@@ -8,28 +8,26 @@
 - [System Requirements](docs/user-guide/system-requirements.md)
 
 ## Setup the application
-> Note that the following instructions assume Docker engine is setup in the host system.
+
+The following instructions assume Docker engine is correctly set up in the host system.
+If you don't have docker, follow the [installation guide for docker engine](https://docs.docker.com/engine/install/ubuntu/) at docker.com.
 
 1. Clone the **edge-ai-suites** repository and change into industrial-edge-insights-vision directory. The directory contains the utility scripts required in the instructions that follows.
+
     ```sh
     git clone https://github.com/open-edge-platform/edge-ai-suites.git
     cd edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-vision/
     ```
+
 2.  Set app specific environment variable file
     ```sh
     cp .env_pallet_defect_detection .env
-    ```    
+    ```
 
-3.  Edit the HOST_IP and other environment variables in `.env` file as follows
+3.  Edit the `HOST_IP`, `MTX_WEBRTCICESERVERS2_0_USERNAME` and `MTX_WEBRTCICESERVERS2_0_PASSWORD` environment variables in `.env` file, as follows:
+
     ```sh
     HOST_IP=<HOST_IP>   # IP address of server where DLStreamer Pipeline Server is running.
-
-    MR_PSQL_PASSWORD=  #PostgreSQL service & client adapter e.g. intel1234
-
-    MR_MINIO_ACCESS_KEY=   # MinIO service & client access key e.g. intel1234
-    MR_MINIO_SECRET_KEY=   # MinIO service & client secret key e.g. intel1234
-
-    MR_URL= # Model registry url. Example http://<IP_address_of_model_registry_server>:32002
 
     MTX_WEBRTCICESERVERS2_0_USERNAME=<username>  # WebRTC credentials e.g. intel1234
     MTX_WEBRTCICESERVERS2_0_PASSWORD=<password>
@@ -37,24 +35,31 @@
     # application directory
     SAMPLE_APP=pallet-defect-detection
     ```
-4.  Install pre-requisites. Run with sudo if needed.
+
+4.  Install the pre-requisites. Run with sudo if needed.
+
     ```sh
     ./setup.sh
     ```
-    This sets up application pre-requisites, download artifacts, sets executable permissions for scripts etc. Downloaded resource directories are made available to the application via volume mounting in docker compose file automatically.
+
+    This script sets up application pre-requisites, download artifacts, sets executable permissions for scripts etc. Downloaded resource directories are made available to the application via volume mounting in docker compose file automatically.
 
 ## Deploy the Application
 
-5.  Bring up the application
+5.  Bring up the application:
+
     ```sh
     docker compose up -d
     ```
-6.  Fetch the list of pipeline loaded available to launch
+
+6.  Fetch the list of pipeline loaded available to launch:
+
     ```sh
     ./sample_list.sh
     ```
+
     This lists the pipeline loaded in DL Streamer Pipeline Server.
-    
+
     Example Output:
 
     ```sh
@@ -86,12 +91,15 @@
         ...
     ]
     ```
+
 7.  Start the sample application with a pipeline.
+
     ```sh
     ./sample_start.sh -p pallet_defect_detection
     ```
-    This command would look for the payload for the pipeline specified in `-p` argument above, inside the `payload.json` file and launch the a pipeline instance in DLStreamer Pipeline Server. Refer to the table, to learn about different options available. 
-    
+
+    This command will look for the payload for the pipeline specified in `-p` argument above, inside the `payload.json` file and launch the a pipeline instance in DLStreamer Pipeline Server. Refer to the table, to learn about different available options.
+
     Output:
 
     ```sh
@@ -110,15 +118,19 @@
     Posting payload to REST server at http://<HOST_IP>:8080/pipelines/user_defined_pipelines/pallet_defect_detection
     Payload for pipeline 'pallet_defect_detection' posted successfully. Response: "4b36b3ce52ad11f0ad60863f511204e2"
     ```
-    NOTE: This would start the pipeline. We can view the inference stream on WebRTC by opening a browser and navigating to http://<HOST_IP>:8889/pdd/ for Pallet Defect Detection
-    
-8.  Get status of pipeline instance(s) running.
+
+    > **NOTE:** This would start the pipeline. We can view the inference stream on WebRTC by opening a browser and navigating to http://<HOST_IP>:8889/pdd/ for Pallet Defect Detection
+
+8.  Get the status of running pipeline instance(s):
+
     ```sh
     ./sample_status.sh
     ```
-    This command lists status of pipeline instances launched during the lifetime of sample application.
-    
+
+    This command lists the statuses of pipeline instances launched during the lifetime of sample application.
+
     Output:
+
     ```sh
     # Example output for Pallet Defect Detection
     Environment variables loaded from /home/intel/OEP/edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-vision/.env
@@ -134,13 +146,17 @@
     }
     ]
     ```
+
 9.  Stop pipeline instance.
+
     ```sh
     ./sample_stop.sh
     ```
-    This command will stop all instances that are currently in `RUNNING` state and respond with the last status.
-    
+
+    This command will stop all instances that are currently in the `RUNNING` state and return their last status.
+
     Output:
+
     ```sh
     # Example output for Pallet Defect Detection
     No pipelines specified. Stopping all pipeline instances
@@ -160,17 +176,21 @@
     "state": "RUNNING"
     }
     ```
-    If you wish to stop a specific instance, you can provide it with an `--id` argument to the command.    
+
+    If you wish to stop a specific instance, you can specify it with an `--id` argument to the command.
     For example, `./sample_stop.sh --id 4b36b3ce52ad11f0ad60863f511204e2`
 
-10. Bring down the application
+10. Bring down the application:
+
     ```sh
     docker compose down -v
     ```
+
     This will bring down the services in the application and remove any volumes.
 
 
 ## Further Reading
+
 - [Helm based deployment](docs/user-guide/how-to-deploy-using-helm-charts.md)
 - [MLOps using Model Registry](docs/user-guide/how-to-enable-mlops.md)
 - [Run multiple AI pipelines](docs/user-guide/how-to-run-multiple-ai-pipelines.md)
@@ -179,4 +199,5 @@
 - [Publish metadata to OPCUA](docs/user-guide/how-to-use-opcua-publisher.md)
 
 ## Troubleshooting
+
 - [Troubleshooting Guide](docs/user-guide/troubleshooting-guide.md)
