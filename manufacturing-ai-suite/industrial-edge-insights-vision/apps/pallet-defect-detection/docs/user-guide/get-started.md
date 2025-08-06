@@ -19,12 +19,12 @@ If you don't have docker, follow the [installation guide for docker engine](http
     cd edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-vision/
     ```
 
-2.  Set app specific environment variable file
+2.  Set app-specific environment variable file
     ```bash
     cp .env_pallet_defect_detection .env
     ```
 
-3.  Edit the `HOST_IP`, `MTX_WEBRTCICESERVERS2_0_USERNAME` and `MTX_WEBRTCICESERVERS2_0_PASSWORD` environment variables in `.env` file, as follows:
+3.  Edit the `HOST_IP`, `MTX_WEBRTCICESERVERS2_0_USERNAME` and `MTX_WEBRTCICESERVERS2_0_PASSWORD` environment variables in the `.env` file as follows:
 
     ```bash
     HOST_IP=<HOST_IP>   # IP address of server where DLStreamer Pipeline Server is running.
@@ -47,6 +47,11 @@ If you don't have docker, follow the [installation guide for docker engine](http
 ## Deploy the Application
 
 5.  Bring up the application:
+
+   The Docker daemon service should start automatically at boot. If not, you can start it manually:
+   ```bash
+   sudo systemctl start docker
+   ```
 
     ```bash
     docker compose up -d
@@ -98,7 +103,7 @@ If you don't have docker, follow the [installation guide for docker engine](http
     ./sample_start.sh -p pallet_defect_detection
     ```
 
-    This command will look for the payload for the pipeline specified in `-p` argument above, inside the `payload.json` file and launch the a pipeline instance in DLStreamer Pipeline Server. Refer to the table, to learn about different available options.
+    This command will look for the payload for the pipeline specified in the `-p` argument above, inside the `payload.json` file and launch a pipeline instance in DLStreamer Pipeline Server. Refer to the table, to learn about different available options.
 
     Output:
 
@@ -119,7 +124,7 @@ If you don't have docker, follow the [installation guide for docker engine](http
     Payload for pipeline 'pallet_defect_detection' posted successfully. Response: "4b36b3ce52ad11f0ad60863f511204e2"
     ```
 
-    > **NOTE:** This would start the pipeline. We can view the inference stream on WebRTC by opening a browser and navigating to http://<HOST_IP>:8889/pdd/ for Pallet Defect Detection
+    > **NOTE:** This will start the pipeline. To view the inference stream on WebRTC, open a browser and navigate to http://<HOST_IP>:8889/pdd/ for Pallet Defect Detection
 
 8.  Get the status of running pipeline instance(s):
 
@@ -177,7 +182,7 @@ If you don't have docker, follow the [installation guide for docker engine](http
     }
     ```
 
-    If you wish to stop a specific instance, you can specify it with an `--id` argument to the command.
+    If you wish to stop a specific instance, make sure to identify it with the `--id` argument.
     For example, `./sample_stop.sh --id 4b36b3ce52ad11f0ad60863f511204e2`
 
 10. Bring down the application:
