@@ -7,7 +7,7 @@
 
 - [System Requirements](system-requirements.md)
 
-## Setup the application
+## Set up the application
 
 The following instructions assume Docker engine is correctly set up in the host system.
 If you don't have docker, follow the [installation guide for docker engine](https://docs.docker.com/engine/install/ubuntu/).
