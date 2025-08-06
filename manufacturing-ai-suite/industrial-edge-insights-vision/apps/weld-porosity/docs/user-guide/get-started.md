@@ -43,11 +43,16 @@ If you don't have docker, follow the [installation guide for docker engine](http
     ./setup.sh
     ```
 
-    This sets up application pre-requisites, downloads artifacts, sets executable permissions for scripts etc. Downloaded resource directories are made available to the application via volume mounting in docker compose file automatically.
+    This sets up application pre-requisites, downloads artifacts, sets executable permissions for scripts etc. Downloaded resource directories are made available to the application via volume mounting in the docker compose file automatically.
 
 ## Deploy the Application
 
-5.  Bring up the application
+5.  Bring up the application:
+
+   The Docker daemon service should start automatically at boot. If not, you can start it manually:
+   ```bash
+   sudo systemctl start docker
+   ```
 
     ```bash
     docker compose up -d

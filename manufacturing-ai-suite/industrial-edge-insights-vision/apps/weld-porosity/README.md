@@ -40,7 +40,7 @@ for display in Grafana.
 It also consists of the below Third-party microservices:
 
 - [MediaMTX Server](https://hub.docker.com/r/bluenviron/mediamtx) is a real-time media server and media proxy that allows publishing webrtc stream.
-- [Coturn Server](https://hub.docker.com/r/coturn/coturn) is a media traffic NAT traversal server and gateway.
+- [Coturn Server](https://hub.docker.com/r/coturn/coturn) is a media traffic NAT traversal server and a gateway.
 - [Open telemetry Collector](https://hub.docker.com/r/otel/opentelemetry-collector-contrib) is a set of receivers, exporters, processors, connectors for Open Telemetry.
 - [Prometheus](https://hub.docker.com/r/prom/prometheus) is a systems and service monitoring system used for viewing Open Telemetry.
 - [Postgres](https://hub.docker.com/_/postgres) is an object-relational database system that provides reliability and data integrity.
