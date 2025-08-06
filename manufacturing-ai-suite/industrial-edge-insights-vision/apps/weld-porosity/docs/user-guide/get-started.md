@@ -10,7 +10,7 @@
 ## Setup the application
 
 The following instructions assume Docker engine is correctly set up in the host system.
-If you don't have docker, follow the [installation guide for docker engine](https://docs.docker.com/engine/install/ubuntu/) at docker.com.
+If you don't have docker, follow the [installation guide for docker engine](https://docs.docker.com/engine/install/ubuntu/).
 
 1. Clone the **edge-ai-suites** repository and change into industrial-edge-insights-vision directory. The directory contains the utility scripts required in the instructions that follows.
 
@@ -19,13 +19,13 @@ If you don't have docker, follow the [installation guide for docker engine](http
     cd edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-vision/
     ```
 
-2.  Set app specific environment variable file
+2.  Set app-specific environment variable file.
 
     ```bash
     cp .env_weld_porosity_classification .env
     ```
 
-3.  Edit the `HOST_IP`, `MTX_WEBRTCICESERVERS2_0_USERNAME` and `MTX_WEBRTCICESERVERS2_0_PASSWORD` environment variables in `.env` file, as follows:
+3.  Edit the `HOST_IP`, `MTX_WEBRTCICESERVERS2_0_USERNAME` and `MTX_WEBRTCICESERVERS2_0_PASSWORD` environment variables in the `.env` file as follows:
 
     ```bash
     HOST_IP=<HOST_IP>   # IP address of server where DLStreamer Pipeline Server is running.
@@ -99,7 +99,7 @@ If you don't have docker, follow the [installation guide for docker engine](http
     ./sample_start.sh -p weld_porosity_classification
     ```
 
-    This command would look for the payload for the pipeline specified in `-p` argument above, inside the `payload.json` file and launch the a pipeline instance in DLStreamer Pipeline Server. Refer to the table, to learn about different options available.
+    This command would look for the payload for the pipeline specified in the `-p` argument above, inside the `payload.json` file and launch a pipeline instance in DLStreamer Pipeline Server. Refer to the table, to learn about different available options.
 
     Output:
 
@@ -121,7 +121,7 @@ If you don't have docker, follow the [installation guide for docker engine](http
 
     ```
 
-    > **NOTE:** This will start the pipeline. We can view the inference stream on WebRTC by opening a browser and navigating to http://<HOST_IP>:8889/weld/
+    > **NOTE:** This will start the pipeline. To view the inference stream on WebRTC, open a browser and navigate to http://<HOST_IP>:8889/weld/
 
 8.  Get status of pipeline instance(s) running.
 
@@ -179,7 +179,7 @@ If you don't have docker, follow the [installation guide for docker engine](http
     }
     ```
 
-    If you wish to stop a specific instance, you can identify it with an `--id` argument to the command.
+    If you wish to stop a specific instance, make sure to identify it with the `--id` argument.
     For example, `./sample_stop.sh --id 0714ca6e5c7611f091f03266c7df2abf`
 
 10. Bring down the application

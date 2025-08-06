@@ -1,16 +1,16 @@
 # Weld Porosity Detection
 
-Weld Porosity Detection prevents defects in real time using AI-powered monitoring. AI and machine vision enable real-time detection of welding defects, ensuring immediate corrective action before issues escalate. By leveraging the right camera and computing hardware, a trained AI model continuously monitors the welds, halting the process the moment a defect is detected. Deep learning AI processes video data at frame rates far beyond human capability, delivering unmatched precision and reliability.
+Weld Porosity Detection prevents defects in real time using AI-powered monitoring. AI and machine vision enable real-time detection of welding defects, ensuring immediate corrective action before issues escalate. Using the right camera and computing hardware, a trained AI model continuously monitors the welds, halting the process the moment a defect is detected. Deep learning AI processes video data at frame rates far beyond human capability, delivering unmatched precision and reliability.
 
 ## Features
 
 It is a cloud-native application composed of microservices, using pre-trained deep learning
-models for video analysis. This sample application offers the following features:
+models for video analysis. This sample application offers the following:
 
 - High-speed data exchange with low-latency compute.
 - AI-assisted defect detection in real-time as pallets are received at the warehouse.
 - On-premise data processing for data privacy and efficient use of bandwidth.
-- Interconnected warehouses deliver analytics for quick and informed tracking and decision making.
+- Interconnected warehouse delivery analytics for quick and informed decision making and tracking.
 
 ## Get Started
 
@@ -39,9 +39,9 @@ for display in Grafana.
 
 It also consists of the below Third-party microservices:
 
-- [MediaMTX Server](https://hub.docker.com/r/bluenviron/mediamtx) is a real-time media server and media proxy that allows to publish webrtc stream.
+- [MediaMTX Server](https://hub.docker.com/r/bluenviron/mediamtx) is a real-time media server and media proxy that allows publishing webrtc stream.
 - [Coturn Server](https://hub.docker.com/r/coturn/coturn) is a media traffic NAT traversal server and gateway.
 - [Open telemetry Collector](https://hub.docker.com/r/otel/opentelemetry-collector-contrib) is a set of receivers, exporters, processors, connectors for Open Telemetry.
 - [Prometheus](https://hub.docker.com/r/prom/prometheus) is a systems and service monitoring system used for viewing Open Telemetry.
-- [Postgres](https://hub.docker.com/_/postgres) is object-relational database system that provides reliability and data integrity.
-- [Minio](https://hub.docker.com/r/minio/minio) is high performance object storage that is API compatible with Amazon S3 cloud storage service.
+- [Postgres](https://hub.docker.com/_/postgres) is an object-relational database system that provides reliability and data integrity.
+- [Minio](https://hub.docker.com/r/minio/minio) is a high performance object storage that is API compatible with Amazon S3 cloud storage service.
