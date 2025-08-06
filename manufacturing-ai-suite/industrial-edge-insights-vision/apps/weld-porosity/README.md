@@ -2,8 +2,6 @@
 
 Weld Porosity Detection prevents defects in real time using AI-powered monitoring. AI and machine vision enable real-time detection of welding defects, ensuring immediate corrective action before issues escalate. Using the right camera and computing hardware, a trained AI model continuously monitors the welds, halting the process the moment a defect is detected. Deep learning AI processes video data at frame rates far beyond human capability, delivering unmatched precision and reliability.
 
-## Features
-
 It is a cloud-native application composed of microservices, using pre-trained deep learning
 models for video analysis. This sample application offers the following:
 
@@ -14,6 +12,8 @@ models for video analysis. This sample application offers the following:
 
 ## Get Started
 
+To see the system requirements and other installation, see the following guides:
+
 - [System Requirements](./docs/user-guide/system-requirements.md)
 - [Setup guide](./docs/user-guide/get-started.md)
 - [Overview](./docs/user-guide/overview.md)
@@ -23,7 +23,7 @@ models for video analysis. This sample application offers the following:
 
 You can read about the overview of the architecture and logic of the application [here](./docs/user-guide/overview-architecture.md)
 
-### Components and Services
+The components and services are as follows:
 
 - **DL Streamer Pipeline Server** is a core component of the app. It receives video feed from
 multiple cameras (four by default, simulated with a video recording). With pre-trained deep
@@ -37,7 +37,7 @@ feedback it receives is moved to Grafana to display.
 end-user visualization. It is supplemented by the Coturn signaling server and passes the feed
 for display in Grafana.
 
-It also consists of the below Third-party microservices:
+It also consists of the following third-party microservices:
 
 - [MediaMTX Server](https://hub.docker.com/r/bluenviron/mediamtx) is a real-time media server and media proxy that allows publishing webrtc stream.
 - [Coturn Server](https://hub.docker.com/r/coturn/coturn) is a media traffic NAT traversal server and a gateway.
