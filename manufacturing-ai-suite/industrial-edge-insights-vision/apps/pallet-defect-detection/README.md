@@ -1,9 +1,6 @@
 # Pallet Defect Detection
 
 Pallet Defect Detection provides automated quality control with AI-driven vision systems. It enables real-time pallet condition monitoring by running inference workflows across multiple AI models. It connects multiple video streams from warehouse cameras to AI-powered pipelines, all operating efficiently on a single industrial PC. This solution enhances logistics efficiency and inventory management by detecting defects before they impact operations.
-
-## Features
-
 It is a cloud-native application composed of microservices, using pre-trained deep learning
 models for video analysis. This sample application offers the following:
 
@@ -23,7 +20,7 @@ models for video analysis. This sample application offers the following:
 
 You can read about the overview of the architecture and logic of the application [here](./docs/user-guide/overview-architecture.md)
 
-### Components and Services
+The components and services are as follows:
 
 - **DL Streamer Pipeline Server** is a core component of the app. It receives video feed from
 multiple cameras (four by default, simulated with a video recording). With pre-trained deep
@@ -37,7 +34,7 @@ feedback it receives is moved to Grafana to display.
 end-user visualization. It is supplemented by the Coturn signaling server and passes the feed
 for display in Grafana.
 
-It also consists of the below Third-party microservices:
+It also consists of the following third-party microservices:
 
 - [MediaMTX Server](https://hub.docker.com/r/bluenviron/mediamtx) is a real-time media server and media proxy that allows to publish webrtc stream.
 - [Coturn Server](https://hub.docker.com/r/coturn/coturn) is a media traffic NAT traversal server and a gateway.
@@ -46,7 +43,7 @@ It also consists of the below Third-party microservices:
 - [Postgres](https://hub.docker.com/_/postgres) is object-relational database system that provides reliability and data integrity.
 - [Minio](https://hub.docker.com/r/minio/minio) is high performance object storage that is API compatible with Amazon S3 cloud storage service.
 
-## Further Reading
+## Learn More
 
 - [Helm based deployment](how-to-deploy-using-helm-charts.md)
 - [MLOps using Model Registry](how-to-enable-mlops.md)
