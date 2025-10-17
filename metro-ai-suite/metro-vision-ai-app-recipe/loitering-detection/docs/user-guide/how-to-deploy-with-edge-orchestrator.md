@@ -12,6 +12,7 @@ Edge Orchestrator, part of Intel’s Edge Software, simplifies edge application 
 
 * **Flexible Configuration**: From organizing your physical infrastructure to managing the permutations of executing applications in a variety of runtime environments, Edge Orchestrator gives you the flexibility to define the policies, criteria, and hierarchies that make the most sense for your specific business needs.
 
+<<<<<<< HEAD
 To deploy the **Loitering Detection** Sample Application with the Edge Orchestrator, follow the steps in this document.
 
 ## Deploy with Edge Orchestrator
@@ -21,6 +22,17 @@ To deploy the **Loitering Detection** Sample Application with the Edge Orchestra
 1. Access to the web interface of the Edge Orchestrator with one or more [edge nodes onboarded](<https://docs.openedgeplatform.intel.com/edge-manage-docs/main/user_guide/set_up_edge_infra/edge_node_onboard.html>) to the Edge Orchestrator.
 
 1. Clusters with a [privilege template](<https://docs.openedgeplatform.intel.com/edge-manage-docs/main/user_guide/additional_howtos/set_up_a_cluster_template.html>) have been created on the needed edge nodes by following the steps in [Create Cluster](<https://docs.openedgeplatform.intel.com/edge-manage-docs/main/user_guide/set_up_edge_infra/create_clusters.html#create-cluster>).
+=======
+To deploy the **Loitering Detection** Sample Application with the Edge Orchestrator, follow the steps described in this document.
+
+## Procedure to Deploy with Edge Orchestrator
+
+### Prerequisites
+
+1. Access to the web interface of the Edge Orchestrator with one or more [Edge Nodes Onboarded](<https://docs.openedgeplatform.intel.com/edge-manage-docs/main/user_guide/set_up_edge_infra/edge_node_onboard.html>) to the Edge Orchestrator.
+
+1. Clusters with a [privilege template](<https://docs.openedgeplatform.intel.com/edge-manage-docs/main/user_guide/additional_howtos/set_up_a_cluster_template.html>) have been created on the needed Edge Nodes following the procedures described in [Create Cluster](<https://docs.openedgeplatform.intel.com/edge-manage-docs/main/user_guide/set_up_edge_infra/create_clusters.html#create-cluster>).
+>>>>>>> 74354cdc (Spine app EMF deployment documentation on mainline)
 
 ### Make the Deployment Package Available
 
@@ -31,7 +43,11 @@ To deploy the **Loitering Detection** Sample Application with the Edge Orchestra
     cd metro-ai-suite/metro-vision-ai-app-recipe/loitering-detection
     ```
 
+<<<<<<< HEAD
 1. From the web browser, open the URL of the Edge Orchestrator and import the deployment package in the folder **deployment-package** by following the steps described in [Import Deployment Package](<https://docs.openedgeplatform.intel.com/edge-manage-docs/main/user_guide/package_software/import_deployment.html#import-deployment-package>).
+=======
+1. From the web browser, open the URL of the Edge Orchestrator and import the Deployment Package present in the folder **deployment-package** following the steps described in [Import Deployment Package](<https://docs.openedgeplatform.intel.com/edge-manage-docs/main/user_guide/package_software/import_deployment.html#import-deployment-package>).
+>>>>>>> 74354cdc (Spine app EMF deployment documentation on mainline)
 
 1. After you have imported the deployment package into Edge Orchestrator, you can see it in the list of deployment packages:
 
@@ -61,11 +77,19 @@ To set up a deployment:
 
 1. Click **Next** to view the Review page.
 
+<<<<<<< HEAD
 1. Verify that the deployment details are correct and click **Deploy**.
 
 After a few minutes, the deployment will start and will take about 5 minutes to complete.
 
 In the Edge Orchestrator Web UI, you can track the application installation through the [View Deployment Details](<https://docs.openedgeplatform.intel.com/edge-manage-docs/main/user_guide/package_software/deployment_details.html#view-deployment-details>) page.
+=======
+1. Verify if the deployment details are correct and click **Deploy**.
+
+After a few minutes, the deployment will start and will take about 5 minutes to complete.
+
+In the Edge Orchestrator Web UI, you can track the application installation through the [View Deployment Details](<https://docs.openedgeplatform.intel.com/edge-manage-docs/main/user_guide/package_software/deployment_details.html#view-deployment-details>) view.
+>>>>>>> 74354cdc (Spine app EMF deployment documentation on mainline)
 
 The **Loitering Detection** Sample Application is fully deployed when the applications become green and the status is shown as _Running_.
 
@@ -82,4 +106,8 @@ For more information on setting up a deployment, see [Set up a Deployment](<http
 
 1. Follow the steps in the **Loitering Detection** [Documentation](<how-to-deploy-with-helm.md#step-3-deploy-the-application-and-run-multiple-ai-pipelines>) on the usage of the application.
 
+<<<<<<< HEAD
    > Note: Skip the Deploy Helm chart step.
+=======
+   > Note: Skip the Deploy Helm chart step.
+>>>>>>> 74354cdc (Spine app EMF deployment documentation on mainline)
