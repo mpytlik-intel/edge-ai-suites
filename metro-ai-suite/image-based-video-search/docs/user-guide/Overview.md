@@ -1,3 +1,5 @@
+xyz
+
 # Image-Based Video Search Sample Application
 
 <!--REQUIRED: Add a short description without including the name of the RI/Application/microservice in the description. Ensure it's at least 50 characters (excluding spaces) and doesn't exceed 150 characters (excluding spaces). This will enable the content to be properly displayed in the catalog's card layout.-->
