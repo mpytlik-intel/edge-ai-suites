@@ -1,5 +1,6 @@
 # Smart Intersection
 
+<!--hide_directive
 <div class="component_card_widget">
   <a href="https://github.com/open-edge-platform/edge-ai-suites/tree/main/metro-ai-suite/metro-vision-ai-app-recipe/smart-intersection">
     <img src="../../_static/images/github-mark-white.png" alt="" /> GitHub project
@@ -11,6 +12,7 @@
     <img src="../../_static/images/download_icon.png" alt="" /> ESC Download
   </a>
 </div>
+hide_directive-->
 
 Smart Intersection Sample Application uses edge AI to improve traffic flow. It combines feeds from multiple cameras to track vehicles across angles, analyze speed and direction, and understand interactions in real space. The system can run on existing cameras and deliver real-time, coordinated insights for smarter traffic monitoring.
 
