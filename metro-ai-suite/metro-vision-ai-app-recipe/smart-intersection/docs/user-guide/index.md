@@ -1,5 +1,16 @@
-Smart Intersection
-========================================
+# Smart Intersection
+
+<div class="component_card_widget">
+  <a href="https://github.com/open-edge-platform/edge-ai-suites/tree/main/metro-ai-suite/metro-vision-ai-app-recipe/smart-intersection">
+    <img src="../../_static/images/github-mark-white.png" alt="" /> GitHub project
+  </a>
+  <a href="https://github.com/open-edge-platform/edge-ai-suites/blob/main/metro-ai-suite/metro-vision-ai-app-recipe/smart-intersection/README.md">
+    <img src="../../_static/images/documentation_icon.png" alt="" /> Documentation
+  </a>
+  <a href="https://edgesoftwarecatalog.intel.com/details/?microserviceType=recipe&microserviceNameForUrl=smart-intersection">
+    <img src="../../_static/images/download_icon.png" alt="" /> ESC Download
+  </a>
+</div>
 
 Smart Intersection Sample Application uses edge AI to improve traffic flow. It combines feeds from multiple cameras to track vehicles across angles, analyze speed and direction, and understand interactions in real space. The system can run on existing cameras and deliver real-time, coordinated insights for smarter traffic monitoring.
 
@@ -18,14 +29,14 @@ The key benefits are as follows:
 
 This guide is designed to help developers understand the architecture, setup, and customization of the sample application.
 
+:::{toctree}
 
-.. toctree::
-
-   Overview
-   how-it-works
-   system-requirements
-   get-started
-   how-to-deploy-helm
-   how-to-deploy-with-edge-orchestrator
-   application-security-enablement
-   support
+Overview.md
+how-it-works
+system-requirements
+get-started
+how-to-deploy-helm
+how-to-deploy-with-edge-orchestrator
+application-security-enablement
+support
+:::
