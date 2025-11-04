@@ -23,16 +23,16 @@ make up_mqtt_ingestion INCLUDE=validation
 - Login to the Grafana with values set for `VISUALIZER_GRAFANA_USER` and `VISUALIZER_GRAFANA_PASSWORD`
     in `.env` file and select **System Metrics Dashboard**.
 
-    ![Grafana login](./_images/login_wt.png)
+    ![Grafana login](../_images/login_wt.png)
 
-- After login, click on Dashboard 
+- After login, click on Dashboard
 
-    ![Menu view](./_images/dashboard.png)
+    ![Menu view](../_images/dashboard.png)
 
 - Select the `System Metrics Dashboard`.
 
-    ![List all dashboard](./_images/list_all_dashboard.png)
+    ![List all dashboard](../_images/list_all_dashboard.png)
 
 - One will see the below output.
 
-    ![System Metrics Dashboard](./_images/system_metrics_dashboard.png)
+    ![System Metrics Dashboard](../_images/system_metrics_dashboard.png)

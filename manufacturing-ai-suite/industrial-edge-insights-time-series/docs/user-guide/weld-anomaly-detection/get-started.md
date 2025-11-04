@@ -49,8 +49,8 @@ cd edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-time-series
 ```
 ## Data flow explanation
 
-The data flow remains same as that explained in the [High-Level Architecture](../how-it-works.md).
-We will ingest the wind turbine anomaly detection data using the OPC-UA simulator and publishing the anomaly alerts to MQTT broker.
+The data flow remains same as that explained in the [High-Level Architecture](./how-it-works.md).
+We will ingest the weld anomaly detection data using the OPC-UA simulator and publishing the anomaly alerts to MQTT broker.
 
 ### **Data Sources**
 
@@ -67,8 +67,7 @@ This data is being ingested into **Telegraf** using the **OPC-UA** protocol usin
 
 ### **Data Processing**
 
-**Time Series Analytics Microservice** uses the User Defined Function(UDF) deployment package(TICK Scripts, UDFs, Models) coming from the sample apps. The UDF deployment package for `Wind Turbine Anomaly Detection` sample app is available
-at `edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-time-series/apps/wind-turbine-anomaly-detection/time-series-analytics-config`.
+**Time Series Analytics Microservice** uses the User Defined Function(UDF) deployment package(TICK Scripts, UDFs, Models) coming from the sample apps. The UDF deployment package for `Weld Anomaly Detection` sample app is available at `edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-time-series/apps/weld-anomaly-detection/time-series-analytics-config`.
 
 Directory details is as below:
 
@@ -86,8 +85,8 @@ The `udfs` section specifies the details of the UDFs used in the task.
 
 | Key     | Description                                                                                 | Example Value                          |
 |---------|---------------------------------------------------------------------------------------------|----------------------------------------|
-| `name`  | The name of the UDF script.                                                                 | `"windturbine_anomaly_detector"`       |
-| `models`| The name of the model file used by the UDF.                                                 | `"windturbine_anomaly_detector.pkl"`   |
+| `name`  | The name of the UDF script.                                                                 | `"weld_anomaly_detector"`       |
+| `models`| The name of the model file used by the UDF.                                                 | `"weld_anomaly_detector.cb"`   |
 | `device`| Specifies the hardware `CPU` or `GPU` for executing the UDF model inference.Default is `cpu`| `cpu`                                  |
 
 > **Note:** The maximum allowed size for `config.json` is 5 KB.
@@ -120,8 +119,7 @@ The `mqtt` section specifies the MQTT broker details for sending alerts.
      By default, it is configured to publish the alerts to **MQTT**.
 
 #### **`models/`**:
-   - The `windturbine_anomaly_detector.pkl` is a model built using the RandomForestRegressor Algo.
-     More details on how it is built is accessible at `edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-time-series/apps/wind-turbine-anomaly-detection/training/windturbine/README.md`
+   - The `weld_anomaly_detector.cb` is a model built using the RandomForestRegressor Algo.
 
 ## Deploy with Docker Compose
 
@@ -146,16 +144,11 @@ The `mqtt` section specifies the MQTT broker details for sending alerts.
 >    logs for OPC-UA ingestion after a single data ingestion loop. This message can be ignored.
 >  - `make up_opcua_ingestion` is supported only for `Wind Turbine Anomaly Detection` sample app
 
-### Deploying Wind Turbine Anomaly Detection sample app
+### Deploying Weld Anomaly Detection sample app
 
-  - **Using OPC-UA ingestion**:
-    ```bash
-    make up_opcua_ingestion app="wind-turbine-anomaly-detection"
-    ```
-  - **Using MQTT ingestion**:
-    ```bash
-    make up_mqtt_ingestion app="wind-turbine-anomaly-detection"
-    ```
+  ```bash
+  make up_mqtt_ingestion app="weld-anomaly-detection"
+  ```
 
 ### Multi-Stream Ingestion support
 
@@ -164,14 +157,11 @@ Multi-stream ingestion enables the simultaneous processing of multiple data stre
 To activate multi-stream ingestion, set the `num_of_streams` parameter to the required number of parallel streams when deploying the application.
 `<NUMBER_OF_STREAMS>`: Specify the number of parallel streams to run (e.g., `3` for three concurrent streams).
 
-#### Wind Turbine Anomaly Detection
+#### Weld Turbine Anomaly Detection
 
 ```bash
-# Deploy with OPC-UA Multi-Stream Ingestion
-make up_opcua_ingestion app="wind-turbine-anomaly-detection" num_of_streams=<NUMBER_OF_STREAMS>
-
 # Deploy with MQTT Multi-Stream Ingestion
-make up_mqtt_ingestion app="wind-turbine-anomaly-detection" num_of_streams=<NUMBER_OF_STREAMS>
+make up_mqtt_ingestion app="weld-anomaly-detection" num_of_streams=<NUMBER_OF_STREAMS>
 ```
 
 #### Notes
@@ -194,7 +184,8 @@ make status
 ### Running User Defined Function(UDF) inference on GPU
 
 By default, UDF for both the sample apps is configured to run on `CPU`.
-The `Wind Turbine Anomaly Detection` sample app ML model can also run on `iGPU`.
+The `Weld Anomaly Detection` sample app ML model can only run in this mode.
+
 To trigger the UDF inference on GPU in Time Series Analytics Microservice, run the following command:
 
 ```sh
@@ -202,7 +193,7 @@ To trigger the UDF inference on GPU in Time Series Analytics Microservice, run t
  'https://<HOST_IP>:3000/ts-api/config' \
  -H 'accept: application/json' \
  -H 'Content-Type: application/json' \
- -d '<Add contents of edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-time-series/apps/wind-turbine-anomaly-detection/time-series-analytics-config/config.json with device
+ -d '<Add contents of edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-time-series/apps/weld-anomaly-detection/time-series-analytics-config/config.json with device
      value updated to gpu from cpu>'
 ```
 
@@ -232,7 +223,7 @@ To trigger the UDF inference on GPU in Time Series Analytics Microservice, run t
     show measurements
     # Run below query to check and output measurement processed
     # by Time Series Analytics microservice
-    select * from "wind-turbine-anomaly-data"
+    select * from "weld-sensor-anomaly-data"
     ```
 
 2. To check the output in Grafana:
@@ -249,12 +240,12 @@ To trigger the UDF inference on GPU in Time Series Analytics Microservice, run t
     - After login, click on Dashboard
       ![Menu view](../_images/dashboard.png)
 
-    - Select the `Wind Turbine Dashboard`.
-      ![Windturbine dashboard](./_images/wind_turbine_dashboard.png)
+    - Select the `Weld Anomaly Detection Dashboard`.
+      ![Weld Anomaly Detection dashboard](./_images/weld_anomaly_detection.png)
 
     - One will see the below output.
 
-      ![Anomaly prediction in grid active power](./_images/anomaly_power_prediction.png)
+      ![Anomaly prediction in weld sensor data](./_images/anomaly_detection_weld.png)
 
 ## Bring down the sample app
 

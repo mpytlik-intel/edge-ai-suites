@@ -17,7 +17,7 @@ This guide provides step-by-step instructions for deploying the Industrial Edge 
 
 You can either generate or download the Helm charts.
 
-### Wind Turbine Anomaly Detection Sample App
+### Weld Anomaly Detection Sample App
 
     - To download the Helm charts:
 
@@ -25,75 +25,82 @@ You can either generate or download the Helm charts.
 
         1. Download Helm chart with the following command:
 
-            `helm pull oci://registry-1.docker.io/intel/wind-turbine-anomaly-detection-sample-app --version 1.1.0-weekly`
+            `helm pull oci://registry-1.docker.io/intel/weld-anomaly-detection-sample-app --version 1.0.0-weekly`
 
         2. Unzip the package using the following command:
 
-            `tar -xvzf wind-turbine-anomaly-detection-sample-app-1.1.0-weekly.tgz`
+            `tar -xvzf weld-anomaly-detection-sample-app-1.0.0-weekly.tgz`
 
         - Get into the Helm directory:
 
-            `cd wind-turbine-anomaly-detection-sample-app`
+            `cd weld-anomaly-detection-sample-app`
 
     - To generate the Helm charts:
-
-        ```bash
+      ```bash
         cd edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-time-series # path relative to git clone folder
 
-        make gen_helm_charts app=wind-turbine-anomaly-detection
+        make gen_helm_charts app=weld-anomaly-detection version=1.0.0-weekly
 
         cd helm/
-        ```
+      ```
 
-### Install - Wind Turbine Anomaly Detection
+## Step 2: Configure and update the environment variables
 
-To install Helm charts, use one of the following options:
+1. Update the following fields in `values.yaml` file of the helm chart
 
-- OPC-UA ingestion flow:
-
-    ```bash
-    helm install ts-wind-turbine-anomaly --set env.TELEGRAF_INPUT_PLUGIN=opcua . -n ts-sample-app --create-namespace
+    ``` sh
+    INFLUXDB_USERNAME:
+    INFLUXDB_PASSWORD:
+    VISUALIZER_GRAFANA_USER:
+    VISUALIZER_GRAFANA_PASSWORD:
+    HTTP_PROXY: # example: http_proxy: http://proxy.example.com:891
+    HTTPS_PROXY: # example: http_proxy: http://proxy.example.com:891
     ```
 
-- MQTT ingestion flow:
-
-    ```bash
-    helm install ts-wind-turbine-anomaly --set env.TELEGRAF_INPUT_PLUGIN=mqtt_consumer . -n ts-sample-app --create-namespace
-    ```
+## Step 3: Install Helm charts
 
 > **Note:**
-> To deploy with GPU support for inferencing, use the following command:
-> ```bash
-> helm install ts-wind-turbine-anomaly \
->   --set privileged_access_required=true \
->   --set env.TELEGRAF_INPUT_PLUGIN=<input_plugin> \
->   . -n ts-sample-app --create-namespace
-> ```
-> The `privileged_access_required=true` setting enables Time Series Analytics Microservice access to GPU device through `/dev/dri`.
+> 1. Uninstall the Helm charts if already installed.
+> 2. Note the `helm install` command fails if the above required fields are not populated
+>    as per the rules called out in `values.yaml` file.
+
+
+### Install - Weld Anomaly Detection
+
+```bash
+helm install ts-weld-anomaly . -n ts-sample-app --create-namespace
+```
+
+**Verify Installation:**
+Use the following command to verify if all the application resources got installed w/ their status:
+
+```bash
+   kubectl get all -n ts-sample-app
+```
 
 ## Step 4: Copy the udf package for helm deployment to Time Series Analytics Microservice
 
-### UDF - Wind Turbine Anomaly Detection Sample App
+### UDF - Weld Anomaly Detection Sample App
 
 To copy your own or existing model into Time Series Analytics Microservice in order to run this sample application in Kubernetes environment:
 
-1. The following udf package is placed in the repository under `edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-time-series/apps/wind-turbine-anomaly-detection/time-series-analytics-config`.
+1. The following udf package is placed in the repository under `edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-time-series/apps/weld-anomaly-detection/time-series-analytics-config`.
 
     ```
     - time-series-analytics-config/
         - models/
-            - windturbine_anomaly_detector.pkl
+            - weld_anomaly_detector.cb
         - tick_scripts/
-            - windturbine_anomaly_detector.tick
+            - weld_anomaly_detector.tick
         - udfs/
             - requirements.txt
-            - windturbine_anomaly_detector.py
+            - weld_anomaly_detector.py
     ```
 
 2. Copy your new UDF package (using the windturbine anomaly detection UDF package as an example) to the `time-series-analytics-microservice` pod:
     ```sh
-    export SAMPLE_APP="wind-turbine-anomaly-detection"
-    cd edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-time-series/apps/wind-turbine-anomaly-detection/time-series-analytics-config # path relative to git clone folder
+    export SAMPLE_APP="weld-anomaly-detection"
+    cd edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-time-series/apps/weld-anomaly-detection/time-series-analytics-config # path relative to git clone folder
     mkdir -p $SAMPLE_APP
     cp -r models tick_scripts udfs $SAMPLE_APP/.
 
@@ -101,6 +108,9 @@ To copy your own or existing model into Time Series Analytics Microservice in or
 
     kubectl cp $SAMPLE_APP $POD_NAME:/tmp/ -n ts-sample-app
     ```
+
+> **Note:**
+> Run the commands only after performing the Helm install.
 
 ## Step 5: Activate the New UDF Deployment Package
 
@@ -130,10 +140,10 @@ Follow the verification steps in the [Get Started guide](get-started.md):
 
 ## Uninstall Helm Charts
 
-### Uninstall - Wind Turbine Anomaly Detection Sample App
+### Uninstall - Weld Anomaly Detection Sample App
 
 ```sh
-helm uninstall ts-wind-turbine-anomaly -n ts-sample-app
+helm uninstall ts-weld-anomaly -n ts-sample-app
 kubectl get all -n ts-sample-app # It may take a few minutes for all application resources to be cleaned up.
 ```
 
