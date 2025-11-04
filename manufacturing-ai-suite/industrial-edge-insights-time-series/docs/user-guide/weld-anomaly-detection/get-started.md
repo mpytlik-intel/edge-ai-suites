@@ -265,7 +265,7 @@ To trigger the UDF inference on GPU in Time Series Analytics Microservice, run t
 
 ## Other Deployment options
 
-- [How to Deploy with Helm](../how-to-deploy-with-helm.md): Guide for deploying the sample application on a k8s cluster using Helm.
+- [How to Deploy with Helm](./how-to-deploy-with-helm.md): Guide for deploying the sample application on a k8s cluster using Helm.
 
 ## Advanced setup
 
