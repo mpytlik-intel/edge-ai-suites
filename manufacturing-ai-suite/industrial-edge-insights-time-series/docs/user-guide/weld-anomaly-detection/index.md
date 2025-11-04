@@ -7,7 +7,7 @@ and operational efficiency. No more failures or unplanned downtime.
 
 [Get Started](get-started.md)
 
-[How to deploy with helm](./how-to-deploy-with-helm.md)
+[How to Deploy with Helm](./how-to-deploy-with-helm.md)
 
 <!--hide_directive
 :::{toctree}
