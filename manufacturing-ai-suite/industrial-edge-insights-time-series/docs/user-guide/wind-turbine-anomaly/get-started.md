@@ -166,6 +166,8 @@ The `mqtt` section specifies the MQTT broker details for sending alerts.
   ```bash
   make up_mqtt_ingestion app="weld-anomaly-detection"
   ```
+:::
+::::
 
 ### Multi-Stream Ingestion support
 
