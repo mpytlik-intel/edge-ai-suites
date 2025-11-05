@@ -176,7 +176,9 @@ Multi-stream ingestion enables the simultaneous processing of multiple data stre
 To activate multi-stream ingestion, set the `num_of_streams` parameter to the required number of parallel streams when deploying the application.
 `<NUMBER_OF_STREAMS>`: Specify the number of parallel streams to run (e.g., `3` for three concurrent streams).
 
-#### Wind Turbine Anomaly Detection
+::::{tab-set}
+:::{tab-item} Wind Turbine Anomaly Detection
+:sync: tab1
 
 ```bash
 # Deploy with OPC-UA Multi-Stream Ingestion
@@ -186,12 +188,17 @@ make up_opcua_ingestion app="wind-turbine-anomaly-detection" num_of_streams=<NUM
 make up_mqtt_ingestion app="wind-turbine-anomaly-detection" num_of_streams=<NUMBER_OF_STREAMS>
 ```
 
-#### Weld Turbine Anomaly Detection
+:::
+:::{tab-item} Weld Anomaly Detection
+:sync: tab2
 
 ```bash
 # Deploy with MQTT Multi-Stream Ingestion
 make up_mqtt_ingestion app="weld-anomaly-detection" num_of_streams=<NUMBER_OF_STREAMS>
 ```
+
+:::
+::::
 
 #### Notes
 
@@ -229,7 +236,9 @@ To trigger the UDF inference on GPU in Time Series Analytics Microservice, run t
 
 ## Verify the Output Results
 
-### Verify - Wind Turbine Anomaly Detection
+::::{tab-set}
+:::{tab-item} Wind Turbine Anomaly Detection
+:sync: tab1
 
 1. Get into the InfluxDB* container:
 
@@ -279,7 +288,9 @@ To trigger the UDF inference on GPU in Time Series Analytics Microservice, run t
 
       ![Anomaly prediction in grid active power](./_images/anomaly_power_prediction.png)
 
-### Verify - Weld Anomaly Detection
+:::
+:::{tab-item} Deploying Weld Anomaly Detection
+:sync: tab2
 
 1. Get into the InfluxDB* container:
 
@@ -329,6 +340,8 @@ To trigger the UDF inference on GPU in Time Series Analytics Microservice, run t
 
       ![Anomaly prediction in weld sensor data](./_images/anomaly_detection_weld.png)
 
+:::
+::::
 
 ## Bring down the sample app
 
