@@ -57,7 +57,7 @@ OPC-UA simulator and publishing the anomaly alerts to MQTT broker.
 
 Using the `edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-time-series/apps/wind-turbine-anomaly-detection/ingestor-data/wind-turbine-anomaly-detection.csv` which is a normalized version of open source data wind turbine dataset (`edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-time-series/apps/wind-turbine-anomaly-detection/training/T1.csv`) from <https://www.kaggle.com/datasets/berkerisen/wind-turbine-scada-dataset>.
 This data is being ingested into **Telegraf** using the **OPC-UA** protocol using the **OPC-UA** data simulator.
-  
+
 ### **Data Ingestion**
 
 **Telegraf** through its input plugins (**OPC-UA** OR **MQTT**) gathers the data and sends this input data to both **InfluxDB** and **Time Series Analytics Microservice**.
@@ -69,10 +69,10 @@ This data is being ingested into **Telegraf** using the **OPC-UA** protocol usin
 ### **Data Processing**
 
 **Time Series Analytics Microservice** uses the User Defined Function(UDF) deployment package(TICK Scripts, UDFs, Models) coming from the sample apps. The UDF deployment package for `Wind Turbine Anomaly Detection` sample app is available
-at `edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-time-series/apps/wind-turbine-anomaly-detection/time-series-analytics-config` and for `Weld Anomaly Detection` sample app is available at `edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-time-series/apps/weld-anomaly-detection/time-series-analytics-config`. 
+at `edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-time-series/apps/wind-turbine-anomaly-detection/time-series-analytics-config` and for `Weld Anomaly Detection` sample app is available at `edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-time-series/apps/weld-anomaly-detection/time-series-analytics-config`.
 
 Directory details is as below:
-  
+
 #### **`config.json`**:
 
 The `task` section defines the settings for the Kapacitor task and User-Defined Functions (UDFs).
@@ -117,9 +117,9 @@ The `mqtt` section specifies the MQTT broker details for sending alerts.
 
 #### **`tick_scripts/`**:
    - The TICKScript `windturbine_anomaly_detector.tick` determines processing of the input data coming in.
-     Mainly, has the details on execution of the UDF file, storage of processed data and publishing of alerts. 
+     Mainly, has the details on execution of the UDF file, storage of processed data and publishing of alerts.
      By default, it is configured to publish the alerts to **MQTT**.
-   
+
 #### **`models/`**:
    - The `windturbine_anomaly_detector.pkl` is a model built using the RandomForestRegressor Algo.
      More details on how it is built is accessible at `edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-time-series/apps/wind-turbine-anomaly-detection/training/windturbine/README.md`
@@ -137,17 +137,19 @@ The `mqtt` section specifies the MQTT broker details for sending alerts.
 > **NOTE**:
 >  - The below `make up_opcua_ingestion` or `make up_mqtt_ingestion` fails if the above required fields are not populated
 >    as per the rules called out in `.env` file.
->  - The sample app is deployed by pulling the pre-built container images of the sample app 
+>  - The sample app is deployed by pulling the pre-built container images of the sample app
 >    from the docker hub OR from the internal container registry (login to the docker registry from cli and configure `DOCKER_REGISTRY`
 >    env variable in `.env` file at `edge-ai-suites/manufacturing-ai-suite/industrial-edge-insights-time-series`)
->  - The `CONTINUOUS_SIMULATOR_INGESTION` variable in the `.env` file (for Docker Compose) and in `helm/values.yaml` (for Helm deployments) 
->    is set to `true` by default, enabling continuous looping of simulator data. To ingest the simulator data only once (without looping), 
+>  - The `CONTINUOUS_SIMULATOR_INGESTION` variable in the `.env` file (for Docker Compose) and in `helm/values.yaml` (for Helm deployments)
+>    is set to `true` by default, enabling continuous looping of simulator data. To ingest the simulator data only once (without looping),
 >    set this variable to `false`.
->  - If `CONTINUOUS_SIMULATOR_INGESTION` is set to `false`, you may see the `[inputs.opcua] status not OK for node` message in the `telegraf` 
+>  - If `CONTINUOUS_SIMULATOR_INGESTION` is set to `false`, you may see the `[inputs.opcua] status not OK for node` message in the `telegraf`
 >    logs for OPC-UA ingestion after a single data ingestion loop. This message can be ignored.
 >  - `make up_opcua_ingestion` is supported only for `Wind Turbine Anomaly Detection` sample app
 
-### Deploying Wind Turbine Anomaly Detection sample app
+::::{tab-set}
+:::{tab-item} Deploying Wind Turbine Anomaly Detection
+:sync: tab1
 
   - **Using OPC-UA ingestion**:
     ```bash
@@ -157,8 +159,9 @@ The `mqtt` section specifies the MQTT broker details for sending alerts.
     ```bash
     make up_mqtt_ingestion app="wind-turbine-anomaly-detection"
     ```
-
-### Deploying Weld Anomaly Detection sample app
+:::
+:::{tab-item} Deploying Weld Anomaly Detection
+:sync: tab2
 
   ```bash
   make up_mqtt_ingestion app="weld-anomaly-detection"
@@ -193,7 +196,7 @@ make up_mqtt_ingestion app="weld-anomaly-detection" num_of_streams=<NUMBER_OF_ST
 - Ensure system resources (CPU, memory) are sufficient to support the desired number of streams.
 - For troubleshooting or monitoring, use `make status` to verify container health and logs.
 
-   
+
 Use the following command to verify that all containers are active and error-free.
 
 > **Note:** The command `make status` may show errors in containers like ia-grafana when user have not logged in
@@ -245,7 +248,7 @@ To trigger the UDF inference on GPU in Time Series Analytics Microservice, run t
     ``` bash
     # For below command, the INFLUXDB_USERNAME and INFLUXDB_PASSWORD needs to be fetched from `.env` file
     # for docker compose deployment and `values.yml` for helm deployment
-    influx -username <username> -password <passwd> 
+    influx -username <username> -password <passwd>
     use datain # database access
     show measurements
     # Run below query to check and output measurement processed
@@ -256,22 +259,22 @@ To trigger the UDF inference on GPU in Time Series Analytics Microservice, run t
 2. To check the output in Grafana:
 
     - Use link `https://<host_ip>:3000/` to launch Grafana from browser (preferably, chrome browser)
-      
+
       > **Note**: Use link `https://<host_ip>:30001` to launch Grafana from browser (preferably, chrome browser) for the helm deployment
-    
+
     - Login to the Grafana with values set for `VISUALIZER_GRAFANA_USER` and `VISUALIZER_GRAFANA_PASSWORD`
       in `.env` file and select **Wind Turbine Dashboard**.
 
       ![Grafana login](./_images/login_wt.png)
 
-    - After login, click on Dashboard 
+    - After login, click on Dashboard
       ![Menu view](./_images/dashboard.png)
 
     - Select the `Wind Turbine Dashboard`.
       ![Windturbine dashboard](./_images/wind_turbine_dashboard.png)
 
     - One will see the below output.
-  
+
       ![Anomaly prediction in grid active power](./_images/anomaly_power_prediction.png)
 
 ### Verify - Weld Anomaly Detection
@@ -295,7 +298,7 @@ To trigger the UDF inference on GPU in Time Series Analytics Microservice, run t
     ``` bash
     # For below command, the INFLUXDB_USERNAME and INFLUXDB_PASSWORD needs to be fetched from `.env` file
     # for docker compose deployment and `values.yml` for helm deployment
-    influx -username <username> -password <passwd> 
+    influx -username <username> -password <passwd>
     use datain # database access
     show measurements
     # Run below query to check and output measurement processed
@@ -306,22 +309,22 @@ To trigger the UDF inference on GPU in Time Series Analytics Microservice, run t
 2. To check the output in Grafana:
 
     - Use link `https://<host_ip>:3000/` to launch Grafana from browser (preferably, chrome browser)
-      
+
       > **Note**: Use link `https://<host_ip>:30001` to launch Grafana from browser (preferably, chrome browser) for the helm deployment
-    
+
     - Login to the Grafana with values set for `VISUALIZER_GRAFANA_USER` and `VISUALIZER_GRAFANA_PASSWORD`
       in `.env` file and select **Wind Turbine Dashboard**.
 
       ![Grafana login](./_images/login_wt.png)
 
-    - After login, click on Dashboard 
+    - After login, click on Dashboard
       ![Menu view](./_images/dashboard.png)
 
     - Select the `Weld Anomaly Detection Dashboard`.
       ![Weld Anomaly Detection dashboard](./_images/weld_anomaly_detection.png)
 
     - One will see the below output.
-  
+
       ![Anomaly prediction in weld sensor data](./_images/anomaly_detection_weld.png)
 
 
