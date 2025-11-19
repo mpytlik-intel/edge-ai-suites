@@ -1,15 +1,15 @@
 .. pyrealsense2-d457-multicam-object-detection-tutorial:
 
-|openvino| Tutorial on Multi-camera Object Detection using |realsense| Depth Camera D457
+OpenVINO™ Tutorial on Multi-camera Object Detection using Intel® RealSense™ Depth Camera D457
 ===========================================================================================
 
 In this tutorial, the multi-camera use case is demonstrated using an `Axiomtek Robox500 ROS 2 AMR Controller <https://www.axiomtek.com/Default.aspx?MenuId=Products&FunctionId=ProductView&ItemId=27392&C=ROBOX500&upcat=408>`__ and four `Intel® RealSense™ Depth Camera D457 <https://www.intelrealsense.com/depth-camera-d457/>`__. Here, the four cameras are connected to the Industrial Gigabit Multimedia Serial Link™ (GMSL) supported Axiomtek Robox500 ROS 2 AMR Controller through GMSL/FAKRA (female-to-female) cables, which provide high-bandwidth video transmission.
 
-Four instances of AI-based applications for object detection and object segmentation are run in parallel using four |realsense| camera streams. Further in this tutorial, the `Ultralytics YOLOv8 object detection model. <https://docs.ultralytics.com/>`__ model is downloaded and used for object detection and object segmentation. The tutorial can be run on an Axiomtek Robox500 ROS 2 AMR Controller consisting of either a 12th Gen Intel® Core™ i7-1270PE processor or a 13th Gen Intel® Core™ i7-1370PE processor, both with 28W TDP and an |xe| Processing Unit.
+Four instances of AI-based applications for object detection and object segmentation are run in parallel using four Intel® RealSense™ camera streams. Further in this tutorial, the `Ultralytics YOLOv8 object detection model. <https://docs.ultralytics.com/>`__ model is downloaded and used for object detection and object segmentation. The tutorial can be run on an Axiomtek Robox500 ROS 2 AMR Controller consisting of either a 12th Gen Intel® Core™ i7-1270PE processor or a 13th Gen Intel® Core™ i7-1370PE processor, both with 28W TDP and an Intel® Iris® Xe Integrated Graphics Processing Unit.
 
 The setup looks like as described in the table below.
 
-.. list-table:: |realsense| Depth Camera D457 Multi-camera Object detection setup
+.. list-table:: Intel® RealSense™ Depth Camera D457 Multi-camera Object detection setup
     :widths: 15 25 40 10
     :header-rows: 1
 
@@ -34,7 +34,7 @@ The setup looks like as described in the table below.
       - Object detection & segmentation
       - GPU
 
-The following steps are required in order to set up the Axiomtek Robox500 ROS 2 AMR Controller to support four |realsense| Depth Camera D457.
+The following steps are required in order to set up the Axiomtek Robox500 ROS 2 AMR Controller to support four Intel® RealSense™ Depth Camera D457.
 
 Source Code
 -----------
@@ -48,11 +48,11 @@ Complete the :doc:`../../../../gsg_robot/index` before continuing.
 
 Axiomtek Robox500 ROS 2 AMR Controller Setup
 ----------------
-Connect four |realsense| Depth Camera D457 to  the Axiomtek Robox500 ROS 2 AMR Controller as shown in the below picture. Now, power-on the target.
+Connect four Intel® RealSense™ Depth Camera D457 to  the Axiomtek Robox500 ROS 2 AMR Controller as shown in the below picture. Now, power-on the target.
 
 .. image:: ../../../../images/Axiomtek_GMSL_Camera.jpg
 
-.. Note:: Select the "MIPI" mode of the |realsense| Depth Camera D457 by moving the select switch on the camera to "M", as shown in the picture below.
+.. Note:: Select the "MIPI" mode of the Intel® RealSense™ Depth Camera D457 by moving the select switch on the camera to "M", as shown in the picture below.
 
    .. image:: ../../../../images/MIPI_USB_Switch_in_D457.jpeg
       :width: 350
@@ -98,11 +98,11 @@ The following steps describe how to configure the |SerDes| and further to instal
 
 #. To download and install the ``intel-ipu6-dkms`` Dynamic Kernel Module Support package, follow the steps described in the documentation `Intel® GMSL intel-ipu6 Debian kernel modules (DKMS) <https://eci.intel.com/docs/3.3/development/tutorials/enable-gmsl.html#intel-gmsl-intel-ipu6-debian-kernel-modules-dkms>`_.
 
-#. To load the ``intel-ipu6`` kernel modules after installation and to enable the |realsense| Depth Camera D457, follow the steps described in the documentation `Enable ROS2 Intel® RealSense™ Depth Camera D457 GMSL <https://eci.intel.com/docs/3.3/development/tutorials/enable-gmsl.html#enable-ros2-intel-realsense-depth-camera-d457-gmsl>`__.
+#. To load the ``intel-ipu6`` kernel modules after installation and to enable the Intel® RealSense™ Depth Camera D457, follow the steps described in the documentation `Enable ROS2 Intel® RealSense™ Depth Camera D457 GMSL <https://eci.intel.com/docs/3.3/development/tutorials/enable-gmsl.html#enable-ros2-intel-realsense-depth-camera-d457-gmsl>`__.
 
 .. Note:: The steps, such as BIOS settings and d4xx module user parameters, must be configured to be relevant to the ``Standalone-mode`` of the Add-in-Card for Axiomtek Robox500 ROS 2 AMR Controller.
 
-Install and run multi-camera object detection tutorial using the |realsense| Depth Camera D457
+Install and run multi-camera object detection tutorial using the Intel® RealSense™ Depth Camera D457
 ----------------------------------------------------------------------------------------------
 
 Install

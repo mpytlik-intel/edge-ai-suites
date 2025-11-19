@@ -4,7 +4,7 @@
 
 .. robot-tutorials-troubleshooting:
 
-Troubleshooting for |p_amr| Tutorials |troubleshooting|
+Troubleshooting for Autonomous Mobile Robot Tutorials |troubleshooting|
 =======================================================
 
 .. _shared_robot-tutorials-troubleshooting_start:
@@ -13,13 +13,13 @@ Use ``ROS_DOMAIN_ID`` to Avoid Interference in ROS Messages
 ------------------------------------------------------------
 
 A typical method to demonstrate a use case requires you to start several
-|ros| nodes and exchange |ros| messages between the |ros| nodes.
+ROS 2 nodes and exchange ROS 2 messages between the ROS 2 nodes.
 
 However, interference from unrelated nodes -- whether on the same host machine
 or within the local network -- can disrupt the process. Debugging and
 resolving such interference can be challenging in this scenario.
 
-|ros| uses the ``ROS_DOMAIN_ID`` environment variable to isolate several
+ROS 2 uses the ``ROS_DOMAIN_ID`` environment variable to isolate several
 use cases from each other. For this reason, you should set this variable
 to a certain number before you execute a tutorial:
 
@@ -38,23 +38,23 @@ as described in the :ref:`prepare-ros-environment` section.
 Troubleshooting AAEON Motor Control Board Issues
 ------------------------------------------------
 
-Several tutorials apply an |up_xtreme| to demonstrate how the |lp_amr|
-can interact with a physical robot. The |up_xtreme| includes a motor control
+Several tutorials apply an AAEON UP Xtreme i11 Robotic Development Kit to demonstrate how the Autonomous Mobile Robot
+can interact with a physical robot. The AAEON UP Xtreme i11 Robotic Development Kit includes a motor control
 board, which implements the motor drivers and the USB interface towards the compute
-board. To support this motor control board, the |lp_amr| provides the Deb package
+board. To support this motor control board, the Autonomous Mobile Robot provides the Deb package
 ``ros-humble-aaeon-ros2-amr-interface``, which is based on the GitHub project
 `AAEONAEU-SW/ros2_amr_interface
 <https://github.com/AAEONAEU-SW/ros2_amr_interface>`_
-with some adaptations for |ros| Humble.
+with some adaptations for ROS 2 Humble.
 
 The following subsections provide solutions to fix potential issues with
-the USB interface of the |up_xtreme|.
+the USB interface of the AAEON UP Xtreme i11 Robotic Development Kit.
 
 
 Add the current user to the ``dialout`` group
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To control the |up_xtreme| via the USB interface, the current user must be a
+To control the AAEON UP Xtreme i11 Robotic Development Kit via the USB interface, the current user must be a
 member of the ``dialout`` group. Use the ``groups`` command to verify that the
 current user belongs to the ``dialout`` group. If the user does not belong
 to this group, add the group membership by means of:
@@ -145,7 +145,7 @@ Enable 3D options in RViz2
 
   .. image:: ../../images/aaeon_rviz2_3Doption_selected.png
 
-Troubleshooting |openvino| Issues
+Troubleshooting OpenVINO™ Issues
 ----------------------------------
 
 File Permission Errors
@@ -164,9 +164,9 @@ for this file.
 
 Missing Model files
 ^^^^^^^^^^^^^^^^^^^^
-Some of the |openvino| based tutorials in this SDK rely on the models that are provided during the installation of the ``ros-humble-openvino-node``. In case you missed out on installing these models you may run into problem when executing these tutorials.
+Some of the OpenVINO™ based tutorials in this SDK rely on the models that are provided during the installation of the ``ros-humble-openvino-node``. In case you missed out on installing these models you may run into problem when executing these tutorials.
 
-Follow the instructions on :doc:`../../gsg_robot/install-openvino`, to troubleshoot potential issues with the |openvino| installation.
+Follow the instructions on :doc:`../../gsg_robot/install-openvino`, to troubleshoot potential issues with the OpenVINO™ installation.
 
 
 .. _troubleshooting-gpu-not-detected:
@@ -176,14 +176,14 @@ GPU device is not detected with Linux Kernel 6.7.5 or later
 
 According to the `Release Notes of the Intel® Graphics Compute Runtime <https://github.com/intel/compute-runtime/releases/tag/24.09.28717.12>`__,
 there is a known incompatibility between the Intel® Graphics Compute Runtime
-used in this release of the |lp_amr| and the Intel® Graphics Driver kernel mode driver in
+used in this release of the Autonomous Mobile Robot and the Intel® Graphics Driver kernel mode driver in
 Linux Kernel 6.7.5 or later.
 
-For Intel® Core™ Ultra Processors, the recommended operating system for the |lp_amr|
+For Intel® Core™ Ultra Processors, the recommended operating system for the Autonomous Mobile Robot
 is the `Ubuntu OS version 22.04 LTS (Jammy Jellyfish) <https://releases.ubuntu.com/22.04>`__ Desktop image, as described in the
 :doc:`../../gsg_robot/prepare-system` section. Since this version of the
-|ubuntu| operating system uses a Linux Kernel 6.8, this incompatibility
-will have an impact if you use the |lp_amr| on an Intel® Core™ Ultra Processor.
+Canonical Ubuntu operating system uses a Linux Kernel 6.8, this incompatibility
+will have an impact if you use the Autonomous Mobile Robot on an Intel® Core™ Ultra Processor.
 
 To test whether your system is impacted, you can use the ``clinfo`` tool.
 You can install and execute this tool by means of:
@@ -193,7 +193,7 @@ You can install and execute this tool by means of:
    sudo apt install clinfo
    clinfo | grep "Device Type"
 
-The output of the ``clinfo`` command will report the detected |opencl|
+The output of the ``clinfo`` command will report the detected OpenCL™
 devices:
 
 .. code-block:: text

@@ -2,7 +2,7 @@ Execute the Wandering Application on the Jackal Robot
 =======================================================
 
 This tutorial details the steps to install and run the Wandering Application
-with |realsense| camera input on a Clearpath Robotics Jackal robot.
+with Intel® RealSense™ camera input on a Clearpath Robotics Jackal robot.
 The Wandering Application will use the Nav2 navigation stack and the
 RTAB-Map SLAM application to let the Jackal robot move around and create
 a map of the environment.
@@ -18,7 +18,7 @@ Installation and Execution
 Make sure that you have set up your Jackal robot as described on the
 :doc:`./jackal-intel-robotics-sdk` page. In addition, you can run the
 steps on page :doc:`./jackal-keyboard-teleop` in order to verify that
-your |ros| installation can communicate with the Motor Control Unit (MCU).
+your ROS 2 installation can communicate with the Motor Control Unit (MCU).
 
 To install the Deb package of the Wandering tutorial on Jackal robots,
 run the following command:
@@ -43,7 +43,7 @@ RTAB-Map SLAM application will create the map.
 
    Wandering Application running on the Jackal robot: the rviz2 tool
    shows the robot with the identified map and the image of the
-   |realsense| camera.
+   Intel® RealSense™ camera.
 
 
 
@@ -79,7 +79,7 @@ checks the name of the camera-related topics and assigns the variable
 Adaptation of the depthimage_to_laserscan Node
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This node converts the depth image of the |realsense| camera into a 2D laser
+This node converts the depth image of the Intel® RealSense™ camera into a 2D laser
 scan. The node expects that it can subscribe to the topics ``depth`` and
 ``depth_camera_info``.
 This requirement is fulfilled by remapping the following topics, which are

@@ -1,12 +1,12 @@
-Robot Re-localization Package for |ros| Navigation
+Robot Re-localization Package for ROS 2 Navigation
 ===================================================
 
-The Robot Re-localization package empowers |ros| navigation with the capability to re-localize a robot. In situations where sensor measurements encounter glitches or environment disturbances or scene similarities lead to localization loss, the robot may lose its position. This necessitates a fast and reliable re-localization algorithm to re-establish the robot's location accurately. To tackle this issue, we developed an innovative re-localization algorithm that excels in both computational efficiency and memory usage, specifically designed for mobile robots.
+The Robot Re-localization package empowers ROS 2 navigation with the capability to re-localize a robot. In situations where sensor measurements encounter glitches or environment disturbances or scene similarities lead to localization loss, the robot may lose its position. This necessitates a fast and reliable re-localization algorithm to re-establish the robot's location accurately. To tackle this issue, we developed an innovative re-localization algorithm that excels in both computational efficiency and memory usage, specifically designed for mobile robots.
 
 Getting Started
 ----------------
 
-|p_amr| provides a |ros| Deb package for the application, supported by the following platform:
+Autonomous Mobile Robot provides a ROS 2 Deb package for the application, supported by the following platform:
 
 - ROS version: humble
 
@@ -18,7 +18,7 @@ Complete the :doc:`../../../gsg_robot/index` before continuing.
 Install Deb package
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Install the ``ros-humble-its-relocalization-bringup`` Deb package from the Intel® |p_amr| APT repository
+Install the ``ros-humble-its-relocalization-bringup`` Deb package from the Intel® Autonomous Mobile Robot APT repository
 
     .. code-block:: bash
 
@@ -27,7 +27,7 @@ Install the ``ros-humble-its-relocalization-bringup`` Deb package from the Intel
 Run the Re-localization
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Run the following script to set environment variables and bring up |ros| navigation, and |tb3| robot in Gazebo simulation:
+Run the following script to set environment variables and bring up ROS 2 navigation, and TurtleBot3 robot in Gazebo simulation:
 
     .. code-block:: bash
 
@@ -44,11 +44,11 @@ Set the robot **2D Pose Estimate** in rviz2:
         reference, use the robot pose as it appears in Gazebo*.
 
     #. Set the orientation by dragging forward from the down-click. This also
-        enables |ros| navigation.
+        enables ROS 2 navigation.
 
       .. image:: ../../../images//2d_pose_estimate.png
 
-Once |ros| navigation is running in Gazebo and the initial robot position is set, open a new terminal to bring up the re-localization:
+Once ROS 2 navigation is running in Gazebo and the initial robot position is set, open a new terminal to bring up the re-localization:
 
     .. code-block:: bash
 

@@ -19,7 +19,7 @@ Complete the :doc:`../../../gsg_robot/index` before continuing.
 iRobot Create 3 hardware extensions
 ------------------------------------
 
-iRobot Create 3 contains a compute unit running |ros| that provides
+iRobot Create 3 contains a compute unit running ROS 2 that provides
 access to the on-board sensors and actuators. For this tutorial, the
 following modifications have been applied to the robot:
 
@@ -27,10 +27,10 @@ following modifications have been applied to the robot:
 
  - Intel® board mounted on the bottom layer,
 
- - |realsense| camera mounted on the front of the top layer and
+ - Intel® RealSense™ camera mounted on the front of the top layer and
    connected to a USB port on the Intel® board,
 
- - |slamtec_rplidar| 2D (`Slamtec RPLIDAR A3 laser range scanner <https://www.slamtec.ai/product/slamtec-rplidar-a3>`__ or `Slamtec RPLIDAR A2 laser range scanner (A2M8) <https://www.slamtec.ai/product/slamtec-rplidar-a2>`__) sensor on a mount in the center of the
+ - Slamtec RPLIDAR 2D (`Slamtec RPLIDAR A3 laser range scanner <https://www.slamtec.ai/product/slamtec-rplidar-a3>`__ or `Slamtec RPLIDAR A2 laser range scanner (A2M8) <https://www.slamtec.ai/product/slamtec-rplidar-a2>`__) sensor on a mount in the center of the
    top layer and connected to two USB ports on the Intel® board,
 
  - custom battery in the cargo bay to power the Intel® board and
@@ -97,7 +97,7 @@ has to be configured with a static IP address of the same subnet.
 NTP server
 ..........
 
-Time synchronization is very important in |ros|. For this reason, the
+Time synchronization is very important in ROS 2. For this reason, the
 iRobot Create 3 includes an NTP server, which can be configured as described on page
 `iRobot® Create® 3 Webserver - Edit ntp.conf
 <https://iroboteducation.github.io/create3_docs/webserver/edit-ntp-conf/>`__.
@@ -107,10 +107,10 @@ the iRobot Create 3 documentation `Set up NTP on compute board
 <https://iroboteducation.github.io/create3_docs/setup/compute-ntp/>`__.
 Use the IP address of the Ethernet interface connected to the robot.
 
-|ros| Middleware (RMW) Configuration & Fast DDS discovery server
+ROS 2 Middleware (RMW) Configuration & Fast DDS discovery server
 ................................................................
 
-To define what |ros| middleware implementation shall be used by the
+To define what ROS 2 middleware implementation shall be used by the
 iRobot Create 3, follow the configuration guidelines on page
 `iRobot Create 3 Webserver - Application <https://iroboteducation.github.io/create3_docs/webserver/application/>`__.
 Set the RMW_IMPLEMENTATION option to ``rmw_fastrtps_cpp``, as shown in
@@ -123,7 +123,7 @@ the figure below.
    robot the `iRobot Create 3 Webserver - Set Wired Subnet <https://iroboteducation.github.io/create3_docs/webserver/set-wired-subnet/>`__
    is set to ``192.168.99.2``, Fast DDS discovery server is enabled
    and runs on the Intel® board reachable at IP ``192.168.99.10``
-   over the Ethernet connection. |ros| Domain ID is set but it is not
+   over the Ethernet connection. ROS 2 Domain ID is set but it is not
    used when the discovery server is enabled.
 
 To speed up node discovery, enable the
@@ -140,11 +140,11 @@ address.
 Robot namespace
 ...............
 
-Set a |ros| namespace (e.g., ``/robot2``) for your robot, as described on page
+Set a ROS 2 namespace (e.g., ``/robot2``) for your robot, as described on page
 `iRobot Create 3 Webserver - Application <https://iroboteducation.github.io/create3_docs/webserver/application/>`__. This value should be passed to the
 launch file as argument ``irobot_ns``.
 
-|lp_amr| Tutorials based on the iRobot Create 3
+Autonomous Mobile Robot Tutorials based on the iRobot Create 3
 ---------------------------------------------------
 
 .. toctree::

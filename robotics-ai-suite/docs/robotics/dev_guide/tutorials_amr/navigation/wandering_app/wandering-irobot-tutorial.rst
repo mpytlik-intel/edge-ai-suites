@@ -4,13 +4,13 @@ iRobot Create 3 Wandering tutorial
 
 This tutorial presents the Wandering application running on an
 iRobot Create 3 mobile robotics platform extended with an Intel®
-compute board, an |realsense| camera and a |slamtec_rplidar| 2D lidar sensor.
+compute board, an Intel® RealSense™ camera and a Slamtec RPLIDAR 2D lidar sensor.
 
-The tutorial uses the |realsense| camera and the |slamtec_rplidar| 2D
+The tutorial uses the Intel® RealSense™ camera and the Slamtec RPLIDAR 2D
 lidar sensor for both mapping with RTAB-Map and navigation with Nav2.
 For navigation, Intel® :doc:`ground floor segmentation
 <../../../../dev_guide/tutorials_amr/perception/pointcloud-groundfloor-segmentation>`
-is used for segmenting ground level and remove it from the |realsense|
+is used for segmenting ground level and remove it from the Intel® RealSense™
 camera pointcloud.
 
 Watch the video for a demonstration of the iRobot Create 3 navigating
@@ -69,7 +69,7 @@ Start the discovery server in a new terminal:
 
    fastdds discovery --server-id 0
 
-In a new terminal set the environment variables for |ros| to use the
+In a new terminal set the environment variables for ROS 2 to use the
 discovery server:
 
 .. code-block:: bash
@@ -78,7 +78,7 @@ discovery server:
    export ROS_SUPER_CLIENT=true
    unset ROS_DOMAIN_ID
 
-Check that the setup is correct by listing the |ros| topics provided
+Check that the setup is correct by listing the ROS 2 topics provided
 by the robot:
 
 .. code-block:: bash

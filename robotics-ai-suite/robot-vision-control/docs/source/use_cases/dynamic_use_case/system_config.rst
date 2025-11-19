@@ -9,7 +9,7 @@ Camera pose and robot calibration
 
 Before first RVC Execution, we have to ensure a few parameters that has to match the physical setup:
 
-- RVC must known the exact pose (i.e.: position and orientation) of the |realsense| camera as explained in :ref:`Camera pose calibration<camera_pose_calibration>`
+- RVC must known the exact pose (i.e.: position and orientation) of the Intel® RealSense™ camera as explained in :ref:`Camera pose calibration<camera_pose_calibration>`
 - Prepare the robot for communication with the Intel® platform as in :ref:`Universal Robots configuration<universal_robot_configuration>`
 - The robot calibration parameters from the real robot must be extracted, as explained further in :ref:`Universal Robots Calibration Procedure<robot_calibration_procedure>`
 

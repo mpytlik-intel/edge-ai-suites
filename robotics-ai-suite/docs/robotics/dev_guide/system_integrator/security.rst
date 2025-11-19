@@ -3,7 +3,7 @@ Security
 
 
 This section highlights the security features offered by
-|lp_amr| and provides
+Autonomous Mobile Robot and provides
 an overview of the security features. For further reading, refer to the
 specific documents listed below.
 
@@ -12,7 +12,7 @@ Shim Layer - Protect your application data
 ------------------------------------------
 
 
-The |p_amr| includes open-source components, which may be affected by
+The Autonomous Mobile Robot includes open-source components, which may be affected by
 vulnerabilities. A shim layer can help to protect your program data
 against an attack initiated via these vulnerabilities.
 
@@ -42,11 +42,11 @@ In general, it is highly recommended to check regularly for updates and
 vulnerabilities on the component web sites.
 
 
-|lp_amr| Platform
+Autonomous Mobile Robot Platform
 --------------------
 
 
-The main |p_amr| platform is based on the 12th generation
+The main Autonomous Mobile Robot platform is based on the 12th generation
 Intel® Core™ processor with accelerators primarily used for AI inference
 and vision processing. The platform inherits many security elements from
 the processor.
@@ -56,7 +56,7 @@ Security Use Cases and Features
 -------------------------------
 
 
-The |p_amr| platform offers various security features that customers
+The Autonomous Mobile Robot platform offers various security features that customers
 can leverage in the context of Autonomous Robotics Applications. They
 are listed as follows:
 
@@ -89,7 +89,7 @@ in the following documents:
    * -  Intel® Converged Boot Guard and Intel® Trusted Execution Technology (Intel® TXT)
      -  575623
      -  https://cdrdv2.intel.com/v1/dl/getContent/575623
-   * -  |tgl| - Firmware Architecture Specification
+   * -  Tiger Lake platform - Firmware Architecture Specification
      -  608531
      -  https://cdrdv2.intel.com/v1/dl/getContent/608531
    * -  Intel® Trusted Execution Technology (Intel® TXT) DMA Protection Ranges
@@ -177,7 +177,7 @@ in the following documents:
 **Encryption**
 
 
-Encryption is required for many security use cases. The |p_amr|
+Encryption is required for many security use cases. The Autonomous Mobile Robot
 platform supports the common encryption algorithms like AES or RSA in
 hardware. This increases the encryption/decryption performance and
 the security level. Typical use cases are the encryption of
@@ -199,7 +199,7 @@ in the following documents:
    * -  Document Title
      -  Intel Document ID
      -  Document Link
-   * -  |tgl| Intel® Total Memory Encryption (Intel® TME)
+   * -  Tiger Lake platform Intel® Total Memory Encryption (Intel® TME)
      -  620815
      -  https://cdrdv2.intel.com/v1/dl/getContent/620815
    * -  Whitley Platform Memory Encryption Technologies -TME/MK-TME deep Dive
@@ -237,7 +237,7 @@ in the following document:
    * -  Document Title
      -  Intel Document ID
      -  Document Link
-   * -  |tgl| - Firmware Architecture Specification
+   * -  Tiger Lake platform - Firmware Architecture Specification
      -  608531
      -  https://cdrdv2.intel.com/v1/dl/getContent/608531
 
@@ -268,10 +268,10 @@ in the following documents:
    * -  Document Title
      -  Intel Document ID
      -  Document Link
-   * -  |tgl| - Firmware Architecture Specification
+   * -  Tiger Lake platform - Firmware Architecture Specification
      -  608531
      -  https://cdrdv2.intel.com/v1/dl/getContent/608531
-   * -  |tgl| enDebug User Guide
+   * -  Tiger Lake platform enDebug User Guide
      -  630604
      -  https://cdrdv2.intel.com/v1/dl/getContent/630604
    * -  Anderson Lake Secure Debug User Guide

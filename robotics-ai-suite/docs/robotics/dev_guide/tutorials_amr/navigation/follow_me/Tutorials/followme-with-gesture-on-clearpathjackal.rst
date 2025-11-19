@@ -4,7 +4,7 @@ Follow-me with ADBSCAN and Gesture-based Control on Clearpath Robotics Jackal Ro
 =========================================================================================
 
 This tutorial demonstrates the Follow-me algorithm along with a gesture recognition network, where the robot follows a target person in real time and responds to state commands through hand gestures.
-This tutorial uses Clearpath Robotics Jackal robot and one |realsense| camera D400 series.
+This tutorial uses Clearpath Robotics Jackal robot and one Intel® RealSense™ camera D400 series.
 This camera provides the point cloud data as input for the Intel®-patented object detection algorithm Adaptive DBSCAN to detect the position of the target person. This camera also provides RGB images to the object detection network responsible for detecting hand gestures for controlling the robot's start and stop states.
 This RGB image is passed through a deep learning-based gesture recognition pipeline, called `Mediapipe Hands Framework <https://mediapipe.readthedocs.io/en/latest/solutions/hands.html>`__, to detect the gesture category.
 The motion commands for the robot are published to ``twist`` topic based on these two outputs: person's position and gesture category.
@@ -33,7 +33,7 @@ Complete the :doc:`../../../../../gsg_robot/index` before continuing.
 Install the Deb package
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Install ``ros-humble-follow-me-tutorial-w-gesture`` Deb package from |lp_amr| APT repository.
+Install ``ros-humble-follow-me-tutorial-w-gesture`` Deb package from Autonomous Mobile Robot APT repository.
 
 .. code-block:: bash
 
@@ -56,7 +56,7 @@ for hand gesture recognition. Install the following modules as a prerequisite fo
 Identify serial number of Realsense Camera
 -------------------------------------------
 
-Install the |realsense| camera utilities package to easily read the correct serial number:
+Install the Intel® RealSense™ camera utilities package to easily read the correct serial number:
 
 .. code-block:: bash
 
@@ -74,7 +74,7 @@ Check the Serial number:
 You will use this serial number (and not the ASIC Serial Number) when launching the demo below.
 
 
-Run Demo with |realsense| Camera
+Run Demo with Intel® RealSense™ Camera
 ---------------------------------
 
 Execute the following script to launch Follow-Me with Gesture on the Clearpath Robotics Jackal robot:
@@ -87,18 +87,18 @@ Execute the following script to launch Follow-Me with Gesture on the Clearpath R
 
 <Camera Serial Number>: Use the serial number returned when using `rs-enumerate-devices`. Note that the output of other programs like `lsusb` might return an incorrect serial number.
 
-After starting the script, the robot should begin searching for trackable objects in its initial detection radius (defaulting to around 0.5m), and then following acquired targets as soon as they provide a ``thumbs up`` to the |realsense| camera and move from the initial target location.
+After starting the script, the robot should begin searching for trackable objects in its initial detection radius (defaulting to around 0.5m), and then following acquired targets as soon as they provide a ``thumbs up`` to the Intel® RealSense™ camera and move from the initial target location.
 
 .. note::
 
-   There are reconfigurable parameters in ``/opt/ros/humble/share/tutorial_follow_me_w_gesture/params`` directory for the |realsense| camera (`followme_adbscan_RS_params.yaml`). You can modify parameters depending on the respective robot, sensor configuration and environments (if required) before running the tutorial.
+   There are reconfigurable parameters in ``/opt/ros/humble/share/tutorial_follow_me_w_gesture/params`` directory for the Intel® RealSense™ camera (`followme_adbscan_RS_params.yaml`). You can modify parameters depending on the respective robot, sensor configuration and environments (if required) before running the tutorial.
    Find a brief description of the parameters in the following table:
 
    .. list-table:: Configurable Parameters
       :widths: 20 80
 
       * - ``Lidar_type``
-        - Type of the point cloud sensor. For |realsense| camera and LIDAR inputs, the default value is set to ``RS`` and ``2D``, respectively.
+        - Type of the point cloud sensor. For Intel® RealSense™ camera and LIDAR inputs, the default value is set to ``RS`` and ``2D``, respectively.
       * - ``Lidar_topic``
         - Name of the topic publishing point cloud data.
       * - ``Verbose``

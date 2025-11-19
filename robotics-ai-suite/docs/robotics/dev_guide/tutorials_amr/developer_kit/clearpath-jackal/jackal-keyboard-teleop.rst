@@ -3,7 +3,7 @@ Control the Jackal Motors Using a Keyboard
 
 This page describes how to run a quick test, which verifies that the
 Jackal robot has been set up appropriately.
-It verifies that the |ros| middleware is working and that the
+It verifies that the ROS 2 middleware is working and that the
 onboard computer of the Jackal robot can communicate with the Motor
 Control Unit (MCU).
 
@@ -50,7 +50,7 @@ If you don't see this output, there might be an issue with your installation
 of the Clearpath Robotics services. See the :ref:`jackal-troubleshooting`
 section for debugging hints.
 
-Now you can install the ``ros-humble-teleop-twist-keyboard`` |ros| package:
+Now you can install the ``ros-humble-teleop-twist-keyboard`` ROS 2 package:
 
 .. code-block:: bash
 

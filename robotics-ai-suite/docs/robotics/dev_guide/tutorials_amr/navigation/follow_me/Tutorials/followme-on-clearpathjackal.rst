@@ -1,8 +1,8 @@
 Follow-me with ADBSCAN on Clearpath Robotics Jackal Robot
 ================================================================
 
-This tutorial provides instructions for running the ADBSCAN-based Follow-me algorithm from |p_amr| using |realsense| camera input when using a Clearpath Robotics Jackal robot.
-The |realsense| camera publishes to ``/camera/depth/color/points`` topic. The ``adbscan_sub_node`` subscribes to the corresponding topic,
+This tutorial provides instructions for running the ADBSCAN-based Follow-me algorithm from Autonomous Mobile Robot using Intel® RealSense™ camera input when using a Clearpath Robotics Jackal robot.
+The Intel® RealSense™ camera publishes to ``/camera/depth/color/points`` topic. The ``adbscan_sub_node`` subscribes to the corresponding topic,
 detects the obstacle array, computes the robot's velocity and publishes to the ``/cmd_vel`` topic of type `geometry_msg/msg/Twist`.
 This ``twist`` message consists of the updated angular and linear velocity of the robot to follow the target, which can be subsequently subscribed by a robot-driver.
 
@@ -17,7 +17,7 @@ Complete the :doc:`../../../../../gsg_robot/index` before continuing.
 Install the Deb package
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Install the ``ros-humble-follow-me-tutorial`` Deb package from the |lp_amr| APT repository.
+Install the ``ros-humble-follow-me-tutorial`` Deb package from the Autonomous Mobile Robot APT repository.
 
 .. code-block:: bash
 
@@ -46,7 +46,7 @@ After starting the script, the robot should begin searching for trackable object
       :widths: 20 80
 
       * - ``Lidar_type``
-        - Type of the point cloud sensor. For |realsense| camera and LIDAR inputs, the default value is set to ``RS`` and ``2D``, respectively.
+        - Type of the point cloud sensor. For Intel® RealSense™ camera and LIDAR inputs, the default value is set to ``RS`` and ``2D``, respectively.
       * - ``Lidar_topic``
         - Name of the topic publishing point cloud data.
       * - ``Verbose``

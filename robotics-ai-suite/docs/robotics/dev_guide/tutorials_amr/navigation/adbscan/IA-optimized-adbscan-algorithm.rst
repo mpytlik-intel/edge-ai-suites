@@ -4,14 +4,14 @@ Intel-optimized ADBSCAN Algorithm
 ===================================
 
 In this version of ADBSCAN, the algorithm has been optimized for Intel® SOC by replacing linear neighbor point search with an optimized oneAPI PCL library (offloaded to GPU), as well as refactoring the clustering algorithm.
-It has been tested and validated on 13th Generation Intel® Core™ processors with |xe|, 12th Generation Intel® Core™ processors with |xe| and 11th Generation Intel® Core™ processors with |xe|. This tutorial describes how to run this Intel-optimized ADBSCAN algorithm and compare the execution time with the unoptimized version.
+It has been tested and validated on 13th Generation Intel® Core™ processors with Intel® Iris® Xe Integrated Graphics, 12th Generation Intel® Core™ processors with Intel® Iris® Xe Integrated Graphics and 11th Generation Intel® Core™ processors with Intel® Iris® Xe Integrated Graphics. This tutorial describes how to run this Intel-optimized ADBSCAN algorithm and compare the execution time with the unoptimized version.
 
 
 Getting Started
 ----------------
 
 The Intel-optimized and unoptimized versions of the algorithm are distributed as ``ros-humble-adbscan-oneapi`` and ``ros-humble-adbscan-ros2``, respectively.
-We demonstrate the gain in latency for a |ros| bag file with point cloud data from a |realsense| camera. The amount of gain is prominent when the input is dense or the
+We demonstrate the gain in latency for a ROS 2 bag file with point cloud data from a Intel® RealSense™ camera. The amount of gain is prominent when the input is dense or the
 number of input points is large. In case of a 2D LIDAR, the point cloud is comparatively sparse and hence, not showed here.
 
 
@@ -21,10 +21,10 @@ Prerequisites
 Complete the :doc:`../../../../gsg_robot/index` before continuing.
 
 
-Install and run the |ros| bag file Deb package
+Install and run the ROS 2 bag file Deb package
 -----------------------------------------------
 
-Install the following package with |ros| bag files in order to publish point cloud data from LIDAR and |realsense| camera:
+Install the following package with ROS 2 bag files in order to publish point cloud data from LIDAR and Intel® RealSense™ camera:
 
    .. code-block:: bash
 
@@ -38,16 +38,16 @@ Run the following commands in a terminal:
       source /opt/ros/humble/setup.bash
       ros2 bag play --loop /opt/ros/humble/share/bagfiles/laser-pointcloud
 
-This command will launch the |ros| bag file and publish the recorded point cloud data to respective topics. You will view the following screen output:
+This command will launch the ROS 2 bag file and publish the recorded point cloud data to respective topics. You will view the following screen output:
 
   .. image:: ../../../../images/rosbag_play_screen.png
 
-``ros2 topic list`` command will show a list of the published topics which include ``/scan`` (point cloud from 2D LIDAR) and ``/camera/depth/color/points`` (point cloud from |realsense| camera).
+``ros2 topic list`` command will show a list of the published topics which include ``/scan`` (point cloud from 2D LIDAR) and ``/camera/depth/color/points`` (point cloud from Intel® RealSense™ camera).
 
 Install and run optimized Deb package
 ---------------------------------------------
 
-Install ``ros-humble-adbscan-oneapi`` Deb package from Intel® |p_amr| APT repository:
+Install ``ros-humble-adbscan-oneapi`` Deb package from Intel® Autonomous Mobile Robot APT repository:
 
    .. code-block:: bash
 
@@ -71,7 +71,7 @@ The table shows a breakdown between pre-processing, ADBSCAN execution and post-p
 Install and run standard (unoptimized) Deb package
 -----------------------------------------------------
 
-Install ``ros-humble-adbscan-ros2`` Deb package from Intel® |p_amr| APT repository
+Install ``ros-humble-adbscan-ros2`` Deb package from Intel® Autonomous Mobile Robot APT repository
 
    .. code-block:: bash
 
@@ -92,7 +92,7 @@ This will print a similar table with the benchmarking data.
 
 You will see that the ADBSCAN execution time is much smaller for the optimized version compared to the standard one. The pre-processing and post-processing time
 should be more or less of the same range in both versions, since the input bag file is identical. The amount of gain in execution time will depend on the system configuration, the size of the point cloud data in the input frames etc.
-We observed an average gain of ~5-8x in 13th Generation Intel® Core™ processors with |xe|, 12th Generation Intel® Core™ processors with |xe| and 11th Generation Intel® Core™ processors with |xe| for this specific |ros| bag file.
+We observed an average gain of ~5-8x in 13th Generation Intel® Core™ processors with Intel® Iris® Xe Integrated Graphics, 12th Generation Intel® Core™ processors with Intel® Iris® Xe Integrated Graphics and 11th Generation Intel® Core™ processors with Intel® Iris® Xe Integrated Graphics for this specific ROS 2 bag file.
 
 Re-configurable parameters
 ----------------------------
@@ -111,7 +111,7 @@ A complete list of the reconfigurable parameters is given below:
          :widths: 20 80
 
          * - ``Lidar_type``
-           - Type of the point cloud sensor. For |realsense| camera and LIDAR inputs, the default value is set to ``RS`` and ``2D``, respectively.
+           - Type of the point cloud sensor. For Intel® RealSense™ camera and LIDAR inputs, the default value is set to ``RS`` and ``2D``, respectively.
          * - ``Lidar_topic``
            - Name of the topic publishing point cloud data.
          * - ``Verbose``
@@ -129,11 +129,7 @@ A complete list of the reconfigurable parameters is given below:
          * - ``base``, ``coeff_1``, ``coeff_2``, ``scale_factor``
            - These are the coefficients used to calculate the adaptive parameters of the ADBSCAN algorithm. These values are pre-computed and recommended to keep unchanged.
          * - ``oneapi_library``
-<<<<<<< HEAD
-           - Available options are: ``oneapi_kdtree``, ``oneapi_octree``, ``pcl_kdtree``. ``oneapi_kdtree`` and ``oneapi_octree`` allow the algorithm to use optimized |oneapi| KdTree or octree library and offload the neighbor point search method to GPU. ``pcl_kdtree`` option uses the standard PCL KdTree library, not optimized for Intel® SOC.
-=======
-           - Available options are: ``oneapi_kdtree``, ``oneapi_octree``, ``pcl_kdtree``. ``oneapi_kdtree`` and ``oneapi_octree`` allow the algorithm to use optimized oneAPI KdTree or octree library and offload the neighbor point search method to GPU. ``pcl_kdtree`` option uses the standard PCL KdTree library, not optimized for |intel| SOC.
->>>>>>> 01bb6cfd7e1f4fedbb13bf33b5f240cbccac3690
+           - Available options are: ``oneapi_kdtree``, ``oneapi_octree``, ``pcl_kdtree``. ``oneapi_kdtree`` and ``oneapi_octree`` allow the algorithm to use optimized oneAPI KdTree or octree library and offload the neighbor point search method to GPU. ``pcl_kdtree`` option uses the standard PCL KdTree library, not optimized for Intel® SOC.
          * - ``benchmark_number_of_frames``
            - Any integer greater or equal to 1. This is the number of frames over which the average execution time is executed and printed in the benchmarking table.
 

@@ -24,7 +24,7 @@ To get started with the Robot Vision Control (RVC) project, you need to clone fr
 
 Open the folder ``robot-vision-control`` in VSCode and follow the instructions to open it in a devcontainer.
 This will automatically build a container with all the required dependencies to run RVC.
-The container is based on |Ubuntu_OS| 22.04 LTS (Jammy Jellyfish).
+The container is based on Canonical Ubuntu OS 22.04 LTS (Jammy Jellyfish).
 
 Build RVC image
 -------------------

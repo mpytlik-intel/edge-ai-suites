@@ -13,7 +13,7 @@ Hardware Prerequisites
 
 You have a robot and a keyboard or an SSH/VNC connection to the robot.
 
-Example for the |up_xtreme|
+Example for the AAEON UP Xtreme i11 Robotic Development Kit
 ------------------------------------------
 
 #. Connect to your robot via SSH/VNC or direct access. If you choose direct

@@ -1,7 +1,7 @@
 Install the Intel® NPU Driver on Intel® Core™ Ultra Processors
 #########################################################
 
-If you want to run |openvino| inferencing applications on the NPU device
+If you want to run OpenVINO™ inferencing applications on the NPU device
 of Intel® Core™ Ultra processors, you need to install the Intel® NPU driver.
 If your system does not have an Intel® Core™ Ultra Processor, you should skip
 this step.
@@ -11,7 +11,7 @@ General information on the Intel® NPU driver can be found on the
 website. The driver consists of the following packages:
 
 *  ``intel-driver-compiler-npu``: Intel® driver compiler for NPU hardware;
-   the driver compiler enables compilation of |openvino| IR models using
+   the driver compiler enables compilation of OpenVINO™ IR models using
    the Level Zero Graph Extension API.
 *  ``intel-fw-npu``: Intel® firmware package for NPU hardware.
 *  ``intel-level-zero-npu``: Intel® Level Zero driver for NPU hardware;
@@ -82,4 +82,3 @@ and that the device belongs to the ``render`` group:
 
    $ ls -lah /dev/accel/accel0
    crw-rw---- 1 root render 261, 0 Jul  1 13:10 /dev/accel/accel0
-

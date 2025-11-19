@@ -4,7 +4,7 @@
 Motion Controller Plugin
 ==========================
 
-The :cpp:class:`RVCMotionControllerInterface<RVCMotionController::RVCMotionControllerInterface>` 
+The :cpp:class:`RVCMotionControllerInterface<RVCMotionController::RVCMotionControllerInterface>`
 defines the interfaces Motion controller plugins are based off.
 
 The strategy the robot is complying when assigned a target Pose is defined in custom plugins following
@@ -21,10 +21,10 @@ RVC is providing a `relatively` simple motion controller based off Moveit2 servo
 .. Moveit2 Servo: https://moveit.picknik.ai/humble/doc/examples/realtime_servo/realtime_servo_tutorial.html
 
 
-The strategy is to compute an in space linear velocity trajectory (althought in time follows an atan profile) to 
+The strategy is to compute an in space linear velocity trajectory (althought in time follows an atan profile) to
 the target and to feed it |moveit2| |servo| node.
 
-Additional features exposed by servo are collision maps, customizable in the associated yaml file, and 
+Additional features exposed by servo are collision maps, customizable in the associated yaml file, and
 singularity detection.
 
 Although the controller will `NOT` compute alternate trajectories around these maps/singularities,
@@ -54,16 +54,16 @@ Dobby is a real-time motion planning framework with a high success rate in compl
 Direct Universal Robot Pendant Controller
 -----------------------------------------
 
-The Universal Robot drivers are present in |ROS2| and fully supported, but in case another robot
-is employed, and the |ROS2| drivers are missing, we provided a strategy to implement a RVC Plugin
-able to interface with the specific robot using their custom interfaces. And as reference, we 
-chose Universal Robot pretending we didn't have a |ROS2| driver.
+The Universal Robot drivers are present in ROS 2 and fully supported, but in case another robot
+is employed, and the ROS 2 drivers are missing, we provided a strategy to implement a RVC Plugin
+able to interface with the specific robot using their custom interfaces. And as reference, we
+chose Universal Robot pretending we didn't have a ROS 2 driver.
 
 The limitation of this plugin, is that the robot, once sent to a target, cant change destination,
 
 and before changing destination, the previous one has to be successfully reached.
 
-This limitation can of course be worked around, using fine tuned Universal specific interfaces (servoj as 
+This limitation can of course be worked around, using fine tuned Universal specific interfaces (servoj as
 opposed to movep), but we didn't want to particularize the solution too much towards a very specific model
 
 Direct Universal Robot Pendant Controller configuration

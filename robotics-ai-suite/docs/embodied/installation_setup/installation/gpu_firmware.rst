@@ -15,7 +15,7 @@ collection within https://github.com/intel-gpu includes:
 
   - `[i915] <https://github.com/intel-gpu/intel-gpu-i915-backports>`_ - The main graphics driver, Intel® Graphics Driver.
   - `[cse] <https://github.com/intel-gpu/intel-gpu-cse-backports>`_ - Intel® Converged Security Engine (Intel® CSE).
-  - `[pmt] <https://github.com/intel-gpu/intel-gpu-pmt-backports>`_ - |pmt|.
+  - `[pmt] <https://github.com/intel-gpu/intel-gpu-pmt-backports>`_ - Intel® Platform Monitoring Technology (Intel® PMT).
   - `[firmware] <https://github.com/intel-gpu/intel-gpu-firmware>`_ - Contains firmware required by Intel® Graphics Driver.
 
 Each project is tagged consistently so when pulling these repositories pull the same tag.

@@ -1,11 +1,11 @@
 .. launch-wandering-application-gazebo-sim-waffle:
 
-Wandering Application in |tb3| Waffle robot through Gazebo Simulation
+Wandering Application in TurtleBot3 Waffle robot through Gazebo Simulation
 ========================================================================
 
 
-This tutorial shows a |tb3| Waffle robot performing autonomous mapping of the |tb3| robot world in the Gazebo simulation.
-For more information about |tb3| Waffle robot, see `this <https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/#gazebo-simulation>`__.
+This tutorial shows a TurtleBot3 Waffle robot performing autonomous mapping of the TurtleBot3 robot world in the Gazebo simulation.
+For more information about TurtleBot3 Waffle robot, see `this <https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/#gazebo-simulation>`__.
 
 Prerequisites
 -------------

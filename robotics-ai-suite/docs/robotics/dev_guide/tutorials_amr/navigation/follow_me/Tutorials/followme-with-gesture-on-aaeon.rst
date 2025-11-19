@@ -5,7 +5,7 @@ Follow-me with ADBSCAN and Gesture-based Control on Aaeon Robot
 
 This tutorial demonstrates the Follow-me algorithm with gesture, where the robot follows a target person in real time.
 The movement of the robot can be controlled by the person's position (relative to the robot) as well as the hand gestures.
-This tutorial is demonstrated on Aaeon robot using 2 front-mounted |realsense| cameras: camera 1 and camera 2.
+This tutorial is demonstrated on Aaeon robot using 2 front-mounted Intel® RealSense™ cameras: camera 1 and camera 2.
 Camera 1 takes the point cloud data as inputs and passes it through Intel®-patented object detection algorithm, namely Adaptive DBSCAN,
 to detect the position of the target person.
 Camera 2 is positioned at a certain height for capturing the RGB images of the target's hand gestures.
@@ -40,7 +40,7 @@ Prerequisites
 Install the Deb package
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Install ``ros-humble-follow-me-tutorial-w-gesture`` Deb package from Intel® |p_amr| APT repository.
+Install ``ros-humble-follow-me-tutorial-w-gesture`` Deb package from Intel® Autonomous Mobile Robot APT repository.
 
    .. code-block::
 
@@ -90,7 +90,7 @@ Please perform IMU calibration of the robot, launch script below:
       /opt/ros/humble/share/ros2_amr_interface/scripts/calibration.sh
 
 
-Run Demo with |realsense| Camera
+Run Demo with Intel® RealSense™ Camera
 ---------------------------------
 
 To launch the Follow-me application tutorial with gesture on the Aaeon robot, use the following ROS 2 launch file.
@@ -113,7 +113,7 @@ The robot will stop as soon as ``thumbs down`` is showed or the target person mo
 
 .. note::
 
-   There are reconfigurable parameters in `/opt/ros/humble/share/tutorial_follow_me_w_gesture/params` directory for |realsense| camera (`followme_adbscan_RS_params.yaml`).
+   There are reconfigurable parameters in `/opt/ros/humble/share/tutorial_follow_me_w_gesture/params` directory for Intel® RealSense™ camera (`followme_adbscan_RS_params.yaml`).
    The user can modify parameters depending on the respective robot, sensor configuration and environments (if required) before running the tutorial.
    Find a brief description of the parameters in the following table:
 
@@ -121,7 +121,7 @@ The robot will stop as soon as ``thumbs down`` is showed or the target person mo
       :widths: 20 80
 
       * - ``Lidar_type``
-        - Type of the point cloud sensor. For |realsense| camera and LIDAR inputs, the default value is set to ``RS`` and ``2D``, respectively.
+        - Type of the point cloud sensor. For Intel® RealSense™ camera and LIDAR inputs, the default value is set to ``RS`` and ``2D``, respectively.
       * - ``Lidar_topic``
         - Name of the topic publishing point cloud data.
       * - ``Verbose``

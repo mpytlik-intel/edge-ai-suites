@@ -1,16 +1,16 @@
 =================================
-|vtune| for CPU and GPU profiling
+VTune™ Profiler for CPU and GPU profiling
 =================================
 
 Overview
 ========
 
-|vtune| is a performance analysis tool for applications and systems, which helps in analyzing and optimizing the application performance, system performance and system configuration. The profiling can be executed on a CPU, GPU or FPGA. It can profile both single-threaded as well as multi-threaded applications. Refer the `Get Started with VTune™ Profiler <https://www.intel.com/content/www/us/en/docs/vtune-profiler/get-started-guide/2024-0/overview.html>`__ for more details on |vtune|.
+VTune™ Profiler is a performance analysis tool for applications and systems, which helps in analyzing and optimizing the application performance, system performance and system configuration. The profiling can be executed on a CPU, GPU or FPGA. It can profile both single-threaded as well as multi-threaded applications. Refer the `Get Started with VTune™ Profiler <https://www.intel.com/content/www/us/en/docs/vtune-profiler/get-started-guide/2024-0/overview.html>`__ for more details on VTune™ Profiler.
 
-Installation of |vtune|
+Installation of VTune™ Profiler
 =======================
 
-Follow the `VTune™ Profiler installation guide <https://www.intel.com/content/www/us/en/docs/vtune-profiler/installation-guide/2023-1/overview.html>`__ to install |vtune| by choosing one of the following two options:
+Follow the `VTune™ Profiler installation guide <https://www.intel.com/content/www/us/en/docs/vtune-profiler/installation-guide/2023-1/overview.html>`__ to install VTune™ Profiler by choosing one of the following two options:
 
 * `Get the Intel® oneAPI Base Toolkit <https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html>`__
 * `Get the VTune™ Profiler <https://www.intel.com/content/www/us/en/developer/tools/oneapi/vtune-profiler-download.html>`__
@@ -21,7 +21,7 @@ Additional System Setup for CPU and GPU Profiling
 
 #. Build and Install the Sampling Drivers for Linux Targets.
 
-   To do CPU and GPU profiling using driverless sampling collection on processors based on Intel® Performance Hybrid Architecture, which has been introduced from 12th Gen Intel® Core™ processors, the |vtune| sampling drivers must be installed and loaded using root credentials. Follow the steps to `Build and Install the Sampling Drivers for Linux Targets <https://www.intel.com/content/www/us/en/docs/vtune-profiler/user-guide/2024-0/build-install-sampling-drivers-for-linux-targets.html>`__.
+   To do CPU and GPU profiling using driverless sampling collection on processors based on Intel® Performance Hybrid Architecture, which has been introduced from 12th Gen Intel® Core™ processors, the VTune™ Profiler sampling drivers must be installed and loaded using root credentials. Follow the steps to `Build and Install the Sampling Drivers for Linux Targets <https://www.intel.com/content/www/us/en/docs/vtune-profiler/user-guide/2024-0/build-install-sampling-drivers-for-linux-targets.html>`__.
 
 #. System setup for CPU and GPU profiling.
 
@@ -60,10 +60,10 @@ Additional System Setup for CPU and GPU Profiling
          sudo usermod -a -G render $USER
 
 
-Profiling an Application from |lp_amr|
+Profiling an Application from Autonomous Mobile Robot
 ======================================
 
-The example application from |lp_amr| considered for the CPU and GPU profiling is the "Collaborative visual slam with fastmapping enabled" application from the  :doc:`../../tutorials_amr/navigation/collaborative-slam` tutorial. The two CPU analyses types considered in this example are ``CPU Hotspots`` analysis and ``CPU Microarchitecture Exploration`` analysis. Furthermore, the GPU analysis type considered is ``GPU Offload`` analysis. The CPU and GPU profiling are carried out using the ``vtune`` command line tool. However, the ``vtune-gui`` tool is later used to visualize and understand the findings.
+The example application from Autonomous Mobile Robot considered for the CPU and GPU profiling is the "Collaborative visual slam with fastmapping enabled" application from the  :doc:`../../tutorials_amr/navigation/collaborative-slam` tutorial. The two CPU analyses types considered in this example are ``CPU Hotspots`` analysis and ``CPU Microarchitecture Exploration`` analysis. Furthermore, the GPU analysis type considered is ``GPU Offload`` analysis. The CPU and GPU profiling are carried out using the ``vtune`` command line tool. However, the ``vtune-gui`` tool is later used to visualize and understand the findings.
 
 
 CPU Profiling
@@ -84,7 +84,7 @@ Steps to run CPU Hotspots Analysis
 
 #. Install the "Collaborative visual slam with fastmapping enabled" application from the :doc:`../../tutorials_amr/navigation/collaborative-slam` tutorial.
 
-#. Run the below command to source the |ros| setup files.
+#. Run the below command to source the ROS 2 setup files.
 
    .. code-block::
 
@@ -125,7 +125,7 @@ After the CPU Hotspots Analysis results are saved, open the ``vtune-gui`` by run
 
 Now click on the ``open-results`` button on the left side of the tool, browse to the directory ``vtune_results_hotspots``, select the ``vtune_results_hotspots.vtune`` file and click on ``open``. This will open the CPU Hotspots Analysis results for the "Collaborative visual slam with fastmapping enabled" application from the :doc:`../../tutorials_amr/navigation/collaborative-slam` tutorial which ran for 30 seconds.
 
-From the summary page, some of the CPU Hotspots Analysis details that can be observed are mentioned below. Refer to the page, `Run and Interpret Hotspots Analysis <https://www.intel.com/content/www/us/en/docs/vtune-profiler/tutorial-common-bottlenecks-linux/2020/run-and-interpret-hotspots-analysis.html>`__, for more details on the CPU Hotspots Analysis using |vtune|.
+From the summary page, some of the CPU Hotspots Analysis details that can be observed are mentioned below. Refer to the page, `Run and Interpret Hotspots Analysis <https://www.intel.com/content/www/us/en/docs/vtune-profiler/tutorial-common-bottlenecks-linux/2020/run-and-interpret-hotspots-analysis.html>`__, for more details on the CPU Hotspots Analysis using VTune™ Profiler.
 
 Top Hotspots and the Top Tasks
 ..............................
@@ -169,7 +169,7 @@ Steps to run CPU Microarchitecture Exploration
 
 #. Install the "Collaborative visual slam with fastmapping enabled" application from the :doc:`../../tutorials_amr/navigation/collaborative-slam` tutorial.
 
-#. Run the below command to source the |ros| setup files.
+#. Run the below command to source the ROS 2 setup files.
 
    .. code-block::
 
@@ -210,7 +210,7 @@ After the CPU Microarchitecture Exploration results are saved, open the ``vtune-
 
 Now click on the ``open-results`` button on the left side of the tool, browse to the directory ``vtune_results_uarch``, select the ``vtune_results_uarch.vtune`` file and click on ``open``. This will open the CPU Microarchitecture Exploration results for the "Collaborative visual slam with fastmapping enabled" application from the :doc:`../../tutorials_amr/navigation/collaborative-slam` tutorial which ran for 30 seconds.
 
-From the summary page, some of the CPU Microarchitecture Exploration details that can be observed are mentioned below. Refer to the page, `Analyze Microarchitecture Usage <https://www.intel.com/content/www/us/en/docs/vtune-profiler/tutorial-common-bottlenecks-linux/2020/analyze-microarchitecture-usage.html>`__, for more details on the CPU Microarchitecture Exploration using |vtune|.
+From the summary page, some of the CPU Microarchitecture Exploration details that can be observed are mentioned below. Refer to the page, `Analyze Microarchitecture Usage <https://www.intel.com/content/www/us/en/docs/vtune-profiler/tutorial-common-bottlenecks-linux/2020/analyze-microarchitecture-usage.html>`__, for more details on the CPU Microarchitecture Exploration using VTune™ Profiler.
 
 P-core and E-core execution summary
 ...................................
