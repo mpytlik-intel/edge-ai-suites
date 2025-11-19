@@ -197,7 +197,7 @@ Satisfy the |esdq| prerequisites by:
      pip install openvino-dev[tensorflow]
 
 - Installing the ``intel-basekit`` Deb package by following the |l_oneapi|
-  Installation Guide for |Linux| OS `instructions
+  Installation Guide for Linux OS `instructions
   <https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-linux/2023-2/apt.html>`__.
 
 - Installing |gstreamer| by following the "Install |GStreamer| on |Ubuntu_OS| or Debian OS"
@@ -373,7 +373,7 @@ Run the Self-Certification Application for Compute Systems
       cd $ROBOTICS_SDK
 
 
-#. If your system uses a |Linux| Kernel 6.7.5 or later, read the section
+#. If your system uses a Linux Kernel 6.7.5 or later, read the section
    :ref:`troubleshooting-gpu-not-detected`.
    If your system is impacted by this issue, export the following debug
    variables as a workaround:

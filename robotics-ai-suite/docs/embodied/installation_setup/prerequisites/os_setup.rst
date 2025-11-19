@@ -32,7 +32,7 @@ Set locale
 Set Date and Time
 ------------------
 
-Use the ``date`` command to display the current date and time. If the |Linux| OS time and date is incorrect, set it to current date and time:
+Use the ``date`` command to display the current date and time. If the Linux OS time and date is incorrect, set it to current date and time:
 
 .. code-block:: bash
 
@@ -43,4 +43,3 @@ Setup Sources
 --------------
 
 .. include:: Apt-Repositories.rst
-

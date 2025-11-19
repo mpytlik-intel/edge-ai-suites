@@ -120,9 +120,9 @@ The |intel| Dynamic Application Loader (|intel| DAL) is a feature of
 |intel| platforms that allows you to run small portions of Java\* code on
 |intel| Converged Security and Management Engine (|intel| CSME) firmware.
 Intel has developed DAL Host Interface Daemon (also known as JHI), which
-contains the APIs that enable a |Linux| operating system to communicate
+contains the APIs that enable a Linux operating system to communicate
 with Intel DAL. The daemon is available both in a standalone software
-package and as part of the Yocto Project's |Linux| 64-bit distribution.
+package and as part of the Yocto Project's Linux 64-bit distribution.
 
 
 More information about the described use cases and features can be found
@@ -208,7 +208,7 @@ in the following documents:
    * -  |intel| 64 and IA-32 Architectures Software Developer Manuals
      -  –
      -  https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html
-   * -  Filesystem-level encryption (|Linux| OS)
+   * -  Filesystem-level encryption (Linux OS)
      -  –
      -  https://www.kernel.org/doc/html/v4.16/filesystems/fscrypt.html
    * -  |intel| Advanced Encryption Standard Instructions (AES-NI)

@@ -114,7 +114,7 @@ the issue may be caused by the display scale mode being set to a value other tha
 
 To resolve this issue, set the display scale mode to 100%:
 
-#. Open the system settings on your |Linux| system.
+#. Open the system settings on your Linux system.
 #. Navigate to the **Displays** section.
 #. Set the **Scale** option to **100%**.
 
@@ -171,18 +171,18 @@ Follow the instructions on :doc:`../../gsg_robot/install-openvino`, to troublesh
 
 .. _troubleshooting-gpu-not-detected:
 
-GPU device is not detected with |Linux| Kernel 6.7.5 or later
+GPU device is not detected with Linux Kernel 6.7.5 or later
 --------------------------------------------------------------
 
 According to the `Release Notes of the Intel® Graphics Compute Runtime <https://github.com/intel/compute-runtime/releases/tag/24.09.28717.12>`__,
 there is a known incompatibility between the |intel| Graphics Compute Runtime
 used in this release of the |lp_amr| and the |i915| kernel mode driver in
-|Linux| Kernel 6.7.5 or later.
+Linux Kernel 6.7.5 or later.
 
 For Intel® Core™ Ultra Processors, the recommended operating system for the |lp_amr|
 is the `Ubuntu OS version 22.04 LTS (Jammy Jellyfish) <https://releases.ubuntu.com/22.04>`__ Desktop image, as described in the
 :doc:`../../gsg_robot/prepare-system` section. Since this version of the
-|ubuntu| operating system uses a |Linux| Kernel 6.8, this incompatibility
+|ubuntu| operating system uses a Linux Kernel 6.8, this incompatibility
 will have an impact if you use the |lp_amr| on an Intel® Core™ Ultra Processor.
 
 To test whether your system is impacted, you can use the ``clinfo`` tool.
@@ -213,4 +213,3 @@ GPU-related workloads, the GPU will be detected appropriately:
 
    export NEOReadDebugKeys=1
    export OverrideGpuAddressSpace=48
-

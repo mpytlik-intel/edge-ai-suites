@@ -18,7 +18,7 @@ Modules and Services
 --------------------
 
 
-In the |l_oneapi| (|oneapi|) and |l_openvino| (|openvino|), a middleware layered
+In the |l_oneapi| (oneAPI) and |l_openvino| (|openvino|), a middleware layered
 architecture that abstracts hardware dependencies from algorithm implementation.
 
 
@@ -49,7 +49,7 @@ package.
 
 
 The |p_amr| software stack relies on the underlying hardware platform, software supported by and integrated into
-their respective Unified Extensible Firmware Interface (UEFI) based boot processes, and supported |Linux|
+their respective Unified Extensible Firmware Interface (UEFI) based boot processes, and supported Linux
 operating system. For requirement details, see :doc:`../../dev_guide/requirements`.
 
 
@@ -58,13 +58,13 @@ operating system. For requirement details, see :doc:`../../dev_guide/requirement
 
 
 |lp_amr| relies on standard |intel|
-Architecture |Linux| drivers that are included and upstreamed in the |Linux| kernel
+Architecture Linux drivers that are included and upstreamed in the Linux kernel
 from kernel.org and forming part of |Ubuntu| distributions. These drivers
 are not bundled within the |p_amr| package. Some notable drivers that are
 specifically important for |p_amr| include:
 
 -  Video4Linux2 Driver Framework, a collection of device drivers and an API for
-   supporting realtime video capture on |Linux| systems (compatible with USB
+   supporting realtime video capture on Linux systems (compatible with USB
    webcams, TV tuners etc.), standardizing the video output, so that
    programmers can easily add video support to their applications.
 
