@@ -14,7 +14,7 @@ The Industrial Motion-Control ROS2 Gateway is the communication bridge between D
 .. _ros2-2axis-rrbot:
 
 Launch RRBot 2-axis Robotic Arm ROS2 tutorial
-********************************************************************************************
+****************************************************************************************************************************************************************
 
 This tutorial monitors and controls the RRBot (`Revolute-Revolute Manipulator Robot`), a double inverted pendulum robots-arm, within the ROS2 framework. It demonstrates motion-control concepts through the `ros2_control <https://control.ros.org/humble/index.html>`_ using a simple 3-linkage, 2-joint arm.
 
@@ -96,7 +96,7 @@ This tutorial monitors and controls the RRBot (`Revolute-Revolute Manipulator Ro
 .. _ros2-6axis-hiwin:
 
 Launch HIWIN 6-axis Robotic Arm ROS2 tutorial
-*******************************************************************************************
+***************************************************************************************************************************************************************
 
 This demo allows you to monitor and control the `HIWIN industrial robots <https://hiwin.com/products/industrial-robotics/#IndustrialRobots>`_ within the ROS2 framework:
 
@@ -194,7 +194,7 @@ This demo allows you to monitor and control the `HIWIN industrial robots <https:
 .. _ros2-agvm:
 
 Launch AGV ROS2 tutorial
-********************************************************
+******************************************************************************************
 
 This tutorial allows monitors and controls an AGV (Automated Guided Vehicle) using the EtherCAT wired-protocol control on four Mecanum wheel-drive chassis within the ROS2 framework. `YDLidar Communication Protocol for ROS2 <https://github.com/YDLIDAR/YDLidar-SDK/blob/master/doc/YDLidar-SDK-Communication-Protocol.md>`_ is used for ``ydlidar`` devices to configure LiDAR in the ROS2 environment.
 

@@ -1,4 +1,4 @@
-/*******************************************************************************
+/***************************************************************************************************************************************************
 
                           License Agreement
                For Open Source Computer Vision Library
@@ -31,7 +31,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-*******************************************************************************/
+***************************************************************************************************************************************************/
 
 #include "orb_extractor.h"
 #include "orb_point_pairs.h"

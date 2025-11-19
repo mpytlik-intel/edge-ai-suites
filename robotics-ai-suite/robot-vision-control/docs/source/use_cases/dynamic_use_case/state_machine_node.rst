@@ -1,7 +1,7 @@
 
 
 State machine main node
-********************************************
+******************************************************************************
 
 The Exemplary dynamic use case shows the use case of an Universal robot
 UR5e tracking a erratically moving object, optionally picking it up and placing at

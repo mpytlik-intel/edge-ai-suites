@@ -1,4 +1,4 @@
-/********************************************************************************
+/****************************************************************************************************************************************************
 SPDX-License-Identifier: BSD-3-Clause
 SPDX-FileCopyrightText: (C) 2015 TRACLabs, Inc.
 Copyright (c) 2015, TRACLabs, Inc.
@@ -28,7 +28,7 @@ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
 LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
 OF THE POSSIBILITY OF SUCH DAMAGE.
-********************************************************************************/
+****************************************************************************************************************************************************/
 
 #include "rclcpp/rclcpp.hpp"
 
@@ -57,7 +57,7 @@ bool TRAC_IKKinematicsPlugin::initialize(const rclcpp::Node::SharedPtr &node,
     const std::vector<std::string> &tip_frames,
     double search_discretization)
 {
- 
+
 
   node_ = node;
   storeValues(robot_model, group_name, base_name, tip_frames, search_discretization);
@@ -380,7 +380,7 @@ bool TRAC_IKKinematicsPlugin::searchPositionIK(const geometry_msgs::msg::Pose &i
   (void)timeout;
   (void)consistency_limits;
   (void)options;
-  
+
   if (!active_)
   {
     RCLCPP_ERROR(rclcpp::get_logger("tracikplug"),"kinematics not active");
@@ -412,8 +412,8 @@ bool TRAC_IKKinematicsPlugin::searchPositionIK(const geometry_msgs::msg::Pose &i
     bounds.rot.z(std::numeric_limits<float>::max());
   }
 
-    auto start_time = std::chrono::time_point<std::chrono::steady_clock, std::chrono::duration<double>>(                                                                                     
-        std::chrono::steady_clock::now());    
+    auto start_time = std::chrono::time_point<std::chrono::steady_clock, std::chrono::duration<double>>(
+        std::chrono::steady_clock::now());
   int rc = ik_solver->CartToJnt(in, frame, out,start_time, bounds);
 
 
@@ -453,4 +453,3 @@ bool TRAC_IKKinematicsPlugin::searchPositionIK(const geometry_msgs::msg::Pose &i
 //register TRAC_IKKinematicsPlugin as a KinematicsBase implementation
 #include <pluginlib/class_list_macros.hpp>
 PLUGINLIB_EXPORT_CLASS(trac_ik_kinematics_plugin::TRAC_IKKinematicsPlugin, kinematics::KinematicsBase);
-

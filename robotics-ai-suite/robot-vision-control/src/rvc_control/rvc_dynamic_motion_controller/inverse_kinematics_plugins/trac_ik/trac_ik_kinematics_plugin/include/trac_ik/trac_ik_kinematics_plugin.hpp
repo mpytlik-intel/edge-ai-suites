@@ -1,4 +1,4 @@
-/********************************************************************************
+/****************************************************************************************************************************************************
 SPDX-License-Identifier: BSD-3-Clause
 SPDX-FileCopyrightText: (C) 2015 TRACLabs, Inc.
 Copyright (c) 2015, TRACLabs, Inc.
@@ -28,7 +28,7 @@ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
 LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
 OF THE POSSIBILITY OF SUCH DAMAGE.
-********************************************************************************/
+****************************************************************************************************************************************************/
 
 #ifndef TRAC_IK_KINEMATICS_PLUGIN_
 #define TRAC_IK_KINEMATICS_PLUGIN_
@@ -190,7 +190,7 @@ public:
     double search_discretization);
 
   virtual bool supportsGroup(const moveit::core::JointModelGroup *,
-                             std::string *error_text_out = 0) const 
+                             std::string *error_text_out = 0) const
   {
     (void)error_text_out;
     return true;

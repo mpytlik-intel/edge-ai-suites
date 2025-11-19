@@ -18,7 +18,7 @@ Based on your needs, you can install one, two, or all of the following kits and 
 - Humanoid - Imitation Learning: This kit enables robots to learn and improve their performance over time, for example, picking up boxes more efficiently over time, even with physical obstacles.
 
 Autonomous Mobile Robot
-*************************************************
+***********************************************************************************
 
 Develop, build, and deploy end-to-end mobile robot applications with this purpose-built, open, and modular software development kit that includes libraries, middleware, and sample applications based on the open source ROS 2 Humble robot operating system.
 
@@ -41,7 +41,7 @@ Click each icon to learn more.
         Resources to get started with development.
 
 Stationary Robot Vision & Control Framework
-**************************************************************************************************
+**********************************************************************************************************************************************************************
 
 Robot Vision and Control is a robotic software framework aimed at tackling Pick and place, Track and place industrial problems.
 
@@ -64,7 +64,7 @@ Click each icon to learn more.
         Resources to get started with development.
 
 Humanoid - Imitation Learning
-**************************************************
+************************************************************************************
 
 Embodied Intelligence SDK is a suite of intuitive, easy-to-use software stack designed to streamline the development process of Embodied Intelligence product and applications on Intel platform. The SDK provides developers with a comprehensive environment for developing, testing, and optimizing Embodied Intelligence software and algorithms efficiently. It also provides necessary software framework, libraries, tools, Best known configuration(BKC), tutorials and example codes to facilitate AI solution development.
 

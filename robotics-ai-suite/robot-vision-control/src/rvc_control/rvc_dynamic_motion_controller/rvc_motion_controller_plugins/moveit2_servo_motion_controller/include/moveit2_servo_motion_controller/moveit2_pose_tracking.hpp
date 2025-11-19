@@ -1,4 +1,4 @@
-/*********************************************************************
+/*****************************************************************************************************************************************
  * SPDX-License-Identifier: BSD-3-Clause
  * SPDX-FileCopyrightText: (C) 2008-2013, Willow Garage, Inc.
  * Software License Agreement (BSD License)
@@ -32,7 +32,7 @@
  *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
  *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  *  POSSIBILITY OF SUCH DAMAGE.
- *********************************************************************/
+ *****************************************************************************************************************************************/
 /*
    Author: Andy Zelenak
    Desc: Servoing. Track a pose setpoint in real time.
@@ -182,5 +182,3 @@ private:
 
 // using alias
 using PoseTrackingPtr = std::shared_ptr<PoseTracking>;
-
-

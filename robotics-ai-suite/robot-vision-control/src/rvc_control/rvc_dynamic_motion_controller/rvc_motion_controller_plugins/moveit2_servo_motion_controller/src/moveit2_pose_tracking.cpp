@@ -1,4 +1,4 @@
-/*********************************************************************
+/*****************************************************************************************************************************************
  * SPDX-License-Identifier: BSD-3-Clause
  * SPDX-FileCopyrightText: (C) 2020, PickNik Inc.
  * Software License Agreement (BSD License)
@@ -32,7 +32,7 @@
  *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
  *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  *  POSSIBILITY OF SUCH DAMAGE.
- *********************************************************************/
+ *****************************************************************************************************************************************/
 
 #include "moveit2_servo_motion_controller/moveit2_pose_tracking.hpp"
 #include <moveit_servo/servo_parameters.h>
@@ -85,7 +85,7 @@ PoseTracking::PoseTracking(
     , publish_period(servo_parameters_->publish_period)
     , planning_scene_monitor_(planning_scene_monitor)
     , loop_rate_(1.0 / publish_period)
-    , controllerSpeed(0)    
+    , controllerSpeed(0)
     , transform_buffer_(node_->get_clock())
     , transform_listener_(transform_buffer_)
     , stop_requested_(false)
@@ -294,9 +294,9 @@ void PoseTracking::setTargetPose(const geometry_msgs::msg::PoseStamped::ConstSha
         double z_error = target_pose_.pose.position.z - command_frame_transform_.translation()(2);
 
         goalAchieved = (std::abs(x_error) < positional_tolerance(0)) && (std::abs(y_error) < positional_tolerance(1)) &&
-            (std::abs(z_error) < positional_tolerance(2)) && (std::abs(*angular_error_) < angular_tolerance);    
+            (std::abs(z_error) < positional_tolerance(2)) && (std::abs(*angular_error_) < angular_tolerance);
     }
-    
+
 
     // If the target pose is not defined in planning frame, transform the target pose.
     if (target_pose_.header.frame_id != planning_frame_)

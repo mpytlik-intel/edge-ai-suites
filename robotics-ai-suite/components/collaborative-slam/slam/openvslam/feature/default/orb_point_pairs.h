@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-/*******************************************************************************
+/***************************************************************************************************************************************************
 
                           License Agreement
                For Open Source Computer Vision Library
@@ -32,7 +32,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-*******************************************************************************/
+***************************************************************************************************************************************************/
 
 #ifndef OPENVSLAM_FEATURE_ORB_POINT_PAIRS_H
 #define OPENVSLAM_FEATURE_ORB_POINT_PAIRS_H
