@@ -17,17 +17,17 @@ Depending on your processor type, select one of the following |ubuntu|
    +----------------------------------------------+------------------------------------------------+
    | Processor type                               | |ubuntu| 22.04 LTS variant                     |
    +==============================================+================================================+
-   | |core| Ultra Processors                      | |ubuntu_iso_download| Desktop image            |
+   | |core| Ultra Processors                      | `Ubuntu OS version 22.04 LTS (Jammy Jellyfish) <https://releases.ubuntu.com/22.04>`__ Desktop image            |
    +----------------------------------------------+------------------------------------------------+
    | Other |intel| processors, including:         | 22.04 LTS image for Intel IoT platforms,       |
-   |                                              | available at |ubuntu_iot_iso_download|         |
+   |                                              | available at `Download Ubuntu image for Intel® IoT platforms <https://ubuntu.com/download/iot/intel-iot>`__         |
    | 11th/12th/13th Generation |core| Processors, |                                                |
    |                                              |                                                |
    | |intel| Processor N-series                   |                                                |
    | (products formerly Alder Lake-N)             |                                                |
    +----------------------------------------------+------------------------------------------------+
 
-Visit the |ubuntu| website to see the detailed installation instructions: |ubuntu_install_instructions|.
+Visit the |ubuntu| website to see the detailed installation instructions: `Install Ubuntu desktop <https://ubuntu.com/tutorials/install-ubuntu-desktop>`__.
 
 Steps to Install |ubuntu|
 -------------------------
@@ -75,13 +75,13 @@ Depending on the processor type, the expected result is as follows:
 Install |ros| |ros_version|
 ============================
 
-To install |ros| on your system, follow the |ros_install_instructions|.
+To install |ros| on your system, follow the `ROS 2 setup guide <https://docs.ros.org/en/humble/Installation.html>`__.
 
 
 |ros| Installation Overview
 -------------------------------
 
-When following the |ros_install_instructions_debian|, typically the installation
+When following the `ROS 2 setup with Ubuntu Deb Packages <https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html#ubuntu-debian-packages>`__, typically the installation
 includes the following steps:
 
 #. Set up APT sources

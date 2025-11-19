@@ -67,7 +67,7 @@ to this group, add the group membership by means of:
 Solve conflicts with the BRLTTY daemon
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-BRLTTY is a background process that operates Braille displays, a tool for individuals 
+BRLTTY is a background process that operates Braille displays, a tool for individuals
 who are blind. There is a possibility that BRLTTY may block the USB interface
 utilized by the AAEON motor control board. To identify such a conflict,
 execute the following command:
@@ -160,9 +160,9 @@ Execute the following commands in your terminal to make the necessary changes:
    sudo chmod u+x /tmp/pipeline_object.yaml
 
 The first command assigns the current user as the owner of ``/tmp/pipeline_object.yaml``, while the second command grants the owner execute permissions
-for this file. 
+for this file.
 
-Missing Model files 
+Missing Model files
 ^^^^^^^^^^^^^^^^^^^^
 Some of the |openvino| based tutorials in this SDK rely on the models that are provided during the installation of the ``ros-humble-openvino-node``. In case you missed out on installing these models you may run into problem when executing these tutorials.
 
@@ -180,7 +180,7 @@ used in this release of the |lp_amr| and the |i915| kernel mode driver in
 |Linux| Kernel 6.7.5 or later.
 
 For |core| Ultra Processors, the recommended operating system for the |lp_amr|
-is the |ubuntu_iso_download| Desktop image, as described in the
+is the `Ubuntu OS version 22.04 LTS (Jammy Jellyfish) <https://releases.ubuntu.com/22.04>`__ Desktop image, as described in the
 :doc:`../../gsg_robot/prepare-system` section. Since this version of the
 |ubuntu| operating system uses a |Linux| Kernel 6.8, this incompatibility
 will have an impact if you use the |lp_amr| on an |core| Ultra Processor.
