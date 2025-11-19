@@ -1,5 +1,5 @@
 Install Autonomous Mobile Robot Deb packages
-##################################################################
+#################################
 
 This section details steps to install Autonomous Mobile Robot Deb packages.
 
@@ -411,7 +411,7 @@ Install one of the following packages based upon your processor type:
 
       +-----------------+-------------------------------------------------------------+
       | GPU Generation  | Processors                                                  |
-      +================================+=========================================================================================================================+
+      +=================+=============================================================+
       | ``genXe``       | Intel® Core™ Ultra Processors                               |
       |                 |                                                             |
       |                 | 13th Generation Intel® Core™ Processors                     |
