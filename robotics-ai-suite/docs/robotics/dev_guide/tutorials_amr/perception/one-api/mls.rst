@@ -23,8 +23,8 @@ for details.
 
 .. note::
 
-  This tutorial is applicable for execution both within inside and outside a |docker| image. It assumes that the
-  ``pcl-oneapi-tutorials`` |deb_pack| is installed, and the user has copied the *tutorial*
+  This tutorial is applicable for execution both within inside and outside a Docker image. It assumes that the
+  ``pcl-oneapi-tutorials`` Deb package is installed, and the user has copied the *tutorial*
   directory from */opt/intel/pcl/oneapi/tutorials/* to a user-writable directory.
 
 #. Prepare the environment:
@@ -94,7 +94,7 @@ mandatory; other fields are allowed and preserved).
    :lines: 15-18
    :dedent:
 
-Compare to original version, append oneapi namespace to original MovingLeastSquares class. 
+Compare to original version, append oneapi namespace to original MovingLeastSquares class.
 The first template type is used for the input and output cloud. Only the XYZ
 dimensions of the input are smoothed in the output.
 

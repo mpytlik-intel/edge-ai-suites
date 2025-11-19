@@ -91,7 +91,7 @@ Supported Hardware
 
 Systems based on |intel| 64 architectures below are supported
 
-* |Core| processor family
+* Intel® Core™ processor family
 
 * |Xeon| processor family
 
@@ -124,7 +124,7 @@ library.
 
 2. To develop with the PCL |oneapi| library or build PCL |oneapi| tutorials, you need the |l_oneapi|. To install |l_oneapi|,
 
-  a. For |docker| environment:
+  a. For Docker environment:
 
    .. code-block::
 

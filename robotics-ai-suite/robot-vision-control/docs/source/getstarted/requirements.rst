@@ -27,7 +27,7 @@ The following table lists the system requirements:
    * - **Intel Processor**
      - | • 13th Gen |intel_core|  Processor (Code name: Raptor Lake [**RPL**])
        | • 12th Gen |intel_core| Processor (Code name: Alder Lake [**ADL**])
-       
+
 
    * - **Memory**
      - 16 GB RAM (minimum)
@@ -40,5 +40,5 @@ Validated Hardware Platforms
 
 The following platforms have been validated with RVC:
 
-* |asrockind_platform| `(iEPF-9012S-EY4) <https://www.asrockind.com/en-gb/iEPF-9012S-EY4>`_
-* |asrockind_platform| `(RPL-P) <https://www.asrockind.com/en-gb/iEP-7020E>`_
+* ASRock Industrial intelligent edge platform `(iEPF-9012S-EY4) <https://www.asrockind.com/en-gb/iEPF-9012S-EY4>`_
+* ASRock Industrial intelligent edge platform `(RPL-P) <https://www.asrockind.com/en-gb/iEP-7020E>`_

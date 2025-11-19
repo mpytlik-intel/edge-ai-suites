@@ -6,7 +6,7 @@ The Robot Re-localization package empowers |ros| navigation with the capability 
 Getting Started
 ----------------
 
-|p_amr| provides a |ros| |deb_pack| for the application, supported by the following platform:
+|p_amr| provides a |ros| Deb package for the application, supported by the following platform:
 
 - ROS version: humble
 
@@ -15,10 +15,10 @@ Prerequisites
 
 Complete the :doc:`../../../gsg_robot/index` before continuing.
 
-Install |deb_pack|
+Install Deb package
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Install the ``ros-humble-its-relocalization-bringup`` |deb_pack| from the |intel| |p_amr| APT repository
+Install the ``ros-humble-its-relocalization-bringup`` Deb package from the |intel| |p_amr| APT repository
 
     .. code-block:: bash
 
@@ -53,7 +53,7 @@ Once |ros| navigation is running in Gazebo and the initial robot position is set
     .. code-block:: bash
 
        source /opt/ros/humble/setup.bash
-       ros2 launch relocalization_bringup relocalization.launch.xml 
+       ros2 launch relocalization_bringup relocalization.launch.xml
 
 To simulate the re-localization package, we have developed a demo application that replicates a scenario in which the sensor encounters a temporary failure. In this application, the sensor is disabled for a few seconds while the robot is traveling towards its goal. Once the sensor measurements are re-enabled, the robot will automatically re-localize itself and resume its navigation toward the goal. To run this demo application execute:
 

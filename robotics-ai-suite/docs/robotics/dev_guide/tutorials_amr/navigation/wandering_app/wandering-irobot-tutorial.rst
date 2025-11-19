@@ -109,7 +109,7 @@ The |irobot_create3| topics should be listed:
 
    If only ``/parameter_events`` and ``/rosout`` topics are listed then
    the communication between the robot and the |intel| board is not
-   working. Check the |irobot_create3_documentation| to troubleshoot
+   working. Check the `iRobot Create 3 mobile robotics platform documentation <https://iroboteducation.github.io/create3_docs/>`__ to troubleshoot
    the issue.
 
 Start the tutorial using its launch file; provide the namespace set on

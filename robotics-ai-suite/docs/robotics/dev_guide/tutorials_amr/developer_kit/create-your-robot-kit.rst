@@ -84,7 +84,7 @@ The standard assembly involves the following steps:
 Step 2: Integration into |lp_amr|
 +++++++++++++++++++++++++++++++++
 
-Start the robot base |ros| node on the native system OS or inside a |docker|
+Start the robot base |ros| node on the native system OS or inside a Docker
 container.
 To ensure proper functionality, ensure that both the robot base node and the rest of
 the |lp_amr| pipeline are configured with the same ROS_DOMAIN_ID.
@@ -114,7 +114,7 @@ The |lp_amr| pipeline assumes that the robot base |ros| node:
 *  Is subscribed to ``cmd_vel`` which is used by the Navigation 2 package to
    give instructions to the robot like spin in place or move forward
 
-The |lp_amr| provides the following examples with the ``ros-humble-aaeon-ros2-amr-interface`` |deb_pack|:
+The |lp_amr| provides the following examples with the ``ros-humble-aaeon-ros2-amr-interface`` Deb package:
 
 * `/opt/ros/humble/share/ros2_amr_interface/params/aaeon_node_params_uncalibrated_imu.yaml`
 * `/opt/ros/humble/share/ros2_amr_interface/params/aaeon_node_params.yaml`
@@ -128,7 +128,7 @@ This section details the commands required to startup the motor controller of an
 
 To start the node on the |up_xtreme|, you can reference and initiate it as follows:
 
-* Ensure that the ``ros-humble-aaeon-ros2-amr-interface`` |deb_pack| is installed.
+* Ensure that the ``ros-humble-aaeon-ros2-amr-interface`` Deb package is installed.
 
   .. code-block:: bash
 

@@ -8,7 +8,7 @@ Limitation
 
 This optimized PCL release does not support acceleration for CPU device for
 
-* 12th generation of |atom| processors, known as codename 'Alder Lake-N'.
+* 12th generation of Intel Atom® processors, known as codename 'Alder Lake-N'.
 
 
 Troubleshooting

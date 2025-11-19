@@ -4,8 +4,8 @@ Follow-me with ADBSCAN and Gesture Control
 ====================================================
 
 This demo of the Follow-me algorithm shows a |p_amr| application for following a target person where the movement of the robot can be controlled by the person's location and hand gestures. The entire pipeline diagram can be found in :doc:`../index` page.
-This demo contains only the ADBSCAN and Gesture recognition modules in the input-processing application stack. No text-to-speech synthesis module is present in the output-processing application stack. This demo has been tested and validated on 12th Generation |core| processors with |xe| (known as Alder Lake-P).
-This tutorial describes how to launch the demo in `Gazebo` simulator. 
+This demo contains only the ADBSCAN and Gesture recognition modules in the input-processing application stack. No text-to-speech synthesis module is present in the output-processing application stack. This demo has been tested and validated on 12th Generation Intel® Core™ processors with |xe| (known as Alder Lake-P).
+This tutorial describes how to launch the demo in `Gazebo` simulator.
 
 Getting Started
 ----------------
@@ -15,10 +15,10 @@ Prerequisites
 
 Complete the :doc:`../../../../../gsg_robot/index` before continuing.
 
-Install the |deb_pack|
+Install the Deb package
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Install ``ros-humble-followme-turtlebot3-gazebo`` |deb_pack| from |intel| |p_amr| APT repository. This is the wrapper package which will launch all of the dependencies in the backend.
+Install ``ros-humble-followme-turtlebot3-gazebo`` Deb package from |intel| |p_amr| APT repository. This is the wrapper package which will launch all of the dependencies in the backend.
 
    .. code-block::
 
@@ -30,7 +30,7 @@ Install Python Modules
 
 This application uses `Mediapipe Hands Framework <https://mediapipe.readthedocs.io/en/latest/solutions/hands.html>`__
 for hand gesture recognition. Install the following modules as a prerequisite for the framework:
-   
+
    .. code-block::
 
       pip3 install mediapipe
@@ -49,7 +49,7 @@ Run the following script to launch `Gazebo` simulator and |ros| rviz2.
       /opt/ros/humble/share/followme_turtlebot3_gazebo/scripts/demo_lidar.sh
 
 You will see two panels side-by-side: `Gazebo` GUI on the left and |ros| rviz display on the right.
-   
+
    .. image:: ../../../../../images/screenshot_followme_w_gesture_demo.jpg
 
 -  The green square robot is a guide robot (namely, the target), which will follow a pre-defined trajectory.
@@ -82,7 +82,7 @@ Execute the following commands one by one in three separate terminals.
       sudo chmod +x /opt/ros/humble/share/followme_turtlebot3_gazebo/scripts/demo_RS.sh
       /opt/ros/humble/share/followme_turtlebot3_gazebo/scripts/demo_RS.sh
 
-#. Terminal 2: This command will launch the ADBSCAN |deb_pack|. It runs the ADBScan node on the point cloud data to detect the location of the target.
+#. Terminal 2: This command will launch the ADBSCAN Deb package. It runs the ADBScan node on the point cloud data to detect the location of the target.
 
    .. code-block::
 
@@ -95,7 +95,7 @@ Execute the following commands one by one in three separate terminals.
       ros2 run gesture_recognition_pkg traj_and_img_publisher_node.py --ros-args --params-file /opt/ros/humble/share/gesture_recognition_pkg/config/gesture_recognition.yaml
 
 In this demo, |realsense| camera of the |tb3| robot is selected as the input point cloud sensor. After running all of the above commands,
-you will observe similar behavior of the |tb3| robot and guide robot in the `Gazebo` GUI as in :ref:`followme-gesture-lidar` 
+you will observe similar behavior of the |tb3| robot and guide robot in the `Gazebo` GUI as in :ref:`followme-gesture-lidar`
 
 .. note::
 
@@ -141,7 +141,7 @@ you will observe similar behavior of the |tb3| robot and guide robot in the `Gaz
 Troubleshooting
 ----------------------------
 
-- Failed to install |deb_pack|: Please make sure to run ``sudo apt update`` before installing the necessary |deb_packs|.
+- Failed to install Deb package: Please make sure to run ``sudo apt update`` before installing the necessary Deb packages.
 
 - You can stop the demo anytime by pressing ``ctrl-C``. If the `Gazebo` simulator freezes or does not stop, please use the following command in a terminal:
 

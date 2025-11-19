@@ -7,7 +7,7 @@ foundational to the field of autonomous mobile robots. This practical
 understanding is invaluable for those looking to enter the robotics
 industry or further their knowledge in this rapidly evolving field.
 
-Before starting, review the |irobot_create3_documentation| to be able to
+Before starting, review the `iRobot Create 3 mobile robotics platform documentation <https://iroboteducation.github.io/create3_docs/>`__ to be able to
 perform the configuration changes needed for the tutorial.
 
 Prerequisites
@@ -30,7 +30,7 @@ following modifications have been applied to the robot:
  - |realsense| camera mounted on the front of the top layer and
    connected to a USB port on the |intel| board,
 
- - |slamtec_rplidar| 2D (|slamtec_rplidar_a3| or |slamtec_rplidar_a2m8|) sensor on a mount in the center of the
+ - |slamtec_rplidar| 2D (`Slamtec RPLIDAR A3 laser range scanner <https://www.slamtec.ai/product/slamtec-rplidar-a3>`__ or `Slamtec RPLIDAR A2 laser range scanner (A2M8) <https://www.slamtec.ai/product/slamtec-rplidar-a2>`__) sensor on a mount in the center of the
    top layer and connected to two USB ports on the |intel| board,
 
  - custom battery in the cargo bay to power the |intel| board and
@@ -67,7 +67,7 @@ to access your WiFi network following the
 <https://edu.irobot.com/create3-setup>`__ documentation.
 
 With the robot connected to your WiFi network continue configuring it
-using its web interface. Refer to the |irobot_create3_documentation| for the exact
+using its web interface. Refer to the `iRobot Create 3 mobile robotics platform documentation <https://iroboteducation.github.io/create3_docs/>`__ for the exact
 steps to follow.
 
 Wired (Ethernet) network
@@ -89,7 +89,7 @@ Ethernet adapter using an RJ-45 cable.
 The |irobot_create3| robot is configured to use the address
 ``192.168.186.2/24`` on the USB interface. You can change the network
 part of the address by following the instructions on page
-|irobot_create3_webserver_set_wired_subnet|.
+`iRobot Create 3 Webserver - Set Wired Subnet <https://iroboteducation.github.io/create3_docs/webserver/set-wired-subnet/>`__.
 
 On the |intel| board, the network interface connected to the robot
 has to be configured with a static IP address of the same subnet.
@@ -112,7 +112,7 @@ Use the IP address of the Ethernet interface connected to the robot.
 
 To define what |ros| middleware implementation shall be used by the
 |irobot_create3|, follow the configuration guidelines on page
-|irobot_create3_webserver_application|.
+`iRobot Create 3 Webserver - Application <https://iroboteducation.github.io/create3_docs/webserver/application/>`__.
 Set the RMW_IMPLEMENTATION option to ``rmw_fastrtps_cpp``, as shown in
 the figure below.
 
@@ -120,7 +120,7 @@ the figure below.
    :align: center
 
    |irobot_create3| |l_ros| application configuration page. On this
-   robot the |irobot_create3_webserver_set_wired_subnet|
+   robot the `iRobot Create 3 Webserver - Set Wired Subnet <https://iroboteducation.github.io/create3_docs/webserver/set-wired-subnet/>`__
    is set to ``192.168.99.2``, Fast DDS discovery server is enabled
    and runs on the |intel| board reachable at IP ``192.168.99.10``
    over the Ethernet connection. |ros| Domain ID is set but it is not
@@ -141,7 +141,7 @@ Robot namespace
 ...............
 
 Set a |ros| namespace (e.g., ``/robot2``) for your robot, as described on page
-|irobot_create3_webserver_application|. This value should be passed to the
+`iRobot Create 3 Webserver - Application <https://iroboteducation.github.io/create3_docs/webserver/application/>`__. This value should be passed to the
 launch file as argument ``irobot_ns``.
 
 |lp_amr| Tutorials based on the |irobot_create3|

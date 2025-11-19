@@ -47,7 +47,7 @@ vulnerabilities on the component web sites.
 
 
 The main |p_amr| platform is based on the 12th generation
-|core| processor with accelerators primarily used for AI inference
+Intel® Core™ processor with accelerators primarily used for AI inference
 and vision processing. The platform inherits many security elements from
 the processor.
 

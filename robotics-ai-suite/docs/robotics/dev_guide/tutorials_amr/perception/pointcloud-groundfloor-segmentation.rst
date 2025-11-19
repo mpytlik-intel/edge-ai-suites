@@ -29,7 +29,7 @@ The source code of this component can be found here: `Groundfloor <https://githu
 Getting Started
 ----------------
 
-|p_amr| provides a |ros| |deb_pack| for the application, supported by the following platform:
+|p_amr| provides a |ros| Deb package for the application, supported by the following platform:
 
 - OS: Ubuntu 22.04 LTS
 
@@ -42,10 +42,10 @@ Prerequisites
 Complete the :doc:`../../../gsg_robot/index` before continuing.
 
 
-Install |deb_pack|
+Install Deb package
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Install ``ros-humble-pointcloud-groundfloor-segmentation`` |deb_pack| from |intel| |p_amr| APT repository
+Install ``ros-humble-pointcloud-groundfloor-segmentation`` Deb package from |intel| |p_amr| APT repository
 
    .. code-block:: bash
 
@@ -225,7 +225,7 @@ To achieve optimal output quality, it is essential to fulfill following requirem
 Troubleshooting
 ----------------------------
 
-- Failed to install |deb_pack|: Please make sure to run ``sudo apt update`` before installing the necessary |deb_packs|.
+- Failed to install Deb package: Please make sure to run ``sudo apt update`` before installing the necessary Deb packages.
 
 - You can stop the demo anytime by pressing ``ctrl-C``.
 

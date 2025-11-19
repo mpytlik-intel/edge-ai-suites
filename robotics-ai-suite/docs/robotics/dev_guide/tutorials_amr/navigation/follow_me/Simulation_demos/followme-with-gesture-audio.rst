@@ -5,10 +5,10 @@ Follow-me with ADBSCAN, Gesture and Audio Control
 
 This demo of the Follow-me algorithm shows a |p_amr| application for following a target person where the movement of the robot can be controlled by the person's location, hand gestures as well as audio command. The entire pipeline diagram can be found in :doc:`../index` page.
 It takes point cloud sensor (2D Lidar/depth camera) as well as RGB camera image as inputs. These inputs are passed through |intel|-patented Adaptive DBScan and a deep-learning-based gesture recognition pipeline, respectively to publish motion command messages for a differential drive robot. It also takes recorded audio commands for starting and stopping the robot movement. Moreover, the demo is equipped with a text-to-speech synthesis model to narrate the robot's
-activity over the course of its movement. 
+activity over the course of its movement.
 
-This demo has been tested and validated on 13th Generation |core| processors with |xe| and 12th Generation |core| processors with |xe|.
-This tutorial describes how to launch the demo in the `Gazebo` simulator. 
+This demo has been tested and validated on 13th Generation Intel® Core™ processors with |xe| and 12th Generation Intel® Core™ processors with |xe|.
+This tutorial describes how to launch the demo in the `Gazebo` simulator.
 
 Getting Started
 ----------------
@@ -18,12 +18,12 @@ Prerequisites
 
 Complete the :doc:`../../../../../gsg_robot/index` before continuing.
 
-Install the |deb_packs|
+Install the Deb packages
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Install ``ros-humble-followme-turtlebot3-gazebo`` and ``ros-humble-text-to-speech-pkg`` |deb_packs| from |intel| |p_amr| APT repository. ``ros-humble-followme-turtlebot3-gazebo`` is the wrapper package for the demo which will install all of the dependencies in the backend.
+Install ``ros-humble-followme-turtlebot3-gazebo`` and ``ros-humble-text-to-speech-pkg`` Deb packages from |intel| |p_amr| APT repository. ``ros-humble-followme-turtlebot3-gazebo`` is the wrapper package for the demo which will install all of the dependencies in the backend.
 
-   .. code-block:: 
+   .. code-block::
 
       sudo apt update
       sudo apt install ros-humble-followme-turtlebot3-gazebo ros-humble-text-to-speech-pkg
@@ -34,8 +34,8 @@ Install Pre-requisite Libraries
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Install the pre-requisite modules for running the framework:
-   
-   .. code-block:: 
+
+   .. code-block::
 
       source /opt/ros/humble/setup.bash
       pip install -r /opt/ros/humble/share/followme_turtlebot3_gazebo/scripts/requirements.txt
@@ -52,33 +52,33 @@ Run the following commands one by one in five separate terminals:
 
 1. Terminal 1: This command will open |ros| rviz2.
 
-  .. code-block:: 
+  .. code-block::
 
     rviz2 -d /opt/ros/humble/share/followme_turtlebot3_gazebo/rviz/followme_lidar.rviz
 
 You will see the |ros| rviz2 with a panel for `Image` visualization. It will display the published RGB image in the simulated RGB camera.
-   
+
   .. image:: ../../../../../images/rviz_display_follow_me.png
 
 2. Terminal 2: This command will launch ``ros-humble-text-to-speech-pkg``.
 
-  .. code-block:: 
+  .. code-block::
 
-    ros2 run text_to_speech_pkg text_to_speech_node.py --ros-args --params-file /opt/ros/humble/share/text_to_speech_pkg/config/text_to_speech_config.yaml 
+    ros2 run text_to_speech_pkg text_to_speech_node.py --ros-args --params-file /opt/ros/humble/share/text_to_speech_pkg/config/text_to_speech_config.yaml
 
 You will see the |ros| node starting up and loading the parameter files for the underlying neural networks. This operation may take ~5-10 seconds depending on the system speed.
-   
+
   .. image:: ../../../../../images/text_to_speech_launch_follow_me.png
 
 3. Terminal 3: This command will launch `Gazebo`.
 
-  .. code-block:: 
+  .. code-block::
 
     export TURTLEBOT3_MODEL=waffle
     ros2 launch followme_turtlebot3_gazebo empty_world_followme_w_gesture_audio_1.launch.py
 
-You will see the `Gazebo` GUI with two simulated robots in an empty `Gazebo` world. We suggest to rescale and place the `Gazebo` and rviz panels side by side (like the following picture) for better visualization of the demo. 
-   
+You will see the `Gazebo` GUI with two simulated robots in an empty `Gazebo` world. We suggest to rescale and place the `Gazebo` and rviz panels side by side (like the following picture) for better visualization of the demo.
+
   .. image:: ../../../../../images/follow_me_demo_gazebo_rviz.png
 
 
@@ -90,25 +90,25 @@ In this demo, we used a pre-defined trajectory for the guide robot and published
 
 4. Terminal 4: This command will launch the ``adbscan`` node, which will publish `twist` msg to the ``tb3/cmd_vel`` topic:
 
-  .. code-block:: 
+  .. code-block::
 
     ros2 run adbscan_ros2_follow_me adbscan_sub_w_gesture_audio --ros-args --params-file /opt/ros/humble/share/adbscan_ros2_follow_me/config/adbscan_sub_2D.yaml -r cmd_vel:=tb3/cmd_vel -p use_sim_time:=true
 
-You will view the following information in the terminal. 
+You will view the following information in the terminal.
 
   .. image:: ../../../../../images/adbscan_screenshot_lidar.png
 
 5. Terminal 5: This command will launch the pre-defined trajectory for the guide robot as well as the simulated gesture images and pre-recorded audio publisher nodes:
 
-  .. code-block:: 
+  .. code-block::
 
     ros2 launch followme_turtlebot3_gazebo empty_world_followme_w_gesture_audio_2.launch.py
 
   .. Note::
 
-    If you are running the demo in 13th Generation |core| processors with |xe| (known as Raptor Lake-P), please replace the commands in terminal 5 with the following:
+    If you are running the demo in 13th Generation Intel® Core™ processors with |xe| (known as Raptor Lake-P), please replace the commands in terminal 5 with the following:
 
-    .. code-block:: 
+    .. code-block::
 
       ros2 launch followme_turtlebot3_gazebo empty_world_followme_w_gesture_audio_2.launch.py soc:='rpl'
 
@@ -151,54 +151,54 @@ Execute the following commands one by one in three separate terminals:
 
 1. Terminal 1: This command will open |ros| rviz2.
 
-  .. code-block:: 
+  .. code-block::
 
     rviz2 -d /opt/ros/humble/share/followme_turtlebot3_gazebo/rviz/followme_lidar.rviz
 
 You will see |ros| rviz2 GUI with a panel for `Image` visualization. It will display the published RGB image in the simulated RGB camera.
-   
+
   .. image:: ../../../../../images/rviz_display_follow_me.png
 
 2. Terminal 2: This command will launch ``ros-humble-text-to-speech-pkg``.
 
-  .. code-block:: 
+  .. code-block::
 
-    ros2 run text_to_speech_pkg text_to_speech_node.py --ros-args --params-file /opt/ros/humble/share/text_to_speech_pkg/config/text_to_speech_config.yaml 
+    ros2 run text_to_speech_pkg text_to_speech_node.py --ros-args --params-file /opt/ros/humble/share/text_to_speech_pkg/config/text_to_speech_config.yaml
 
 You will see the |ros| node starting up and loading the parameter files for the underlying neural networks. This operation may take ~5-10 seconds depending on the system speed.
-   
+
   .. image:: ../../../../../images/text_to_speech_launch_follow_me.png
 
 3. Terminal 3: This command will launch `Gazebo`.
 
-  .. code-block:: 
+  .. code-block::
 
     export TURTLEBOT3_MODEL=waffle
     ros2 launch followme_turtlebot3_gazebo empty_world_followme_w_gesture_audio_1.launch.py
 
 4. Terminal 4: This command will launch the ``adbscan`` node, which will publish `twist` msg to the ``tb3/cmd_vel`` topic:
 
-  .. code-block:: 
+  .. code-block::
 
     ros2 run adbscan_ros2_follow_me adbscan_sub_w_gesture_audio --ros-args --params-file /opt/ros/humble/share/adbscan_ros2_follow_me/config/adbscan_sub_RS.yaml -r cmd_vel:=tb3/cmd_vel -p use_sim_time:=true
 
 In this instance, we execute ``adbscan`` with the parameter file for |realsense| camera input: ``adbscan_sub_RS.yaml``.
 
-You will view the following information in the terminal. 
+You will view the following information in the terminal.
 
   .. image:: ../../../../../images/adbscan_screenshot.png
 
 5. Terminal 5: This command will launch the pre-defined trajectory for the guide robot as well as the simulated gesture images and pre-recorded audio publisher nodes:
 
-  .. code-block:: 
+  .. code-block::
 
     ros2 launch followme_turtlebot3_gazebo empty_world_followme_w_gesture_audio_2.launch.py
 
   .. Note::
 
-    If you are running the demo in 13th Generation |core| processors with |xe| (known as Raptor Lake-P), please replace the commands in terminal 5 with the following:
+    If you are running the demo in 13th Generation Intel® Core™ processors with |xe| (known as Raptor Lake-P), please replace the commands in terminal 5 with the following:
 
-    .. code-block:: 
+    .. code-block::
 
       ros2 launch followme_turtlebot3_gazebo empty_world_followme_w_gesture_audio_2.launch.py soc:='rpl'
 
@@ -250,7 +250,7 @@ After running all of the above commands, you will observe similar behavior of th
 Troubleshooting
 ----------------------------
 
-- Failed to install |deb_pack|: Please make sure to run ``sudo apt update`` before installing the necessary |deb_packs|.
+- Failed to install Deb package: Please make sure to run ``sudo apt update`` before installing the necessary Deb packages.
 
 - Please make sure to prepare your environment before executing |ros| commands in a new terminal. You can find the instructions in :doc:`../../../../../gsg_robot/prepare-system` page.
 

@@ -14,7 +14,7 @@ The following steps will add the |openvino| APT repository to your package manag
 
       wget -O- https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB | gpg --dearmor | sudo tee /usr/share/keyrings/openvino-archive-keyring.gpg
 
-#. Add the |deb_pack| sources for |openvino| 2023 and |openvino| 2024.
+#. Add the Deb package sources for |openvino| 2023 and |openvino| 2024.
    This will allow you to choose your preferred |openvino| version to be installed.
 
    .. code-block:: bash
@@ -24,7 +24,7 @@ The following steps will add the |openvino| APT repository to your package manag
 
 #. Run the following commands to create the file ``/etc/apt/preferences.d/intel-openvino``.
    This will pin the |openvino| version to 2024.2.0. Earlier versions of |openvino| might
-   not support inferencing on the NPU of |core| Ultra processors.
+   not support inferencing on the NPU of Intel® Core™ Ultra processors.
 
    .. code-block:: bash
 
@@ -82,17 +82,17 @@ The following steps will install the |openvino| packages:
    depend on these models; it is crucial to respond with 'yes' to this query.
 
    .. image:: ../images/configure_ros-humble-openvino-node.png
-      
-#. Several |p_amr| tutorials allow you to perform |openvino| inference on the integrated GPU device of |intel| processors. 
+
+#. Several |p_amr| tutorials allow you to perform |openvino| inference on the integrated GPU device of |intel| processors.
    To enable this feature, install the |intel| Graphics Compute Runtime with the following command:
-   
+
    .. code-block:: bash
 
       sudo apt install -y libze1 libze-intel-gpu1
 
-   .. Note:: While you may encounter GPU driver installation guides that involve downloading ``*.deb`` files for manual installation, 
-      this method does not support automatic update. Therefore, it is advisable to install packages from an APT package feed for easier updates, 
-      as described above. 
+   .. Note:: While you may encounter GPU driver installation guides that involve downloading ``*.deb`` files for manual installation,
+      this method does not support automatic update. Therefore, it is advisable to install packages from an APT package feed for easier updates,
+      as described above.
 
 .. _openvino_installation_cleanup_steps:
 

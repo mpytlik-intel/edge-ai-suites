@@ -9,8 +9,8 @@ In this tutorial we will learn how to use the octree for spatial partitioning an
 
 .. note::
 
-  This tutorial can be run both inside and outside a |docker| image. We assume that the
-  *pcl-oneapi-tutorials* |deb_pack| has been installed, and the user has copied the *tutorial*
+  This tutorial can be run both inside and outside a Docker image. We assume that the
+  *pcl-oneapi-tutorials* Deb package has been installed, and the user has copied the *tutorial*
   directory from */opt/intel/pcl/oneapi/tutorials/* to a user-writable directory.
 
 #. Prepare the environment:

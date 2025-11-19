@@ -11,10 +11,10 @@ Prerequisites
 
 Complete the :doc:`../../../../gsg_robot/index` before continuing.
 
-Install |deb_pack|
+Install Deb package
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Install the ``ros-humble-wandering-aaeon-tutorial`` |deb_pack| from the |intel| |p_amr| APT repository.
+Install the ``ros-humble-wandering-aaeon-tutorial`` Deb package from the |intel| |p_amr| APT repository.
 
    .. code-block::
 

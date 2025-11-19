@@ -115,7 +115,7 @@ More detailed information is available at `Intel® Edge Software Device Qualific
 |      -  The |openvino| Hello Query Device sample application can identify the inferencing       |
 |         devices ``CPU`` and ``GPU``.                                                            |
 |                                                                                                 |
-|      -  On |core| Ultra Processors, in addition the ``NPU`` must be be identified as an         |
+|      -  On Intel® Core™ Ultra Processors, in addition the ``NPU`` must be be identified as an         |
 |         inferencing device.                                                                     |
 +-------------------------------------------------------------------------------------------------+
 | |gstreamer| Video                                                                               |
@@ -196,11 +196,11 @@ Satisfy the |esdq| prerequisites by:
 
      pip install openvino-dev[tensorflow]
 
-- Installing the ``intel-basekit`` |deb_pack| by following the |l_oneapi|
+- Installing the ``intel-basekit`` Deb package by following the |l_oneapi|
   Installation Guide for |Linux| OS `instructions
   <https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-linux/2023-2/apt.html>`__.
 
-- Installing |gstreamer| by following the "Install |GStreamer| on |Ubuntu_OS| or |Debian_OS|"
+- Installing |gstreamer| by following the "Install |GStreamer| on |Ubuntu_OS| or Debian OS"
   `instructions
   <https://gstreamer.freedesktop.org/documentation/installing/on-linux.html?gi-language=c#install-gstreamer-on-ubuntu-or-debian>`__.
 
@@ -220,7 +220,7 @@ Satisfy the |esdq| prerequisites by:
   #. Make sure that your file ``/etc/apt/preferences.d/intel-openvino``
      pins the |openvino| version of all components to ``2024.2.0*`` or above.
      Consider that earlier |openvino| versions do not support the NPU of
-     |core| Ultra Processors.
+     Intel® Core™ Ultra Processors.
   #. Install the |openvino| Runtime by using:
 
      .. code-block:: bash
@@ -233,7 +233,7 @@ Satisfy the |esdq| prerequisites by:
 
 - Installing the |intel| NPU Driver as described on page
   :doc:`../../gsg_robot/install-npu-driver`. Don't execute this step if
-  your system does not have an |core| Ultra Processor.
+  your system does not have an Intel® Core™ Ultra Processor.
 
 .. note::
 
@@ -305,7 +305,7 @@ Download and Install the Test Modules
 To download and install the |lp_amr| test modules on your target device follow the
 steps below:
 
-#. Install the ``ros-humble-amr-esdq`` |deb_pack| from
+#. Install the ``ros-humble-amr-esdq`` Deb package from
    |intel| |p_amr| APT repository.
 
    .. code-block:: bash
@@ -356,7 +356,7 @@ Run the Self-Certification Application for Compute Systems
 
    Log out and log in again.
 
-#. If you have just installed the ``ros-humble-amr-esdq`` |deb_pack| as
+#. If you have just installed the ``ros-humble-amr-esdq`` Deb package as
    described in the :ref:`esdq-install` section, reboot your system.
 
    Otherwise, there is a possibility that the tests that depend on the

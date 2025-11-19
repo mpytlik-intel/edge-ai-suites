@@ -28,7 +28,7 @@ The container is based on |Ubuntu_OS| 22.04 LTS (Jammy Jellyfish).
 
 Build RVC image
 -------------------
-Build the RVC |docker| image outside of the devcontainer, after the devcontainer has been built. The Devcontainer provides the base container image for RVC.
+Build the RVC Docker image outside of the devcontainer, after the devcontainer has been built. The Devcontainer provides the base container image for RVC.
 
 .. code-block:: bash
 

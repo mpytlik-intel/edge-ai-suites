@@ -41,7 +41,7 @@ Troubleshooting AAEON Motor Control Board Issues
 Several tutorials apply an |up_xtreme| to demonstrate how the |lp_amr|
 can interact with a physical robot. The |up_xtreme| includes a motor control
 board, which implements the motor drivers and the USB interface towards the compute
-board. To support this motor control board, the |lp_amr| provides the |deb_pack|
+board. To support this motor control board, the |lp_amr| provides the Deb package
 ``ros-humble-aaeon-ros2-amr-interface``, which is based on the GitHub project
 `AAEONAEU-SW/ros2_amr_interface
 <https://github.com/AAEONAEU-SW/ros2_amr_interface>`_
@@ -174,16 +174,16 @@ Follow the instructions on :doc:`../../gsg_robot/install-openvino`, to troublesh
 GPU device is not detected with |Linux| Kernel 6.7.5 or later
 --------------------------------------------------------------
 
-According to the |intel_compute_runtime_release_notes_24_09|,
+According to the `Release Notes of the Intel® Graphics Compute Runtime <https://github.com/intel/compute-runtime/releases/tag/24.09.28717.12>`__,
 there is a known incompatibility between the |intel| Graphics Compute Runtime
 used in this release of the |lp_amr| and the |i915| kernel mode driver in
 |Linux| Kernel 6.7.5 or later.
 
-For |core| Ultra Processors, the recommended operating system for the |lp_amr|
+For Intel® Core™ Ultra Processors, the recommended operating system for the |lp_amr|
 is the `Ubuntu OS version 22.04 LTS (Jammy Jellyfish) <https://releases.ubuntu.com/22.04>`__ Desktop image, as described in the
 :doc:`../../gsg_robot/prepare-system` section. Since this version of the
 |ubuntu| operating system uses a |Linux| Kernel 6.8, this incompatibility
-will have an impact if you use the |lp_amr| on an |core| Ultra Processor.
+will have an impact if you use the |lp_amr| on an Intel® Core™ Ultra Processor.
 
 To test whether your system is impacted, you can use the ``clinfo`` tool.
 You can install and execute this tool by means of:
@@ -205,7 +205,7 @@ devices:
 If the list of devices not include the GPU, your system is impacted.
 
 To fix the issue, you can apply the workaround that is recommended in the
-|intel_compute_runtime_release_notes_24_09|.
+`Release Notes of the Intel® Graphics Compute Runtime <https://github.com/intel/compute-runtime/releases/tag/24.09.28717.12>`__.
 If you export the following debug variables before you run any of the
 GPU-related workloads, the GPU will be detected appropriately:
 

@@ -1,15 +1,15 @@
-|clearpath_robotics| |jackal| Robot
+Clearpath Robotics |jackal| Robot
 ===================================
 
-The |clearpath_robotics| |jackal| robot is a rugged unmanned ground robot, which is
-developed and distributed by |clearpath_robotics|, a Rockwell Automation company.
-Detailed information about this robot is provided by |clearpath_robotics|:
+The Clearpath Robotics |jackal| robot is a rugged unmanned ground robot, which is
+developed and distributed by Clearpath Robotics, a Rockwell Automation company.
+Detailed information about this robot is provided by Clearpath Robotics:
 
 * `Jackal Unmanned Ground Vehicle <https://clearpathrobotics.com/jackal-small-unmanned-ground-vehicle/>`_ product page
 * `Jackal User Manual  <https://docs.clearpathrobotics.com/docs/robots/outdoor_robots/jackal/user_manual_jackal/>`_
 
 The following pages describe how the |lp_amr| can be used with a
-|clearpath_robotics| |jackal| robot.
+Clearpath Robotics |jackal| robot.
 
 * :doc:`clearpath-jackal/jackal-intel-robotics-sdk` - This page depicts
   how to install and configure the |lp_amr| on the |jackal| robot.

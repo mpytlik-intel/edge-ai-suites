@@ -21,7 +21,7 @@ Example for the |up_xtreme|
 
 #. Set up your system by following the steps in :doc:`../../../gsg_robot/prepare-system`.
 
-#. Ensure the ``ros-humble-aaeon-ros2-amr-interface`` |deb_pack| is installed.
+#. Ensure the ``ros-humble-aaeon-ros2-amr-interface`` Deb package is installed.
 
    .. code-block:: bash
 

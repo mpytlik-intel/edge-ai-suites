@@ -1,9 +1,9 @@
-Install the |intel| NPU Driver on |core| Ultra Processors
+Install the |intel| NPU Driver on Intel® Core™ Ultra Processors
 #########################################################
 
 If you want to run |openvino| inferencing applications on the NPU device
-of |core| Ultra processors, you need to install the |intel| NPU driver.
-If your system does not have an |core| Ultra Processor, you should skip
+of Intel® Core™ Ultra processors, you need to install the |intel| NPU driver.
+If your system does not have an Intel® Core™ Ultra Processor, you should skip
 this step.
 
 General information on the |intel| NPU driver can be found on the
@@ -79,7 +79,7 @@ access rights. Verify that you can see the ``/dev/accel/accel0`` device
 and that the device belongs to the ``render`` group:
 
 .. code-block:: bash
-   
+
    $ ls -lah /dev/accel/accel0
    crw-rw---- 1 root render 261, 0 Jul  1 13:10 /dev/accel/accel0
 

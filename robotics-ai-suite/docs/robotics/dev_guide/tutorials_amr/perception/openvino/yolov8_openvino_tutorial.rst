@@ -3,8 +3,8 @@
 |openvino| Yolov8 Tutorial
 =======================================
 
-This tutorial serves as an example for understanding the utilization of |openvino| node. 
-It outlines the steps for installing  |ros| |openvino| node and executing the segmentation model on the CPU, 
+This tutorial serves as an example for understanding the utilization of |openvino| node.
+It outlines the steps for installing  |ros| |openvino| node and executing the segmentation model on the CPU,
 using a |realsense| camera image as the input.
 
 Getting Started
@@ -26,12 +26,12 @@ Install Python packages (optional)
 
 Following Python packages are necessary to automatically download and convert the model to IR files.
 Also You can provide your own model files in the config, if you have them already.
- 
+
   .. code-block::
 
       pip3 install numpy pandas openvino-dev ultralytics nncf onnx
 
-Install |deb_pack|
+Install Deb package
 ^^^^^^^^^^^^^^^^^^^
   .. code-block::
 
@@ -57,7 +57,7 @@ First create a config file `pipeline.toml`. If not present, sample content for t
       task = "segmentation" # options: detection, segmentation, pose
       # w,h of internal resolution, input frames are resized
       # consider using smaller resolution for faster inference
-      width = 640 
+      width = 640
       height = 480
       model_size = "n" # options: n, s, m, l, x (refer to ultralytics docs)
       half = true # use half precision
@@ -97,13 +97,13 @@ First create a config file `pipeline.toml`. If not present, sample content for t
                 	-r /camera/camera/color/image_raw:=/camera/color/image_raw \
                 	-r /camera/camera/color/camera_info:=/camera/color/camera_info \
                 	-r /camera/camera/aligned_depth_to_color/image_raw:=/camera/depth/image_raw \
-                	-r /camera/camera/aligned_depth_to_color/camera_info:=/camera/depth/camera_info 
+                	-r /camera/camera/aligned_depth_to_color/camera_info:=/camera/depth/camera_info
 
 Once you start the node, you view the output video and detections using the following command:
 
    .. code-block::
 
-        rviz2 
+        rviz2
 
 
 Then you can subscribe to the ``/pipeline1/color/image_raw/yolo_video`` topic to view the result.
@@ -124,7 +124,7 @@ The messages have following structure:
       sensor_msgs/Image rgb_image # Original image
       sensor_msgs/Image depth_image # only if topic depth is provided
 
-      string task # "Detection" "Segmentation "Pose" 
+      string task # "Detection" "Segmentation "Pose"
 
       geometry_msgs/TransformStamped camera_transform # Camera transform captured at the time of image arrival
 
@@ -133,7 +133,7 @@ The messages have following structure:
 
 Structure of the YoloDetection message object:
 
-   .. code-block:: 
+   .. code-block::
 
       float32 confidence
 
@@ -152,7 +152,7 @@ Structure of the YoloDetection message object:
       # Only used for Segmentation task, this is flatten array of mask, same size as bounding box
       float32[] mask
 
-The same message structure is used for all 3 tasks (detection, segmentation, pose) with some fields being empty when not used. 
+The same message structure is used for all 3 tasks (detection, segmentation, pose) with some fields being empty when not used.
 
 For body pose related tasks there is an image that helps in understanding the meaning of joints and how they are connected.
 .. Connected Joints (Research gate) https://www.researchgate.net/figure/Key-points-for-human-poses-according-to-the-COCO-output-format-R-L-right-left_fig3_353746430
@@ -160,7 +160,7 @@ For body pose related tasks there is an image that helps in understanding the me
 Other considerations
 ----------------------
 
-Yolov8 model requires a commercial license from Ultralytics. This package only provides an efficient way to run the model on |openvino| with |ros|. Models and weights are downloaded from ultralytics and converted to IR format. 
+Yolov8 model requires a commercial license from Ultralytics. This package only provides an efficient way to run the model on |openvino| with |ros|. Models and weights are downloaded from ultralytics and converted to IR format.
 
 This package requires the model to have fixed shape, and to have 80 classes (for detection/segmentation). Keep this in mind when providing fine tuned models.
 

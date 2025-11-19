@@ -12,7 +12,7 @@ Complete the :doc:`../../../../gsg_robot/index` before continuing.
 Install
 --------------------------------
 
-Install ``ros-humble-adbscan-ros2`` |deb_pack| from |intel| |p_amr| APT repository
+Install ``ros-humble-adbscan-ros2`` Deb package from |intel| |p_amr| APT repository
 
    .. code-block::
 

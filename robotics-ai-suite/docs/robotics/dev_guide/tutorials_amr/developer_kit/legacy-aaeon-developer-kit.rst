@@ -16,7 +16,7 @@ and verified that the robot is functioning properly,
 you are free to start over with a fresh OS installation to set up the robot system
 with the latest |lp_amr| release.
 Just follow our :doc:`../../../gsg_robot/index` from installation of Ubuntu, ROS software to the |p_amr|.
-Since release 2.0 the new |deb_pack| based SDK contains all the software required to run on an AAEON robotic kit. It also includes a number of additional tutorials.
+Since release 2.0 the new Deb package based SDK contains all the software required to run on an AAEON robotic kit. It also includes a number of additional tutorials.
 
 |lp_amr| Tutorials based on the AAEON Robotic kits
 ---------------------------------------------------

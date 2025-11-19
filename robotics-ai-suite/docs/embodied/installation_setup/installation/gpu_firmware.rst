@@ -1,7 +1,7 @@
 Install Intel® GPU firmware (Optional)
 ======================================
 
-The Embodied Intelligence SDK offers two options for installing Intel® GPU firmware: 
+The Embodied Intelligence SDK offers two options for installing Intel® GPU firmware:
 
 - **For platforms with only an integrated GPU (iGPU)**: automatic installation via the :doc:`Real-Time Linux <rt_linux>` method.
 - **For platforms with both integrated (iGPU) and discrete GPUs (dGPU)**: manual installation using the instructions provided on this page.
@@ -10,11 +10,11 @@ Dependencies
 :::::::::::::::::::::::::::
 
 This firmware is part of a collection of kernel mode drivers
-that together enable support for Intel graphics. The backports 
+that together enable support for Intel graphics. The backports
 collection within https://github.com/intel-gpu includes:
 
   - `[i915] <https://github.com/intel-gpu/intel-gpu-i915-backports>`_ - The main graphics driver, |i915|.
-  - `[cse] <https://github.com/intel-gpu/intel-gpu-cse-backports>`_ - |cse|.
+  - `[cse] <https://github.com/intel-gpu/intel-gpu-cse-backports>`_ - Intel® Converged Security Engine (Intel® CSE).
   - `[pmt] <https://github.com/intel-gpu/intel-gpu-pmt-backports>`_ - |pmt|.
   - `[firmware] <https://github.com/intel-gpu/intel-gpu-firmware>`_ - Contains firmware required by |i915|.
 

@@ -4,7 +4,7 @@ Intel-optimized ADBSCAN Algorithm
 ===================================
 
 In this version of ADBSCAN, the algorithm has been optimized for |intel| SOC by replacing linear neighbor point search with an optimized |oneapi| PCL library (offloaded to GPU), as well as refactoring the clustering algorithm.
-It has been tested and validated on 13th Generation |core| processors with |xe|, 12th Generation |core| processors with |xe| and 11th Generation |core| processors with |xe|. This tutorial describes how to run this Intel-optimized ADBSCAN algorithm and compare the execution time with the unoptimized version.
+It has been tested and validated on 13th Generation Intel® Core™ processors with |xe|, 12th Generation Intel® Core™ processors with |xe| and 11th Generation Intel® Core™ processors with |xe|. This tutorial describes how to run this Intel-optimized ADBSCAN algorithm and compare the execution time with the unoptimized version.
 
 
 Getting Started
@@ -21,7 +21,7 @@ Prerequisites
 Complete the :doc:`../../../../gsg_robot/index` before continuing.
 
 
-Install and run the |ros| bag file |deb_pack|
+Install and run the |ros| bag file Deb package
 -----------------------------------------------
 
 Install the following package with |ros| bag files in order to publish point cloud data from LIDAR and |realsense| camera:
@@ -44,10 +44,10 @@ This command will launch the |ros| bag file and publish the recorded point cloud
 
 ``ros2 topic list`` command will show a list of the published topics which include ``/scan`` (point cloud from 2D LIDAR) and ``/camera/depth/color/points`` (point cloud from |realsense| camera).
 
-Install and run optimized |deb_pack|
+Install and run optimized Deb package
 ---------------------------------------------
 
-Install ``ros-humble-adbscan-oneapi`` |deb_pack| from |intel| |p_amr| APT repository:
+Install ``ros-humble-adbscan-oneapi`` Deb package from |intel| |p_amr| APT repository:
 
    .. code-block:: bash
 
@@ -68,10 +68,10 @@ This will print tables with the benchmarking data as showed below:
 
 The table shows a breakdown between pre-processing, ADBSCAN execution and post-processing time. The caption at the bottom of the table will print which PCL library is being used.
 
-Install and run standard (unoptimized) |deb_pack|
+Install and run standard (unoptimized) Deb package
 -----------------------------------------------------
 
-Install ``ros-humble-adbscan-ros2`` |deb_pack| from |intel| |p_amr| APT repository
+Install ``ros-humble-adbscan-ros2`` Deb package from |intel| |p_amr| APT repository
 
    .. code-block:: bash
 
@@ -86,13 +86,13 @@ Run the following command in a terminal
       ros2 run adbscan_ros2 adbscan_sub --ros-args --params-file /opt/ros/humble/share/adbscan_ros2/config/adbscan_sub_RS.yaml
 
 
-This will print a similar table with the benchmarking data. 
+This will print a similar table with the benchmarking data.
 
     .. image:: ../../../../images/benchmark_table_unoptimized.png
 
 You will see that the ADBSCAN execution time is much smaller for the optimized version compared to the standard one. The pre-processing and post-processing time
 should be more or less of the same range in both versions, since the input bag file is identical. The amount of gain in execution time will depend on the system configuration, the size of the point cloud data in the input frames etc.
-We observed an average gain of ~5-8x in 13th Generation |core| processors with |xe|, 12th Generation |core| processors with |xe| and 11th Generation |core| processors with |xe| for this specific |ros| bag file.
+We observed an average gain of ~5-8x in 13th Generation Intel® Core™ processors with |xe|, 12th Generation Intel® Core™ processors with |xe| and 11th Generation Intel® Core™ processors with |xe| for this specific |ros| bag file.
 
 Re-configurable parameters
 ----------------------------
@@ -137,7 +137,7 @@ A complete list of the reconfigurable parameters is given below:
 Troubleshooting
 ----------------------------
 
-- Failed to install |deb_pack|: Please make sure to run ``sudo apt update`` before installing the necessary |deb_packs|.
+- Failed to install Deb package: Please make sure to run ``sudo apt update`` before installing the necessary Deb packages.
 
 - You can stop the demo anytime by pressing ``ctrl-C``.
 
@@ -150,9 +150,9 @@ Troubleshooting
 - IA-optimized ADBSCAN offloads the neighbor search to GPUs when using `oneapi_kdtree` and `oneapi_octree` library. Please make sure that your system is equipped with working gpu, if using these libraries.
   You can use `lspci` command in a |Linux| terminal to view GPU info.
 
-- ``ros-humble-adbscan-ros2`` and ``ros-humble-adbscan-oneapi`` are mutually exclusive |deb_packs|. Please refrain from installing them simultaneously like this ``apt install ros-humble-adbscan-ros2 ros-humble-adbscan-oneapi``. Always install the packages sequentially, as showed in this document.
+- ``ros-humble-adbscan-ros2`` and ``ros-humble-adbscan-oneapi`` are mutually exclusive Deb packages. Please refrain from installing them simultaneously like this ``apt install ros-humble-adbscan-ros2 ros-humble-adbscan-oneapi``. Always install the packages sequentially, as showed in this document.
 
-- Some newer 13th Generation |core| and |core| Ultra Processors may experience lower performance when the |Linux| kernel schedules the ``adbscan_ros2`` process to an efficient-core (E-core). To achieve better performance, you can utilize the ``taskset`` command to set the process's CPU affinity. For example, you can direct ``adbscan_ros2`` to run on CPU core 0 which is a performance-core (P-core).
+- Some newer 13th Generation Intel® Core™ and Intel® Core™ Ultra Processors may experience lower performance when the |Linux| kernel schedules the ``adbscan_ros2`` process to an efficient-core (E-core). To achieve better performance, you can utilize the ``taskset`` command to set the process's CPU affinity. For example, you can direct ``adbscan_ros2`` to run on CPU core 0 which is a performance-core (P-core).
 
   .. code-block:: bash
 

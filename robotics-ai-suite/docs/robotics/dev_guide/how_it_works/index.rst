@@ -8,7 +8,7 @@ How it Works |how_it_works|
 ===========================
 
 
-The |lp_amr| (\ |p_amr|\ ) modules are deployed as |deb_packs|, 
+The |lp_amr| (\ |p_amr|\ ) modules are deployed as Deb packages,
 enhancing the Developer Experience (DX) and supporting Continuous Integration and
 Continuous Deployment (CI/CD) practices. They offer flexible deployment across various
 execution environments, including robots, development PCs, servers, and the cloud.
@@ -18,7 +18,7 @@ Modules and Services
 --------------------
 
 
-In the |l_oneapi| (|oneapi|) and |l_openvino| (|openvino|), a middleware layered 
+In the |l_oneapi| (|oneapi|) and |l_openvino| (|openvino|), a middleware layered
 architecture that abstracts hardware dependencies from algorithm implementation.
 
 

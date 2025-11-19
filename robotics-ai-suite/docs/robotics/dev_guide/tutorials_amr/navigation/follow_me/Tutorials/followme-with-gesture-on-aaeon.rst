@@ -3,30 +3,30 @@
 Follow-me with ADBSCAN and Gesture-based Control on Aaeon Robot
 =================================================================
 
-This tutorial demonstrates the Follow-me algorithm with gesture, where the robot follows a target person in real time. 
-The movement of the robot can be controlled by the person's position (relative to the robot) as well as the hand gestures. 
-This tutorial is demonstrated on Aaeon robot using 2 front-mounted |realsense| cameras: camera 1 and camera 2. 
+This tutorial demonstrates the Follow-me algorithm with gesture, where the robot follows a target person in real time.
+The movement of the robot can be controlled by the person's position (relative to the robot) as well as the hand gestures.
+This tutorial is demonstrated on Aaeon robot using 2 front-mounted |realsense| cameras: camera 1 and camera 2.
 Camera 1 takes the point cloud data as inputs and passes it through |intel|-patented object detection algorithm, namely Adaptive DBSCAN,
 to detect the position of the target person.
-Camera 2 is positioned at a certain height for capturing the RGB images of the target's hand gestures. 
-This RGB image is passed through a deep learning-based gesture recognition pipeline, 
-called `Mediapipe Hands Framework <https://mediapipe.readthedocs.io/en/latest/solutions/hands.html>`__, to detect the gesture category. 
-The motion commands for the robot are published to ``twist`` topic based on these two outputs: person's position and gesture category. 
+Camera 2 is positioned at a certain height for capturing the RGB images of the target's hand gestures.
+This RGB image is passed through a deep learning-based gesture recognition pipeline,
+called `Mediapipe Hands Framework <https://mediapipe.readthedocs.io/en/latest/solutions/hands.html>`__, to detect the gesture category.
+The motion commands for the robot are published to ``twist`` topic based on these two outputs: person's position and gesture category.
 
 The two conditions required to start the robot's movement are as follows:
 
--  The target person will be within the tracking radius 
+-  The target person will be within the tracking radius
    (a reconfigurable parameter in the parameter file in `/opt/ros/humble/share/tutorial_follow_me_w_gesture/params/followme_adbscan_RS_params.yaml`) of the robot.
 
 -  The detected gesture of the target is ``thumbs up``.
 
 Once the starting criteria are met, the robot keeps following the target unless one of the below stopping conditions holds true:
 
--  The target moves to a distance greater than the tracking radius 
+-  The target moves to a distance greater than the tracking radius
    (a reconfigurable parameter in the parameter file in `/opt/ros/humble/share/tutorial_follow_me_w_gesture/params/followme_adbscan_RS_params.yaml`).
 
 -  The detected gesture is ``thumbs down``.
-  
+
 Getting Started
 ----------------
 
@@ -37,10 +37,10 @@ Prerequisites
 
 - Complete the :doc:`../../../../../gsg_robot/index` before continuing.
 
-Install the |deb_pack|
+Install the Deb package
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Install ``ros-humble-follow-me-tutorial-w-gesture`` |deb_pack| from |intel| |p_amr| APT repository.
+Install ``ros-humble-follow-me-tutorial-w-gesture`` Deb package from |intel| |p_amr| APT repository.
 
    .. code-block::
 
@@ -52,7 +52,7 @@ Install Python Modules
 
 This application uses `Mediapipe Hands Framework <https://mediapipe.readthedocs.io/en/latest/solutions/hands.html>`__
 for hand gesture recognition. Install the following modules as a prerequisite for the framework:
-   
+
    .. code-block::
 
       pip3 install mediapipe
@@ -64,7 +64,7 @@ Identify serial number of Realsense Camera
 -------------------------------------------
 
 Install package
-    
+
    .. code-block::
 
          sudo apt install librealsense2-utils
@@ -80,7 +80,7 @@ Check the Serial number
 
 Serial Number is the one which has to be used while launching the demo in below step
 
-Calibrate the robot 
+Calibrate the robot
 ^^^^^^^^^^^^^^^^^^^^^^^
 Please perform IMU calibration of the robot, launch script below:
 
@@ -105,15 +105,15 @@ To launch the Follow-me application tutorial with gesture on the Aaeon robot, us
 Camera1 serial number : Camera which is mounted to the bottom (used for tracking the target).
 
 Camera2 serial Number : Camera mounted on the top (used for gesture recognition).
- 
-After executing the above command, you can observe that the robot is locating the target within a tracking radius 
-(~0.5 - 1.5 m; `min_dist` and `max_dist` are set in `/opt/ros/humble/share/tutorial_follow_me/params/followme_adbscan_RS_params.yaml`)  and subsequently, 
-following the moving target person as soon as he/she shows ``thumbs up``. 
+
+After executing the above command, you can observe that the robot is locating the target within a tracking radius
+(~0.5 - 1.5 m; `min_dist` and `max_dist` are set in `/opt/ros/humble/share/tutorial_follow_me/params/followme_adbscan_RS_params.yaml`)  and subsequently,
+following the moving target person as soon as he/she shows ``thumbs up``.
 The robot will stop as soon as ``thumbs down`` is showed or the target person moves away from the tracking radius.
 
 .. note::
 
-   There are reconfigurable parameters in `/opt/ros/humble/share/tutorial_follow_me_w_gesture/params` directory for |realsense| camera (`followme_adbscan_RS_params.yaml`). 
+   There are reconfigurable parameters in `/opt/ros/humble/share/tutorial_follow_me_w_gesture/params` directory for |realsense| camera (`followme_adbscan_RS_params.yaml`).
    The user can modify parameters depending on the respective robot, sensor configuration and environments (if required) before running the tutorial.
    Find a brief description of the parameters in the following table:
 
@@ -162,7 +162,7 @@ Troubleshooting
 
       sudo chmod <xxx> /dev/dri/render128
 
-- Failed to install |deb_pack|: Please make sure to run ``sudo apt update`` before installing the necessary |deb_packs|.
+- Failed to install Deb package: Please make sure to run ``sudo apt update`` before installing the necessary Deb packages.
 
 - You may stop the demo anytime by pressing ``ctrl-C``.
 

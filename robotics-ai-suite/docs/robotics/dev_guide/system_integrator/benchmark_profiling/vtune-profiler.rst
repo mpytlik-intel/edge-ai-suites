@@ -10,10 +10,10 @@ Overview
 Installation of |vtune|
 =======================
 
-Follow the |vtune_profiler_installation_guide| to install |vtune| by choosing one of the following two options:
+Follow the `VTune™ Profiler installation guide <https://www.intel.com/content/www/us/en/docs/vtune-profiler/installation-guide/2023-1/overview.html>`__ to install |vtune| by choosing one of the following two options:
 
 * `Get the Intel® oneAPI Base Toolkit <https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html>`__
-* |vtune_get_the_intel_vtune_profiler|
+* `Get the VTune™ Profiler <https://www.intel.com/content/www/us/en/developer/tools/oneapi/vtune-profiler-download.html>`__
 
 
 Additional System Setup for CPU and GPU Profiling
@@ -21,13 +21,13 @@ Additional System Setup for CPU and GPU Profiling
 
 #. Build and Install the Sampling Drivers for |Linux| Targets.
 
-   To do CPU and GPU profiling using driverless sampling collection on processors based on |intel| Performance Hybrid Architecture, which has been introduced from 12th Gen |core| processors, the |vtune| sampling drivers must be installed and loaded using root credentials. Follow the steps to |vtune_sampling_driver_installation_guide|.
+   To do CPU and GPU profiling using driverless sampling collection on processors based on |intel| Performance Hybrid Architecture, which has been introduced from 12th Gen Intel® Core™ processors, the |vtune| sampling drivers must be installed and loaded using root credentials. Follow the steps to `Build and Install the Sampling Drivers for Linux Targets <https://www.intel.com/content/www/us/en/docs/vtune-profiler/user-guide/2024-0/build-install-sampling-drivers-for-linux-targets.html>`__.
 
 #. System setup for CPU and GPU profiling.
 
-   As described in |vtune_setup_system_for_GPU_analysis|, to analyze |intel| HD and |intel| Iris Graphics hardware events, the profiler requires that the "Intel Metric Discovery(MD) API" Library is installed and that the necessary permissions to enable the collecting of GPU hardware metrics.
+   As described in `Set Up System for GPU Analysis <https://www.intel.com/content/www/us/en/docs/vtune-profiler/user-guide/2024-0/set-up-system-for-gpu-analysis.html>`__, to analyze |intel| HD and |intel| Iris Graphics hardware events, the profiler requires that the "Intel Metric Discovery(MD) API" Library is installed and that the necessary permissions to enable the collecting of GPU hardware metrics.
 
-   * Follow the steps |vtune_setup_system_for_GPU_analysis|, to build and install the Intel Metric Discovery(MD) API Library.
+   * Follow the steps `Set Up System for GPU Analysis <https://www.intel.com/content/www/us/en/docs/vtune-profiler/user-guide/2024-0/set-up-system-for-gpu-analysis.html>`__, to build and install the Intel Metric Discovery(MD) API Library.
    * Run the below command to grant relevant permission to enable the collecting of GPU hardware metrics for non-privileged users.
 
       .. code-block::
@@ -125,7 +125,7 @@ After the CPU Hotspots Analysis results are saved, open the ``vtune-gui`` by run
 
 Now click on the ``open-results`` button on the left side of the tool, browse to the directory ``vtune_results_hotspots``, select the ``vtune_results_hotspots.vtune`` file and click on ``open``. This will open the CPU Hotspots Analysis results for the "Collaborative visual slam with fastmapping enabled" application from the :doc:`../../tutorials_amr/navigation/collaborative-slam` tutorial which ran for 30 seconds.
 
-From the summary page, some of the CPU Hotspots Analysis details that can be observed are mentioned below. Refer to the page, |vtune_run_and_interrupt_hotspots_analysis|, for more details on the CPU Hotspots Analysis using |vtune|.
+From the summary page, some of the CPU Hotspots Analysis details that can be observed are mentioned below. Refer to the page, `Run and Interpret Hotspots Analysis <https://www.intel.com/content/www/us/en/docs/vtune-profiler/tutorial-common-bottlenecks-linux/2020/run-and-interpret-hotspots-analysis.html>`__, for more details on the CPU Hotspots Analysis using |vtune|.
 
 Top Hotspots and the Top Tasks
 ..............................
@@ -210,7 +210,7 @@ After the CPU Microarchitecture Exploration results are saved, open the ``vtune-
 
 Now click on the ``open-results`` button on the left side of the tool, browse to the directory ``vtune_results_uarch``, select the ``vtune_results_uarch.vtune`` file and click on ``open``. This will open the CPU Microarchitecture Exploration results for the "Collaborative visual slam with fastmapping enabled" application from the :doc:`../../tutorials_amr/navigation/collaborative-slam` tutorial which ran for 30 seconds.
 
-From the summary page, some of the CPU Microarchitecture Exploration details that can be observed are mentioned below. Refer to the page, |vtune_analyze_microarchitecture_usage|, for more details on the CPU Microarchitecture Exploration using |vtune|.
+From the summary page, some of the CPU Microarchitecture Exploration details that can be observed are mentioned below. Refer to the page, `Analyze Microarchitecture Usage <https://www.intel.com/content/www/us/en/docs/vtune-profiler/tutorial-common-bottlenecks-linux/2020/analyze-microarchitecture-usage.html>`__, for more details on the CPU Microarchitecture Exploration using |vtune|.
 
 P-core and E-core execution summary
 ...................................

@@ -48,7 +48,7 @@ The source code of this component can be found here: `ITS-Planner <https://githu
 Getting Started
 ----------------
 
-|p_amr| provides a |ros| |deb_pack| for the application, supported by the following platform:
+|p_amr| provides a |ros| Deb package for the application, supported by the following platform:
 
 - ROS version: humble
 
@@ -57,10 +57,10 @@ Prerequisites
 
 Complete the :doc:`../../../gsg_robot/index` before continuing.
 
-Install |deb_pack|
+Install Deb package
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Install the ``ros-humble-its-planner`` |deb_pack| from the |intel| |p_amr| APT repository
+Install the ``ros-humble-its-planner`` Deb package from the |intel| |p_amr| APT repository
 
    .. code-block:: bash
 

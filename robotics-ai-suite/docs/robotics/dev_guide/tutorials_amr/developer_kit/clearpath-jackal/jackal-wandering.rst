@@ -2,7 +2,7 @@ Execute the Wandering Application on the |jackal| Robot
 =======================================================
 
 This tutorial details the steps to install and run the Wandering Application
-with |realsense| camera input on a |clearpath_robotics| |jackal| robot.
+with |realsense| camera input on a Clearpath Robotics |jackal| robot.
 The Wandering Application will use the Nav2 navigation stack and the
 RTAB-Map SLAM application to let the |jackal| robot move around and create
 a map of the environment.
@@ -20,7 +20,7 @@ Make sure that you have set up your |jackal| robot as described on the
 steps on page :doc:`./jackal-keyboard-teleop` in order to verify that
 your |ros| installation can communicate with the Motor Control Unit (MCU).
 
-To install the |deb_pack| of the Wandering tutorial on |jackal| robots,
+To install the Deb package of the Wandering tutorial on |jackal| robots,
 run the following command:
 
 .. code-block:: bash
@@ -121,9 +121,9 @@ considers the necessary remapping of both topics when it starts the
             -p scan_time:=0.033 -p range_min:=0.1 -p range_max:=2.5 \
             -p output_frame:=camera_0_depth_frame &
 
-The ``depthimage_to_laserscan`` node publishes the topic ``/scan``, which is 
+The ``depthimage_to_laserscan`` node publishes the topic ``/scan``, which is
 subscribed by several other nodes. The laser scan messages, which are broadcast
-via this topic, must include a frame id. This frame id, whose default value is 
+via this topic, must include a frame id. This frame id, whose default value is
 ``camera_depth_frame``, must be adapted to the actual link name on the robot.
 According to the TF2 tree of the |jackal| robot, which is shown on the
 :doc:`./jackal-intel-robotics-sdk` page, the actual link name is

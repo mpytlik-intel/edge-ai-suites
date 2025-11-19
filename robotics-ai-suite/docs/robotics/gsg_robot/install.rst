@@ -1,7 +1,7 @@
-Install |lp_amr| |deb_packs|
+Install |lp_amr| Deb packages
 #################################
 
-This section details steps to install |amr_package_name| |deb_packs|.
+This section details steps to install |amr_package_name| Deb packages.
 
 .. note::
 
@@ -65,7 +65,7 @@ This section details steps to install |amr_package_name| |deb_packs|.
 
          .. tab:: Install default toolkit packages
 
-            #. Choose the |amr_package_name| |deb_pack| to install.
+            #. Choose the |amr_package_name| Deb package to install.
 
                **ros-humble-robotics-sdk**
                   The standard version of the |p_amr|. This package includes almost everything except for a handful of tutorials and bag files.
@@ -73,12 +73,12 @@ This section details steps to install |amr_package_name| |deb_packs|.
                **ros-humble-robotics-sdk-complete**
                   The complete version of the |p_amr|. It also includes those items excluded from the standard version. Please note that the complete SDK downloads approximately 20GB of additional files.
 
-            #. Install the chosen |amr_package_name| |deb_pack|
+            #. Install the chosen |amr_package_name| Deb package
 
                .. note::
 
                   Before you install ros-humble-robotics-sdk-complete (or any other packages that depend on OpenVINO), please read the information on :doc:`install-openvino`.
-             
+
                Install command example:
 
                .. code-block:: bash
@@ -130,8 +130,8 @@ This section details steps to install |amr_package_name| |deb_packs|.
                      After setting the proxy values in `/etc/apt/apt.conf.d/proxy.conf` and `/etc/environment`
                      you will have to reboot the device, so these settings become effective.
 
-               
-            #. Choose the |amr_package_name| |deb_pack| to install.
+
+            #. Choose the |amr_package_name| Deb package to install.
 
                **ros-humble-aaeon-adbscan-tutorial**
                   AAEON Robot ADBSCAN mapping with FastMapping algorithm using |realsense| camera.
@@ -188,7 +188,7 @@ This section details steps to install |amr_package_name| |deb_packs|.
 
                   <br/>
 
-            #. Install the chosen |amr_package_name| |deb_pack|.
+            #. Install the chosen |amr_package_name| Deb package.
 
                .. note::
 
@@ -202,12 +202,12 @@ This section details steps to install |amr_package_name| |deb_packs|.
 
    .. tab:: Install in a Docker container (optional)
 
-      To run |lp_amr| in a |Docker| container you must have Docker installed on your system.
+      To run |lp_amr| in a Docker container you must have Docker installed on your system.
       You can go with an existing installation or start with a fresh install.
 
       **Install Docker**
 
-        Follow the `Install Docker_Engine on Ubuntu OS <https://docs.docker.com/engine/install/ubuntu/>`__ guide, to install |Docker| on your target system.
+        Follow the `Install Docker_Engine on Ubuntu OS <https://docs.docker.com/engine/install/ubuntu/>`__ guide, to install Docker on your target system.
 
         After `uninstalling any old Docker Engine versions <Uninstall old versions>`__
         you have the option to:
@@ -218,11 +218,11 @@ This section details steps to install |amr_package_name| |deb_packs|.
 
          * `Install using the convenience script <https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script>`__
 
-        Now you are ready to set up a Dockerfile that you can use to create your own |lp_amr| |Docker| image.
+        Now you are ready to set up a Dockerfile that you can use to create your own |lp_amr| Docker image.
 
         Follow the `Dockerfile reference <https://docs.docker.com/engine/reference/builder/>`__ to learn how to create and launch your Docker image.
 
-      **Example of installing the Robotics SDK inside a |Docker| container**
+      **Example of installing the Robotics SDK inside a Docker container**
 
          .. note::
 
@@ -325,7 +325,7 @@ This section details steps to install |amr_package_name| |deb_packs|.
 
         * Sample create script
 
-          Run the create script to create your |Docker| image based on the Dockerfile.
+          Run the create script to create your Docker image based on the Dockerfile.
 
           .. code-block:: bash
 
@@ -362,7 +362,7 @@ This section details steps to install |amr_package_name| |deb_packs|.
 
         * Sample launch script
 
-          Launches the |Docker| image in |Docker| container.
+          Launches the Docker image in Docker container.
 
           .. code-block:: bash
 
@@ -412,13 +412,13 @@ Install one of the following packages based upon your processor type:
       +-----------------+-------------------------------------------------------------+
       | GPU Generation  | Processors                                                  |
       +=================+=============================================================+
-      | ``genXe``       | |core| Ultra Processors                                     |
+      | ``genXe``       | Intel® Core™ Ultra Processors                                     |
       |                 |                                                             |
-      |                 | 13th Generation |core| Processors                           |
+      |                 | 13th Generation Intel® Core™ Processors                           |
       |                 |                                                             |
-      |                 | 12th Generation |core| Processors                           |
+      |                 | 12th Generation Intel® Core™ Processors                           |
       |                 |                                                             |
-      |                 | 11th Generation |core| Processors                           |
+      |                 | 11th Generation Intel® Core™ Processors                           |
       |                 |                                                             |
       |                 | |intel| Processor N-series (products formerly Alder Lake-N) |
       +-----------------+-------------------------------------------------------------+

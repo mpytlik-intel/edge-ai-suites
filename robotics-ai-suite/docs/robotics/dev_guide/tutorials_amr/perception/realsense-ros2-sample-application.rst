@@ -15,7 +15,7 @@ This tutorial tells you how to:
 
 -  Visualize an image from the |realsense| camera displayed in rviz2.
 
-This |realsense| with |ros| Sample Application can be run using two different types of |realsense| cameras. The next section explains how to run this sample application using an |realsense| camera connected through USB (for example, |realsense| camera D435i). The subsequent section focuses on an |intel_realsense_depth_camera_d457| in MIPI mode, which is connected to an |axiomtek_robox500_ros2_amr_controller|.
+This |realsense| with |ros| Sample Application can be run using two different types of |realsense| cameras. The next section explains how to run this sample application using an |realsense| camera connected through USB (for example, |realsense| camera D435i). The subsequent section focuses on an `Intel® RealSense™ Depth Camera D457 <https://www.intelrealsense.com/depth-camera-d457/>`__ in MIPI mode, which is connected to an `Axiomtek Robox500 ROS 2 AMR Controller <https://www.axiomtek.com/Default.aspx?MenuId=Products&FunctionId=ProductView&ItemId=27392&C=ROBOX500&upcat=408>`__.
 
 Prerequisites
 `````````````
@@ -59,15 +59,15 @@ Using |realsense| camera connected through USB
 
    -  Type ``Ctrl-c`` in the terminal where the tutorial was run.
 
-Using |intel_realsense_depth_camera_d457| on an |axiomtek_robox500_ros2_amr_controller|  
+Using `Intel® RealSense™ Depth Camera D457 <https://www.intelrealsense.com/depth-camera-d457/>`__ on an `Axiomtek Robox500 ROS 2 AMR Controller <https://www.axiomtek.com/Default.aspx?MenuId=Products&FunctionId=ProductView&ItemId=27392&C=ROBOX500&upcat=408>`__
 ```````````````````````````````````````````````````````````````````````````````````````
 
-The following steps are required to set up the |axiomtek| to support the |realsense| Depth Camera D457.
+The following steps are required to set up the Axiomtek Robox500 ROS 2 AMR Controller to support the |realsense| Depth Camera D457.
 
-|axiomtek| Setup
+Axiomtek Robox500 ROS 2 AMR Controller Setup
 ................
 
-Connect an |realsense| Depth Camera D457 to  the |axiomtek| as shown in the below picture. Now, power-on the target.
+Connect an |realsense| Depth Camera D457 to  the Axiomtek Robox500 ROS 2 AMR Controller as shown in the below picture. Now, power-on the target.
 
 .. image:: ../../../images/rs_tutorial_Axiomtek_gmsl_camera_connection.png
 
@@ -79,7 +79,7 @@ Connect an |realsense| Depth Camera D457 to  the |axiomtek| as shown in the belo
 
 BIOS settings
 ^^^^^^^^^^^^^
-Go to the BIOS menu by pressing "``Del``" or "``Esc``" button when the board is powered on. The following BIOS settings should be set to enable |realsense| Depth Camera D457 support on an |axiomtek|.
+Go to the BIOS menu by pressing "``Del``" or "``Esc``" button when the board is powered on. The following BIOS settings should be set to enable |realsense| Depth Camera D457 support on an Axiomtek Robox500 ROS 2 AMR Controller.
 
 * Intel Advanced Menu -> Power & Performance -> CPU-Power Management Control -> C States -> < Disable > (Note: If enabled, fps drops)
 * Intel Advanced Menu -> System Agent (SA) Configuration -> MIPI Camera Configuration -> < Enable > (Note: Enable all four cameras in this menu)
