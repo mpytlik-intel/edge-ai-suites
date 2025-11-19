@@ -1,13 +1,13 @@
-Control the |jackal| Motors Using a Keyboard
+Control the Jackal Motors Using a Keyboard
 ============================================
 
 This page describes how to run a quick test, which verifies that the
-|jackal| robot has been set up appropriately.
+Jackal robot has been set up appropriately.
 It verifies that the |ros| middleware is working and that the
-onboard computer of the |jackal| robot can communicate with the Motor
+onboard computer of the Jackal robot can communicate with the Motor
 Control Unit (MCU).
 
-Make sure that you have set up your |jackal| robot as described on the
+Make sure that you have set up your Jackal robot as described on the
 :doc:`./jackal-intel-robotics-sdk` page.
 
 To execute the following steps, you must be logged in as the ``administrator``

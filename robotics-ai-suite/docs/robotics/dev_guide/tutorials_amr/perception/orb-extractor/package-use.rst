@@ -30,7 +30,7 @@ System Requirements
 
 Hardware Requirements
 -----------------------------------------------------------------------------
-Any of the following CPU with integrated |intel| GPU.
+Any of the following CPU with integrated Intel® GPU.
 
 .. code-block::
 

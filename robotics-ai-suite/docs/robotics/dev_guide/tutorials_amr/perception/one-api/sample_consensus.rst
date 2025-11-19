@@ -25,7 +25,7 @@ This tutorial guides you through the process of detecting a plane model within a
       :linenos:
 
 
-#. Source the |l_oneapi| environment:
+#. Source the Intel® oneAPI Base Toolkit environment:
 
    .. code-block::
 

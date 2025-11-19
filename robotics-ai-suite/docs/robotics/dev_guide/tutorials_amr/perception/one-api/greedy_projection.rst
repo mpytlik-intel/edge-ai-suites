@@ -58,7 +58,7 @@ Additional parameters are defined to provide control segments and overlap.
       :linenos:
 
 
-#. Source the |l_oneapi| environment:
+#. Source the Intel® oneAPI Base Toolkit environment:
 
    .. code-block::
 

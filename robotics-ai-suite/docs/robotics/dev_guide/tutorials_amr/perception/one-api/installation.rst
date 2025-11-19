@@ -6,7 +6,7 @@ Overview and Installation
 Overview
 --------
 
-Intel PCL optimization is accomplished using |l_oneapi|, which
+Intel PCL optimization is accomplished using Intel® oneAPI Base Toolkit, which
 comprises components such as the |oneapi| DPC++ Compiler, OpenMP and |oneapi| Threading Building
 Blocks (``oneTBB``).  This optimization maximizes performance by fully utilizing the hardware's
 available resources.
@@ -29,7 +29,7 @@ PCL KdTree class
     pcl::oneapi::KdTreeFLANN<pcl::PointXYZ> kdtree;
     kdtree.setInputCloud (cloud.makeShared())
 
-**Below are PCL modules optimized through** |l_oneapi|
+**Below are PCL modules optimized through** Intel® oneAPI Base Toolkit
 
 .. _modules:
 .. list-table:: Optimized oneAPI PCL modules
@@ -89,7 +89,7 @@ Supported Hardware
 
 **CPUs:**
 
-Systems based on |intel| 64 architectures below are supported
+Systems based on Intel® 64 architectures below are supported
 
 * Intel® Core™ processor family
 
@@ -122,7 +122,7 @@ library.
 
      sudo apt install libpcl-oneapi
 
-2. To develop with the PCL |oneapi| library or build PCL |oneapi| tutorials, you need the |l_oneapi|. To install |l_oneapi|,
+2. To develop with the PCL |oneapi| library or build PCL |oneapi| tutorials, you need the Intel® oneAPI Base Toolkit. To install Intel® oneAPI Base Toolkit,
 
   a. For Docker environment:
 
@@ -218,8 +218,8 @@ device from default device, the only option is to select through |oneapi| enviro
 JIT Limitation
 --------------
 
-Most |oneapi| PCL modules are implemented with the |intel| |oneapi| DPC++ Compiler.
-The |intel| |oneapi| DPC++ Compiler converts a DPC++ program into an intermediate
+Most |oneapi| PCL modules are implemented with the Intel® |oneapi| DPC++ Compiler.
+The Intel® |oneapi| DPC++ Compiler converts a DPC++ program into an intermediate
 language called SPIR-V (Standard Portable Intermediate Representation). The
 SPIR-V code is stored in the binary produced by the compilation process. The
 SPIR-V code has the advantage that it can be run on any hardware platform by

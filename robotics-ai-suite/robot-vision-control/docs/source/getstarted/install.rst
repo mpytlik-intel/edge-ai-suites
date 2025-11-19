@@ -4,7 +4,7 @@ Install RVC
 Requirements
 ------------
 
-1. |Docker_Engine| (Cannot be rootless, see `the installation <https://docs.docker.com/engine/install/ubuntu/>`_)
+1. Docker Engine (Cannot be rootless, see `the installation <https://docs.docker.com/engine/install/ubuntu/>`_)
 
    * Docker version 20.10.0 or higher
 

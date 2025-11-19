@@ -25,7 +25,7 @@ In this tutorial, we will learn how to initial align two point clouds, using SCI
       :linenos:
 
 
-#. Source the |l_oneapi| environment:
+#. Source the Intel® oneAPI Base Toolkit environment:
 
    .. code-block::
 

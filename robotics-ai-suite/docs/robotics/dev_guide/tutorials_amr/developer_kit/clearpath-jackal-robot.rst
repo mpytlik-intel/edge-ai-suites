@@ -1,7 +1,7 @@
-Clearpath Robotics |jackal| Robot
+Clearpath Robotics Jackal Robot
 ===================================
 
-The Clearpath Robotics |jackal| robot is a rugged unmanned ground robot, which is
+The Clearpath Robotics Jackal robot is a rugged unmanned ground robot, which is
 developed and distributed by Clearpath Robotics, a Rockwell Automation company.
 Detailed information about this robot is provided by Clearpath Robotics:
 
@@ -9,26 +9,26 @@ Detailed information about this robot is provided by Clearpath Robotics:
 * `Jackal User Manual  <https://docs.clearpathrobotics.com/docs/robots/outdoor_robots/jackal/user_manual_jackal/>`_
 
 The following pages describe how the |lp_amr| can be used with a
-Clearpath Robotics |jackal| robot.
+Clearpath Robotics Jackal robot.
 
 * :doc:`clearpath-jackal/jackal-intel-robotics-sdk` - This page depicts
-  how to install and configure the |lp_amr| on the |jackal| robot.
+  how to install and configure the |lp_amr| on the Jackal robot.
 
 * :doc:`clearpath-jackal/jackal-keyboard-teleop` - This page describes
-  how to run a simple test with manual control of the |jackal| motors.
+  how to run a simple test with manual control of the Jackal motors.
 
 * :doc:`clearpath-jackal/jackal-wandering` - This page demonstrates
-  how the |jackal| robot can make use of the algorithms and applications
+  how the Jackal robot can make use of the algorithms and applications
   provided by the |lp_amr|. This is done by executing the
   Wandering Application.
 
 * :doc:`../navigation/follow_me/Tutorials/followme-on-clearpathjackal` - This
   tutorial provides instructions for running the ADBSCAN-based Follow-me
-  algorithm using an input stream from an |realsense| camera on a |jackal| robot.
+  algorithm using an input stream from an |realsense| camera on a Jackal robot.
 
 * :doc:`../navigation/follow_me/Tutorials/followme-with-gesture-on-clearpathjackal` - This
   tutorial demonstrates the Follow-me algorithm along with a gesture
-  recognition network, where the |jackal| robot follows a target person
+  recognition network, where the Jackal robot follows a target person
   in real-time and responds to state commands through hand gestures.
 
 .. toctree::

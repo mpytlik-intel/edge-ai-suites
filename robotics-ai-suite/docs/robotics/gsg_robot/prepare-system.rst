@@ -19,11 +19,11 @@ Depending on your processor type, select one of the following |ubuntu|
    +==============================================+================================================+
    | Intel® Core™ Ultra Processors                      | `Ubuntu OS version 22.04 LTS (Jammy Jellyfish) <https://releases.ubuntu.com/22.04>`__ Desktop image            |
    +----------------------------------------------+------------------------------------------------+
-   | Other |intel| processors, including:         | 22.04 LTS image for Intel IoT platforms,       |
+   | Other Intel® processors, including:         | 22.04 LTS image for Intel IoT platforms,       |
    |                                              | available at `Download Ubuntu image for Intel® IoT platforms <https://ubuntu.com/download/iot/intel-iot>`__         |
    | 11th/12th/13th Generation Intel® Core™ Processors, |                                                |
    |                                              |                                                |
-   | |intel| Processor N-series                   |                                                |
+   | Intel® Processor N-series                   |                                                |
    | (products formerly Alder Lake-N)             |                                                |
    +----------------------------------------------+------------------------------------------------+
 
@@ -65,7 +65,7 @@ Depending on the processor type, the expected result is as follows:
    +==========================================+======================================+
    | Intel® Core™ Ultra Processors                  | ``6.5.0-44-generic``                 |
    +------------------------------------------+--------------------------------------+
-   | Other |intel| processors                 | ``5.15.0-1060-intel-iotg``           |
+   | Other Intel® processors                 | ``5.15.0-1060-intel-iotg``           |
    +------------------------------------------+--------------------------------------+
 
 

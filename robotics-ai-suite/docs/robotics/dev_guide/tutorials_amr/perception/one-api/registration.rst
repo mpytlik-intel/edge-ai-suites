@@ -1,10 +1,10 @@
 .. _oneapi_registration:
 
-|l_oneapi|\'s Iterative Closest Point (ICP)
+Intel® oneAPI Base Toolkit\'s Iterative Closest Point (ICP)
 =============================================================================
 
-The standard Iterative Closest Point (ICP) has been optimized using |l_oneapi|.
-Joint ICP and Generalized ICP are not currently optimized with |l_oneapi|. This tutorial
+The standard Iterative Closest Point (ICP) has been optimized using Intel® oneAPI Base Toolkit.
+Joint ICP and Generalized ICP are not currently optimized with Intel® oneAPI Base Toolkit. This tutorial
 covers the standard ICP.
 
 Iterative Closest Point
@@ -47,7 +47,7 @@ for details.
       :linenos:
 
 
-#. Source the |l_oneapi| environment:
+#. Source the Intel® oneAPI Base Toolkit environment:
 
    .. code-block::
 

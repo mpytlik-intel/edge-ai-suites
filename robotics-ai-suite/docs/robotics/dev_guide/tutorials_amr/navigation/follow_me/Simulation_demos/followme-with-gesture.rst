@@ -18,7 +18,7 @@ Complete the :doc:`../../../../../gsg_robot/index` before continuing.
 Install the Deb package
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Install ``ros-humble-followme-turtlebot3-gazebo`` Deb package from |intel| |p_amr| APT repository. This is the wrapper package which will launch all of the dependencies in the backend.
+Install ``ros-humble-followme-turtlebot3-gazebo`` Deb package from Intel® |p_amr| APT repository. This is the wrapper package which will launch all of the dependencies in the backend.
 
    .. code-block::
 

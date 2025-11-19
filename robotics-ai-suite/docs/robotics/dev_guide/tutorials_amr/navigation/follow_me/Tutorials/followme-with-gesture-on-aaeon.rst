@@ -6,7 +6,7 @@ Follow-me with ADBSCAN and Gesture-based Control on Aaeon Robot
 This tutorial demonstrates the Follow-me algorithm with gesture, where the robot follows a target person in real time.
 The movement of the robot can be controlled by the person's position (relative to the robot) as well as the hand gestures.
 This tutorial is demonstrated on Aaeon robot using 2 front-mounted |realsense| cameras: camera 1 and camera 2.
-Camera 1 takes the point cloud data as inputs and passes it through |intel|-patented object detection algorithm, namely Adaptive DBSCAN,
+Camera 1 takes the point cloud data as inputs and passes it through Intel®-patented object detection algorithm, namely Adaptive DBSCAN,
 to detect the position of the target person.
 Camera 2 is positioned at a certain height for capturing the RGB images of the target's hand gestures.
 This RGB image is passed through a deep learning-based gesture recognition pipeline,
@@ -40,7 +40,7 @@ Prerequisites
 Install the Deb package
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Install ``ros-humble-follow-me-tutorial-w-gesture`` Deb package from |intel| |p_amr| APT repository.
+Install ``ros-humble-follow-me-tutorial-w-gesture`` Deb package from Intel® |p_amr| APT repository.
 
    .. code-block::
 

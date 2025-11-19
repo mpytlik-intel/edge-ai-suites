@@ -10,16 +10,16 @@
    systems, and more. Built on latest generations of artificial neural
    networks, including Convolutional Neural Networks (CNNs), recurrent and
    attention-based networks, the toolkit extends computer vision and non-vision
-   workloads across |intel| hardware, optimizing performance. It accelerates
+   workloads across Intel® hardware, optimizing performance. It accelerates
    applications with high-performance AI and deep learning inference, deployed
    from edge to the cloud.
 
 -  `Intel® oneAPI Base Toolkit
    <https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit.html>`__,
-   is capable of executing sample applications in the toolkit. This core set of tools and libraries is designed for 
+   is capable of executing sample applications in the toolkit. This core set of tools and libraries is designed for
    developing high-performance, data-centric applications across diverse architectures. It features an industry-leading
    C++ compiler and the Data Parallel C++ (DPC++) language, an evolution of C++
-   for heterogeneous computing. For |l_oneapi| training, refer to:
+   for heterogeneous computing. For Intel® oneAPI Base Toolkit training, refer to:
 
    -  `Intel® DPC++ Compatibility Tool Self-Guided Jupyter Notebook Tutorial
       <https://www.intel.com/content/www/us/en/developer/articles/training/intel-dpcpp-compatibility-tool-training.html>`__
@@ -46,7 +46,7 @@
    |p_amr|\s or with sensors for which only ROS1 driver nodes exist.
 
 -  |ros|, Robot Operating System (ROS) is a collection of open-source software
-   libraries and tools designed for building robot applications. |ros| depends on other middleware, like the Object       
+   libraries and tools designed for building robot applications. |ros| depends on other middleware, like the Object
    Management Group (OMG) DDS connectivity framework which utilizes a publish-subscribe pattern (The
    standard |ros| distribution includes eProsima Fast DDS implementation.)
 
@@ -54,8 +54,8 @@
    open-source library that includes several hundred computer vision algorithms.
 
 -  `GStreamer_Framework <https://gstreamer.freedesktop.org/documentation>`__
-   includes support for libv4l2 video sources, |gstreamer| "good" plugins for
-   video and  audio, and a |gstreamer| plugin for display to show a video
+   includes support for libv4l2 video sources, GStreamer "good" plugins for
+   video and  audio, and a GStreamer plugin for display to show a video
    stream in a window.
 
 -  Teleop Twist Joy is a generic facility for teleoperating twist-based |ros|

@@ -1,7 +1,7 @@
 Navigation
 ================
 
-The following tutorials guide you on utilizing |ros| components developed by |intel|
+The following tutorials guide you on utilizing |ros| components developed by Intel®
 to assist an |p_amr| in navigating and mapping a room and offering teleoperation options.
 
 .. toctree::

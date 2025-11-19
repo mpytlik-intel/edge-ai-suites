@@ -3,7 +3,7 @@
 ITS Path Planner |ros| Navigation Plugin
 ========================================
 
-Intelligent Sampling and Two-Way Search (ITS) global path planner is an |intel| patented algorithm.
+Intelligent Sampling and Two-Way Search (ITS) global path planner is an Intel® patented algorithm.
 
 The ITS Plugin for the |ros| Navigation 2 application plugin is a global path
 planner module that is based on Intelligent sampling and Two-way Search (ITS).
@@ -60,7 +60,7 @@ Complete the :doc:`../../../gsg_robot/index` before continuing.
 Install Deb package
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Install the ``ros-humble-its-planner`` Deb package from the |intel| |p_amr| APT repository
+Install the ``ros-humble-its-planner`` Deb package from the Intel® |p_amr| APT repository
 
    .. code-block:: bash
 

@@ -25,7 +25,7 @@ This tutorial demonstrates how to execute passthrough filtering.
       :linenos:
 
 
-#. Source the |l_oneapi| environment:
+#. Source the Intel® oneAPI Base Toolkit environment:
 
    .. code-block::
 

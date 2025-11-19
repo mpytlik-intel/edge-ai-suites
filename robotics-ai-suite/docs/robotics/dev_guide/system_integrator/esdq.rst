@@ -1,6 +1,6 @@
 .. esdq:
 
-|l_esdq| (|esdq|) for |p_amr|
+Intel® Edge Software Device Qualification (Intel® Edge Software Device Qualification (Intel® ESDQ)) for |p_amr|
 ======================================================================================
 
 
@@ -8,8 +8,8 @@ Overview
 --------
 
 
-|l_esdq| (|esdq|) for |p_amr| provides customers with the capability to run an
-|Intel_Corporation|-provided test suite at the target system, with the goal of enabling
+Intel® Edge Software Device Qualification (Intel® Edge Software Device Qualification (Intel® ESDQ)) for |p_amr| provides customers with the capability to run an
+Intel-provided test suite at the target system, with the goal of enabling
 partners to determine their platform's compatibility with the |p_amr|.
 
 The target of this self certification suite is the |p_amr| compute systems.
@@ -22,9 +22,9 @@ to move the |p_amr|.
 How It Works
 ------------
 
-The |p_amr| Test Modules interact with the |esdq| Command Line Interface (CLI) through a common
-test module interface (TMI) layer which is part of the |esdq| binary.
-|esdq| generates a complete test report in HTML format, along with detailed
+The |p_amr| Test Modules interact with the Intel® Edge Software Device Qualification (Intel® ESDQ) Command Line Interface (CLI) through a common
+test module interface (TMI) layer which is part of the Intel® Edge Software Device Qualification (Intel® ESDQ) binary.
+Intel® Edge Software Device Qualification (Intel® ESDQ) generates a complete test report in HTML format, along with detailed
 logs packaged as one zip file, which you can manually choose to email to:
 edge.software.device.qualification@intel.com.
 More detailed information is available at `Intel® Edge Software Device Qualification (Intel® ESDQ) Overview
@@ -36,7 +36,7 @@ More detailed information is available at `Intel® Edge Software Device Qualific
    Each test and its pass/fail criteria is described below.
    To jump to the installation process, go to :ref:`esdq-install`.
 
-|esdq| for |p_amr| contains the following test modules.
+Intel® Edge Software Device Qualification (Intel® ESDQ) for |p_amr| contains the following test modules.
 
 +-------------------------------------------------------------------------------------------------+
 | |realsense| Camera                                                                              |
@@ -58,8 +58,8 @@ More detailed information is available at `Intel® Edge Software Device Qualific
 |                                                                                                 |
 |      -  The number of FPS (Frames Per Second) are as expected.                                  |
 +-------------------------------------------------------------------------------------------------+
-| |intel| |vtune| Profiler                                                                        |
-|    This module runs the |intel| |vtune| Profiler on the target system. For more information,    |
+| Intel® |vtune| Profiler                                                                        |
+|    This module runs the Intel® |vtune| Profiler on the target system. For more information,    |
 |    go to the `Intel® VTune™ Profiler website                                                    |
 |    <https://www.intel.com/content/www/us/en/developer/tools/oneapi/vtune-profiler.html>`__.     |
 |                                                                                                 |
@@ -70,7 +70,7 @@ More detailed information is available at `Intel® Edge Software Device Qualific
 |      -  |vtune| Profiler collects Platform information.                                         |
 +-------------------------------------------------------------------------------------------------+
 | rviz2 and FastMapping                                                                           |
-|   This module runs the FastMapping application (the version of octomap optimized for |intel|    |
+|   This module runs the FastMapping application (the version of octomap optimized for Intel®    |
 |   platforms) on the target system and uses rviz2 to verify that it works as expected.           |
 |   For more information, go to the `rviz wiki <http://wiki.ros.org/rviz>`__.                     |
 |                                                                                                 |
@@ -78,8 +78,8 @@ More detailed information is available at `Intel® Edge Software Device Qualific
 |                                                                                                 |
 |     -  FastMapping is able to create a map out of a pre-recorded |ros| bag.                     |
 +-------------------------------------------------------------------------------------------------+
-| |l_oneapi|                                                                                      |
-|    This module verifies some basic capabilities of |l_oneapi| on the target platform.           |
+| Intel® oneAPI Base Toolkit                                                                                      |
+|    This module verifies some basic capabilities of Intel® oneAPI Base Toolkit on the target platform.           |
 |    For more information, go to the `Intel® oneAPI Base Toolkit website                          |
 |    <https://software.intel.com/content/www/us/en/develop/tools/oneapi.html#gs.cjvm2h>`__.       |
 |                                                                                                 |
@@ -118,25 +118,25 @@ More detailed information is available at `Intel® Edge Software Device Qualific
 |      -  On Intel® Core™ Ultra Processors, in addition the ``NPU`` must be be identified as an         |
 |         inferencing device.                                                                     |
 +-------------------------------------------------------------------------------------------------+
-| |gstreamer| Video                                                                               |
-|    This module verifies if a |gstreamer| Video Pipeline using |gstreamer| Plugins runs on the   |
+| GStreamer Video                                                                               |
+|    This module verifies if a GStreamer Video Pipeline using GStreamer Plugins runs on the   |
 |    target system.                                                                               |
 |                                                                                                 |
 |    The test is considered PASS if:                                                              |
 |                                                                                                 |
 |      -  The Video Pipeline was opened on the host without errors.                               |
 +-------------------------------------------------------------------------------------------------+
-| |gstreamer| Audio                                                                               |
-|    This module verifies if a |gstreamer| Audio Pipeline using |gstreamer| Plugins runs on the   |
+| GStreamer Audio                                                                               |
+|    This module verifies if a GStreamer Audio Pipeline using GStreamer Plugins runs on the   |
 |    target system.                                                                               |
 |                                                                                                 |
 |    The test is considered PASS if:                                                              |
 |                                                                                                 |
 |      -  The Audio Pipeline was opened on the host without errors.                               |
 +-------------------------------------------------------------------------------------------------+
-| |gstreamer| Autovideosink Plugin - Display                                                      |
+| GStreamer Autovideosink Plugin - Display                                                      |
 |    This module verifies if a stream from a camera compatible with libv4l2 can be opened and     |
-|    displayed using |gstreamer|.                                                                 |
+|    displayed using GStreamer.                                                                 |
 |                                                                                                 |
 |    The test is considered PASS if:                                                              |
 |                                                                                                 |
@@ -163,13 +163,13 @@ More detailed information is available at `Intel® Edge Software Device Qualific
 Get Started
 -----------
 
-This tutorial takes you through the installation and execution of the |esdq| CLI tool.
+This tutorial takes you through the installation and execution of the Intel® Edge Software Device Qualification (Intel® ESDQ) CLI tool.
 Configure your target system to satisfy the necessary :ref:`esdq-prerequisites`
 before you proceed with the :ref:`esdq-install`.
 Execute your self-certification process by selecting from the three available
 certification types:
 
--  :ref:`esdq_compute` for certifying |intel|-based compute systems with
+-  :ref:`esdq_compute` for certifying Intel®-based compute systems with
    the |p_amr| software
 
 -  :ref:`esdq_sensor_rgb` for certifying RGB cameras with the |p_amr|
@@ -186,7 +186,7 @@ modules.
 Prerequisites
 -------------
 
-Satisfy the |esdq| prerequisites by:
+Satisfy the Intel® Edge Software Device Qualification (Intel® ESDQ) prerequisites by:
 
 - Installing |openvino| Development Tools and specifying ``tensorflow`` as the extras parameter
   of the described "Step 4. Install the Package" `instructions
@@ -196,11 +196,11 @@ Satisfy the |esdq| prerequisites by:
 
      pip install openvino-dev[tensorflow]
 
-- Installing the ``intel-basekit`` Deb package by following the |l_oneapi|
+- Installing the ``intel-basekit`` Deb package by following the Intel® oneAPI Base Toolkit
   Installation Guide for |Linux| OS `instructions
   <https://www.intel.com/content/www/us/en/docs/oneapi/installation-guide-linux/2023-2/apt.html>`__.
 
-- Installing |gstreamer| by following the "Install |GStreamer| on |Ubuntu_OS| or Debian OS"
+- Installing GStreamer by following the "Install |GStreamer| on |Ubuntu_OS| or Debian OS"
   `instructions
   <https://gstreamer.freedesktop.org/documentation/installing/on-linux.html?gi-language=c#install-gstreamer-on-ubuntu-or-debian>`__.
 
@@ -231,7 +231,7 @@ Satisfy the |esdq| prerequisites by:
   `OpenVINO™ documentation
   <https://docs.openvino.ai/2024/get-started/install-openvino/install-openvino-apt.html>`__.
 
-- Installing the |intel| NPU Driver as described on page
+- Installing the Intel® NPU Driver as described on page
   :doc:`../../gsg_robot/install-npu-driver`. Don't execute this step if
   your system does not have an Intel® Core™ Ultra Processor.
 
@@ -241,7 +241,7 @@ Satisfy the |esdq| prerequisites by:
 
 .. _esdq-install:
 
-Download and Install |esdq| for |p_amr|
+Download and Install Intel® Edge Software Device Qualification (Intel® ESDQ) for |p_amr|
 ---------------------------------------------------------------
 
 Complete the following two installation steps in order to properly configure
@@ -253,14 +253,14 @@ your test setup:
 
 .. _esdq-install-cli:
 
-Download and Install |esdq| CLI
+Download and Install Intel® Edge Software Device Qualification (Intel® ESDQ) CLI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Download the |esdq| CLI to your device from here:
+Download the Intel® Edge Software Device Qualification (Intel® ESDQ) CLI to your device from here:
 :download:`edge-software-device-qualification-11.0.0.zip <https://amrdocs.intel.com/downloads/edge-software-device-qualification-11.0.0.zip>`
 
 Set the ``ESDQ_INSTALLATION`` variable to point to the desired installation
-location. For example, if you want to install the the |esdq| CLI under
+location. For example, if you want to install the the Intel® Edge Software Device Qualification (Intel® ESDQ) CLI under
 the ``~/esdq`` directory, just set the this variable as follows:
 
 .. code-block:: bash
@@ -282,7 +282,7 @@ in the next installation steps.
 
    export ROBOTICS_SDK=$ESDQ_INSTALLATION/edge-software-device-qualification-11.0.0/
 
-Install the |esdq| CLI executing the following commands:
+Install the Intel® Edge Software Device Qualification (Intel® ESDQ) CLI executing the following commands:
 
 .. code-block:: bash
 
@@ -290,7 +290,7 @@ Install the |esdq| CLI executing the following commands:
    ./setup.sh -i
    export PATH=$PATH:$HOME/.local/bin
 
-Check the successful installation of the |esdq| CLI verifying that the execution
+Check the successful installation of the Intel® Edge Software Device Qualification (Intel® ESDQ) CLI verifying that the execution
 of the following command prints ``Version: 11.0.0`` on the terminal:
 
 .. code-block:: bash
@@ -306,7 +306,7 @@ To download and install the |lp_amr| test modules on your target device follow t
 steps below:
 
 #. Install the ``ros-humble-amr-esdq`` Deb package from
-   |intel| |p_amr| APT repository.
+   Intel® |p_amr| APT repository.
 
    .. code-block:: bash
 
@@ -383,7 +383,7 @@ Run the Self-Certification Application for Compute Systems
       export NEOReadDebugKeys=1
       export OverrideGpuAddressSpace=48
 
-#. Run the |esdq| test, and generate the report:
+#. Run the Intel® Edge Software Device Qualification (Intel® ESDQ) test, and generate the report:
 
    .. code-block:: bash
 
@@ -447,7 +447,7 @@ You can check your current configuration by:
 
       ros2 topic list
 
-#. Once your configuration is set, you can proceed to run the |esdq| test
+#. Once your configuration is set, you can proceed to run the Intel® Edge Software Device Qualification (Intel® ESDQ) test
    and generate the report.
 
    .. code-block:: bash
@@ -490,7 +490,7 @@ You can check your current configuration by:
 
       ros2 topic list
 
-#. Once your configuration is set, you can proceed to run the |esdq| test
+#. Once your configuration is set, you can proceed to run the Intel® Edge Software Device Qualification (Intel® ESDQ) test
    and generate the report.
 
    .. code-block:: bash
@@ -500,7 +500,7 @@ You can check your current configuration by:
       esdq --verbose module run Robotics_SDK --arg sensors_depth
 
 
-Send Results to |Intel_Corporation|
+Send Results to Intel
 -----------------------------------
 
 Once the automated and manual tests are executed successfully, you can
@@ -509,7 +509,7 @@ Software Recommended Hardware
 <https://www.intel.com/content/www/us/en/developer/topic-technology/edge-5g/edge-solutions/hardware.html>`__
 site.
 
-Send the zip file that is created after running |esdq| tests to:
+Send the zip file that is created after running Intel® Edge Software Device Qualification (Intel® ESDQ) tests to:
 edge.software.device.qualification@intel.com.
 
 For example, after one of our local runs the following files were generated in the

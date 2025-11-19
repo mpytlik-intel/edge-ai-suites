@@ -18,7 +18,7 @@ Complete the :doc:`../../../gsg_robot/index` before continuing.
 Install Deb package
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Install the ``ros-humble-its-relocalization-bringup`` Deb package from the |intel| |p_amr| APT repository
+Install the ``ros-humble-its-relocalization-bringup`` Deb package from the Intel® |p_amr| APT repository
 
     .. code-block:: bash
 
@@ -27,7 +27,7 @@ Install the ``ros-humble-its-relocalization-bringup`` Deb package from the |inte
 Run the Re-localization
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Run the following script to set environment variables and bring up |ros| navigation, and |tb3| robot in |Gazebo| simulation:
+Run the following script to set environment variables and bring up |ros| navigation, and |tb3| robot in Gazebo simulation:
 
     .. code-block:: bash
 

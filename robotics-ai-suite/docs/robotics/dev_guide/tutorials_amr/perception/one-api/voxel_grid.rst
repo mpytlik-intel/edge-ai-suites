@@ -26,7 +26,7 @@ This tutorial covers the process of downsampling / reducing the number of points
       :linenos:
 
 
-#. Source the |l_oneapi| environment:
+#. Source the Intel® oneAPI Base Toolkit environment:
 
    .. code-block::
 

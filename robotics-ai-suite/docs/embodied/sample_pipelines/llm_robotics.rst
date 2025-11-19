@@ -60,7 +60,7 @@ Install ROS2 Iron
 
       $ sudo apt update && sudo apt install -y locales curl gnupg2 lsb-release
 
-#. Setup the |Intel| oneAPI APT repository:
+#. Setup the Intel® oneAPI APT repository:
 
    .. code-block:: bash
 

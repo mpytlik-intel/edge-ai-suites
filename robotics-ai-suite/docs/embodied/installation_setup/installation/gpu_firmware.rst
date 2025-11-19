@@ -13,14 +13,14 @@ This firmware is part of a collection of kernel mode drivers
 that together enable support for Intel graphics. The backports
 collection within https://github.com/intel-gpu includes:
 
-  - `[i915] <https://github.com/intel-gpu/intel-gpu-i915-backports>`_ - The main graphics driver, |i915|.
+  - `[i915] <https://github.com/intel-gpu/intel-gpu-i915-backports>`_ - The main graphics driver, Intel® Graphics Driver.
   - `[cse] <https://github.com/intel-gpu/intel-gpu-cse-backports>`_ - Intel® Converged Security Engine (Intel® CSE).
   - `[pmt] <https://github.com/intel-gpu/intel-gpu-pmt-backports>`_ - |pmt|.
-  - `[firmware] <https://github.com/intel-gpu/intel-gpu-firmware>`_ - Contains firmware required by |i915|.
+  - `[firmware] <https://github.com/intel-gpu/intel-gpu-firmware>`_ - Contains firmware required by Intel® Graphics Driver.
 
 Each project is tagged consistently so when pulling these repositories pull the same tag.
 
-.. tip:: In |i915| is disabled, check the grub of cmdline:
+.. tip:: In Intel® Graphics Driver is disabled, check the grub of cmdline:
 
     .. code-block:: console
 
@@ -30,7 +30,7 @@ Each project is tagged consistently so when pulling these repositories pull the 
 Installation
 :::::::::::::::::::::::::::
 
-1. Get the correct |i915| firmware with the following command:
+1. Get the correct Intel® Graphics Driver firmware with the following command:
 
 .. code-block:: bash
 
@@ -44,7 +44,7 @@ Installation
     $ sudo rm /lib/firmware/i915/mtl_guc_70.bin.zst
     $ sudo rm /lib/firmware/i915/mtl_gsc_1.bin.zst
 
-3. Update the |i915| firmware with the following command:
+3. Update the Intel® Graphics Driver firmware with the following command:
 
 .. code-block:: bash
 

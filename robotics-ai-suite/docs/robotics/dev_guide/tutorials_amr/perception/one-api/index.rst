@@ -1,4 +1,4 @@
-Point Cloud Library (PCL) Optimized for the |l_oneapi|
+Point Cloud Library (PCL) Optimized for the Intel® oneAPI Base Toolkit
 ===========================================================
 
 All tutorials are compatible with PCL 1.12.1.

@@ -3,7 +3,7 @@
 3D Pointcloud Groundfloor Segmentation for |realsense| Camera and 3D LiDAR
 ============================================================================
 
-This demo showcases an |intel| algorithm designed for the segmentation of depth sensor data,
+This demo showcases an Intel® algorithm designed for the segmentation of depth sensor data,
 compatible with 3D LiDAR or a |realsense| camera inputs. The application processes either a 3D pointcloud
 or a depth image, producing a refined 3D pointcloud as output. Each endpoint within this pointcloud
 is classified, distinguishing between ground floor, elevated surfaces, obstacles and structures above ground level.
@@ -45,7 +45,7 @@ Complete the :doc:`../../../gsg_robot/index` before continuing.
 Install Deb package
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Install ``ros-humble-pointcloud-groundfloor-segmentation`` Deb package from |intel| |p_amr| APT repository
+Install ``ros-humble-pointcloud-groundfloor-segmentation`` Deb package from Intel® |p_amr| APT repository
 
    .. code-block:: bash
 

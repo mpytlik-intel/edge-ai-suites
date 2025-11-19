@@ -4,7 +4,7 @@ Follow-me with ADBSCAN, Gesture and Audio Control
 =====================================================
 
 This demo of the Follow-me algorithm shows a |p_amr| application for following a target person where the movement of the robot can be controlled by the person's location, hand gestures as well as audio command. The entire pipeline diagram can be found in :doc:`../index` page.
-It takes point cloud sensor (2D Lidar/depth camera) as well as RGB camera image as inputs. These inputs are passed through |intel|-patented Adaptive DBScan and a deep-learning-based gesture recognition pipeline, respectively to publish motion command messages for a differential drive robot. It also takes recorded audio commands for starting and stopping the robot movement. Moreover, the demo is equipped with a text-to-speech synthesis model to narrate the robot's
+It takes point cloud sensor (2D Lidar/depth camera) as well as RGB camera image as inputs. These inputs are passed through Intel®-patented Adaptive DBScan and a deep-learning-based gesture recognition pipeline, respectively to publish motion command messages for a differential drive robot. It also takes recorded audio commands for starting and stopping the robot movement. Moreover, the demo is equipped with a text-to-speech synthesis model to narrate the robot's
 activity over the course of its movement.
 
 This demo has been tested and validated on 13th Generation Intel® Core™ processors with |xe| and 12th Generation Intel® Core™ processors with |xe|.
@@ -21,7 +21,7 @@ Complete the :doc:`../../../../../gsg_robot/index` before continuing.
 Install the Deb packages
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Install ``ros-humble-followme-turtlebot3-gazebo`` and ``ros-humble-text-to-speech-pkg`` Deb packages from |intel| |p_amr| APT repository. ``ros-humble-followme-turtlebot3-gazebo`` is the wrapper package for the demo which will install all of the dependencies in the backend.
+Install ``ros-humble-followme-turtlebot3-gazebo`` and ``ros-humble-text-to-speech-pkg`` Deb packages from Intel® |p_amr| APT repository. ``ros-humble-followme-turtlebot3-gazebo`` is the wrapper package for the demo which will install all of the dependencies in the backend.
 
    .. code-block::
 

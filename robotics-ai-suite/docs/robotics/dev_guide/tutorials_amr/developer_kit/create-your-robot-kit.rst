@@ -2,7 +2,7 @@ Create Your Own Robot Kit
 ==========================
 
 This tutorial guides guides you through creating an autonomous mobile robot capable of
-exploring and mapping an area. It involves adding an |intel| compute system, placing a
+exploring and mapping an area. It involves adding an Intel® compute system, placing a
 |realsense| camera on top of any robot base, and using the |lp_amr| software.
 
 Use the :doc:`robot-keyboard-teleop` |ros| node to validate that the robot kit's hardware
@@ -17,11 +17,11 @@ Hardware Requirements
 
 The robot base should contain:
 
-*  |intel| compute system with |lp_amr| installed
+*  Intel® compute system with |lp_amr| installed
 
 *  |realsense| camera
 
-*  Robot base support (chassis) for the |intel| compute system and the
+*  Robot base support (chassis) for the Intel® compute system and the
    |realsense| camera
 
 *  Wheels
@@ -73,11 +73,11 @@ The standard assembly involves the following steps:
 #. Mount the motors onto the lower chassis board and then assemble the wheels.
 #. Fix the motor controller on the chassis board and establish connections with the motors.
 #. Attach the |realsense| camera and the SSD drive to the upper chassis board.
-#. Mount the |intel| compute system to the the upper chassis board.
+#. Mount the Intel® compute system to the the upper chassis board.
 #. Connect the two chassis boards.
-#. Establish a connection between the |intel| compute system and both |realsense| camera and motor controller via USB.
-#. Connect both the the |intel| compute system and the motor controller to a power source.
-#. Power the |intel| compute system using a power source.
+#. Establish a connection between the Intel® compute system and both |realsense| camera and motor controller via USB.
+#. Connect both the the Intel® compute system and the motor controller to a power source.
+#. Power the Intel® compute system using a power source.
 #. Turn on the power switch of motor controller.
 
 
@@ -219,7 +219,7 @@ Robot Navigation Parameter File
 To help understand the options in this parameter file, see |ros| `Navigation 2
 Packages Configuration Guide <https://navigation.ros.org/configuration/index.html>`__:
 
-With numerous parameters to configure, |intel| recommends referring to
+With numerous parameters to configure, Intel® recommends referring to
 Navigation 2 documentation for a comprehensive understanding of the setup.
 
 The most important parameters to set are:

@@ -1,7 +1,7 @@
-|irobot_create3|
+iRobot Create 3
 ================
 
-|irobot_create3| is a mobile robotics platform, which developers can use
+iRobot Create 3 is a mobile robotics platform, which developers can use
 to gain hands-on experience with the technologies and concepts that are
 foundational to the field of autonomous mobile robots. This practical
 understanding is invaluable for those looking to enter the robotics
@@ -16,28 +16,28 @@ Prerequisites
 Complete the :doc:`../../../gsg_robot/index` before continuing.
 
 
-|irobot_create3| hardware extensions
+iRobot Create 3 hardware extensions
 ------------------------------------
 
-|irobot_create3| contains a compute unit running |ros| that provides
+iRobot Create 3 contains a compute unit running |ros| that provides
 access to the on-board sensors and actuators. For this tutorial, the
 following modifications have been applied to the robot:
 
  - two support layers added on top of the robot,
 
- - |intel| board mounted on the bottom layer,
+ - Intel® board mounted on the bottom layer,
 
  - |realsense| camera mounted on the front of the top layer and
-   connected to a USB port on the |intel| board,
+   connected to a USB port on the Intel® board,
 
  - |slamtec_rplidar| 2D (`Slamtec RPLIDAR A3 laser range scanner <https://www.slamtec.ai/product/slamtec-rplidar-a3>`__ or `Slamtec RPLIDAR A2 laser range scanner (A2M8) <https://www.slamtec.ai/product/slamtec-rplidar-a2>`__) sensor on a mount in the center of the
-   top layer and connected to two USB ports on the |intel| board,
+   top layer and connected to two USB ports on the Intel® board,
 
- - custom battery in the cargo bay to power the |intel| board and
+ - custom battery in the cargo bay to power the Intel® board and
    accessories, namely the camera and the lidar,
 
- - an Ethernet adapter connected to the |irobot_create3| adapter board
-   and to the |intel| board,
+ - an Ethernet adapter connected to the iRobot Create 3 adapter board
+   and to the Intel® board,
 
  - a rear caster wheel attached to the cargo bay, as described in the
    `iRobot® Create® 3 Mechanical System
@@ -49,19 +49,19 @@ following modifications have been applied to the robot:
    :width: 500px
    :align: center
 
-   |irobot_create3| robot front view.
+   iRobot Create 3 robot front view.
 
 .. figure:: ../../../images/iRobot/IAF1-iRobot-Create-3-MTL-Custom-setup-back-view-2.jpg
    :width: 500px
    :align: center
 
-   |irobot_create3| robot rear view.
+   iRobot Create 3 robot rear view.
 
 
-|irobot_create3| software configuration
+iRobot Create 3 software configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Update the robot to use the latest |l_ros| firmware and configure it
+Update the robot to use the latest ROS 2 Humble firmware and configure it
 to access your WiFi network following the
 `iRobot® Create® 3 Setup
 <https://edu.irobot.com/create3-setup>`__ documentation.
@@ -73,37 +73,37 @@ steps to follow.
 Wired (Ethernet) network
 ........................
 
-The |intel| board and the compute unit of the |irobot_create3| should be
+The Intel® board and the compute unit of the iRobot Create 3 should be
 connected using an Ethernet adapter with a USB Type-C connector. The
 USB Type-C plug should be connected to the adapter board of the
-|irobot_create3|, while the |intel| board should be connected to the
+iRobot Create 3, while the Intel® board should be connected to the
 Ethernet adapter using an RJ-45 cable.
 
 .. figure:: ../../../images/iRobot/iRobot-Create-3-Ethernet-connection.jpg
    :width: 600px
    :align: center
 
-   Ethernet via USB connection between |irobot_create3|  adapter board
-   and |intel| board.
+   Ethernet via USB connection between iRobot Create 3  adapter board
+   and Intel® board.
 
-The |irobot_create3| robot is configured to use the address
+The iRobot Create 3 robot is configured to use the address
 ``192.168.186.2/24`` on the USB interface. You can change the network
 part of the address by following the instructions on page
 `iRobot Create 3 Webserver - Set Wired Subnet <https://iroboteducation.github.io/create3_docs/webserver/set-wired-subnet/>`__.
 
-On the |intel| board, the network interface connected to the robot
+On the Intel® board, the network interface connected to the robot
 has to be configured with a static IP address of the same subnet.
 
 NTP server
 ..........
 
 Time synchronization is very important in |ros|. For this reason, the
-|irobot_create3| includes an NTP server, which can be configured as described on page
+iRobot Create 3 includes an NTP server, which can be configured as described on page
 `iRobot® Create® 3 Webserver - Edit ntp.conf
 <https://iroboteducation.github.io/create3_docs/webserver/edit-ntp-conf/>`__.
 
-Alternatively, you can set up an NTP server on the |intel| board by following
-the |irobot_create3| documentation `Set up NTP on compute board
+Alternatively, you can set up an NTP server on the Intel® board by following
+the iRobot Create 3 documentation `Set up NTP on compute board
 <https://iroboteducation.github.io/create3_docs/setup/compute-ntp/>`__.
 Use the IP address of the Ethernet interface connected to the robot.
 
@@ -111,7 +111,7 @@ Use the IP address of the Ethernet interface connected to the robot.
 ................................................................
 
 To define what |ros| middleware implementation shall be used by the
-|irobot_create3|, follow the configuration guidelines on page
+iRobot Create 3, follow the configuration guidelines on page
 `iRobot Create 3 Webserver - Application <https://iroboteducation.github.io/create3_docs/webserver/application/>`__.
 Set the RMW_IMPLEMENTATION option to ``rmw_fastrtps_cpp``, as shown in
 the figure below.
@@ -119,18 +119,18 @@ the figure below.
 .. figure:: ../../../images/iRobot/iRobot-create3-ROS-configuration.png
    :align: center
 
-   |irobot_create3| |l_ros| application configuration page. On this
+   iRobot Create 3 ROS 2 Humble application configuration page. On this
    robot the `iRobot Create 3 Webserver - Set Wired Subnet <https://iroboteducation.github.io/create3_docs/webserver/set-wired-subnet/>`__
    is set to ``192.168.99.2``, Fast DDS discovery server is enabled
-   and runs on the |intel| board reachable at IP ``192.168.99.10``
+   and runs on the Intel® board reachable at IP ``192.168.99.10``
    over the Ethernet connection. |ros| Domain ID is set but it is not
    used when the discovery server is enabled.
 
 To speed up node discovery, enable the
 `iRobot® Create® 3 Fast DDS Discovery Server
 <https://iroboteducation.github.io/create3_docs/setup/discovery-server/>`__.
-Use the IP address set above for the |intel| board on the USB
-connection to the |irobot_create3| as the Fast DDS Discovery Server IP
+Use the IP address set above for the Intel® board on the USB
+connection to the iRobot Create 3 as the Fast DDS Discovery Server IP
 address.
 
 .. note::
@@ -144,7 +144,7 @@ Set a |ros| namespace (e.g., ``/robot2``) for your robot, as described on page
 `iRobot Create 3 Webserver - Application <https://iroboteducation.github.io/create3_docs/webserver/application/>`__. This value should be passed to the
 launch file as argument ``irobot_ns``.
 
-|lp_amr| Tutorials based on the |irobot_create3|
+|lp_amr| Tutorials based on the iRobot Create 3
 ---------------------------------------------------
 
 .. toctree::

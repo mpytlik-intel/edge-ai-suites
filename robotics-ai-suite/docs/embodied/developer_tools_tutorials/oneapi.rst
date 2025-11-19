@@ -20,9 +20,9 @@ It includes:
    :align: center
    :header-rows: 0
 
-   * - |intel_oneapi_dpcc_compiler| 
+   * - |intel_oneapi_dpcc_compiler|
      - Compile and optimize C++ and SYCL code for CPU, GPU, and FPGA target architectures.
-   * - |dpct|
+   * - Intel® DPC++ Compatibility Tool
      - Migrate legacy CUDA code to open multiarchitecture SYCL code with this assistant.
    * - |vtune|
      - Find and optimize performance bottlenecks across CPU, GPU, and FPGA systems.
@@ -63,7 +63,7 @@ Install |oneapi_full| **2024.2.1**:
 
   # launch the GUI installer as the root
   $ sudo sh ./l_BaseKit_p_2024.2.1.100_offline.sh
-  
+
   # Optionally, to launch the GUI installer as the current user
   $ sh ./l_BaseKit_p_2024.2.1.100_offline.sh
 
@@ -72,7 +72,7 @@ Install |oneapi_full| **2024.2.1**:
 |intel_oneapi_hpc_toolkit|
 ===========================
 
-High-performance computing (HPC) is at the core of AI, machine learning, and deep learning applications. |intel_oneapi_hpc_toolkit| delivers what developers need to build, analyze, optimize, and scale HPC applications with the latest techniques in vectorization, multi-threading, multi-node parallelization, and memory optimization. 
+High-performance computing (HPC) is at the core of AI, machine learning, and deep learning applications. |intel_oneapi_hpc_toolkit| delivers what developers need to build, analyze, optimize, and scale HPC applications with the latest techniques in vectorization, multi-threading, multi-node parallelization, and memory optimization.
 
 It includes:
 
@@ -87,7 +87,7 @@ It includes:
      - Deliver flexible, efficient, scalable cluster messaging on CPU and GPU architectures and a variety of network fabrics.
    * - |intel_oneapi_dpcc_compiler|
      - Compile and optimize C++ and SYCL code for CPU, GPU, and FPGA target architectures.
-   * - |dpct|
+   * - Intel® DPC++ Compatibility Tool
      - Migrate legacy CUDA code to open multiarchitecture SYCL code with this assistant.
    * - |vtune|
      - Find and optimize performance bottlenecks across CPU, GPU, and FPGA systems.
@@ -101,9 +101,9 @@ It includes:
      - Simplify parallelism with this advanced threading and memory-management template library.
    * - Intel® oneAPI Math Kernel Library (oneMKL)
      - Accelerate math processing routines, including matrix algebra, fast Fourier transforms (FFT), and vector math.
-   * - Intel® Integrated Performance Primitives 
+   * - Intel® Integrated Performance Primitives
      - Speed up performance of imaging, signal processing, data compression, cryptography, and more.
-   * - Intel® Cryptography Primitives Library  
+   * - Intel® Cryptography Primitives Library
      - Secure, fast, lightweight building blocks for cryptography optimized for Intel CPUs.
    * - Intel® oneAPI Data Analytics Library (oneDAL)
      - Boost machine learning and data analytics performance.

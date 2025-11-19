@@ -30,7 +30,7 @@ For more info of ``pcl::StatusticalOutlierRemoval`` filter, refer to `this page.
       :linenos:
 
 
-#. Source the |l_oneapi| environment:
+#. Source the Intel® oneAPI Base Toolkit environment:
 
    .. code-block::
 

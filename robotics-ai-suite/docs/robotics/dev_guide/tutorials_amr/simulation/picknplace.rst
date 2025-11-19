@@ -1,7 +1,7 @@
 Gazebo Pick & Place Demo
 ========================
 
-This Pick-n-Place demo is a simulation implemented using |ros| Humble and |Gazebo| Classic simulation. The project showcases the interaction of a conveyor belt, a |tb3| Autonomous Mobile Robot (AMR), and two UR5 robotic arms (ARM) in a simulated environment.  The aim is to harness the capabilities of both the Nav2 and MoveIt2 stacks, presenting a comprehensive demonstration of multi-robot coordination in a simulation environment.
+This Pick-n-Place demo is a simulation implemented using |ros| Humble and Gazebo Classic simulation. The project showcases the interaction of a conveyor belt, a |tb3| Autonomous Mobile Robot (AMR), and two UR5 robotic arms (ARM) in a simulated environment.  The aim is to harness the capabilities of both the Nav2 and MoveIt2 stacks, presenting a comprehensive demonstration of multi-robot coordination in a simulation environment.
 
 
 .. image:: ../../../images/picknplace.png
@@ -19,7 +19,7 @@ Complete the :doc:`../../../gsg_robot/index` before continuing.
 Install Debian Package
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Install ``ros-humble-picknplace-simulation`` Debian package from |intel| |p_amr| APT repository.
+Install ``ros-humble-picknplace-simulation`` Debian package from Intel® |p_amr| APT repository.
 
    .. code-block::
 
@@ -29,9 +29,9 @@ Install ``ros-humble-picknplace-simulation`` Debian package from |intel| |p_amr|
 Run Demo
 --------
 
-   
+
    .. code-block:: bash
-  
+
       source /opt/ros/humble/setup.bash
       ros2 launch picknplace warehouse.launch.py
 
@@ -64,7 +64,7 @@ The demonstration workflow is as follows:
 Other Details
 -------------
 
-**State Machine Implementation**: The demo employs Smach library to design the state machine that acts as the controller for both ARMs in Python. Smach is a valuable tool for creating, managing, and analyzing hierarchical state machines for robotic operations. 
+**State Machine Implementation**: The demo employs Smach library to design the state machine that acts as the controller for both ARMs in Python. Smach is a valuable tool for creating, managing, and analyzing hierarchical state machines for robotic operations.
 
 **Moveit wrapper**: The ``moveit`` commands are send using a modified version of ``pymoveit2`` library which originally maintained at `link <https://github.com/AndrejOrsula/pymoveit2>`_ . The modified version introduces several enhancements and rectifies existing bugs. However, with the recent availability of Python bindings in the latest Moveit2 stack, it's advisable to use that instead.
 
@@ -122,7 +122,7 @@ The robot_config package offers a straightforward way to instantiate both AMR (A
            'wait_on': 'service /spawn_entity'
        }.items()
    )
-   
+
    ld.add_action(amr_launch_cmd)
 
 **Spawning ARM in Gazebo**

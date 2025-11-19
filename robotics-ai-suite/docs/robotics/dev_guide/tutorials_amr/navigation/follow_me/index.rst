@@ -9,7 +9,7 @@ A comprehensive diagram of the application is showed in the figure below. The De
 
 This multimodal solution can control robot motion by any combination of the following three factors:
 
-- **Target person's proximity/location:** We use an |intel|-patented point cloud-based object detection and localization algorithm, called ADBSCAN, for this purpose.
+- **Target person's proximity/location:** We use an Intel®-patented point cloud-based object detection and localization algorithm, called ADBSCAN, for this purpose.
   It takes point cloud data as inputs from a 2D LIDAR or RGB-D camera and outputs the presence and location of the target (to be followed).
   `ros-humble-adbscan-ros2-follow-me` package launches this node. This module is present in all versions of the Follow-me algorithm.
 - **Hand gesture of the target:** An open-source deep learning model, developed by Google’s Mediapipe framework, is used for the target person’s hand gesture recognition from RGB image.

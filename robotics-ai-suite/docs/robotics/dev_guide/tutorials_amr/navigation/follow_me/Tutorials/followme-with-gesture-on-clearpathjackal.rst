@@ -1,11 +1,11 @@
 .. followme-with-gesture on jackal robot:
 
-Follow-me with ADBSCAN and Gesture-based Control on Clearpath Robotics |jackal| Robot
+Follow-me with ADBSCAN and Gesture-based Control on Clearpath Robotics Jackal Robot
 =========================================================================================
 
 This tutorial demonstrates the Follow-me algorithm along with a gesture recognition network, where the robot follows a target person in real time and responds to state commands through hand gestures.
-This tutorial uses Clearpath Robotics |jackal| robot and one |realsense| camera D400 series.
-This camera provides the point cloud data as input for the |intel|-patented object detection algorithm Adaptive DBSCAN to detect the position of the target person. This camera also provides RGB images to the object detection network responsible for detecting hand gestures for controlling the robot's start and stop states.
+This tutorial uses Clearpath Robotics Jackal robot and one |realsense| camera D400 series.
+This camera provides the point cloud data as input for the Intel®-patented object detection algorithm Adaptive DBSCAN to detect the position of the target person. This camera also provides RGB images to the object detection network responsible for detecting hand gestures for controlling the robot's start and stop states.
 This RGB image is passed through a deep learning-based gesture recognition pipeline, called `Mediapipe Hands Framework <https://mediapipe.readthedocs.io/en/latest/solutions/hands.html>`__, to detect the gesture category.
 The motion commands for the robot are published to ``twist`` topic based on these two outputs: person's position and gesture category.
 
@@ -77,7 +77,7 @@ You will use this serial number (and not the ASIC Serial Number) when launching 
 Run Demo with |realsense| Camera
 ---------------------------------
 
-Execute the following script to launch Follow-Me with Gesture on the Clearpath Robotics |jackal| robot:
+Execute the following script to launch Follow-Me with Gesture on the Clearpath Robotics Jackal robot:
 
 .. code-block:: bash
 

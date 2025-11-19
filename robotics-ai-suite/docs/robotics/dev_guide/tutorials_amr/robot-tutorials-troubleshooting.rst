@@ -125,7 +125,7 @@ Enable 3D options in RViz2
 .. note::
 
    Displaying in 3D consumes a lot of system resources this may interfere with the robot control commands.
-   |intel| recommends opening rviz2 on a development system. The development system needs to be
+   Intel® recommends opening rviz2 on a development system. The development system needs to be
    in the same network and have the same ROS_DOMAIN_ID set.
 
    To prepare the development system follow the instructions to :doc:`../../gsg_robot/prepare-system`.
@@ -175,8 +175,8 @@ GPU device is not detected with |Linux| Kernel 6.7.5 or later
 --------------------------------------------------------------
 
 According to the `Release Notes of the Intel® Graphics Compute Runtime <https://github.com/intel/compute-runtime/releases/tag/24.09.28717.12>`__,
-there is a known incompatibility between the |intel| Graphics Compute Runtime
-used in this release of the |lp_amr| and the |i915| kernel mode driver in
+there is a known incompatibility between the Intel® Graphics Compute Runtime
+used in this release of the |lp_amr| and the Intel® Graphics Driver kernel mode driver in
 |Linux| Kernel 6.7.5 or later.
 
 For Intel® Core™ Ultra Processors, the recommended operating system for the |lp_amr|

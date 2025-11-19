@@ -40,7 +40,7 @@ This document will not describe KdTree in detail, and please refer to original `
       :linenos:
 
 
-#. Source the |l_oneapi| environment:
+#. Source the Intel® oneAPI Base Toolkit environment:
 
    .. code-block::
 

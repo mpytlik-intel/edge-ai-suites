@@ -1,7 +1,7 @@
 AAEON Robotic Kits
 ##################
 
-The AAEON UP Xtreme* i11 & UP Squared* 6000 Robotic Development Kits are delivered with the |intel| Edge Insights for Autonomous Mobile Robots software preinstalled.
+The AAEON UP Xtreme* i11 & UP Squared* 6000 Robotic Development Kits are delivered with the Intel® Edge Insights for Autonomous Mobile Robots software preinstalled.
 This is a legacy version of the |lp_amr|. The devices may give you a good start to get familiar with an autonomous robotic system.
 To get detailed information on the hardware of these robotic kits,
 check out the up-board.org page:

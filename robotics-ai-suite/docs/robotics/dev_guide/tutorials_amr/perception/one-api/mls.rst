@@ -3,7 +3,7 @@
 Surface Reconstruction with |oneapi| Moving Least Squares (MLS)
 =============================================================================
 
-MLS creates a 3D surface from a point cloud through either down-sampling or up-sampling techniques. |l_oneapi|\'s MLS is based on the original MLS API. Differences between the two:
+MLS creates a 3D surface from a point cloud through either down-sampling or up-sampling techniques. Intel® oneAPI Base Toolkit\'s MLS is based on the original MLS API. Differences between the two:
 
 -  oneapi MLS calculates with 32-bit float instead of 64-bit double.
 
@@ -41,7 +41,7 @@ for details.
       :linenos:
 
 
-#. Source the |l_oneapi| environment:
+#. Source the Intel® oneAPI Base Toolkit environment:
 
    .. code-block::
 

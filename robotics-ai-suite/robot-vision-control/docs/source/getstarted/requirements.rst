@@ -14,7 +14,7 @@ Knowledge / Experience
 Target System
 ------------------------------------------
 
-An industrial PC with an |Intel| CPU supporting. Internet connectivity is recommended during the initial setup for installing open-source content.
+An industrial PC with an Intel® CPU supporting. Internet connectivity is recommended during the initial setup for installing open-source content.
 
 The following table lists the system requirements:
 
@@ -25,8 +25,8 @@ The following table lists the system requirements:
    * - Attribute
      - Requirements
    * - **Intel Processor**
-     - | • 13th Gen |intel_core|  Processor (Code name: Raptor Lake [**RPL**])
-       | • 12th Gen |intel_core| Processor (Code name: Alder Lake [**ADL**])
+     - | • 13th Gen Intel® Core™  Processor (Code name: Raptor Lake [**RPL**])
+       | • 12th Gen Intel® Core™ Processor (Code name: Alder Lake [**ADL**])
 
 
    * - **Memory**

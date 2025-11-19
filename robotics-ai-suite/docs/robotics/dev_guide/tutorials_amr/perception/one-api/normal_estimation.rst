@@ -25,7 +25,7 @@ In this tutorial, we will learn how to obtain the surface normals of each point 
       :linenos:
 
 
-#. Source the |l_oneapi| environment:
+#. Source the Intel® oneAPI Base Toolkit environment:
 
    .. code-block::
 

@@ -5,7 +5,7 @@ To run our tutorials on a real robot, you can use your own robot with |ros| supp
 
 For convenience, you can also use a robotic kit that supports the |ros| operating system and add the |lp_AMR| to it by following the :doc:`../../../gsg_robot/index`.
 
-Check out the :doc:`clearpath-jackal-robot` tutorial to see how we applied the |lp_AMR| to the |jackal| robot.
+Check out the :doc:`clearpath-jackal-robot` tutorial to see how we applied the |lp_AMR| to the Jackal robot.
 
 You can also have a look at the :doc:`AAEON a robotic kit <legacy-aaeon-developer-kit>`, which comes with a preinstalled "Edge Insights for Autonomous Mobile Robots" software (the legacy version of the |lp_amr|) and is used in many of the |lp_amr| tutorials.
 

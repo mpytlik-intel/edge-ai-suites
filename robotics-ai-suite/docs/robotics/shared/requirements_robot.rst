@@ -3,16 +3,16 @@ Target System
 ------------------------------------------
 
 
--  |intel| processors:
+-  Intel® processors:
 
-   -  Intel Atom® processor with |intel| SSE4.1 support
-   -  |intel| Pentium® processor N4200/5, N3350/5, N3450/5 with |intel| HD Graphics
+   -  Intel Atom® processor with Intel® SSE4.1 support
+   -  Intel® Pentium® processor N4200/5, N3350/5, N3450/5 with Intel® HD Graphics
    -  Intel® Core™ Ultra processors (Series 2) *(partial support - see note below)*
    -  Intel® Core™ Ultra processors (Series 1)
-   -  13th Generation Intel® Core™ processors with |xe| or |intel| UHD Graphics
-   -  12th Generation Intel® Core™ processors with |xe| or |intel| UHD Graphics
-   -  11th Generation Intel® Core™ processors with |xe| or |intel| UHD Graphics
-   -  10th Generation Intel® Core™ processors with an integrated GPU and |intel| UHD Graphics
+   -  13th Generation Intel® Core™ processors with |xe| or Intel® UHD Graphics
+   -  12th Generation Intel® Core™ processors with |xe| or Intel® UHD Graphics
+   -  11th Generation Intel® Core™ processors with |xe| or Intel® UHD Graphics
+   -  10th Generation Intel® Core™ processors with an integrated GPU and Intel® UHD Graphics
 
 -  8 GB or more RAM
 -  Free space on hard drive:

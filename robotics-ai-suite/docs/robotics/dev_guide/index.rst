@@ -8,7 +8,7 @@ Developer Guide |dev_guide|
 
 The |lp_amr| provides software packages and pre-validated hardware modules for
 sensor data ingestion, classification, environment modeling, action
-planning, action control. Built on the (|l_ros|) robot operating system,
+planning, action control. Built on the (ROS 2 Humble) robot operating system,
 it also features reference algorithms and working examples.
 
 
@@ -20,7 +20,7 @@ package allows you to run Light Detection and Ranging (LiDAR) based SLAM
 and compare those results with visual SLAM results on accuracy and
 performance indicators. Additionally, it detects and highlights the objects
 on the map. Depending on the platform that is used,
-workloads are executed on an integrated GPU or on |intel| CPU.
+workloads are executed on an integrated GPU or on Intel® CPU.
 
 
 The |p_amr| addresses

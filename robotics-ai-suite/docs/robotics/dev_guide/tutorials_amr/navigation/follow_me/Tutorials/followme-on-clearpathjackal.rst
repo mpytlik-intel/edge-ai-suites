@@ -1,7 +1,7 @@
-Follow-me with ADBSCAN on Clearpath Robotics |jackal| Robot
+Follow-me with ADBSCAN on Clearpath Robotics Jackal Robot
 ================================================================
 
-This tutorial provides instructions for running the ADBSCAN-based Follow-me algorithm from |p_amr| using |realsense| camera input when using a Clearpath Robotics |jackal| robot.
+This tutorial provides instructions for running the ADBSCAN-based Follow-me algorithm from |p_amr| using |realsense| camera input when using a Clearpath Robotics Jackal robot.
 The |realsense| camera publishes to ``/camera/depth/color/points`` topic. The ``adbscan_sub_node`` subscribes to the corresponding topic,
 detects the obstacle array, computes the robot's velocity and publishes to the ``/cmd_vel`` topic of type `geometry_msg/msg/Twist`.
 This ``twist`` message consists of the updated angular and linear velocity of the robot to follow the target, which can be subsequently subscribed by a robot-driver.
@@ -27,7 +27,7 @@ Install the ``ros-humble-follow-me-tutorial`` Deb package from the |lp_amr| APT 
 Run Demo
 ----------------
 
-To launch the Follow-me application tutorial on the |jackal| robot, use the following ROS 2 launch file.
+To launch the Follow-me application tutorial on the Jackal robot, use the following ROS 2 launch file.
 
 .. code-block:: bash
 

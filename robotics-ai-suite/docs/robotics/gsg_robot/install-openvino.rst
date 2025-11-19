@@ -83,8 +83,8 @@ The following steps will install the |openvino| packages:
 
    .. image:: ../images/configure_ros-humble-openvino-node.png
 
-#. Several |p_amr| tutorials allow you to perform |openvino| inference on the integrated GPU device of |intel| processors.
-   To enable this feature, install the |intel| Graphics Compute Runtime with the following command:
+#. Several |p_amr| tutorials allow you to perform |openvino| inference on the integrated GPU device of Intel® processors.
+   To enable this feature, install the Intel® Graphics Compute Runtime with the following command:
 
    .. code-block:: bash
 

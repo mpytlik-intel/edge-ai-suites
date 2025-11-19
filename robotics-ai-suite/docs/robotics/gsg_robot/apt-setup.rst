@@ -40,7 +40,7 @@ Make sure that you have :doc:`prepared the system <prepare-system>`
 
       echo -e "\nPackage: libflann*\nPin: version 1.19.*\nPin-Priority: -1\n\nPackage: flann*\nPin: version 1.19.*\nPin-Priority: -1" | sudo tee -a /etc/apt/preferences.d/isar
 
-#. Configure the APT repository of the |intel| |oneapi| Base Toolkit:
+#. Configure the APT repository of the Intel® |oneapi| Base Toolkit:
 
    .. code-block:: bash
 

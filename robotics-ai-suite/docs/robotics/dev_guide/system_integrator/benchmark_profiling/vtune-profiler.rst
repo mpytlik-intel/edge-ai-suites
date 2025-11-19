@@ -21,11 +21,11 @@ Additional System Setup for CPU and GPU Profiling
 
 #. Build and Install the Sampling Drivers for |Linux| Targets.
 
-   To do CPU and GPU profiling using driverless sampling collection on processors based on |intel| Performance Hybrid Architecture, which has been introduced from 12th Gen Intel® Core™ processors, the |vtune| sampling drivers must be installed and loaded using root credentials. Follow the steps to `Build and Install the Sampling Drivers for Linux Targets <https://www.intel.com/content/www/us/en/docs/vtune-profiler/user-guide/2024-0/build-install-sampling-drivers-for-linux-targets.html>`__.
+   To do CPU and GPU profiling using driverless sampling collection on processors based on Intel® Performance Hybrid Architecture, which has been introduced from 12th Gen Intel® Core™ processors, the |vtune| sampling drivers must be installed and loaded using root credentials. Follow the steps to `Build and Install the Sampling Drivers for Linux Targets <https://www.intel.com/content/www/us/en/docs/vtune-profiler/user-guide/2024-0/build-install-sampling-drivers-for-linux-targets.html>`__.
 
 #. System setup for CPU and GPU profiling.
 
-   As described in `Set Up System for GPU Analysis <https://www.intel.com/content/www/us/en/docs/vtune-profiler/user-guide/2024-0/set-up-system-for-gpu-analysis.html>`__, to analyze |intel| HD and |intel| Iris Graphics hardware events, the profiler requires that the "Intel Metric Discovery(MD) API" Library is installed and that the necessary permissions to enable the collecting of GPU hardware metrics.
+   As described in `Set Up System for GPU Analysis <https://www.intel.com/content/www/us/en/docs/vtune-profiler/user-guide/2024-0/set-up-system-for-gpu-analysis.html>`__, to analyze Intel® HD and Intel® Iris Graphics hardware events, the profiler requires that the "Intel Metric Discovery(MD) API" Library is installed and that the necessary permissions to enable the collecting of GPU hardware metrics.
 
    * Follow the steps `Set Up System for GPU Analysis <https://www.intel.com/content/www/us/en/docs/vtune-profiler/user-guide/2024-0/set-up-system-for-gpu-analysis.html>`__, to build and install the Intel Metric Discovery(MD) API Library.
    * Run the below command to grant relevant permission to enable the collecting of GPU hardware metrics for non-privileged users.

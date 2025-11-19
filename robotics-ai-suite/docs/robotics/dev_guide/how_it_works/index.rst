@@ -18,7 +18,7 @@ Modules and Services
 --------------------
 
 
-In the |l_oneapi| (|oneapi|) and |l_openvino| (|openvino|), a middleware layered
+In the Intel® oneAPI Base Toolkit (|oneapi|) and Intel® Distribution of OpenVINO™ toolkit (|openvino|), a middleware layered
 architecture that abstracts hardware dependencies from algorithm implementation.
 
 
@@ -30,7 +30,7 @@ data providers from consumers.
 Camera and LiDAR sensor data is abstracted through |ros| topics.
 
 
-Video streaming processing pipelines are supported by |GStreamer_Framework|. |GStreamer_Framework|
+Video streaming processing pipelines are supported by GStreamer Open Source Multimedia Framework. GStreamer Open Source Multimedia Framework
 is a library for constructing media handling component graphs. It decouples
 sensor ingestion, video processing and AI object detection via |openvino|
 toolkit DL Streamer framework. This versatile framework supports applications ranging from simple
@@ -57,7 +57,7 @@ operating system. For requirement details, see :doc:`../../dev_guide/requirement
 ---------------------
 
 
-|lp_amr| relies on standard |intel|
+|lp_amr| relies on standard Intel®
 Architecture |Linux| drivers that are included and upstreamed in the |Linux| kernel
 from kernel.org and forming part of |Ubuntu| distributions. These drivers
 are not bundled within the |p_amr| package. Some notable drivers that are

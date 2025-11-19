@@ -182,7 +182,7 @@ This section details steps to install |amr_package_name| Deb packages.
                   Wandering application.
 
                **ros-humble-wandering-tutorials**
-                  Meta-package for |intel| Wandering application tutorials.
+                  Meta-package for Intel® Wandering application tutorials.
 
                .. raw:: html
 
@@ -420,7 +420,7 @@ Install one of the following packages based upon your processor type:
       |                 |                                                             |
       |                 | 11th Generation Intel® Core™ Processors                           |
       |                 |                                                             |
-      |                 | |intel| Processor N-series (products formerly Alder Lake-N) |
+      |                 | Intel® Processor N-series (products formerly Alder Lake-N) |
       +-----------------+-------------------------------------------------------------+
       | ``gen11``       | Products formerly Ice Lake                                  |
       +-----------------+-------------------------------------------------------------+

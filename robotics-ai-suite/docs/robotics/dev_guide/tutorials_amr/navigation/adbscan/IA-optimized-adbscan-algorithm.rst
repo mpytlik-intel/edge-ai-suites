@@ -3,7 +3,7 @@
 Intel-optimized ADBSCAN Algorithm
 ===================================
 
-In this version of ADBSCAN, the algorithm has been optimized for |intel| SOC by replacing linear neighbor point search with an optimized |oneapi| PCL library (offloaded to GPU), as well as refactoring the clustering algorithm.
+In this version of ADBSCAN, the algorithm has been optimized for Intel® SOC by replacing linear neighbor point search with an optimized |oneapi| PCL library (offloaded to GPU), as well as refactoring the clustering algorithm.
 It has been tested and validated on 13th Generation Intel® Core™ processors with |xe|, 12th Generation Intel® Core™ processors with |xe| and 11th Generation Intel® Core™ processors with |xe|. This tutorial describes how to run this Intel-optimized ADBSCAN algorithm and compare the execution time with the unoptimized version.
 
 
@@ -47,7 +47,7 @@ This command will launch the |ros| bag file and publish the recorded point cloud
 Install and run optimized Deb package
 ---------------------------------------------
 
-Install ``ros-humble-adbscan-oneapi`` Deb package from |intel| |p_amr| APT repository:
+Install ``ros-humble-adbscan-oneapi`` Deb package from Intel® |p_amr| APT repository:
 
    .. code-block:: bash
 
@@ -71,7 +71,7 @@ The table shows a breakdown between pre-processing, ADBSCAN execution and post-p
 Install and run standard (unoptimized) Deb package
 -----------------------------------------------------
 
-Install ``ros-humble-adbscan-ros2`` Deb package from |intel| |p_amr| APT repository
+Install ``ros-humble-adbscan-ros2`` Deb package from Intel® |p_amr| APT repository
 
    .. code-block:: bash
 
@@ -129,7 +129,7 @@ A complete list of the reconfigurable parameters is given below:
          * - ``base``, ``coeff_1``, ``coeff_2``, ``scale_factor``
            - These are the coefficients used to calculate the adaptive parameters of the ADBSCAN algorithm. These values are pre-computed and recommended to keep unchanged.
          * - ``oneapi_library``
-           - Available options are: ``oneapi_kdtree``, ``oneapi_octree``, ``pcl_kdtree``. ``oneapi_kdtree`` and ``oneapi_octree`` allow the algorithm to use optimized |oneapi| KdTree or octree library and offload the neighbor point search method to GPU. ``pcl_kdtree`` option uses the standard PCL KdTree library, not optimized for |intel| SOC.
+           - Available options are: ``oneapi_kdtree``, ``oneapi_octree``, ``pcl_kdtree``. ``oneapi_kdtree`` and ``oneapi_octree`` allow the algorithm to use optimized |oneapi| KdTree or octree library and offload the neighbor point search method to GPU. ``pcl_kdtree`` option uses the standard PCL KdTree library, not optimized for Intel® SOC.
          * - ``benchmark_number_of_frames``
            - Any integer greater or equal to 1. This is the number of frames over which the average execution time is executed and printed in the benchmarking table.
 

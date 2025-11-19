@@ -27,7 +27,7 @@ In this tutorial we will learn how to use the octree for spatial partitioning an
       :linenos:
 
 
-#. Source the |l_oneapi| environment:
+#. Source the Intel® oneAPI Base Toolkit environment:
 
    .. code-block::
 

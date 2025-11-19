@@ -25,7 +25,7 @@ In this tutorial, we will explore the process of simple plane segmentation, extr
       :linenos:
 
 
-#. Source the |l_oneapi| environment:
+#. Source the Intel® oneAPI Base Toolkit environment:
 
    .. code-block::
 
