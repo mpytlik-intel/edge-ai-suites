@@ -41,8 +41,8 @@ position:
 Use Different Stereo Camera
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Note:** Only Intel® RealSense\ |tm| cameras have been tested. To adapt
-the |RVC| Framework to a different camera, note that the |ROS| node handling
+**Note:** Only Intel® RealSense™ cameras have been tested. To adapt
+the RVC Framework to a different camera, note that the ROS 2 node handling
 the new camera must expose a pointcloud ordered (that is, the pointcloud
 is not monodimensional array, but must be a 640x480 pointcloud and
 ordered). This is necessary to extract the cropped pointcloud from the
@@ -72,7 +72,7 @@ reference. In the RVC demonstration, the base of the camera is at
 right camera xacro that the manufacturer provides.
 
 Additionally, make modifications on the AI side, such as removing the
-RealSense ros2 node and replacing with a |ROS| of the new camera.
+RealSense ros2 node and replacing with a ROS 2 of the new camera.
 
 The AI publishes the detected pose with:
 
@@ -182,8 +182,8 @@ connected to that link.
 Change Manipulator without supported drivers
 --------------------------------------------
 
-RVC is based on |ros2| framework, hence its able to drive manupulators with ROS 2 support.
-This means the manufacturer has to provide a |ros2| driver, fully implementing the `ROS 2 Control <https://control.ros.org/master/index.html>`__
+RVC is based on ROS 2 framework, hence its able to drive manupulators with ROS 2 support.
+This means the manufacturer has to provide a ROS 2 driver, fully implementing the `ROS 2 Control <https://control.ros.org/master/index.html>`__
 interfaces and `MoveIt 2 <https://moveit.picknik.ai/main/index.html>`__ support.
 
 If the robot is not supported, there is another way, albeit potentially not straight forward:

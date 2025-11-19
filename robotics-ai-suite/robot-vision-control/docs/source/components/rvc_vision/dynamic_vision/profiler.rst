@@ -16,4 +16,4 @@ Currently implemented metrics are:
 - Number of failed dead lines from Linux RT kernel scheduler
 
 
-In this initial release of |RVC| the metrics are just printed on console every second.
+In this initial release of RVC the metrics are just printed on console every second.

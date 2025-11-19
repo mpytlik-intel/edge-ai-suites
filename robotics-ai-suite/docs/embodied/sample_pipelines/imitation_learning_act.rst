@@ -97,7 +97,7 @@ Inference
 
 2. Convert the model checkpoint to OpenVINO IR.
 
-| ``ov_convert.py`` is a script provided to convert the |pytorch| model to OpenVINO IR. You can find the script in the `act-ov` directory, and see the usage with the following command:
+| ``ov_convert.py`` is a script provided to convert the PyTorch model to OpenVINO IR. You can find the script in the `act-ov` directory, and see the usage with the following command:
 
    .. code-block:: bash
 

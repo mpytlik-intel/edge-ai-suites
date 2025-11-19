@@ -63,8 +63,8 @@ Depth Anything V2, is an active powerful foundation model for monocular depth es
 
 Model Conversion
 ================
-The Depth-Anything-V2 model is trained using |pytorch| but can achieve optimized inference performance on Intel devices using OpenVINO™.
-To enable this, the |pytorch| model must first be converted to the OpenVINO™ IR format.
+The Depth-Anything-V2 model is trained using PyTorch but can achieve optimized inference performance on Intel devices using OpenVINO™.
+To enable this, the PyTorch model must first be converted to the OpenVINO™ IR format.
 
 .. contents:: Table of Contents
    :local:

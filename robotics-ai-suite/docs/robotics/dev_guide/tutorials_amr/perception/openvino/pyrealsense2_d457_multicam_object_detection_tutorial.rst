@@ -90,11 +90,12 @@ Install ``librealsense2`` and ``realsense2`` tools
 
     sudo apt install -y ros-humble-librealsense2-tools
 
-Configure the |SerDes| and install ``intel-ipu6-dkms`` Dynamic Kernel Module Support package
-```````````````````````````````````````````````````````````````````````````````````````````````
-The following steps describe how to configure the |SerDes| and further to install and load the ``intel-ipu6-dkms`` Dynamic Kernel Module Support package.
+Configure the Intel’s GMSL Serializer-Deserializer ACPI devices and install ``intel-ipu6-dkms`` Dynamic Kernel Module Support package
+```````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
 
-#. The design approach of the GMSL Add-in-Card present in the Axiomtek Robox500 ROS 2 AMR Controller is called ``Standalone-mode``. i.e., a single GMSL Serializer and Camera Sensor device is connected per Deserializer. In order to configure the |SerDes| in ``Standalone-mode``, follow the steps described in the documentation `Configure Intel® GMSL SerDes ACPI devices <https://eci.intel.com/docs/3.3/development/tutorials/enable-gmsl.html#configure-intel-gmsl-serdes-acpi-devices>`__.
+The following steps describe how to configure the Intel’s GMSL Serializer-Deserializer ACPI devices and further to install and load the ``intel-ipu6-dkms`` Dynamic Kernel Module Support package.
+
+#. The design approach of the GMSL Add-in-Card present in the Axiomtek Robox500 ROS 2 AMR Controller is called ``Standalone-mode``. i.e., a single GMSL Serializer and Camera Sensor device is connected per Deserializer. In order to configure the Intel’s GMSL Serializer-Deserializer ACPI devices in ``Standalone-mode``, follow the steps described in the documentation `Configure Intel® GMSL SerDes ACPI devices <https://eci.intel.com/docs/3.3/development/tutorials/enable-gmsl.html#configure-intel-gmsl-serdes-acpi-devices>`__.
 
 #. To download and install the ``intel-ipu6-dkms`` Dynamic Kernel Module Support package, follow the steps described in the documentation `Intel® GMSL intel-ipu6 Debian kernel modules (DKMS) <https://eci.intel.com/docs/3.3/development/tutorials/enable-gmsl.html#intel-gmsl-intel-ipu6-debian-kernel-modules-dkms>`_.
 

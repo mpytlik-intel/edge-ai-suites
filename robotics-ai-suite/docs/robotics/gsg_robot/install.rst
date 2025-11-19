@@ -412,15 +412,15 @@ Install one of the following packages based upon your processor type:
       +-----------------+-------------------------------------------------------------+
       | GPU Generation  | Processors                                                  |
       +=================+=============================================================+
-      | ``genXe``       | Intel® Core™ Ultra Processors                                     |
+      | ``genXe``       | Intel® Core™ Ultra Processors                               |
       |                 |                                                             |
-      |                 | 13th Generation Intel® Core™ Processors                           |
+      |                 | 13th Generation Intel® Core™ Processors                     |
       |                 |                                                             |
-      |                 | 12th Generation Intel® Core™ Processors                           |
+      |                 | 12th Generation Intel® Core™ Processors                     |
       |                 |                                                             |
-      |                 | 11th Generation Intel® Core™ Processors                           |
+      |                 | 11th Generation Intel® Core™ Processors                     |
       |                 |                                                             |
-      |                 | Intel® Processor N-series (products formerly Alder Lake-N) |
+      |                 | Intel® Processor N-series (products formerly Alder Lake-N)  |
       +-----------------+-------------------------------------------------------------+
       | ``gen11``       | Products formerly Ice Lake                                  |
       +-----------------+-------------------------------------------------------------+

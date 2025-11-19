@@ -73,7 +73,7 @@ For generic kernel:
     |  .. code-block:: console                        |                                         |
     |                                                 |                                         |
     |     CONFIG_HZ_250=y                             | Reduce task scheduling-clock overhead   |
-    |     CONFIG_NO_HZ=n                              | and disable CPU governor Linux OS     |
+    |     CONFIG_NO_HZ=n                              | and disable CPU governor Linux OS       |
     |     CONFIG_NO_HZ_FULL=y                         | features                                |
     |     CONFIG_NO_HZ_IDLE=n                         |                                         |
     |     CONFIG_ACPI_PROCESSOR=n                     |                                         |
@@ -85,7 +85,7 @@ For generic kernel:
     |                                                 |                                         |
     +-------------------------------------------------+-----------------------------------------+
     |  .. code-block:: console                        |                                         |
-    |                                                 | Disable Linux OS power-management     |
+    |                                                 | Disable Linux OS power-management       |
     |     ARCH_SUSPEND_POSSIBLE=n                     | runtime features                        |
     |     CONFIG_SUSPEND=n                            |                                         |
     |     CONFIG_PM=n                                 |                                         |
