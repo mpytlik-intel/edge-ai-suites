@@ -23,7 +23,7 @@ Prerequisites
 Complete the :doc:`../../../gsg_robot/index` before continuing.
 
 Using Intel® RealSense™ camera connected through USB
-`````````````````````````````````````````````````
+`````````````````````````````````````````````````````
 
 #. Connect an Intel® RealSense™ camera (for example, Intel® RealSense™ D435i) to the host, through USB.
 
@@ -60,12 +60,12 @@ Using Intel® RealSense™ camera connected through USB
    -  Type ``Ctrl-c`` in the terminal where the tutorial was run.
 
 Using `Intel® RealSense™ Depth Camera D457 <https://www.intelrealsense.com/depth-camera-d457/>`__ on an `Axiomtek Robox500 ROS 2 AMR Controller <https://www.axiomtek.com/Default.aspx?MenuId=Products&FunctionId=ProductView&ItemId=27392&C=ROBOX500&upcat=408>`__
-```````````````````````````````````````````````````````````````````````````````````````
+`````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
 
 The following steps are required to set up the Axiomtek Robox500 ROS 2 AMR Controller to support the Intel® RealSense™ Depth Camera D457.
 
 Axiomtek Robox500 ROS 2 AMR Controller Setup
-................
+...............................................
 
 Connect an Intel® RealSense™ Depth Camera D457 to  the Axiomtek Robox500 ROS 2 AMR Controller as shown in the below picture. Now, power-on the target.
 
@@ -197,7 +197,7 @@ Add the user to the *video* and *render* group
     sudo usermod -a -G render $USER
 
 Install and run the  Intel® RealSense™ camera with ROS 2 sample application
-......................................................................
+............................................................................
 
 #. Download and install the Intel® RealSense™ camera with ROS 2 sample application:
 

@@ -1,5 +1,5 @@
 Set up the Autonomous Mobile Robot APT Repositories
-####################################
+####################################################
 
 A target running a compatible OS can install Deb packages from hosted APT repositories.
 

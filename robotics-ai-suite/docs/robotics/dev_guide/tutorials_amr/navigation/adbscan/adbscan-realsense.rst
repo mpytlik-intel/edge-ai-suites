@@ -27,7 +27,7 @@ Install the following package with ROS 2 bag files in order to publish point clo
 
 
 Run the demo with Intel® RealSense™ camera
--------------------------------------
+-------------------------------------------
 
    .. code-block::
 

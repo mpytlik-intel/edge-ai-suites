@@ -28,7 +28,7 @@ And then press play on the teaching pendant.
 Motion controller exemplary plugin
 ===================================
 
-A |moveit2| based motion controller has been implemented showing a dynamic
+A `MoveIt 2 <https://moveit.picknik.ai/main/index.html>`__ based motion controller has been implemented showing a dynamic
 real-time tracking of the goal set in sendGoal. At all time, sendGoal
 can be kept being called with different target, and the motion
 controller will do its best to track the goal.
@@ -145,7 +145,7 @@ The file waypoint.yaml exposes the waypoint the dynamic and static use cases use
 
 How to derive this numbers:
 
-ROS 2 is using a different coordinate system than the Univeral Robot teach pendant. To convert
+ROS2 is using a different coordinate system than the Univeral Robot teach pendant. To convert
 the two, here is the conversion:
 
 

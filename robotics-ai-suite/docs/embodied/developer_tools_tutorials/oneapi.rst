@@ -9,9 +9,9 @@ Intel® oneAPI Toolkit
 
 Robotics software developers can use the Intel® oneAPI Toolkit and oneAPI-powered applications to enhance AI deep learning and heterogeneous computing capabilities, thereby leveraging the full value of all hardware.
 
-|oneapi_full|
+Intel® oneAPI™ Base Toolkit
 ===========================
-The |oneapi_full| (Base Kit) is a core set of tools and libraries for developing high-performance, data-centric applications across diverse architectures. It features an industry-leading C++ compiler that implements SYCL*, an evolution of C++ for heterogeneous computing.
+The Intel® oneAPI™ Base Toolkit (Base Kit) is a core set of tools and libraries for developing high-performance, data-centric applications across diverse architectures. It features an industry-leading C++ compiler that implements SYCL*, an evolution of C++ for heterogeneous computing.
 
 It includes:
 
@@ -53,7 +53,7 @@ It includes:
 
 .. _oneapi_install_label:
 
-Install |oneapi_full| **2024.2.1**:
+Install Intel® oneAPI™ Base Toolkit **2024.2.1**:
 
 1. From the `oneAPI website <https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?packages=oneapi-toolkit&oneapi-toolkit-os=linux&oneapi-lin=offline>`_, locate the downloaded install file.
 

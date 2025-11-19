@@ -1,7 +1,7 @@
 Supported peripherals
 *********************
 
-Stationary Robot Vision & Control is developed, tested and validated with a limited set of peripherals.
+Robot Vision & Control Framework is developed, tested and validated with a limited set of peripherals.
 
 
 
@@ -13,7 +13,7 @@ Tier 1 Sensors
 
 Preferred sensors, utilized for use-case examples, tested & validated
 
-* |Realsense| `D400 Family <https://www.intelrealsense.com/introducing-intel-realsense-d400-product-family/>`__ cameras
+* Intel® RealSense™ `D400 Family <https://www.intelrealsense.com/introducing-intel-realsense-d400-product-family/>`__ cameras
 
 Tier 2 Sensors
 --------------
@@ -53,4 +53,5 @@ Tier 3 Actuators
 
 Robot/Actuator expected to function, not owned, not tested
 
-* Every manipulator with existing ROS2 drivers with |moveit2| support and urdf (or xacro) robot description
+* Every manipulator with existing ROS2 drivers with `MoveIt 2 <https://moveit.picknik.ai/main/index.html>`__ support and urdf (or xacro) robot description
+

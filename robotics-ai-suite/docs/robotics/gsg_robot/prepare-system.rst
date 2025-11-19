@@ -4,8 +4,8 @@ Prepare the Target System
 .. figure:: ../images/system/target.png
 
 
-Install |ubuntu_version|
-========================
+Install Canonical Ubuntu 22.04 LTS (Jammy Jellyfish)
+=========================================================
 
 Intel recommends a fresh installation of the Ubuntu distribution of the Linux OS for your target system, but this is not mandatory.
 
@@ -14,23 +14,23 @@ Depending on your processor type, select one of the following Canonical Ubuntu
 
 .. table::
 
-   +----------------------------------------------+------------------------------------------------+
-   | Processor type                               | Canonical Ubuntu 22.04 LTS variant                     |
-   +==============================================+================================================+
+   +----------------------------------------------------+----------------------------------------------------------------------------------------------------------------+
+   | Processor type                                     | Canonical Ubuntu 22.04 LTS variant                                                                             |
+   +====================================================+================================================================================================================+
    | Intel® Core™ Ultra Processors                      | `Ubuntu OS version 22.04 LTS (Jammy Jellyfish) <https://releases.ubuntu.com/22.04>`__ Desktop image            |
-   +----------------------------------------------+------------------------------------------------+
-   | Other Intel® processors, including:         | 22.04 LTS image for Intel IoT platforms,       |
-   |                                              | available at `Download Ubuntu image for Intel® IoT platforms <https://ubuntu.com/download/iot/intel-iot>`__         |
-   | 11th/12th/13th Generation Intel® Core™ Processors, |                                                |
-   |                                              |                                                |
-   | Intel® Processor N-series                   |                                                |
-   | (products formerly Alder Lake-N)             |                                                |
-   +----------------------------------------------+------------------------------------------------+
+   +----------------------------------------------------+----------------------------------------------------------------------------------------------------------------+
+   | Other Intel® processors, including:                | 22.04 LTS image for Intel IoT platforms,                                                                       |
+   |                                                    | available at `Download Ubuntu image for Intel® IoT platforms <https://ubuntu.com/download/iot/intel-iot>`__    |
+   | 11th/12th/13th Generation Intel® Core™ Processors, |                                                                                                                |
+   |                                                    |                                                                                                                |
+   | Intel® Processor N-series                          |                                                                                                                |
+   | (products formerly Alder Lake-N)                   |                                                                                                                |
+   +----------------------------------------------------+----------------------------------------------------------------------------------------------------------------+
 
 Visit the Canonical Ubuntu website to see the detailed installation instructions: `Install Ubuntu desktop <https://ubuntu.com/tutorials/install-ubuntu-desktop>`__.
 
 Steps to Install Canonical Ubuntu
--------------------------
+---------------------------------------
 
 #. Download the ISO file from the official website, according to the table above.
 
@@ -63,16 +63,16 @@ Depending on the processor type, the expected result is as follows:
    +------------------------------------------+--------------------------------------+
    | Processor type                           | Expected kernel version              |
    +==========================================+======================================+
-   | Intel® Core™ Ultra Processors                  | ``6.5.0-44-generic``                 |
+   | Intel® Core™ Ultra Processors            | ``6.5.0-44-generic``                 |
    +------------------------------------------+--------------------------------------+
-   | Other Intel® processors                 | ``5.15.0-1060-intel-iotg``           |
+   | Other Intel® processors                  | ``5.15.0-1060-intel-iotg``           |
    +------------------------------------------+--------------------------------------+
 
 
 
 .. _install-ros-ros-version:
 
-Install ROS 2 |ros_version|
+Install ROS 2 Humble
 ============================
 
 To install ROS 2 on your system, follow the `ROS 2 setup guide <https://docs.ros.org/en/humble/Installation.html>`__.

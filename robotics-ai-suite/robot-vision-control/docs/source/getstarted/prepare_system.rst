@@ -2,7 +2,7 @@ Prepare the Target System
 ##########################
 
 Install Canonical Ubuntu 22.04 LTS (Jammy Jellyfish)
-========================
+========================================================
 
 It is recommended but not required that your target system has a fresh installation of Canonical Ubuntu 22.04 LTS (Jammy Jellyfish).
 
@@ -11,7 +11,7 @@ Visit the Ubuntu website for installation instructions `Install Ubuntu desktop <
 
 
 Canonical Ubuntu Installation Overview
------------------------------------
+--------------------------------------------
 
 #. Download the ISO file for `Ubuntu OS version 22.04 LTS (Jammy Jellyfish) <https://releases.ubuntu.com/22.04>`__.
 

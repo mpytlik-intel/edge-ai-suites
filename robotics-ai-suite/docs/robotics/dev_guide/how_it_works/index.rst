@@ -18,7 +18,8 @@ Modules and Services
 --------------------
 
 
-In the Intel® oneAPI Base Toolkit (oneAPI) and Intel® Distribution of OpenVINO™ toolkit (OpenVINO™), a middleware layered architecture that abstracts hardware dependencies from algorithm implementation.
+In the Intel® oneAPI Base Toolkit (oneAPI) and Intel® Distribution of OpenVINO™ toolkit (OpenVINO™), a middleware layered
+architecture that abstracts hardware dependencies from algorithm implementation.
 
 
 The ROS 2 with a data distribution service (DDS) is used as a message bus.
@@ -53,7 +54,7 @@ operating system. For requirement details, see :doc:`../../dev_guide/requirement
 
 
 Autonomous Mobile Robot Drivers
----------------------
+---------------------------------
 
 
 Autonomous Mobile Robot relies on standard Intel®

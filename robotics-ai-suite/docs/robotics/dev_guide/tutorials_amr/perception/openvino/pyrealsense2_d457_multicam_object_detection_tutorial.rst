@@ -1,7 +1,7 @@
 .. pyrealsense2-d457-multicam-object-detection-tutorial:
 
 OpenVINO™ Tutorial on Multi-camera Object Detection using Intel® RealSense™ Depth Camera D457
-===========================================================================================
+==============================================================================================
 
 In this tutorial, the multi-camera use case is demonstrated using an `Axiomtek Robox500 ROS 2 AMR Controller <https://www.axiomtek.com/Default.aspx?MenuId=Products&FunctionId=ProductView&ItemId=27392&C=ROBOX500&upcat=408>`__ and four `Intel® RealSense™ Depth Camera D457 <https://www.intelrealsense.com/depth-camera-d457/>`__. Here, the four cameras are connected to the Industrial Gigabit Multimedia Serial Link™ (GMSL) supported Axiomtek Robox500 ROS 2 AMR Controller through GMSL/FAKRA (female-to-female) cables, which provide high-bandwidth video transmission.
 
@@ -47,7 +47,7 @@ Prerequisites
 Complete the :doc:`../../../../gsg_robot/index` before continuing.
 
 Axiomtek Robox500 ROS 2 AMR Controller Setup
-----------------
+---------------------------------------------
 Connect four Intel® RealSense™ Depth Camera D457 to  the Axiomtek Robox500 ROS 2 AMR Controller as shown in the below picture. Now, power-on the target.
 
 .. image:: ../../../../images/Axiomtek_GMSL_Camera.jpg
@@ -91,7 +91,7 @@ Install ``librealsense2`` and ``realsense2`` tools
     sudo apt install -y ros-humble-librealsense2-tools
 
 Configure the |SerDes| and install ``intel-ipu6-dkms`` Dynamic Kernel Module Support package
-`````````````````````````````````````````````````````````````
+```````````````````````````````````````````````````````````````````````````````````````````````
 The following steps describe how to configure the |SerDes| and further to install and load the ``intel-ipu6-dkms`` Dynamic Kernel Module Support package.
 
 #. The design approach of the GMSL Add-in-Card present in the Axiomtek Robox500 ROS 2 AMR Controller is called ``Standalone-mode``. i.e., a single GMSL Serializer and Camera Sensor device is connected per Deserializer. In order to configure the |SerDes| in ``Standalone-mode``, follow the steps described in the documentation `Configure Intel® GMSL SerDes ACPI devices <https://eci.intel.com/docs/3.3/development/tutorials/enable-gmsl.html#configure-intel-gmsl-serdes-acpi-devices>`__.
@@ -103,7 +103,7 @@ The following steps describe how to configure the |SerDes| and further to instal
 .. Note:: The steps, such as BIOS settings and d4xx module user parameters, must be configured to be relevant to the ``Standalone-mode`` of the Add-in-Card for Axiomtek Robox500 ROS 2 AMR Controller.
 
 Install and run multi-camera object detection tutorial using the Intel® RealSense™ Depth Camera D457
-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
 
 Install
 ```````

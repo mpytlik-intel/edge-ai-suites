@@ -5,7 +5,7 @@
 Release Notes
 ###################################
 
-Click each tab to learn about the new and updated features in each release of Intel® Stationary Robot Vision & Control.
+Click each tab to learn about the new and updated features in each release of Intel® Robot Vision & Control Framework.
 
 .. tabs::
 
@@ -134,7 +134,7 @@ Click each tab to learn about the new and updated features in each release of In
 
    .. group-tab:: RVC v1.0
 
-      Initial release of Stationary Robot Vision & Control (RVC).
+      Initial release of Robot Vision & Control Framework (RVC).
       RVC allows closed loop automatic object recognition and robot manipulation of a set of moving objects.
 
       **Features**

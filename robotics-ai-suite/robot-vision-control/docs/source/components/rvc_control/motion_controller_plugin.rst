@@ -10,7 +10,7 @@ defines the interfaces Motion controller plugins are based off.
 The strategy the robot is complying when assigned a target Pose is defined in custom plugins following
 the above interface.
 
-The development interface is defined in :ref:`Motion Controller Interface Development<motioncontroller_plugins>`
+The development interface is defined in :ref:`Motion Controller Interface Development <motioncontroller_plugins>`
 
 Moveit2 Servo Motion Controller
 -------------------------------
@@ -22,7 +22,7 @@ RVC is providing a `relatively` simple motion controller based off Moveit2 servo
 
 
 The strategy is to compute an in space linear velocity trajectory (althought in time follows an atan profile) to
-the target and to feed it |moveit2| |servo| node.
+the target and to feed it `MoveIt 2 <https://moveit.picknik.ai/main/index.html>`__ `Servo <https://moveit.picknik.ai/humble/doc/examples/realtime_servo/realtime_servo_tutorial.html>`__ node.
 
 Additional features exposed by servo are collision maps, customizable in the associated yaml file, and
 singularity detection.
@@ -54,10 +54,10 @@ Dobby is a real-time motion planning framework with a high success rate in compl
 Direct Universal Robot Pendant Controller
 -----------------------------------------
 
-The Universal Robot drivers are present in ROS 2 and fully supported, but in case another robot
-is employed, and the ROS 2 drivers are missing, we provided a strategy to implement a RVC Plugin
+The Universal Robot drivers are present in ROS2 and fully supported, but in case another robot
+is employed, and the ROS2 drivers are missing, we provided a strategy to implement a RVC Plugin
 able to interface with the specific robot using their custom interfaces. And as reference, we
-chose Universal Robot pretending we didn't have a ROS 2 driver.
+chose Universal Robot pretending we didn't have a ROS2 driver.
 
 The limitation of this plugin, is that the robot, once sent to a target, cant change destination,
 

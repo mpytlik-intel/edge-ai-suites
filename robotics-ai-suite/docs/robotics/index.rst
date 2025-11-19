@@ -1,5 +1,5 @@
 Autonomous Mobile Robot
-********
+************************
 
 Develop, build, and deploy end-to-end mobile robot applications with this purpose-built, open, and modular software development kit that includes libraries, middleware, and sample applications based on the open source ROS 2 Humble robot operating system.
 

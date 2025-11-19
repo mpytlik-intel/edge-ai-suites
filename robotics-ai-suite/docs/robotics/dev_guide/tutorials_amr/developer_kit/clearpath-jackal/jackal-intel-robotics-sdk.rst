@@ -1,5 +1,5 @@
 Install the Autonomous Mobile Robot on the Jackal Onboard Computer
-=====================================================
+====================================================================
 
 This chapter describes how to install the Autonomous Mobile Robot together with the
 ROS 2 middleware and the Clearpath Robotics ecosystem on
@@ -20,7 +20,7 @@ or replace the pre-installed SATA M.2 SSD with an empty storage device,
 before you continue with the next steps.
 
 Install ROS 2 Humble and the Autonomous Mobile Robot
--------------------------------------
+-----------------------------------------------------------
 
 To install ROS 2 Humble and the Autonomous Mobile Robot on the
 Clearpath Robotics Jackal robot, follow the instructions in the
@@ -81,7 +81,7 @@ that you have completed the steps described in the previous section,
 .. _identify-realsense-serial-number:
 
 Identify the Serial Number of your Intel® RealSense™ Camera
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The serial number of the Intel® RealSense™ camera has to be included in the
 ``robot.yaml`` file. To identify the serial number, connect the camera
@@ -193,7 +193,7 @@ nodes, so that the related ROS 2 topics are published.
 
 
 Add your Intel® RealSense™ Camera D435i to the Robot YAML File
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The robot configuration file, which you have created in the previous section,
 still requires to define a camera in the ``sensors`` section.

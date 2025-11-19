@@ -129,7 +129,7 @@ A complete list of the reconfigurable parameters is given below:
          * - ``base``, ``coeff_1``, ``coeff_2``, ``scale_factor``
            - These are the coefficients used to calculate the adaptive parameters of the ADBSCAN algorithm. These values are pre-computed and recommended to keep unchanged.
          * - ``oneapi_library``
-           - Available options are: ``oneapi_kdtree``, ``oneapi_octree``, ``pcl_kdtree``. ``oneapi_kdtree`` and ``oneapi_octree`` allow the algorithm to use optimized oneAPI KdTree or octree library and offload the neighbor point search method to GPU. ``pcl_kdtree`` option uses the standard PCL KdTree library, not optimized for Intel® SOC.
+           - Available options are: ``oneapi_kdtree``, ``oneapi_octree``, ``pcl_kdtree``. ``oneapi_kdtree`` and ``oneapi_octree`` allow the algorithm to use optimized oneAPI™ KdTree or octree library and offload the neighbor point search method to GPU. ``pcl_kdtree`` option uses the standard PCL KdTree library, not optimized for Intel® SOC.
          * - ``benchmark_number_of_frames``
            - Any integer greater or equal to 1. This is the number of frames over which the average execution time is executed and printed in the benchmarking table.
 

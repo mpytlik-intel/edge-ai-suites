@@ -20,7 +20,7 @@ Install OpenVINO™ tutorial packages
    sudo apt install ros-humble-segmentation-realsense-tutorial
 
 Run Demo with Intel® RealSense™ Camera Topic Input
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Run one of the following commands to launch the segmentation tutorial with a specific inference engine:
 

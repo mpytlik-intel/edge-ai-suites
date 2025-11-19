@@ -81,7 +81,7 @@ The standard assembly involves the following steps:
 
 
 Step 2: Integration into Autonomous Mobile Robot
-+++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Start the robot base ROS 2 node on the native system OS or inside a Docker
 container.

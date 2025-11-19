@@ -1,7 +1,7 @@
 .. esdq:
 
 Intel® Edge Software Device Qualification (Intel® Edge Software Device Qualification (Intel® ESDQ)) for Autonomous Mobile Robot
-======================================================================================
+=================================================================================================================================
 
 
 Overview
@@ -38,127 +38,127 @@ More detailed information is available at `Intel® Edge Software Device Qualific
 
 Intel® Edge Software Device Qualification (Intel® ESDQ) for Autonomous Mobile Robot contains the following test modules.
 
-+-------------------------------------------------------------------------------------------------+
-| Intel® RealSense™ Camera                                                                              |
-|    This module verifies the capabilities of the Intel® RealSense™ technology on the target platform.  |
-|    For more information, go to the `Intel® RealSense™ website                                   |
-|    <https://www.intelrealsense.com/>`__.                                                        |
-|                                                                                                 |
-|    The tests within this module verify that the following features are installed properly on    |
-|    the target platform and that Autonomous Mobile Robot and Intel® RealSense™ camera are functioning properly.        |
-|                                                                                                 |
-|    The tests are considered PASS if:                                                            |
-|                                                                                                 |
-|      -  The Intel® RealSense™ SDK 2.0 libraries are installed on the target system.                   |
-|                                                                                                 |
-|      -  A simple C++ file can be compiled using the g++ compiler and the ``-lrealsense2``       |
-|         compilation flag.                                                                       |
-|                                                                                                 |
-|      -  Intel® RealSense™ camera topics are listed and published.                                     |
-|                                                                                                 |
-|      -  The number of FPS (Frames Per Second) are as expected.                                  |
-+-------------------------------------------------------------------------------------------------+
-| Intel® VTune™ Profiler                                                                        |
-|    This module runs the Intel® VTune™ Profiler on the target system. For more information,    |
-|    go to the `Intel® VTune™ Profiler website                                                    |
-|    <https://www.intel.com/content/www/us/en/developer/tools/oneapi/vtune-profiler.html>`__.     |
-|                                                                                                 |
-|    The test is considered PASS if:                                                              |
-|                                                                                                 |
-|      -  VTune™ Profiler Profiler runs without errors.                                                   |
-|                                                                                                 |
-|      -  VTune™ Profiler Profiler collects Platform information.                                         |
-+-------------------------------------------------------------------------------------------------+
-| rviz2 and FastMapping                                                                           |
-|   This module runs the FastMapping application (the version of octomap optimized for Intel®    |
-|   platforms) on the target system and uses rviz2 to verify that it works as expected.           |
-|   For more information, go to the `rviz wiki <http://wiki.ros.org/rviz>`__.                     |
-|                                                                                                 |
-|   The test is considered PASS if:                                                               |
-|                                                                                                 |
-|     -  FastMapping is able to create a map out of a pre-recorded ROS 2 bag.                     |
-+-------------------------------------------------------------------------------------------------+
-| Intel® oneAPI Base Toolkit                                                                                      |
-|    This module verifies some basic capabilities of Intel® oneAPI Base Toolkit on the target platform.           |
-|    For more information, go to the `Intel® oneAPI Base Toolkit website                          |
-|    <https://software.intel.com/content/www/us/en/develop/tools/oneapi.html#gs.cjvm2h>`__.       |
-|                                                                                                 |
-|    The tests within this module verify that the DPC++ compiler features are functioning         |
-|    properly on the target platform.                                                             |
-|                                                                                                 |
-|    This test is considered PASS if:                                                             |
-|                                                                                                 |
-|      -  A simple C++ file can be compiled using the DPC++ compiled and it runs as expected.     |
-+-------------------------------------------------------------------------------------------------+
-| OpenVINO™ Toolkit                                                                              |
-|    This module verifies two core features of the OpenVINO™ Toolkit:                            |
-|                                                                                                 |
-|      -  OpenVINO™ model optimizer                                                              |
-|                                                                                                 |
-|      -  Object detection using TensorFlow model                                                 |
-|                                                                                                 |
-|    The test is considered PASS if:                                                              |
-|                                                                                                 |
-|      -  The OpenVINO™ model optimizer is capable to transform a TensorFlow model to an         |
-|         Intermediate Representation (IR) of the network, which can be inferred with the         |
-|         Inference Engine.                                                                       |
-+-------------------------------------------------------------------------------------------------+
-| OpenVINO™ Query for inferencing devices                                                        |
-|    This module executes the                                                                     |
-|    `Hello Query Device                                                                          |
-|    <https://docs.openvino.ai/2024/learn-openvino/openvino-samples/hello-query-device.html>`__   |
-|    C++ sample application of the OpenVINO™ toolkit. This application identifies all            |
-|    available devices that can be used for inferencing.                                          |
-|                                                                                                 |
-|    The test is considered PASS if:                                                              |
-|                                                                                                 |
-|      -  The OpenVINO™ Hello Query Device sample application can identify the inferencing       |
-|         devices ``CPU`` and ``GPU``.                                                            |
-|                                                                                                 |
-|      -  On Intel® Core™ Ultra Processors, in addition the ``NPU`` must be be identified as an         |
-|         inferencing device.                                                                     |
-+-------------------------------------------------------------------------------------------------+
-| GStreamer Video                                                                               |
-|    This module verifies if a GStreamer Video Pipeline using GStreamer Plugins runs on the   |
-|    target system.                                                                               |
-|                                                                                                 |
-|    The test is considered PASS if:                                                              |
-|                                                                                                 |
-|      -  The Video Pipeline was opened on the host without errors.                               |
-+-------------------------------------------------------------------------------------------------+
-| GStreamer Audio                                                                               |
-|    This module verifies if a GStreamer Audio Pipeline using GStreamer Plugins runs on the   |
-|    target system.                                                                               |
-|                                                                                                 |
-|    The test is considered PASS if:                                                              |
-|                                                                                                 |
-|      -  The Audio Pipeline was opened on the host without errors.                               |
-+-------------------------------------------------------------------------------------------------+
-| GStreamer Autovideosink Plugin - Display                                                      |
-|    This module verifies if a stream from a camera compatible with libv4l2 can be opened and     |
-|    displayed using GStreamer.                                                                 |
-|                                                                                                 |
-|    The test is considered PASS if:                                                              |
-|                                                                                                 |
-|      -  No Error messages are displayed while running the gst-launch command.                   |
-|                                                                                                 |
-|    This test may Fail, or it may be skipped if the target system does not have a Web Camera     |
-|    connected.                                                                                   |
-+-------------------------------------------------------------------------------------------------+
-| ADBSCAN                                                                                         |
-|    This module verifies if the ADBSCAN algorithm works on the target system.                    |
-|                                                                                                 |
-|    The test is considered PASS if:                                                              |
-|                                                                                                 |
-|      -  The ADBSCAN algorithm works on the target system.                                       |
-+-------------------------------------------------------------------------------------------------+
-| Collaborative Visual SLAM                                                                       |
-|    This module verifies if the collaborative visual SLAM algorithm works on the target system.  |
-|                                                                                                 |
-|    The test is considered PASS if:                                                              |
-|                                                                                                 |
-|      -  The collaborative visual SLAM algorithm works on the target system.                     |
-+-------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------=======================--+
+| Intel® RealSense™ Camera                                                                                               |
+|    This module verifies the capabilities of the Intel® RealSense™ technology on the target platform.                   |
+|    For more information, go to the `Intel® RealSense™ website                                                          |
+|    <https://www.intelrealsense.com/>`__.                                                                               |
+|                                                                                                                        |
+|    The tests within this module verify that the following features are installed properly on                           |
+|    the target platform and that Autonomous Mobile Robot and Intel® RealSense™ camera are functioning properly.         |
+|                                                                                                                        |
+|    The tests are considered PASS if:                                                                                   |
+|                                                                                                                        |
+|      -  The Intel® RealSense™ SDK 2.0 libraries are installed on the target system.                                    |
+|                                                                                                                        |
+|      -  A simple C++ file can be compiled using the g++ compiler and the ``-lrealsense2``                              |
+|         compilation flag.                                                                                              |
+|                                                                                                                        |
+|      -  Intel® RealSense™ camera topics are listed and published.                                                      |
+|                                                                                                                        |
+|      -  The number of FPS (Frames Per Second) are as expected.                                                         |
++------------------------------------------------------------------------------------------------------------------------+
+| Intel® VTune™ Profiler                                                                                                 |
+|    This module runs the Intel® VTune™ Profiler on the target system. For more information,                             |
+|    go to the `Intel® VTune™ Profiler website                                                                           |
+|    <https://www.intel.com/content/www/us/en/developer/tools/oneapi/vtune-profiler.html>`__.                            |
+|                                                                                                                        |
+|    The test is considered PASS if:                                                                                     |
+|                                                                                                                        |
+|      -  VTune™ Profiler Profiler runs without errors.                                                                  |
+|                                                                                                                        |
+|      -  VTune™ Profiler Profiler collects Platform information.                                                        |
++------------------------------------------------------------------------------------------------------------------------+
+| rviz2 and FastMapping                                                                                                  |
+|   This module runs the FastMapping application (the version of octomap optimized for Intel®                            |
+|   platforms) on the target system and uses rviz2 to verify that it works as expected.                                  |
+|   For more information, go to the `rviz wiki <http://wiki.ros.org/rviz>`__.                                            |
+|                                                                                                                        |
+|   The test is considered PASS if:                                                                                      |
+|                                                                                                                        |
+|     -  FastMapping is able to create a map out of a pre-recorded ROS 2 bag.                                            |
++------------------------------------------------------------------------------------------------------------------------+
+| Intel® oneAPI Base Toolkit                                                                                             |
+|    This module verifies some basic capabilities of Intel® oneAPI Base Toolkit on the target platform.                  |
+|    For more information, go to the `Intel® oneAPI Base Toolkit website                                                 |
+|    <https://software.intel.com/content/www/us/en/develop/tools/oneapi.html#gs.cjvm2h>`__.                              |
+|                                                                                                                        |
+|    The tests within this module verify that the DPC++ compiler features are functioning                                |
+|    properly on the target platform.                                                                                    |
+|                                                                                                                        |
+|    This test is considered PASS if:                                                                                    |
+|                                                                                                                        |
+|      -  A simple C++ file can be compiled using the DPC++ compiled and it runs as expected.                            |
++------------------------------------------------------------------------------------------------------------------------+
+| OpenVINO™ Toolkit                                                                                                      |
+|    This module verifies two core features of the OpenVINO™ Toolkit:                                                    |
+|                                                                                                                        |
+|      -  OpenVINO™ model optimizer                                                                                      |
+|                                                                                                                        |
+|      -  Object detection using TensorFlow model                                                                        |
+|                                                                                                                        |
+|    The test is considered PASS if:                                                                                     |
+|                                                                                                                        |
+|      -  The OpenVINO™ model optimizer is capable to transform a TensorFlow model to an                                 |
+|         Intermediate Representation (IR) of the network, which can be inferred with the                                |
+|         Inference Engine.                                                                                              |
++------------------------------------------------------------------------------------------------------------------------+
+| OpenVINO™ Query for inferencing devices                                                                                |
+|    This module executes the                                                                                            |
+|    `Hello Query Device                                                                                                 |
+|    <https://docs.openvino.ai/2024/learn-openvino/openvino-samples/hello-query-device.html>`__                          |
+|    C++ sample application of the OpenVINO™ toolkit. This application identifies all                                    |
+|    available devices that can be used for inferencing.                                                                 |
+|                                                                                                                        |
+|    The test is considered PASS if:                                                                                     |
+|                                                                                                                        |
+|      -  The OpenVINO™ Hello Query Device sample application can identify the inferencing                               |
+|         devices ``CPU`` and ``GPU``.                                                                                   |
+|                                                                                                                        |
+|      -  On Intel® Core™ Ultra Processors, in addition the ``NPU`` must be be identified as an                          |
+|         inferencing device.                                                                                            |
++------------------------------------------------------------------------------------------------------------------------+
+| GStreamer Video                                                                                                        |
+|    This module verifies if a GStreamer Video Pipeline using GStreamer Plugins runs on the                              |
+|    target system.                                                                                                      |
+|                                                                                                                        |
+|    The test is considered PASS if:                                                                                     |
+|                                                                                                                        |
+|      -  The Video Pipeline was opened on the host without errors.                                                      |
++------------------------------------------------------------------------------------------------------------------------+
+| GStreamer Audio                                                                                                        |
+|    This module verifies if a GStreamer Audio Pipeline using GStreamer Plugins runs on the                              |
+|    target system.                                                                                                      |
+|                                                                                                                        |
+|    The test is considered PASS if:                                                                                     |
+|                                                                                                                        |
+|      -  The Audio Pipeline was opened on the host without errors.                                                      |
++------------------------------------------------------------------------------------------------------------------------+
+| GStreamer Autovideosink Plugin - Display                                                                               |
+|    This module verifies if a stream from a camera compatible with libv4l2 can be opened and                            |
+|    displayed using GStreamer.                                                                                          |
+|                                                                                                                        |
+|    The test is considered PASS if:                                                                                     |
+|                                                                                                                        |
+|      -  No Error messages are displayed while running the gst-launch command.                                          |
+|                                                                                                                        |
+|    This test may Fail, or it may be skipped if the target system does not have a Web Camera                            |
+|    connected.                                                                                                          |
++------------------------------------------------------------------------------------------------------------------------+
+| ADBSCAN                                                                                                                |
+|    This module verifies if the ADBSCAN algorithm works on the target system.                                           |
+|                                                                                                                        |
+|    The test is considered PASS if:                                                                                     |
+|                                                                                                                        |
+|      -  The ADBSCAN algorithm works on the target system.                                                              |
++------------------------------------------------------------------------------------------------------------------------+
+| Collaborative Visual SLAM                                                                                              |
+|    This module verifies if the collaborative visual SLAM algorithm works on the target system.                         |
+|                                                                                                                        |
+|    The test is considered PASS if:                                                                                     |
+|                                                                                                                        |
+|      -  The collaborative visual SLAM algorithm works on the target system.                                            |
++------------------------------------------------------------------------------------------------------------------------+
 
 Get Started
 -----------
@@ -242,7 +242,7 @@ Satisfy the Intel® Edge Software Device Qualification (Intel® ESDQ) prerequisi
 .. _esdq-install:
 
 Download and Install Intel® Edge Software Device Qualification (Intel® ESDQ) for Autonomous Mobile Robot
----------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
 
 Complete the following two installation steps in order to properly configure
 your test setup:
@@ -254,7 +254,7 @@ your test setup:
 .. _esdq-install-cli:
 
 Download and Install Intel® Edge Software Device Qualification (Intel® ESDQ) CLI
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Download the Intel® Edge Software Device Qualification (Intel® ESDQ) CLI to your device from here:
 :download:`edge-software-device-qualification-11.0.0.zip <https://amrdocs.intel.com/downloads/edge-software-device-qualification-11.0.0.zip>`

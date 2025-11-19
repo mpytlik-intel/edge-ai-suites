@@ -21,7 +21,7 @@ For robotics software developers, IPEX-LLM offers the opportunity to empower the
 
 | For details, see: https://github.com/intel/ipex-llm/.
 
-| Before installing Intel® LLM Library for PyTorch, ensure to complete the environment setup in :doc:`../installation_setup` and have |oneapi_full| installed.
+| Before installing Intel® LLM Library for PyTorch, ensure to complete the environment setup in :doc:`../installation_setup` and have Intel® oneAPI™ Base Toolkit installed.
 | Then, install Intel® LLM Library for PyTorch in your Python environment:
 
 .. code-block:: bash

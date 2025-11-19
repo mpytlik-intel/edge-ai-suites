@@ -20,7 +20,7 @@ Target System
    -  10 GB for standard install
    -  30 GB for complete install
 
--  |ubuntu_version|
+-  Canonical Ubuntu 22.04 LTS (Jammy Jellyfish)
 -  Intel® RealSense™ camera D435i
 -  Slamtec* RPLIDAR A3 2D LIDAR (optional)
 

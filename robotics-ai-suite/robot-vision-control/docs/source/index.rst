@@ -2,7 +2,7 @@
 .. _rvc_index:
 
 Stationary Robot Vision & Control
-##########
+######################################
 
 .. image:: images/html/robotic-arm-graphic.png
 
@@ -58,7 +58,7 @@ and place industrial problems.
 
 
 Stationary Robot Vision & Control Resources
-====================
+==============================================
 
 - :doc:`Get Started <getstarted>`
 

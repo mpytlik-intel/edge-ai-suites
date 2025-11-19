@@ -5,7 +5,7 @@
 .. robot-tutorials-troubleshooting:
 
 Troubleshooting for Autonomous Mobile Robot Tutorials |troubleshooting|
-=======================================================
+========================================================================
 
 .. _shared_robot-tutorials-troubleshooting_start:
 

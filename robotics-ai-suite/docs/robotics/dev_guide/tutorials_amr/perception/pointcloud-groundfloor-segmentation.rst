@@ -1,7 +1,7 @@
 .. pointcloud-groundfloor-segmentation:
 
 3D Pointcloud Groundfloor Segmentation for Intel® RealSense™ Camera and 3D LiDAR
-============================================================================
+=================================================================================
 
 This demo showcases an Intel® algorithm designed for the segmentation of depth sensor data,
 compatible with 3D LiDAR or a Intel® RealSense™ camera inputs. The application processes either a 3D pointcloud
@@ -54,7 +54,7 @@ Install ``ros-humble-pointcloud-groundfloor-segmentation`` Deb package from Inte
 
 
 Run the Segmentation with Intel® RealSense™ Camera Input
-----------------------------------------------------
+---------------------------------------------------------
 
 Execute the following command to run the demo using a Intel® RealSense™ camera input, after starting the Intel® RealSense™ ROS 2 node.
 

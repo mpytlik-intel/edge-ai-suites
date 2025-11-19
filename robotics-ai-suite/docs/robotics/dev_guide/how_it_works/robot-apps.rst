@@ -1,5 +1,5 @@
 Autonomous Mobile Robot Applications
----------------------
+-------------------------------------
 
 
 -  **The Wandering Application**, included in the Autonomous Mobile Robot, demonstrates the

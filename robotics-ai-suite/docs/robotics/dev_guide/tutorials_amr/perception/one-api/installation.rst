@@ -122,11 +122,7 @@ library.
 
      sudo apt install libpcl-oneapi
 
-<<<<<<< HEAD
-2. To develop with the PCL |oneapi| library or build PCL |oneapi| tutorials, you need the Intel® oneAPI Base Toolkit. To install Intel® oneAPI Base Toolkit,
-=======
-2. To develop with the PCL oneAPI library or build PCL oneAPI tutorials, you need the |l_oneapi|. To install |l_oneapi|,
->>>>>>> 01bb6cfd7e1f4fedbb13bf33b5f240cbccac3690
+2. To develop with the PCL oneAPI™ library or build PCL oneAPI™ tutorials, you need the Intel® oneAPI Base Toolkit. To install Intel® oneAPI Base Toolkit,
 
   a. For Docker environment:
 
@@ -222,13 +218,8 @@ device from default device, the only option is to select through oneAPI environm
 JIT Limitation
 --------------
 
-<<<<<<< HEAD
-Most |oneapi| PCL modules are implemented with the Intel® |oneapi| DPC++ Compiler.
-The Intel® |oneapi| DPC++ Compiler converts a DPC++ program into an intermediate
-=======
-Most oneAPI PCL modules are implemented with the |intel| oneAPI DPC++ Compiler.
-The |intel| oneAPI DPC++ Compiler converts a DPC++ program into an intermediate
->>>>>>> 01bb6cfd7e1f4fedbb13bf33b5f240cbccac3690
+Most oneAPI™ PCL modules are implemented with the Intel® oneAPI™ DPC++ Compiler.
+The Intel® oneAPI™ DPC++ Compiler converts a DPC++ program into an intermediate
 language called SPIR-V (Standard Portable Intermediate Representation). The
 SPIR-V code is stored in the binary produced by the compilation process. The
 SPIR-V code has the advantage that it can be run on any hardware platform by

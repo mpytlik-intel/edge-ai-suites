@@ -38,7 +38,7 @@ Install Deb package
       sudo apt install ros-humble-openvino-yolov8 ros-humble-openvino-yolov8-msgs
 
 Run Demo with Intel® RealSense™ Camera Topic Input
-----------------------------------------------
+--------------------------------------------------
 
 First create a config file `pipeline.toml`. If not present, sample content for this configuration file (including the comments) will be generated in the command output when executing the ``ros2 run yolo yolo`` command.
 
