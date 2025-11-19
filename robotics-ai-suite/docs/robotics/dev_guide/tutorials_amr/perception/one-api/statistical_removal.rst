@@ -4,7 +4,7 @@ Removing Outliers Using a StatisticalOutlierRemoval Filter
 ===============================================================
 
 This tutorial demonstrates the process of eliminating noisy measurements, e.g. outliers,
-from a point cloud data set using statistical analysis techniques.  This is the |oneapi| optimization
+from a point cloud data set using statistical analysis techniques.  This is the oneAPI optimization
 version of ``pcl::StatisticalOutlierRemoval``.
 
 For more info of ``pcl::StatusticalOutlierRemoval`` filter, refer to `this page.

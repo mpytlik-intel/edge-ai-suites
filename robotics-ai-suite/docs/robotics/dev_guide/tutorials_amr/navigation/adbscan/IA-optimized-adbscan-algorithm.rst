@@ -3,7 +3,7 @@
 Intel-optimized ADBSCAN Algorithm
 ===================================
 
-In this version of ADBSCAN, the algorithm has been optimized for Intel® SOC by replacing linear neighbor point search with an optimized |oneapi| PCL library (offloaded to GPU), as well as refactoring the clustering algorithm.
+In this version of ADBSCAN, the algorithm has been optimized for Intel® SOC by replacing linear neighbor point search with an optimized oneAPI PCL library (offloaded to GPU), as well as refactoring the clustering algorithm.
 It has been tested and validated on 13th Generation Intel® Core™ processors with |xe|, 12th Generation Intel® Core™ processors with |xe| and 11th Generation Intel® Core™ processors with |xe|. This tutorial describes how to run this Intel-optimized ADBSCAN algorithm and compare the execution time with the unoptimized version.
 
 
@@ -129,7 +129,11 @@ A complete list of the reconfigurable parameters is given below:
          * - ``base``, ``coeff_1``, ``coeff_2``, ``scale_factor``
            - These are the coefficients used to calculate the adaptive parameters of the ADBSCAN algorithm. These values are pre-computed and recommended to keep unchanged.
          * - ``oneapi_library``
+<<<<<<< HEAD
            - Available options are: ``oneapi_kdtree``, ``oneapi_octree``, ``pcl_kdtree``. ``oneapi_kdtree`` and ``oneapi_octree`` allow the algorithm to use optimized |oneapi| KdTree or octree library and offload the neighbor point search method to GPU. ``pcl_kdtree`` option uses the standard PCL KdTree library, not optimized for Intel® SOC.
+=======
+           - Available options are: ``oneapi_kdtree``, ``oneapi_octree``, ``pcl_kdtree``. ``oneapi_kdtree`` and ``oneapi_octree`` allow the algorithm to use optimized oneAPI KdTree or octree library and offload the neighbor point search method to GPU. ``pcl_kdtree`` option uses the standard PCL KdTree library, not optimized for |intel| SOC.
+>>>>>>> 01bb6cfd7e1f4fedbb13bf33b5f240cbccac3690
          * - ``benchmark_number_of_frames``
            - Any integer greater or equal to 1. This is the number of frames over which the average execution time is executed and printed in the benchmarking table.
 
@@ -148,11 +152,11 @@ Troubleshooting
     - Increase the absolute values of `x_filter_back`, `y_filter_right`, `y_filter_left`. Please see the description of these parameters in the table and adjust according to your environment.
 
 - IA-optimized ADBSCAN offloads the neighbor search to GPUs when using `oneapi_kdtree` and `oneapi_octree` library. Please make sure that your system is equipped with working gpu, if using these libraries.
-  You can use `lspci` command in a |Linux| terminal to view GPU info.
+  You can use `lspci` command in a Linux terminal to view GPU info.
 
 - ``ros-humble-adbscan-ros2`` and ``ros-humble-adbscan-oneapi`` are mutually exclusive Deb packages. Please refrain from installing them simultaneously like this ``apt install ros-humble-adbscan-ros2 ros-humble-adbscan-oneapi``. Always install the packages sequentially, as showed in this document.
 
-- Some newer 13th Generation Intel® Core™ and Intel® Core™ Ultra Processors may experience lower performance when the |Linux| kernel schedules the ``adbscan_ros2`` process to an efficient-core (E-core). To achieve better performance, you can utilize the ``taskset`` command to set the process's CPU affinity. For example, you can direct ``adbscan_ros2`` to run on CPU core 0 which is a performance-core (P-core).
+- Some newer 13th Generation Intel® Core™ and Intel® Core™ Ultra Processors may experience lower performance when the Linux kernel schedules the ``adbscan_ros2`` process to an efficient-core (E-core). To achieve better performance, you can utilize the ``taskset`` command to set the process's CPU affinity. For example, you can direct ``adbscan_ros2`` to run on CPU core 0 which is a performance-core (P-core).
 
   .. code-block:: bash
 

@@ -19,7 +19,7 @@ Follow the `VTune™ Profiler installation guide <https://www.intel.com/content/
 Additional System Setup for CPU and GPU Profiling
 =================================================
 
-#. Build and Install the Sampling Drivers for |Linux| Targets.
+#. Build and Install the Sampling Drivers for Linux Targets.
 
    To do CPU and GPU profiling using driverless sampling collection on processors based on Intel® Performance Hybrid Architecture, which has been introduced from 12th Gen Intel® Core™ processors, the |vtune| sampling drivers must be installed and loaded using root credentials. Follow the steps to `Build and Install the Sampling Drivers for Linux Targets <https://www.intel.com/content/www/us/en/docs/vtune-profiler/user-guide/2024-0/build-install-sampling-drivers-for-linux-targets.html>`__.
 

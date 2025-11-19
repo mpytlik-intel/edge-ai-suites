@@ -92,15 +92,15 @@ Generate point cloud data, queries, radiuses, indices with a random number.
    :lines: 33-57
    :dedent:
 
-Create and build the |oneapi| point cloud; then upload the queries and
-   radiuses to a |oneapi| device.
+Create and build the oneAPI point cloud; then upload the queries and
+   radiuses to a oneAPI device.
 
 .. literalinclude:: ../../../../sources/octree/oneapi_octree_search.cpp
    :language: cpp
    :lines: 59-72
    :dedent:
 
-Create output buffers where we can download output from the |oneapi| device.
+Create output buffers where we can download output from the oneAPI device.
 
 .. literalinclude:: ../../../../sources/octree/oneapi_octree_search.cpp
    :language: cpp
@@ -146,7 +146,7 @@ Perform KNN search.
    :lines: 100-103
    :dedent:
 
-Download the search results from the |oneapi| device. The size vector contains
+Download the search results from the oneAPI device. The size vector contains
 the size of found neighbors for each query. The downloaded_buffer vector
 contains the index of all found neighbors for each query.
 

@@ -75,9 +75,9 @@ Click each tab to learn about the new and updated features in each release of In
 
       **New Features:**
 
-      * Provided |Linux| OS 6.12.8 BSP with Preempt-RT
+      * Provided Linux OS 6.12.8 BSP with Preempt-RT
       * Provided Real-time optimization BKC
-      * Optimized IgH EtherCAT master with |Linux| kernel v6.12
+      * Optimized IgH EtherCAT master with Linux kernel v6.12
       * Added ACT manipulation pipeline with |OpenVINO|/Intel® Extension for PyTorch optimization
       * Added ORB-SLAM3 pipeline focuses on real-time simultaneous localization and mapping
       * Provided typical AI models optimization tutorials with |OpenVINO|
@@ -139,5 +139,3 @@ Click each tab to learn about the new and updated features in each release of In
            - Imitation learning pipeline using Action Chunking with Transformers(ACT) algorithm to train and evaluate in simulator or real robot environment with Intel optimization
          * - :ref:`VSLAM: ORB-SLAM3 <orb_slam3>`
            - One of popular real-time feature-based SLAM libraries able to perform Visual, Visual-Inertial and Multi-Map SLAM with monocular, stereo and RGB-D cameras, using pin-hole and fisheye lens models
-
-

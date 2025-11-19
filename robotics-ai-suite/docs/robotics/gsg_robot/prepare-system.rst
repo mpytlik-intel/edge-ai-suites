@@ -7,7 +7,7 @@ Prepare the Target System
 Install |ubuntu_version|
 ========================
 
-Intel recommends a fresh installation of the Ubuntu distribution of the |Linux| OS for your target system, but this is not mandatory.
+Intel recommends a fresh installation of the Ubuntu distribution of the Linux OS for your target system, but this is not mandatory.
 
 Depending on your processor type, select one of the following |ubuntu|
 22.04 LTS variants:
@@ -47,10 +47,10 @@ Steps to Install |ubuntu|
 #. Verify Ubuntu\* is successfully installed.
 
 
-Verify that the appropriate |Linux| kernel is installed
+Verify that the appropriate Linux kernel is installed
 -------------------------------------------------------
 
-Run the following command to display the installed |Linux| kernel:
+Run the following command to display the installed Linux kernel:
 
 .. code-block:: bash
 
@@ -130,5 +130,3 @@ Important Notes
    Ensure you use the same ``ROS_DOMAIN_ID`` for every |ros| node that is expected to participate in a given |ros| graph.
 
    Ensure you use an individual ``ROS_DOMAIN_ID`` for every |ros| communication graph, in order to avoid conflicts in message handling.
-
-

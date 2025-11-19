@@ -7,7 +7,7 @@ RVC Requirements
 Knowledge / Experience
 ----------------------
 
--  You are familiar with executing |linux| commands.
+-  You are familiar with executing Linux commands.
 
 -  |ros| background strongly recommended.
 

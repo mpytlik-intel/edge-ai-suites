@@ -20,7 +20,7 @@ Installation
 
     $ sudo apt install -y linux-firmware
 
-**Note:** |Linux| OS version 6.12 requires specific Intel® Graphics Driver graphics microcontroller (guc), display microcontroller (dmc), and Intel® Graphics System Controller (Intel® GSC) (gsc) firmwares; these firmwares are installed in ``/lib/firmware/i915/experimental/``. Confirm the following boot parameters through ``cat /proc/cmdline`` after the next reboot:
+**Note:** Linux OS version 6.12 requires specific Intel® Graphics Driver graphics microcontroller (guc), display microcontroller (dmc), and Intel® Graphics System Controller (Intel® GSC) (gsc) firmwares; these firmwares are installed in ``/lib/firmware/i915/experimental/``. Confirm the following boot parameters through ``cat /proc/cmdline`` after the next reboot:
 
 .. code-block:: bash
 
@@ -45,7 +45,7 @@ Expected result:
   linux-firmware:
     Installed: 20220329.git681281e4-0ubuntu3.36-intel-iotg.eci8
 
-3. Install the real-time |Linux| kernel. For details, see :ref:`LinuxBSP <linuxbsp>`.
+3. Install the real-time Linux kernel. For details, see :ref:`LinuxBSP <linuxbsp>`.
 
 .. code-block:: bash
 
@@ -186,7 +186,7 @@ Below is an example to boost the real-time core to 3GHz, with the Energy Perform
 Per-core C-State Disable
 :::::::::::::::::::::::::::
 
-Refer to :ref:`OS Setup <OS_Setup>` for BIOS optimization and |Linux| boot parameter optimization on real-time performance, Intel C-state and P-state are enabled. It brings more power consumption to improve on GPU AI performance, but C-state can introduce jitter due to the varying times required to transition between states in isolate cores. **Per-core C-state Disable** helps minimize this jitter, providing a more stable environment for real-time task.
+Refer to :ref:`OS Setup <OS_Setup>` for BIOS optimization and Linux boot parameter optimization on real-time performance, Intel C-state and P-state are enabled. It brings more power consumption to improve on GPU AI performance, but C-state can introduce jitter due to the varying times required to transition between states in isolate cores. **Per-core C-state Disable** helps minimize this jitter, providing a more stable environment for real-time task.
 
 Follow with below command to disable C-state in isolate core:
 
@@ -216,7 +216,7 @@ Follow with below command to disable C-state in isolate core:
 Timer Migration Disable
 :::::::::::::::::::::::::
 
-In |Linux| kernel, timer migration refers to the process of moving timers from one CPU to another. This is often done to balance the load across CPUs or to optimize power management by consolidating timers on fewer CPUs when others are idle. Timer migration can lead to interference with other tasks running on the target CPU, potentially affecting real-time performance in isolate CPU core. By keeping timers on their original CPU, you minimize the risk of such interference.
+In Linux kernel, timer migration refers to the process of moving timers from one CPU to another. This is often done to balance the load across CPUs or to optimize power management by consolidating timers on fewer CPUs when others are idle. Timer migration can lead to interference with other tasks running on the target CPU, potentially affecting real-time performance in isolate CPU core. By keeping timers on their original CPU, you minimize the risk of such interference.
 
 Disabling timer migration in a real-time kernel helps maintain the consistency and predictability required for real-time applications, ensuring that timers are executed with minimal latency and interference.
 
@@ -239,7 +239,7 @@ Swap can be disabled with following command:
 Verify Benchmark Performance
 ===============================
 
-After installing the real-time |Linux| kernel, it's a good idea to benchmark the system to establish confidence that the system is properly configured. Perform either of the following commands to install `Cyclictest <https://git.kernel.org/pub/scm/utils/rt-tests/rt-tests.git>`_. Cyclictest is most commonly used for benchmarking real-time systems. It is one of the most frequently used tools for evaluating the relative performance of an RT. Cyclictest accurately and repeatedly measures the difference between a thread’s intended wake-up time and the time at which it actually wakes up to provide statistics about the system’s latency. It can measure latency in real-time systems caused by the hardware, the firmware, and the operating system.
+After installing the real-time Linux kernel, it's a good idea to benchmark the system to establish confidence that the system is properly configured. Perform either of the following commands to install `Cyclictest <https://git.kernel.org/pub/scm/utils/rt-tests/rt-tests.git>`_. Cyclictest is most commonly used for benchmarking real-time systems. It is one of the most frequently used tools for evaluating the relative performance of an RT. Cyclictest accurately and repeatedly measures the difference between a thread’s intended wake-up time and the time at which it actually wakes up to provide statistics about the system’s latency. It can measure latency in real-time systems caused by the hardware, the firmware, and the operating system.
 Please use ``rt-tests v2.6`` to collect performance, which support to pin threads to specific isolate core and avoid main thread in same core with the measurement threads.
 
 Follow with below steps, you can find ``cyclictest v2.6`` in ``rt-tests-2.6``：
@@ -298,4 +298,8 @@ On a **realtime-enabled** system, the result might be similar to the following:
 
 This result indicates an apparent short-term worst-case latency of 18 us. According to this, it is important to pay attention to the Max values as these are indicators of outliers. Even if the system has decent Avg (average) values, a single outlier as indicated by Max is enough to break or disturb a real-time system.
 
+<<<<<<< HEAD
 If the real-time data is not good by default installation, please refer to :ref:`OS Setup <OS_Setup>` for BIOS optimization and `Optimize Performance <https://eci.intel.com/docs/3.3/development/performance.html>`_ to optimize |Linux| OS and application runtime on Intel® Processors.
+=======
+If the real-time data is not good by default installation, please refer to :ref:`OS Setup <OS_Setup>` for BIOS optimization and `Optimize Performance <https://eci.intel.com/docs/3.3/development/performance.html>`_ to optimize Linux OS and application runtime on |Intel| Processors.
+>>>>>>> 01bb6cfd7e1f4fedbb13bf33b5f240cbccac3690
