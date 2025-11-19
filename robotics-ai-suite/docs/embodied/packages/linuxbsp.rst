@@ -3,13 +3,13 @@
 
 .. _linuxbsp:
 
-Linux BSP
-########################
+*Linux* BSP
+############
 
-The Embodied Intelligence SDK includes Intel's LTS Kernel v6.12 with Preempt RT patch to support the Arrow Lake platform, which includes the Linux Kernel v6.12, optimized configuration, and kernel boot parameters.
+The Embodied Intelligence SDK includes Intel's LTS Kernel v6.12 with Preempt RT patch to support the Arrow Lake platform, which includes the *Linux* Kernel v6.12, optimized configuration, and kernel boot parameters.
 
 Quick Start
-************************
+************
 
 You can install this component from Intel's Embodied Intelligence SDK repository.
 
@@ -25,11 +25,11 @@ For generic kernel:
 
    $ sudo apt install linux-intel-experimental
 
-Configure and Build Linux Kernel
------------------------------------------------------------------------------------------
+Configure and Build *Linux* Kernel
+-----------------------------------
 
-The Linux BSP Sources are available to download with ``apt-get source`` in addition to support developer to compile by self and deploy on target.
-This section will explain the procedure to configure the Linux kernel and build it.
+The *Linux* BSP Sources are available to download with ``apt-get source`` in addition to support developer to compile by self and deploy on target.
+This section will explain the procedure to configure the *Linux* kernel and build it.
 
 **Step 1: Environment Prerequisites**
 
@@ -65,15 +65,15 @@ For generic kernel:
 
 **Step 3: Configure RT Kernel**
 
-   The Linux kernel source code comes with the default configuration. Refer to the following list which provides the additional kernel configurations used during compilation to optimize the system for real-time performance.
+   The *Linux* kernel source code comes with the default configuration. Refer to the following list which provides the additional kernel configurations used during compilation to optimize the system for real-time performance.
 
     +-------------------------------------------------+-----------------------------------------+
     |  kernel config fragment overrides (.cfg)        | Comments                                |
-    +=================================================================================================+================================================================================+
+    +=================================================+=========================================+
     |  .. code-block:: console                        |                                         |
     |                                                 |                                         |
     |     CONFIG_HZ_250=y                             | Reduce task scheduling-clock overhead   |
-    |     CONFIG_NO_HZ=n                              | and disable CPU governor Linux OS       |
+    |     CONFIG_NO_HZ=n                              | and disable CPU governor *Linux* OS     |
     |     CONFIG_NO_HZ_FULL=y                         | features                                |
     |     CONFIG_NO_HZ_IDLE=n                         |                                         |
     |     CONFIG_ACPI_PROCESSOR=n                     |                                         |
@@ -85,7 +85,7 @@ For generic kernel:
     |                                                 |                                         |
     +-------------------------------------------------+-----------------------------------------+
     |  .. code-block:: console                        |                                         |
-    |                                                 | Disable Linux OS power-management       |
+    |                                                 | Disable *Linux* OS power-management     |
     |     ARCH_SUSPEND_POSSIBLE=n                     | runtime features                        |
     |     CONFIG_SUSPEND=n                            |                                         |
     |     CONFIG_PM=n                                 |                                         |
@@ -108,7 +108,7 @@ For generic kernel:
     |                                                 |                                         |
     +-------------------------------------------------+-----------------------------------------+
 
-    You can find a file named ``config-6.12.8-intel-ese-experimental-lts`` in ``/boot/`` when the target had installed with 'sudo apt install linux-intel-rt-experimental', and copy it into Linux kernel source directory.
+    You can find a file named ``config-6.12.8-intel-ese-experimental-lts`` in ``/boot/`` when the target had installed with 'sudo apt install linux-intel-rt-experimental', and copy it into *Linux* kernel source directory.
 
   #. To make changes to the configuration file, run the make command:
 
@@ -137,7 +137,7 @@ For generic kernel:
 
 **Step 5: Install the kernel**
 
-   The process of building and compiling the Linux kernel takes some time to complete. you will find kernel debian package which can be installed on target with below commands:
+   The process of building and compiling the *Linux* kernel takes some time to complete. you will find kernel debian package which can be installed on target with below commands:
 
       .. code-block:: bash
 
@@ -163,7 +163,7 @@ For generic kernel:
 
 
 Packages
-******************
+*********
 
 * :ref:`Linux-intel-rt-experimental <linuxbsp>`
 * customizations-grub
