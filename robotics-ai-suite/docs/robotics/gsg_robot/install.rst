@@ -1,5 +1,5 @@
 Install Autonomous Mobile Robot Deb packages
-#################################
+##################################################################
 
 This section details steps to install Autonomous Mobile Robot Deb packages.
 
