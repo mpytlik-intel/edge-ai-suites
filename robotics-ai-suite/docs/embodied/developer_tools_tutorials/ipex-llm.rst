@@ -1,5 +1,5 @@
 Intel® LLM Library for PyTorch
-####################
+########################################
 
 Intel® LLM Library for PyTorch (IPEX-LLM) is an LLM optimization library which accelerates local LLM inference and fine-tuning (LLaMA, Mistral, ChatGLM, Qwen, DeepSeek, Mixtral, Gemma, Phi, MiniCPM, Qwen-VL, MiniCPM-V, etc.) on Intel XPU (CPU, iGPU, NPU, dGPU).
 
