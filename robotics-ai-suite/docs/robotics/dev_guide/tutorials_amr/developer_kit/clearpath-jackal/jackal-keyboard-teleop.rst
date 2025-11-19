@@ -1,5 +1,5 @@
 Control the Jackal Motors Using a Keyboard
-============================================
+================================================================================================================================================
 
 This page describes how to run a quick test, which verifies that the
 Jackal robot has been set up appropriately.
@@ -65,13 +65,13 @@ Start the ``teleop_twist_keyboard`` command-line tool by means of:
 
 Then you can control the robot using these keys:
 
-+-----+-----+-----+
++--------+--------+--------+
 |  u  |  i  |  o  |
-+-----+-----+-----+
++--------+--------+--------+
 |  j  |  k  |  l  |
-+-----+-----+-----+
++--------+--------+--------+
 |  m  |  ,  |  .  |
-+-----+-----+-----+
++--------+--------+--------+
 
 You can also manually publish to the ``/cmd_vel`` topic to let the robot move.
 For example, to trigger a movement to the x direction, you can run:

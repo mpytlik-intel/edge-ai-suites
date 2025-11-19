@@ -1,5 +1,5 @@
 Install Intel(R) Realsense SDK
-###############################
+#############################################################
 
 Intel® RealSense™ SDK 2.0 is a cross-platform library for Intel® RealSense™ depth cameras.
 The SDK allows depth and color streaming, and provides intrinsic and extrinsic calibration information.
@@ -12,7 +12,7 @@ The Robot Operating System (ROS) is a set of software libraries and tools that h
 More information about ROS can be found at: https://www.ros.org/
 
 Installation
-============
+===============================
 
 #. Register the server's public key:
 
@@ -63,7 +63,7 @@ Installation
     to install librealsense packages and more other tools from Intel RealSense sources.
 
 Troubleshooting
-===============
+======================================
 
 Errors for ``librealsense2-dkms`` installation
 :::::::::::::::::::::::::::::::::::::::::::::::

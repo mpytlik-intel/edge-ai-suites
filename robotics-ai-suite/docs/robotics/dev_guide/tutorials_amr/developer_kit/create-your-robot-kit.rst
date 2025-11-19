@@ -1,5 +1,5 @@
 Create Your Own Robot Kit
-==========================
+===================================================================
 
 This tutorial guides guides you through creating an autonomous mobile robot capable of
 exploring and mapping an area. It involves adding an Intel® compute system, placing a
@@ -10,10 +10,10 @@ setup has been done correctly.
 
 
 Requirements
-#############
+#########################
 
 Hardware Requirements
-+++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++
 
 The robot base should contain:
 
@@ -34,7 +34,7 @@ The robot base should contain:
 
 
 Software Requirements
-+++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++
 
 The robot base should feature a ROS 2 node with the ability to:
 
@@ -60,11 +60,11 @@ The robot base should feature a ROS 2 node with the ability to:
    motor robot's controller via a wired connection, usually a USB connection.
 
 Steps To Create Your Own Robot Kit
-##################################
+###################################################################
 
 
 Step 1: Prerequisites
-+++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++
 
 To create a functional autonomous mobile robot, follow the instructions of the manufacturer.
 
@@ -81,7 +81,7 @@ The standard assembly involves the following steps:
 
 
 Step 2: Integration into Autonomous Mobile Robot
-+++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Start the robot base ROS 2 node on the native system OS or inside a Docker
 container.
@@ -91,10 +91,10 @@ the Autonomous Mobile Robot pipeline are configured with the same ROS_DOMAIN_ID.
 .. _create_your_robot_kit_step3:
 
 Step 3: Robot Base Node ROS 2 Node
-++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Introduction to Robotic Base Node
------------------------------------
+--------------------------------------------------------------------
 
 The Autonomous Mobile Robot pipeline assumes that the robot base ROS 2 node:
 
@@ -121,7 +121,7 @@ The Autonomous Mobile Robot provides the following examples with the ``ros-humbl
 These samples are for the `AAEON UP Xtreme* i11 Robotic Development Kit <https://up-shop.org/up-xtreme-i11-robotic-kit.html>`__.
 
 Robotic Base Node Deep Dive
---------------------------------
+--------------------------------------------------------------
 
 This section details the commands required to startup the motor controller of an AAEON UP Xtreme i11 Robotic Development Kit.
 
@@ -203,17 +203,17 @@ You can check the following:
 .. _create_your_robot_kit_step4:
 
 Step 4: Robot Base Node ROS 2 Navigation Parameter File
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Introduction to the ROS 2 Navigation Parameter File
-----------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
 
 The Autonomous Mobile Robot pipeline for AMRs uses the `Navigation 2 package
 <https://navigation.ros.org/>`__ from ROS 2. Setting parameters specific to the
 robot and the mapping area is essential for the Navigation 2 packages to function properly.
 
 Robot Navigation Parameter File
--------------------------------
+-------------------------------------------------------------
 
 To help understand the options in this parameter file, see ROS 2 `Navigation 2
 Packages Configuration Guide <https://navigation.ros.org/configuration/index.html>`__:
@@ -263,10 +263,10 @@ The most important parameters to set are:
 
 
 Step 5: Navigation Full Stack
-+++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Introduction to the Navigation Full Stack
--------------------------------------------
+-------------------------------------------------------------------------------------
 
 The Autonomous Mobile Robot navigation full stack contains numerous components designed to assist the robot in navigation, obstacle avoidance, and mapping an area. For example:
 
@@ -303,7 +303,7 @@ The Autonomous Mobile Robot navigation full stack contains numerous components d
 
 
 Create a Parameter File for Your Robotic Kit
-----------------------------------------------
+-------------------------------------------------------------------------------------------
 
 The :doc:`../../../dev_guide/tutorials_amr/navigation/wandering_app/wandering-aaeon-tutorial` tutorial provides a parameter file for the AAEON UP Xtreme i11 Robotic Development Kit, that file can be used as a template to create a parameter file for your robotic kit.
 
@@ -341,7 +341,7 @@ The :doc:`../../../dev_guide/tutorials_amr/navigation/wandering_app/wandering-aa
    your Intel® RealSense™ camera is set.
 
 Start Mapping an Area with Your Robot
-----------------------------------------
+-------------------------------------------------------------------------------
 
 #. Place the robot in an area with multiple objects around it.
 
@@ -358,7 +358,7 @@ Start Mapping an Area with Your Robot
 #. Follow the :doc:`../../../dev_guide/tutorials_amr/navigation/wandering_app/wandering-aaeon-tutorial` tutorial.
 
 Troubleshooting
-----------------
+-------------------------------
 
 You can stop the demo anytime by pressing ``ctrl-C``.
 

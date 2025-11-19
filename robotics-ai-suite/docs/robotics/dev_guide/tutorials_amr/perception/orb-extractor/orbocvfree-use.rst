@@ -1,7 +1,7 @@
 .. _orb-orbocvfree-use:
 
 Using GPU ORB Extractor Feature with OpenCV-free Library.
-======================================================================
+======================================================================================================================================================================================================================================
 
 This tutorial demonstrates how to use the GPU orb-extractor feature OpenCV-free library.
 The GPU orb-extractor feature OpenCV free library provides similar features except input and output structures are defined within this library.
@@ -75,7 +75,7 @@ After executing, the input image will display keypoints in blue color dots.
       or more images input using multiple threads with extract API calls.
 
 Code Explanation
---------------------
+--------------------------------------
 
 Initialize the input and output parameters:
 

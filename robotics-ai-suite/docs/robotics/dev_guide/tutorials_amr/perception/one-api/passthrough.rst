@@ -1,7 +1,7 @@
 .. _oneapi_passthrough:
 
 Filtering Point Clouds with a Passthrough Filter
-===========================================================
+=================================================================================================================================================================================================
 
 This tutorial demonstrates how to execute passthrough filtering.
 
@@ -61,7 +61,7 @@ This tutorial demonstrates how to execute passthrough filtering.
       [oneapi passthrough] PointCloud after filtering: 328598
 
 Code Explanation
---------------------
+--------------------------------------
 
 
 Load the example PCD into a PointCloud<PointXYZ>.

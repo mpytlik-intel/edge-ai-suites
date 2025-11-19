@@ -2,7 +2,7 @@
 .. _motioncontroller_plugins:
 
 MotionController Plugins
-------------------------
+------------------------------------------------
 
 MotionController interface based plugins are needed to implement a robot
 specific way to move the robot itself as long as the end effector or
@@ -16,7 +16,7 @@ Motion Controller interface API
 
 
 Called upon initialization of the plugin, with a valid rclcpp::node
-reference. 
+reference.
 The super has to be called with the same node, for example:
 
 ::
@@ -57,7 +57,7 @@ Controller gives an indication if the target is close enough to the
 target
 
 
-APIs for the Motion Controller plugin can be found at 
+APIs for the Motion Controller plugin can be found at
 
 :cpp:class:`RVCMotionControllerInterface <RVCMotionController::RVCMotionControllerInterface>`
 

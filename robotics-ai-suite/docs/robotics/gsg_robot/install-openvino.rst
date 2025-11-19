@@ -1,10 +1,10 @@
 Install OpenVINO™ Packages
-###########################
+######################################################
 
 .. _openvino_installation_steps:
 
 Add the OpenVINO™ APT repository
----------------------------------
+------------------------------------------------------------------
 
 The following steps will add the OpenVINO™ APT repository to your package management.
 
@@ -39,7 +39,7 @@ The following steps will add the OpenVINO™ APT repository to your package mana
 
 
 Install the OpenVINO™ Runtime and the ROS 2 OpenVINO™ Toolkit
----------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 
 The following steps will install the OpenVINO™ packages:
 
@@ -97,7 +97,7 @@ The following steps will install the OpenVINO™ packages:
 .. _openvino_installation_cleanup_steps:
 
 OpenVINO™ Re-Installation and Troubleshooting
-----------------------------------------------
+-------------------------------------------------------------------------------------------
 
 If you need to reinstall OpenVINO™ or clean your system after a failed
 installation, run the following commands:

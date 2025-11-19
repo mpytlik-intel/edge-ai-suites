@@ -1,12 +1,12 @@
 Autonomous Mobile Robot Algorithms
--------------------
+-------------------------------------
 
 
 Autonomous Mobile Robot includes reference algorithms as well as deep learning models, providing practical examples of automated robot control functions.
 
 
 Open Model Zoo for OpenVINO™
-++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 The Open Model Zoo for OpenVINO™ toolkit delivers optimized deep learning
 models and a set of demos to expedite development of high-performance deep
@@ -19,7 +19,7 @@ For details, see `Model Zoo
 
 
 ADBSCAN
-++++++++
+++++++++++++++
 
 **Tutorial**: :doc:`../../dev_guide/tutorials_amr/navigation/adbscan/index`
 
@@ -33,7 +33,7 @@ average.
 
 
 3D Pointcloud Groundfloor Segmentation
-++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 **Tutorial**: :doc:`../../dev_guide/tutorials_amr/perception/pointcloud-groundfloor-segmentation`
 
@@ -43,7 +43,7 @@ pointclouds. This algorithm further assigns classification labels such as 'groun
 
 
 Point Cloud Library (PCL)
-++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 **Tutorial**: :doc:`../../dev_guide/tutorials_amr/perception/one-api/index`
 
@@ -54,14 +54,14 @@ modules which allow you to offload computation to a GPU.
 
 
 ROS 2 Depth Image to Laser Scan
-++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 ROS 2 Depth Image to Laser Scan, converts a depth image to a laser scan
 for use with navigation and localization.
 
 
 IMU Tools
-++++++++++
++++++++++++++++++++
 
 IMU Tools - filters and visualizers - from
 https://github.com/CCNYRoboticsLab/imu_tools:
@@ -80,7 +80,7 @@ https://github.com/CCNYRoboticsLab/imu_tools:
 
 
 FastMapping
-++++++++++++
+++++++++++++++++++++++++
 
 **Tutorial**: :doc:`../../dev_guide/tutorials_amr/navigation/run-fastmapping-algorithm`
 
@@ -89,7 +89,7 @@ surrounding, based on Intel® RealSense™ Depth Camera sensor data.
 
 
 Collaborative Visual SLAM
-++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 **Tutorial**: :doc:`../../dev_guide/tutorials_amr/navigation/collaborative-slam`
 
@@ -117,7 +117,7 @@ Framework for Service Robots paper <https://arxiv.org/abs/2102.03228>`__.
 
 
 ROS 2 Cartographer
-+++++++++++++++++++
++++++++++++++++++++++++++++++++++++++
 
 ROS 2 Cartographer is a system that provides real-time simultaneous
 localization and mapping (SLAM) based on real-time 2D LiDAR sensor data. It
@@ -138,7 +138,7 @@ mapping, or on a robot equipped with a laser rangefinder for 3DoF mapping.
 
 
 SLAM Toolbox
-+++++++++++++
++++++++++++++++++++++++++
 
 The SLAM toolbox is a set of tools and capabilities for 2D SLAM that includes the following:
 
@@ -174,7 +174,7 @@ The SLAM toolbox is a set of tools and capabilities for 2D SLAM that includes th
 
 
 ITS Global Path Planner
-++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 **Tutorial**: :doc:`../../dev_guide/tutorials_amr/navigation/its-path-planner-plugin`
 
@@ -201,7 +201,7 @@ generated smooth path is in the form of ROS navigation message type
 
 
 Robot Localization
-+++++++++++++++++++
++++++++++++++++++++++++++++++++++++++
 
 ``robot_localization`` (from https://github.com/cra-ros-pkg/robot_localization),
 a collection of state estimation nodes, each of which is an implementation
@@ -212,7 +212,7 @@ the integration of GPS data.
 
 
 Navigation 2
-+++++++++++++
++++++++++++++++++++++++++
 
 **Tutorials**: :doc:`../../dev_guide/tutorials_amr/navigation/index`
 

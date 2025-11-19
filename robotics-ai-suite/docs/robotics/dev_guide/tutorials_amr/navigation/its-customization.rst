@@ -1,7 +1,7 @@
 .. its-customization:
 
 ITS Path Planner Plugin Customization
-----------------------------------------
+-------------------------------------------------------------------------------
 
 The ROS 2 navigation bring-up application is started using the TurtleBot* 3 Gazebo*
 simulation, and it receives as input parameter its_nav2_params.yaml.
@@ -30,7 +30,7 @@ its_nav2_params.yaml:
          n: 2
 
 ITS Path Planner Plugin Parameters
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block::
 

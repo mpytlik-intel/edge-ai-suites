@@ -1,7 +1,7 @@
 .. _imitation_act:
 
 Imitation Learning - ACT
-#########################
+#################################################
 
 Imitation learning is a machine learning approach where a model is trained to mimic expert behavior by observing and replicating demonstrations, enabling it to perform tasks similarly to the expert. ACT is an action chunking policy with Transformers, an architecture designed for sequence modeling. It is trained as a
 conditional VAE (CVAE) to capture the variability in human data. It significantly outperforms previous imitation
@@ -12,17 +12,17 @@ learning algorithms on a range of simulated and real-world fine manipulation tas
 In this tutorial, we will introduce how to setup ACT pipeline.
 
 Source Code
-===========
+====================
 
 The source code of this component can be found here: `ACT-Sample <https://github.com/open-edge-platform/edge-ai-suites/tree/main/robotics-ai-suite/pipelines/act-sample>`_
 
 Prerequisites
-=============
+=========================
 
 Ensure you have completed the setup steps in :doc:`../installation_setup`.
 
 Installation
-=============
+=========================
 
 ALOHA real robot environment setup (Optional)
 :::::::::::::::::::::::::::::::::::::::::::::
@@ -88,7 +88,7 @@ Install the DETR with the following command:
       $ pip install -e .
 
 Run pipeline
-=============
+=========================
 
 Inference
 :::::::::

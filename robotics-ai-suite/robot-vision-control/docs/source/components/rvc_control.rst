@@ -1,7 +1,7 @@
 .. _rvc_control:
 
 Control
-***********
+********************
 
 
 .. _High Level Design:
@@ -29,7 +29,7 @@ tasks.
 
 
 Control Framework Resources
----------------------------
+------------------------------------------------------
 
 - :doc:`Example Configuration <rvc_control/parameters>`
 

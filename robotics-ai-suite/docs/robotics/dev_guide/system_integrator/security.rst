@@ -1,5 +1,5 @@
 Security
-========
+===================
 
 
 This section highlights the security features offered by
@@ -9,7 +9,7 @@ specific documents listed below.
 
 
 Shim Layer - Protect your application data
-------------------------------------------
+------------------------------------------------------------------------------------
 
 
 The Autonomous Mobile Robot includes open-source components, which may be affected by
@@ -43,7 +43,7 @@ vulnerabilities on the component web sites.
 
 
 Autonomous Mobile Robot Platform
---------------------
+--------------------------------------
 
 
 The main Autonomous Mobile Robot platform is based on the 12th generation
@@ -53,7 +53,7 @@ the processor.
 
 
 Security Use Cases and Features
--------------------------------
+-------------------------------------------------------------
 
 
 The Autonomous Mobile Robot platform offers various security features that customers

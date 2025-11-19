@@ -1,5 +1,5 @@
 Navigation
-================
+==========================================
 
 The following tutorials guide you on utilizing ROS 2 components developed by Intel®
 to assist an Autonomous Mobile Robot in navigating and mapping a room and offering teleoperation options.

@@ -1,7 +1,7 @@
 .. use-its-path-planner-plugin:
 
 ITS Path Planner ROS 2 Navigation Plugin
-========================================
+========================================================================================================
 
 Intelligent Sampling and Two-Way Search (ITS) global path planner is an Intel® patented algorithm.
 
@@ -41,24 +41,24 @@ Path planning steps summary:
 For customization options, see :doc:`../../../dev_guide/tutorials_amr/navigation/its-customization`.
 
 Source Code
------------
+--------------------
 
 The source code of this component can be found here: `ITS-Planner <https://github.com/open-edge-platform/edge-ai-suites/tree/main/robotics-ai-suite/components/its-planner>`_
 
 Getting Started
-----------------
+-------------------------------
 
 Autonomous Mobile Robot provides a ROS 2 Deb package for the application, supported by the following platform:
 
 - ROS version: humble
 
 Prerequisites
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Complete the :doc:`../../../gsg_robot/index` before continuing.
 
 Install Deb package
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Install the ``ros-humble-its-planner`` Deb package from the Intel® Autonomous Mobile Robot APT repository
 
@@ -133,7 +133,7 @@ ITS Planner also supports Ackermann steering; to launch the Ackermann ITS planne
 .. include:: its-customization.rst
 
 Troubleshooting
----------------
+------------------------------
 
 
 For general robot issues, go to :doc:`../../../dev_guide/tutorials_amr/robot-tutorials-troubleshooting`.

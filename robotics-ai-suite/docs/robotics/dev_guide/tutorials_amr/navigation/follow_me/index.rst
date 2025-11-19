@@ -1,5 +1,5 @@
 Follow-me Algorithm
-=====================
+====================================================================
 
 The Follow-me algorithm is a Autonomous Mobile Robot application for following a target person without any manual or external control dependency. The complete pipeline is described here.
 A comprehensive diagram of the application is showed in the figure below. The Deb packages are outlined with *blue* rectangles in the figure.
@@ -18,7 +18,7 @@ This multimodal solution can control robot motion by any combination of the foll
   The pre-trained `Quartznet <https://docs.openvino.ai/2023.3/omz_models_model_quartznet_15x5_en.html>`_ parameters are obtained from OpenVINO™ model zoo. `ros-humble-speech-recognition-pkg` launches this node and publishes ROS 2 topic with voice-based robot control commands.
 
 
-------------------------------
+------------------------------------------------------------
 
 **Applications (processing outputs)**
 

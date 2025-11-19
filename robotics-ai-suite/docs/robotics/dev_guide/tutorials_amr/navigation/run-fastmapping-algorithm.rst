@@ -1,7 +1,7 @@
 .. run-fastmapping-algorithm:
 
 FastMapping Algorithm
-======================
+========================================================
 
 FastMapping application is the Intel® optimized version of octomap.
 
@@ -9,19 +9,19 @@ For more information on FastMapping, see :ref:`how_it_works`.
 
 
 Source Code
------------
+--------------------
 
 The source code of this component can be found here: `FastMapping <https://github.com/open-edge-platform/edge-ai-suites/tree/main/robotics-ai-suite/components/fast-mapping>`_
 
 
 Prerequisites
--------------
+-------------------------
 
 Complete the :doc:`../../../gsg_robot/index` before continuing.
 
 
 Run the FastMapping Standalone Application
---------------------------------------------
+--------------------------------------------------------------------------------------
 
 #. To download and install the FastMapping standalone sample application run the command below:
 
@@ -66,7 +66,7 @@ To close this application, type ``Ctrl-c`` in the terminal where you ran the lau
 
 
 Troubleshooting
----------------
+------------------------------
 
 
 For general robot issues, go to: :doc:`../../../dev_guide/tutorials_amr/robot-tutorials-troubleshooting`.

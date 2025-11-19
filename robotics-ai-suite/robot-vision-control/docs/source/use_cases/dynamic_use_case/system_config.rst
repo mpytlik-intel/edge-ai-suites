@@ -2,10 +2,10 @@
 .. _preliminary_system_configuration:
 
 Preliminary system configuration
-================================
+====================================================================================
 
 Camera pose and robot calibration
----------------------------------
+------------------------------------------------------------------
 
 Before first RVC Execution, we have to ensure a few parameters that has to match the physical setup:
 
@@ -16,7 +16,7 @@ Before first RVC Execution, we have to ensure a few parameters that has to match
 .. _camera_pose_calibration:
 
 Camera pose calibration
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 Before starting the Vision component, verify that the camera location matches the position
@@ -68,14 +68,14 @@ transform it to robot reference system, and these numbers give the relation betw
 .. _universal_robot_configuration:
 
 Universal Robots Configuration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The real robot or the simulator has to be configured to accept
 connection from RVC and configure the RVC system for real time capabilities
 
 
 Set up Universal Robots UR5e Robot
---------------------------------------
+--------------------------------------------------------------------------
 
 
 This section discusses, in brief, the steps to set up Universal Robots UR5e robot.
@@ -87,12 +87,12 @@ This section discusses, in brief, the steps to set up Universal Robots UR5e robo
 
 
 Set up Private Local Network
------------------------------
+--------------------------------------------------------
 
 One of the key considerations coming from Universal Robots robots is that the network connection from the controlling AI running RVC and the robot must be on a direct Ethernet connection. In this demonstration, a private local network with a dedicated switch was set up with no other traffic on this network, which worked well.
 
 Install external_control.urcap
-------------------------------
+------------------------------------------------------------
 
 Configure the URCaps for the robot and the Robotiq 2F-85 URCap. For details, refer to
 `Connect to External Control via URCap <https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver#connect-to-external-control-via-urcap>`_.
@@ -111,7 +111,7 @@ After installing `external_control.urcap`, the screen, shown in the following fi
     Before starting the demonstration, make sure that the **Speed** slider, shown in the figure, is set around 70%. Even if the speed is set to above 70%, the robot will follow, however higher speed might damage the bolts that connect the base of the robot to the table. Do the same for the Rviz2 speed slider also.
 
 Install Gripper URCaps
------------------------------
+--------------------------------------------------------
 
 The URCaps are available on the `Robotiq <https://robotiq.com/products/2f85-140-adaptive-robot-gripper?ref=nav_product_new_button>`_ website.
 
@@ -128,7 +128,7 @@ Restart the robot. Select **Program Robot** on the Welcome screen. Go to the **I
 .. _robot_calibration_procedure:
 
 Overwrite Model-specific Kinematics Parameters (Calibration)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There might be slight differences (variance) in the physical attributes of various robots. To address this issue, the robot is calibrated at the factory and the variance in these parameters are saved on the robot controller file system. Extract the kinematics parameters specific to your robot and overwrite the distributed parameters file to avoid the robot being sent elsewhere for accumulating errors on inverse kinematics computation due to this parameter variance.
 
@@ -173,7 +173,7 @@ If everything is correct, you will see an information message instead of the err
 Notice the different checksums.
 
 Create Program
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To use the new URCaps, enabling the communication with the Intel® architecture RVC controller, create a new program on the teaching pendant and insert the **External Control** program node in the program tree.
 

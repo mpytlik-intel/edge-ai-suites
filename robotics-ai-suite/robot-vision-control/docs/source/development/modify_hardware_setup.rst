@@ -2,7 +2,7 @@
 .. _swapping_robots:
 
 Modify Hardware Setup
-=====================
+==========================================
 
 RVC Framework has been designed with modularity and abstraction in mind.
 In theory, this means that every hardware component could be substituted.
@@ -10,7 +10,7 @@ However, due to the diverse range of devices and control mechanisms,
 the specific modifications required for seamless operation may vary considerably.
 
 Change Camera
--------------
+-------------------------
 
 This section explains the modifications required if you use different
 cameras:
@@ -94,7 +94,7 @@ that the RVC Robot Motion Controller is tracking a topic configured in
 *src/shared_messages/rvc_messages/msg/PoseStamped.msg*.
 
 Change Universal Robot Model
-----------------------------
+-------------------------------------------------------
 
 The default robot model is UR5e. If you are using a different robot
 model from the same family, do either one of the following:
@@ -112,7 +112,7 @@ model from the same family, do either one of the following:
       ros2 launch rvc_dynamic_motion_controller_use_case dynamic_demo_launch.py robot_ip:=<ROBOT_IP> ur_type:=<URMODEL> &
 
 Change Gripper and Manipulator
-------------------------------
+------------------------------------------------------------
 
 The current implementation handles a composite robot, which is a
 manipulator connected to a gripper as it is a single robot with seven
@@ -180,7 +180,7 @@ connected to that link.
 
 
 Change Manipulator without supported drivers
---------------------------------------------
+--------------------------------------------------------------------------------------
 
 RVC is based on ROS 2 framework, hence its able to drive manupulators with ROS 2 support.
 This means the manufacturer has to provide a ROS 2 driver, fully implementing the `ROS 2 Control <https://control.ros.org/master/index.html>`__

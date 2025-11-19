@@ -1,18 +1,18 @@
 Wandering Application on AAEON robot with Intel® RealSense™ Camera and RTAB-Map SLAM
-=====================================================================================
+==========================================================================================================================================================================================================================================================================================
 
 This tutorial details the steps to install Wandering Application with Intel® RealSense™ camera input and create a map using RTAB-Map Application.
 
 Getting Started
-----------------
+-------------------------------
 
 Prerequisites
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Complete the :doc:`../../../../gsg_robot/index` before continuing.
 
 Install Deb package
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Install the ``ros-humble-wandering-aaeon-tutorial`` Deb package from the Intel® Autonomous Mobile Robot APT repository.
 
@@ -22,7 +22,7 @@ Install the ``ros-humble-wandering-aaeon-tutorial`` Deb package from the Intel®
       sudo apt install ros-humble-wandering-aaeon-tutorial
 
 Run Demo
-----------------
+-------------------------------
 
 Run the following commands to create a map using RTAB-Map and Wandering Application tutorial on the Aaeon robot.
 
@@ -37,7 +37,7 @@ Once the command is executed, the robot starts moving and creates a map with RTA
 
 
 Troubleshooting
-----------------------------
+-------------------------------------------------------
 
 - You can stop the demo anytime by pressing ``ctrl-C``.
 

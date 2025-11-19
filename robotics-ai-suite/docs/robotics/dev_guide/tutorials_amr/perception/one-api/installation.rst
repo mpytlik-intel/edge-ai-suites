@@ -1,10 +1,10 @@
 .. _oneapi-installation:
 
 Overview and Installation
-===========================
+==========================================================================================
 
 Overview
---------
+--------------
 
 Intel PCL optimization is accomplished using Intel® oneAPI Base Toolkit, which
 comprises components such as the oneAPI DPC++ Compiler, OpenMP and oneAPI Threading Building
@@ -85,7 +85,7 @@ oneAPI PCL KdTree class
        - CPU
 
 Supported Hardware
-------------------
+------------------------------------
 
 **CPUs:**
 
@@ -100,18 +100,18 @@ Systems based on Intel® 64 architectures below are supported
 * `Integrated Processor Graphics site <https://www.intel.com/content/www/us/en/developer/articles/guide/intel-graphics-developers-guides.html>`__ Skylake or higher
 
 Supported Operating System
---------------------------
+--------------------------------------------------
 
 * Ubuntu 22.04 LTS
 * Microsoft Windows 10/11
 
 Prerequisites
--------------
+-------------------------
 
 Complete the :doc:`../../../../gsg_robot/index` before continuing.
 
 PCL oneAPI Installation
--------------------------
+-------------------------------------------------
 The PCL oneAPI version depends on the oneAPI runtime library.  By installing the ``libpcl-oneapi`` Debian
 package, it will install all dependencies include ``libpcl`` and pcl dependency libraries,  oneAPI runtime library and GPU runtime
 library.
@@ -146,7 +146,7 @@ library.
 
 
 Runtime Device Selection
-------------------------
+------------------------------------------------
 oneAPI runtime library will choose a default device for a platform, either CPU or GPU.  Currently,
 the oneAPI version of PCL modules does not support the API to switch between different devices.  To switch to
 device from default device, the only option is to select through oneAPI environment variable.
@@ -216,7 +216,7 @@ device from default device, the only option is to select through oneAPI environm
 
 
 JIT Limitation
---------------
+--------------------------
 
 Most oneAPI™ PCL modules are implemented with the Intel® oneAPI™ DPC++ Compiler.
 The Intel® oneAPI™ DPC++ Compiler converts a DPC++ program into an intermediate

@@ -1,11 +1,11 @@
 .. esdq:
 
 Intel® Edge Software Device Qualification (Intel® Edge Software Device Qualification (Intel® ESDQ)) for Autonomous Mobile Robot
-=================================================================================================================================
+=======================================================================================================================================================================================================================================================================================================================================================
 
 
 Overview
---------
+--------------
 
 
 Intel® Edge Software Device Qualification (Intel® Edge Software Device Qualification (Intel® ESDQ)) for Autonomous Mobile Robot provides customers with the capability to run an
@@ -20,7 +20,7 @@ to move the Autonomous Mobile Robot.
 .. _esdq-how-it-works:
 
 How It Works
-------------
+------------------------
 
 The Autonomous Mobile Robot Test Modules interact with the Intel® Edge Software Device Qualification (Intel® ESDQ) Command Line Interface (CLI) through a common
 test module interface (TMI) layer which is part of the Intel® Edge Software Device Qualification (Intel® ESDQ) binary.
@@ -38,7 +38,7 @@ More detailed information is available at `Intel® Edge Software Device Qualific
 
 Intel® Edge Software Device Qualification (Intel® ESDQ) for Autonomous Mobile Robot contains the following test modules.
 
-+-----------------------------------------------------------------------------------------------=======================--+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------============================================================--+
 | Intel® RealSense™ Camera                                                                                               |
 |    This module verifies the capabilities of the Intel® RealSense™ technology on the target platform.                   |
 |    For more information, go to the `Intel® RealSense™ website                                                          |
@@ -57,7 +57,7 @@ Intel® Edge Software Device Qualification (Intel® ESDQ) for Autonomous Mobile 
 |      -  Intel® RealSense™ camera topics are listed and published.                                                      |
 |                                                                                                                        |
 |      -  The number of FPS (Frames Per Second) are as expected.                                                         |
-+------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Intel® VTune™ Profiler                                                                                                 |
 |    This module runs the Intel® VTune™ Profiler on the target system. For more information,                             |
 |    go to the `Intel® VTune™ Profiler website                                                                           |
@@ -68,7 +68,7 @@ Intel® Edge Software Device Qualification (Intel® ESDQ) for Autonomous Mobile 
 |      -  VTune™ Profiler Profiler runs without errors.                                                                  |
 |                                                                                                                        |
 |      -  VTune™ Profiler Profiler collects Platform information.                                                        |
-+------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | rviz2 and FastMapping                                                                                                  |
 |   This module runs the FastMapping application (the version of octomap optimized for Intel®                            |
 |   platforms) on the target system and uses rviz2 to verify that it works as expected.                                  |
@@ -77,7 +77,7 @@ Intel® Edge Software Device Qualification (Intel® ESDQ) for Autonomous Mobile 
 |   The test is considered PASS if:                                                                                      |
 |                                                                                                                        |
 |     -  FastMapping is able to create a map out of a pre-recorded ROS 2 bag.                                            |
-+------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Intel® oneAPI Base Toolkit                                                                                             |
 |    This module verifies some basic capabilities of Intel® oneAPI Base Toolkit on the target platform.                  |
 |    For more information, go to the `Intel® oneAPI Base Toolkit website                                                 |
@@ -89,7 +89,7 @@ Intel® Edge Software Device Qualification (Intel® ESDQ) for Autonomous Mobile 
 |    This test is considered PASS if:                                                                                    |
 |                                                                                                                        |
 |      -  A simple C++ file can be compiled using the DPC++ compiled and it runs as expected.                            |
-+------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | OpenVINO™ Toolkit                                                                                                      |
 |    This module verifies two core features of the OpenVINO™ Toolkit:                                                    |
 |                                                                                                                        |
@@ -102,7 +102,7 @@ Intel® Edge Software Device Qualification (Intel® ESDQ) for Autonomous Mobile 
 |      -  The OpenVINO™ model optimizer is capable to transform a TensorFlow model to an                                 |
 |         Intermediate Representation (IR) of the network, which can be inferred with the                                |
 |         Inference Engine.                                                                                              |
-+------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | OpenVINO™ Query for inferencing devices                                                                                |
 |    This module executes the                                                                                            |
 |    `Hello Query Device                                                                                                 |
@@ -117,7 +117,7 @@ Intel® Edge Software Device Qualification (Intel® ESDQ) for Autonomous Mobile 
 |                                                                                                                        |
 |      -  On Intel® Core™ Ultra Processors, in addition the ``NPU`` must be be identified as an                          |
 |         inferencing device.                                                                                            |
-+------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | GStreamer Video                                                                                                        |
 |    This module verifies if a GStreamer Video Pipeline using GStreamer Plugins runs on the                              |
 |    target system.                                                                                                      |
@@ -125,7 +125,7 @@ Intel® Edge Software Device Qualification (Intel® ESDQ) for Autonomous Mobile 
 |    The test is considered PASS if:                                                                                     |
 |                                                                                                                        |
 |      -  The Video Pipeline was opened on the host without errors.                                                      |
-+------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | GStreamer Audio                                                                                                        |
 |    This module verifies if a GStreamer Audio Pipeline using GStreamer Plugins runs on the                              |
 |    target system.                                                                                                      |
@@ -133,7 +133,7 @@ Intel® Edge Software Device Qualification (Intel® ESDQ) for Autonomous Mobile 
 |    The test is considered PASS if:                                                                                     |
 |                                                                                                                        |
 |      -  The Audio Pipeline was opened on the host without errors.                                                      |
-+------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | GStreamer Autovideosink Plugin - Display                                                                               |
 |    This module verifies if a stream from a camera compatible with libv4l2 can be opened and                            |
 |    displayed using GStreamer.                                                                                          |
@@ -144,24 +144,24 @@ Intel® Edge Software Device Qualification (Intel® ESDQ) for Autonomous Mobile 
 |                                                                                                                        |
 |    This test may Fail, or it may be skipped if the target system does not have a Web Camera                            |
 |    connected.                                                                                                          |
-+------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ADBSCAN                                                                                                                |
 |    This module verifies if the ADBSCAN algorithm works on the target system.                                           |
 |                                                                                                                        |
 |    The test is considered PASS if:                                                                                     |
 |                                                                                                                        |
 |      -  The ADBSCAN algorithm works on the target system.                                                              |
-+------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Collaborative Visual SLAM                                                                                              |
 |    This module verifies if the collaborative visual SLAM algorithm works on the target system.                         |
 |                                                                                                                        |
 |    The test is considered PASS if:                                                                                     |
 |                                                                                                                        |
 |      -  The collaborative visual SLAM algorithm works on the target system.                                            |
-+------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Get Started
------------
+--------------------
 
 This tutorial takes you through the installation and execution of the Intel® Edge Software Device Qualification (Intel® ESDQ) CLI tool.
 Configure your target system to satisfy the necessary :ref:`esdq-prerequisites`
@@ -184,7 +184,7 @@ modules.
 .. _esdq-prerequisites:
 
 Prerequisites
--------------
+-------------------------
 
 Satisfy the Intel® Edge Software Device Qualification (Intel® ESDQ) prerequisites by:
 
@@ -242,7 +242,7 @@ Satisfy the Intel® Edge Software Device Qualification (Intel® ESDQ) prerequisi
 .. _esdq-install:
 
 Download and Install Intel® Edge Software Device Qualification (Intel® ESDQ) for Autonomous Mobile Robot
----------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Complete the following two installation steps in order to properly configure
 your test setup:
@@ -344,7 +344,7 @@ steps below:
 .. _esdq_compute:
 
 Run the Self-Certification Application for Compute Systems
-----------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
 
 #. Use the ``groups`` command to verify whether the current user belongs to
    the ``render``, ``video``, and ``dialout`` groups.
@@ -416,7 +416,7 @@ Run the Self-Certification Application for Compute Systems
 .. _esdq_sensor_rgb:
 
 Run the Self-Certification Application for RGB Cameras
-----------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
 
 This self-certification test expects the camera stream to be on the
 ``/camera/color/image_raw`` topic. This topic must be visible in rviz2 using
@@ -460,7 +460,7 @@ You can check your current configuration by:
 .. _esdq_sensor_depth:
 
 Run the Self-Certification Application for Depth Cameras
-----------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
 
 This self-certification test expects the camera stream to be on the
 ``/camera/depth/color/points`` and on the ``/camera/depth/image_rect_raw`` topics.
@@ -501,7 +501,7 @@ You can check your current configuration by:
 
 
 Send Results to Intel
------------------------------------
+--------------------------------------------------------------------
 
 Once the automated and manual tests are executed successfully, you can
 submit your test results and get your devices listed on the `Intel® Edge
@@ -516,12 +516,12 @@ For example, after one of our local runs the following files were generated in t
 ``$ROBOTICS_SDK/reports/`` directory: ``report.html`` and ``report.zip``.
 
 Troubleshooting
-----------------
+-------------------------------
 
 For issues, go to: :doc:`../../dev_guide/tutorials_amr/robot-tutorials-troubleshooting`.
 
 Support Forum
--------------
+-------------------------
 
 If you're unable to resolve your issues, contact the `Support Forum.
 <https://software.intel.com/en-us/forums/intel-edge-software-recipes>`__

@@ -1,6 +1,6 @@
 
 iRobot Create 3 Wandering tutorial
------------------------------------
+--------------------------------------------------------------------
 
 This tutorial presents the Wandering application running on an
 iRobot Create 3 mobile robotics platform extended with an Intel®
@@ -21,17 +21,17 @@ in a testing playground:
    :width: 900
 
 Getting Started
--------------------------------------------
+-------------------------------------------------------------------------------------
 
 Prerequisites
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Assemble your robotic kit following the instructions :doc:`irobot-create3 <../../developer_kit/irobot-create3-robot>`
 
 - Complete the :doc:`../../../../gsg_robot/index` before continuing.
 
 Intel® board connected to iRobot Create 3
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Follow the instructions on page
 `iRobot® Create® 3 - Network Recommendations
@@ -52,7 +52,7 @@ above:
    64 bytes from 192.168.99.2: icmp_seq=2 ttl=64 time=2.31 ms
    64 bytes from 192.168.99.2: icmp_seq=3 ttl=64 time=2.02 ms
 
-   --- 192.168.99.2 ping statistics ---
+   ------ 192.168.99.2 ping statistics ------
    3 packets transmitted, 3 received, 0% packet loss, time 2004ms
    rtt min/avg/max/mdev = 1.989/2.105/2.308/0.144 ms
 

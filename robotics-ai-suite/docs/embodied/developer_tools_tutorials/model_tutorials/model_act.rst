@@ -1,7 +1,7 @@
 .. _model_act:
 
 Action Chunking with Transformers - ACT
-########################################
+###############################################################################
 
 Action Chunking with Transformers (ACT) is an **end-to-end imitation learning** model designed for fine manipulation tasks in robotics,  learned directly from real demonstrations. ACT aims to overcome the limitations of imitation learning, where policy errors can compound over time and lead to drifting out of the training distribution. By predicting actions in chunks, ACT effectively reduces the horizon, enabling the system to perform complex tasks such as opening a translucent condiment cup and slotting a battery with high success rates (80-90%) using only 10 minutes of demonstration data. ACT model is proposed as an algorithm component of a system, which focus on learning fine-grained bimanual manipulation with low-cost hardware.
 
@@ -32,7 +32,7 @@ Action Chunking with Transformers (ACT) is an **end-to-end imitation learning** 
 - Github link: https://github.com/tonyzhaozh/aloha
 
 Model Conversion
-================
+==========================================
 
 | ACT model is trained by PyTorch, but can get an optimized inference performance on Intel devices using OpenVINO toolkit. PyTorch model should be converted to OpenVINO IR format.
 | The following steps will guide you through the process of converting the ACT model to OpenVINO IR format.
@@ -41,7 +41,7 @@ Model Conversion
   We provide a pretrained checkpoint and also a model conversion script to help you convert model to OpenVINO IR format. Please get the information at the Imitation Learning sample pipeline page :ref:`Install ACT pipeline of OpenVINO <act-ov>`.
 
 Load the trained checkpoint
-----------------------------
+-------------------------------------------------------
 | Checkpoint files(.ckpt) which include parameters state will be saved after training. Rebuilding the model structure and loading the parameters state will be needed for model conversion.
 
 .. attention::
@@ -64,7 +64,7 @@ Load the trained checkpoint
 
 
 Convert model to PyTorch jit trace
---------------------------------------
+--------------------------------------------------------------------------
 | To avoid the risk of failure when converting a transformer structure, we first convert the PyTorch model to a jit trace type.
 
 .. code-block:: python
@@ -85,7 +85,7 @@ Convert model to PyTorch jit trace
     print("Input tensor names:", input_names)
 
 Convert jit trace to OpenVINO IR and save model
-------------------------------------------------
+------------------------------------------------------------------------------------------------
 
 .. code-block:: python
 

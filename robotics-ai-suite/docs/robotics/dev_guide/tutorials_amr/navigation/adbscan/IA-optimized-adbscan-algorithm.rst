@@ -1,14 +1,14 @@
 .. intel-adbscan-algorithm:
 
 Intel-optimized ADBSCAN Algorithm
-===================================
+==================================================================================================================
 
 In this version of ADBSCAN, the algorithm has been optimized for Intel® SOC by replacing linear neighbor point search with an optimized oneAPI PCL library (offloaded to GPU), as well as refactoring the clustering algorithm.
 It has been tested and validated on 13th Generation Intel® Core™ processors with Intel® Iris® Xe Integrated Graphics, 12th Generation Intel® Core™ processors with Intel® Iris® Xe Integrated Graphics and 11th Generation Intel® Core™ processors with Intel® Iris® Xe Integrated Graphics. This tutorial describes how to run this Intel-optimized ADBSCAN algorithm and compare the execution time with the unoptimized version.
 
 
 Getting Started
-----------------
+-------------------------------
 
 The Intel-optimized and unoptimized versions of the algorithm are distributed as ``ros-humble-adbscan-oneapi`` and ``ros-humble-adbscan-ros2``, respectively.
 We demonstrate the gain in latency for a ROS 2 bag file with point cloud data from a Intel® RealSense™ camera. The amount of gain is prominent when the input is dense or the
@@ -16,13 +16,13 @@ number of input points is large. In case of a 2D LIDAR, the point cloud is compa
 
 
 Prerequisites
--------------
+-------------------------
 
 Complete the :doc:`../../../../gsg_robot/index` before continuing.
 
 
 Install and run the ROS 2 bag file Deb package
------------------------------------------------
+--------------------------------------------------------------------------------------------
 
 Install the following package with ROS 2 bag files in order to publish point cloud data from LIDAR and Intel® RealSense™ camera:
 
@@ -45,7 +45,7 @@ This command will launch the ROS 2 bag file and publish the recorded point cloud
 ``ros2 topic list`` command will show a list of the published topics which include ``/scan`` (point cloud from 2D LIDAR) and ``/camera/depth/color/points`` (point cloud from Intel® RealSense™ camera).
 
 Install and run optimized Deb package
----------------------------------------------
+------------------------------------------------------------------------------------------
 
 Install ``ros-humble-adbscan-oneapi`` Deb package from Intel® Autonomous Mobile Robot APT repository:
 
@@ -69,7 +69,7 @@ This will print tables with the benchmarking data as showed below:
 The table shows a breakdown between pre-processing, ADBSCAN execution and post-processing time. The caption at the bottom of the table will print which PCL library is being used.
 
 Install and run standard (unoptimized) Deb package
------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
 
 Install ``ros-humble-adbscan-ros2`` Deb package from Intel® Autonomous Mobile Robot APT repository
 
@@ -95,7 +95,7 @@ should be more or less of the same range in both versions, since the input bag f
 We observed an average gain of ~5-8x in 13th Generation Intel® Core™ processors with Intel® Iris® Xe Integrated Graphics, 12th Generation Intel® Core™ processors with Intel® Iris® Xe Integrated Graphics and 11th Generation Intel® Core™ processors with Intel® Iris® Xe Integrated Graphics for this specific ROS 2 bag file.
 
 Re-configurable parameters
-----------------------------
+-------------------------------------------------------
 
 The optimized ADBSCAN has a user-defined parameter called ``oneapi_library`` to choose from a set of PCL libraries: ``oneapi_kdtree``, ``oneapi_octree``, ``pcl_kdtree``. The default value is ``oneapi_kdtree``.
 Moreover, one can run both optimized and unoptimized packages with a parameter called ``benchmark_number_of_frames``. It will take an integer (greater or equal to 1) as input and the benchmarking table will produce the average execution time of ``benchmark_number_of_frames`` frames, instead of a single frame (default value).
@@ -135,7 +135,7 @@ A complete list of the reconfigurable parameters is given below:
 
 
 Troubleshooting
-----------------------------
+-------------------------------------------------------
 
 - Failed to install Deb package: Please make sure to run ``sudo apt update`` before installing the necessary Deb packages.
 

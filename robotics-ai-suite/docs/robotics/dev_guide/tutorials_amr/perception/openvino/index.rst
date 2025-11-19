@@ -1,6 +1,6 @@
 
 OpenVINO™
-==========
+===============================
 
 This chapter provides a list of OpenVINO™ tutorials.
 

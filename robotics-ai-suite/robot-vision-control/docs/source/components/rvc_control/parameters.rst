@@ -9,7 +9,7 @@ following examples:
 
 
 Plugins
-^^^^^^^^
+^^^^^^^^^^^^^^
 .. _interface_config:
 
 .. code-block:: yaml

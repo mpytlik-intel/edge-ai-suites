@@ -1,5 +1,5 @@
 Installation & Setup
-######################
+###########################################
 
 Embodied Intelligence SDK provides necessary steps to install the packages and set up the environment.
 
@@ -7,7 +7,7 @@ Embodied Intelligence SDK provides necessary steps to install the packages and s
 | If any problems are encountered during installation, please refer to the :doc:`Troubleshooting <troubleshooting>` section.
 
 Prerequisites
-================
+===============================
 
 .. toctree::
    :maxdepth: 1
@@ -16,7 +16,7 @@ Prerequisites
    installation_setup/prerequisites/os_setup
 
 Installation
-================
+===============================
 
 .. toctree::
    :maxdepth: 1

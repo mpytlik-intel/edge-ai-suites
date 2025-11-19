@@ -2,12 +2,12 @@
 :prev_page: None
 
 Troubleshootings
-##############################
+############################################################
 
 #. Inference on GPU does not work?
 
     .. code-block:: bash
-    
+
        $ sudo -E apt install clinfo
        $ clinfo
 
@@ -28,4 +28,3 @@ Troubleshootings
 #. Robot arm does not go accurately pick up the object?
 
     Check :ref:`Camera pose calibration<camera_pose_calibration>`
-

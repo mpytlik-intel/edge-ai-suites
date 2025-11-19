@@ -2,7 +2,7 @@
 .. _development_resources:
 
 Developer Resources
-###################
+#####################################
 
 
 .. toctree::
@@ -13,5 +13,3 @@ Developer Resources
    development/rvc_vision
    development/rvc_control
    development/modify_hardware_setup
-
-

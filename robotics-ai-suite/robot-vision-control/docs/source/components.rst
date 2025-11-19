@@ -2,7 +2,7 @@
 .. _components:
 
 Components and Features of RVC
-##############################
+############################################################
 
 RVC Framework is composed by
 
@@ -23,6 +23,3 @@ High level design:
    components/rvc_vision
    components/rvc_control
    components/rvc_api
-
-
-

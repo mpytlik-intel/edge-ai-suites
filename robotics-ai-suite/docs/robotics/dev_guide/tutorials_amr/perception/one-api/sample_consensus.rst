@@ -1,7 +1,7 @@
 .. _oneapi_sample_consensus:
 
 Identifying Models and Extracting Parameters in 3D Point Clouds
-=============================================================================
+=============================================================================================================================================================================================================================================================
 
 This tutorial guides you through the process of detecting a plane model within a 3D point cloud.
 
@@ -64,7 +64,7 @@ This tutorial guides you through the process of detecting a plane model within a
 
 
 Code Explanation
---------------------
+--------------------------------------
 
 Load the test data from GitHub* into a PointCloud<PointXYZ>.
 

@@ -1,7 +1,7 @@
 .. _oneapi_segmentation:
 
 Plane Model Segmentation
-=============================================================================
+=============================================================================================================================================================================================================================================================
 
 In this tutorial, we will explore the process of simple plane segmentation, extracting points within a point cloud that contribute to a plane model.
 
@@ -63,7 +63,7 @@ In this tutorial, we will explore the process of simple plane segmentation, extr
 
 
 Code Explanation
---------------------
+--------------------------------------
 
 Load the test data from GitHub* into a PointCloud<PointXYZ>.
 

@@ -1,7 +1,7 @@
 .. turtlesim-ros2-sample-application:
 
 Turtlesim ROS 2 Sample Application
-==============================================================
+===================================================================================================================================================================
 
 
 This tutorial describes how to:
@@ -15,13 +15,13 @@ This tutorial describes how to:
 - Launch rviz graphic application to view ROS topics.
 
 Prerequisites
--------------
+-------------------------
 
 Complete the :doc:`../../../gsg_robot/index` before continuing.
 
 
 Run the Turtlesim ROS 2 Sample application
---------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
 
 
 #. To download and install the Turtlesim ROS 2 sample application run the command below:

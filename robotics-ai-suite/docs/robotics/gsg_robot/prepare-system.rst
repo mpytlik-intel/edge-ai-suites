@@ -1,11 +1,11 @@
 Prepare the Target System
-##########################
+##################################################
 
 .. figure:: ../images/system/target.png
 
 
 Install Canonical Ubuntu 22.04 LTS (Jammy Jellyfish)
-=========================================================
+==================================================================================================================
 
 Intel recommends a fresh installation of the Ubuntu distribution of the Linux OS for your target system, but this is not mandatory.
 
@@ -16,7 +16,7 @@ Depending on your processor type, select one of the following Canonical Ubuntu
 
    +----------------------------------------------------+----------------------------------------------------------------------------------------------------------------+
    | Processor type                                     | Canonical Ubuntu 22.04 LTS variant                                                                             |
-   +====================================================+================================================================================================================+
+   +=======================================================================================================+===============================================================================================================================================================================================================================+
    | Intel® Core™ Ultra Processors                      | `Ubuntu OS version 22.04 LTS (Jammy Jellyfish) <https://releases.ubuntu.com/22.04>`__ Desktop image            |
    +----------------------------------------------------+----------------------------------------------------------------------------------------------------------------+
    | Other Intel® processors, including:                | 22.04 LTS image for Intel IoT platforms,                                                                       |
@@ -62,7 +62,7 @@ Depending on the processor type, the expected result is as follows:
 
    +------------------------------------------+--------------------------------------+
    | Processor type                           | Expected kernel version              |
-   +==========================================+======================================+
+   +====================================================================================+==========================================================================+
    | Intel® Core™ Ultra Processors            | ``6.5.0-44-generic``                 |
    +------------------------------------------+--------------------------------------+
    | Other Intel® processors                  | ``5.15.0-1060-intel-iotg``           |
@@ -73,7 +73,7 @@ Depending on the processor type, the expected result is as follows:
 .. _install-ros-ros-version:
 
 Install ROS 2 Humble
-============================
+=======================================================
 
 To install ROS 2 on your system, follow the `ROS 2 setup guide <https://docs.ros.org/en/humble/Installation.html>`__.
 
@@ -106,7 +106,7 @@ Get more information about this topic in the `The ROS_DOMAIN_ID <https://docs.ro
 
 
 Set up a permanent ROS 2 environment
-++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 To simplify the handling of your system, you may add these lines to ``~/.bashrc`` file. In this way, the required settings are executed automatically if a new shell is launched.
 
@@ -116,7 +116,7 @@ To simplify the handling of your system, you may add these lines to ``~/.bashrc`
    echo "export ROS_DOMAIN_ID=42" >> ~/.bashrc
 
 Important Notes
-++++++++++++++++
++++++++++++++++++++++++++++++++
 
 .. note::
 

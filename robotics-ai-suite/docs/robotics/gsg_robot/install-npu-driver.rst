@@ -1,5 +1,5 @@
 Install the Intel® NPU Driver on Intel® Core™ Ultra Processors
-#########################################################
+##################################################################################################################
 
 If you want to run OpenVINO™ inferencing applications on the NPU device
 of Intel® Core™ Ultra processors, you need to install the Intel® NPU driver.

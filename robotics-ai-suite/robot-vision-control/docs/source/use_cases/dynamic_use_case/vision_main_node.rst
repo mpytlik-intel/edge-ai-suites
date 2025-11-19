@@ -1,11 +1,11 @@
 
 
 Vision Component Container
-***************************
+******************************************************
 
 
 Preliminary steps:
-==================
+================================================
 
 Before execution, there are some important steps to follow:
 
@@ -15,7 +15,7 @@ Before execution, there are some important steps to follow:
 
 
 Yolo model retrain
-------------------
+------------------------------------
 
 To retrain our yolo v5 model we followed `this tutorial <https://docs.ultralytics.com/yolov5/tutorials/train_custom_data>`_
 
@@ -29,12 +29,12 @@ then convert the model to openvino:
 if there are troubles with this, follow `issue 5533 <https://github.com/ultralytics/yolov5/issues/5533>`_
 
 PCD files creation
-------------------
+------------------------------------
 
 To create our PCD files, for two different setups we went through two different approces:
 
 PCD file creation from 3D printable STL files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  We created our set of object with a 3D modeler, 3D printed and then used the mesh files to created the pcd files :ref:`pose_detector` requires.
 
@@ -64,7 +64,7 @@ Here the step by step procedure:
    :alt: Blender menu to export selected object to WaveFront format
 
 
-- Convert the .obj file to pcd file with pcl_obj2pcd   
+- Convert the .obj file to pcd file with pcl_obj2pcd
 
 Note: Important consideration: The RVC Pose Detector will align this object PCD file to the input cloud from realsense. This means calculating how much every points of the object pcd are translated and rotated on top of the realsense poincloud from the original file location. To have a consistent meaning, the object baricenter should be in the origin to simulate the center of the optical camera (where all the optical and depth information are translated to). in this way, the algorithm will determine how far and how rotated is the object from the camera optical lense. if the object is not centered in 0,0,0, this calculation would be wrong. See following picture:
 
@@ -74,7 +74,7 @@ Note: Important consideration: The RVC Pose Detector will align this object PCD 
 
 
 PCD file creation from Blender Modeler
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We used the Open Source 3D modeler `Blender <https://www.blender.org/>`_
 
@@ -88,14 +88,14 @@ Verify that the PCD file has enough points using the pcl_viewer tool which comes
 
   $ pcl_viewer <pcdFilename.pcd>
 
-As show in following image  
+As show in following image
 
 
 .. image:: images/html/pcl_viewer.png
    :alt: PCD visualizer
 
 rvc_use_case_binaries package creation
---------------------------------------
+--------------------------------------------------------------------------
 
 - Create a `Ros2 package <https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html>`_ named rvc_use_case_binaries
 
@@ -159,7 +159,7 @@ to match your object ``.pcd`` files
 - Edit parameters.yaml of object_detection and pose_detection to match the names of these files
 
 Container execution:
-====================
+==================================================
 
 
 .. code-block:: bash

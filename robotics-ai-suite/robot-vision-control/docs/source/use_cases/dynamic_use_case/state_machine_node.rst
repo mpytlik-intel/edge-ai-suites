@@ -1,7 +1,7 @@
 
 
 State machine main node
-***********************
+********************************************
 
 The Exemplary dynamic use case shows the use case of an Universal robot
 UR5e tracking a erratically moving object, optionally picking it up and placing at
@@ -10,7 +10,7 @@ customizable location.
 
 
 Motion Controller Main node Execution
-=====================================
+=================================================================================================
 
 The Dynamic use case comes with a set of preconfigured options to achieve the basic
 show case. The only mandatory option is ``robot_ip`` which specifies where the real robot
@@ -26,7 +26,7 @@ And then press play on the teaching pendant.
 .. _moveit2_servo_pose_tracking:
 
 Motion controller exemplary plugin
-===================================
+===========================================================================================
 
 A `MoveIt 2 <https://moveit.picknik.ai/main/index.html>`__ based motion controller has been implemented showing a dynamic
 real-time tracking of the goal set in sendGoal. At all time, sendGoal
@@ -34,7 +34,7 @@ can be kept being called with different target, and the motion
 controller will do its best to track the goal.
 
 Features
------------
+--------------------
 
 - Collision maps
 - Avoid conveyor belts, or in general any obstacles or sensors like cameras
@@ -50,13 +50,13 @@ Features
 .. _motion_controller_configuration:
 
 Motion Controller Configuration
---------------------------------
+--------------------------------------------------------------
 
 For most of these parameters, we refer to the official moveit2 servo
 documentation and to .. Moveit2 servo tutorial: https://moveit.picknik.ai/humble/doc/examples/realtime_servo/realtime_servo_tutorial.html
 
 collision_boxes
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 array of strings with names of the collision boxes
 
@@ -131,7 +131,7 @@ checks will be performed at a frequency specified in
 .. _waypoint_configuration:
 
 Waypoint configuration
------------------------
+--------------------------------------------
 
 The file waypoint.yaml exposes the waypoint the dynamic and static use cases uses to navigate the robot
 

@@ -1,7 +1,7 @@
 .. _oneapi_kdtree:
 
 Performing KdTree Search using oneAPI KdTree FLANN
-===================================================
+=========================================================================================================================================================================
 
 OneAPI KdTree is similar to ``pcl::KdTreeFLANN``, except OneAPI KdTree can search the entire point cloud
 in a single call, while ``pcl::KdTreeFLANN`` performs a search for one point at a time. The OneAPI
@@ -129,7 +129,7 @@ This document will not describe KdTree in detail, and please refer to original `
 
 
 Code Explanation
------------------
+--------------------------------
 
 Compare to original version, the OneAPI version requires to use the OneAPI KdTree header.
 

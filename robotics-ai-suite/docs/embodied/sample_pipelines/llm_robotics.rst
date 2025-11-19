@@ -1,7 +1,7 @@
 .. _llm_robotics_demo:
 
 LLM Robotics Demo
-#################
+################################
 
 We have built a code generation pipeline for robotics, interacting with a chat bot utilizing AI technologies such as large language models (Phi-4) and computer vision (SAM, CLIP). It will use the user's voice or enter a text commands to provide a prompt to the robotics agent to generate corresponding actions.
 
@@ -12,7 +12,7 @@ This tutorial will provide a step-by-step guide to set up a real-time system to 
    :align: center
 
 Prerequisites
-=============
+=========================
 
 Please make sure you have finished setup steps in :doc:`../installation_setup` and also ensure you have the following list-table prerequisites:
 
@@ -31,7 +31,7 @@ Please make sure you have finished setup steps in :doc:`../installation_setup` a
 
 
 JAKA robot arm setup
-====================
+======================================
 
 This section will provide a step-by-step guide to setup a simulation JAKA robot-arm ROS2 application.
 
@@ -113,7 +113,7 @@ Install JAKA robot arm application
 .. _funasr-setup:
 
 FunASR setup
-=============
+=========================
 
 This section will provide a step-by-step guide to setup a FunASR (A Fundamental End-to-End Speech Recognition Toolkit) server.
 
@@ -199,7 +199,7 @@ Add OpenVINO speech model to FunASR
       $ pip install -e ./
 
 LLM and vision models setup
-============================
+=======================================================
 
 This section will provide a step-by-step guide to setup a virtual Python environment to run LLM demo.
 
@@ -274,7 +274,7 @@ Modify the loading PATH of models to the exported model path, the default path i
    self.model_path = "/home/intel/ov_models/Phi-4-mini-instruct-int8-ov"
 
 Run pipeline
-=============
+=========================
 
 This section will provide a step-by-step guide to launch LLM robotics demo.
 

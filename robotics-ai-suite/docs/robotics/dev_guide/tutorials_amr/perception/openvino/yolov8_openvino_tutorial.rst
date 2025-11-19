@@ -1,28 +1,28 @@
 .. yolov8-openvino-tutorial:
 
 OpenVINO™ Yolov8 Tutorial
-=======================================
+================================================================================================================================
 
 This tutorial serves as an example for understanding the utilization of OpenVINO™ node.
 It outlines the steps for installing  ROS 2 OpenVINO™ node and executing the segmentation model on the CPU,
 using a Intel® RealSense™ camera image as the input.
 
 Getting Started
-----------------
+-------------------------------
 
 Prerequisites
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Complete the :doc:`../../../../gsg_robot/index` before continuing.
 
 Install OpenVINO™ package
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Follow the instructions on :doc:`../../../../gsg_robot/install-openvino`, to install OpenVINO™.
 
 
 Install Python packages (optional)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Following Python packages are necessary to automatically download and convert the model to IR files.
 Also You can provide your own model files in the config, if you have them already.
@@ -32,13 +32,13 @@ Also You can provide your own model files in the config, if you have them alread
       pip3 install numpy pandas openvino-dev ultralytics nncf onnx
 
 Install Deb package
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   .. code-block::
 
       sudo apt install ros-humble-openvino-yolov8 ros-humble-openvino-yolov8-msgs
 
 Run Demo with Intel® RealSense™ Camera Topic Input
---------------------------------------------------
+--------------------------------------------------------------------------------------------------
 
 First create a config file `pipeline.toml`. If not present, sample content for this configuration file (including the comments) will be generated in the command output when executing the ``ros2 run yolo yolo`` command.
 
@@ -110,7 +110,7 @@ Then you can subscribe to the ``/pipeline1/color/image_raw/yolo_video`` topic to
 
 
 Advanced usage
-----------------
+-------------------------------
 
 Besides generating a video, this node is also capable of providing the number of post processed detections.
 Detections are published on a topic ``<pipeline_name>/<rgb_topic>/yolo_frame``. For example for above configuration it would be ``pipeline1/color/image_raw/yolo_frame``.
@@ -158,7 +158,7 @@ For body pose related tasks there is an image that helps in understanding the me
 .. Connected Joints (Research gate) https://www.researchgate.net/figure/Key-points-for-human-poses-according-to-the-COCO-output-format-R-L-right-left_fig3_353746430
 
 Other considerations
-----------------------
+-------------------------------------------
 
 Yolov8 model requires a commercial license from Ultralytics. This package only provides an efficient way to run the model on OpenVINO™ with ROS 2. Models and weights are downloaded from ultralytics and converted to IR format.
 

@@ -1,7 +1,7 @@
 .. _model_dp:
 
 Diffusion Policy
-#################
+################################
 
 Similar to the Action Chunking Transformer (ACT), the Diffusion Policy is another significant advancement in the field of robotic visuomotor policy learning, which represents policies as conditional denoising diffusion processes. This allows for effective handling of multimodal action distributions and is well adapted to high dimensional action spaces, which are common in robotic tasks. The algorithm's ability to learn the gradient of the action distribution score function and optimize via stochastic Langevin dynamics steps during inference provides a stable and efficient way to find optimal actions.
 
@@ -21,25 +21,25 @@ Similar to the Action Chunking Transformer (ACT), the Diffusion Policy is anothe
 - Github link: https://github.com/columbia-ai-robotics/diffusion_policy
 
 Model Conversion
-================
+==========================================
 Diffusion Policy (DP) models are trained using **PyTorch**, but optimized inference performance on Intel devices can be achieved using **OpenVINO**. To enable this, PyTorch models should first be converted to **OpenVINO Intermediate Representation (IR)** format.
 
 This document demonstrates how to convert DP model checkpoints to OpenVINO IR using the `low_dim transformer` and `image transformer` architectures as examples. The conversion process involves first converting the models to **ONNX**, followed by using OpenVINO’s `ovc` command-line tool to convert to IR format.
 
 Model Checkpoints
------------------
+--------------------------------
 
-- **Low Dim Transformer DP model checkpoint**:  
+- **Low Dim Transformer DP model checkpoint**:
   `epoch=0850-test_mean_score=0.967.ckpt <https://diffusion-policy.cs.columbia.edu/data/experiments/low_dim/pusht/diffusion_policy_transformer/train_0/checkpoints/epoch%3D0850-test_mean_score%3D0.967.ckpt>`_
 
-- **Image Transformer DP model checkpoint**:  
+- **Image Transformer DP model checkpoint**:
   `epoch=0100-test_mean_score=0.748.ckpt <https://diffusion-policy.cs.columbia.edu/data/experiments/image/pusht/diffusion_policy_transformer/train_0/checkpoints/epoch%3D0100-test_mean_score%3D0.748.ckpt>`_
 
 Low Dim Transformer DP Model KEY Conversion Steps
--------------------------------------------------
+-------------------------------------------------------------------------------------------------
 
 1. Load the Trained Checkpoint
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Checkpoint files contain model parameters saved during training. To prepare for conversion, rebuild the model structure and load the saved parameters:
 
@@ -63,7 +63,7 @@ Checkpoint files contain model parameters saved during training. To prepare for 
    policy = workspace.model
 
 2. Prepare Model Wrapper for Export
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: python
 
@@ -90,7 +90,7 @@ Checkpoint files contain model parameters saved during training. To prepare for 
            self.convert_diffusion_unet = ConvertUnetModel(self.policy)
 
 3. Define ONNX Export Function
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: python
 
@@ -120,10 +120,10 @@ Checkpoint files contain model parameters saved during training. To prepare for 
            opset_version=13,
            do_constant_folding=False,
        )
-       print(f"[===] Diffusion UNet exported to {export_name_unet}")
+       print(f"[=======] Diffusion UNet exported to {export_name_unet}")
 
 4. Instantiate the Converter and Export Model
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: python
 
@@ -131,15 +131,15 @@ Checkpoint files contain model parameters saved during training. To prepare for 
    convert_model.export_onnx(output_dir, ckpt_name)
 
 5. Ensure OpenVINO is Installed
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note::
 
-   Make sure OpenVINO is installed by following the official guide:  
+   Make sure OpenVINO is installed by following the official guide:
    :ref:`Install OpenVINO via pip <openvino_install>`
 
 6. Convert ONNX to OpenVINO IR Format
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once the model is exported to ONNX, use OpenVINO’s `ovc` (OpenVINO Model Converter) to convert it to IR format:
 
@@ -154,12 +154,12 @@ By default, the model will be converted to **FP16 IR format**. The following out
 
 
 Image Transformer DP Model Key Conversion Steps
--------------------------------------------------
+-------------------------------------------------------------------------------------------------
 
 This guide outlines the steps to convert the Image Transformer model—including the observation encoder and diffusion model—into OpenVINO Intermediate Representation (IR) format.
 
 1. Load the Trained Checkpoint
-------------------------------
+------------------------------------------------------------
 
 .. code-block:: python
 
@@ -181,7 +181,7 @@ This guide outlines the steps to convert the Image Transformer model—including
    policy = workspace.model  # Diffusion policy object, not a standard torch.nn.Module
 
 2. Prepare Model Wrappers for Export
-------------------------------------
+------------------------------------------------------------------------
 
 Two components need to be wrapped for ONNX export: the observation encoder and the diffusion model.
 
@@ -195,7 +195,7 @@ Two components need to be wrapped for ONNX export: the observation encoder and t
            self.policy = policy
            self.policy.model.eval()
            self.policy.obs_encoder.eval()
-           
+
            class ConvertObsEncoder(nn.Module):
                def __init__(self, policy):
                    super().__init__()
@@ -220,7 +220,7 @@ Two components need to be wrapped for ONNX export: the observation encoder and t
            self.convert_diffusion_unet = ConvertUnetModel(self.policy)
 
 3. Define ONNX Export Function
-------------------------------
+------------------------------------------------------------
 
 .. code-block:: python
 
@@ -237,7 +237,7 @@ Two components need to be wrapped for ONNX export: the observation encoder and t
            opset_version=13,
            do_constant_folding=True,
        )
-       print(f"[===] Obs Encoder exported to {export_name_obs_encoder}")
+       print(f"[=======] Obs Encoder exported to {export_name_obs_encoder}")
 
 
        trajectory = torch.rand(1, 10, 2)
@@ -256,10 +256,10 @@ Two components need to be wrapped for ONNX export: the observation encoder and t
            opset_version=13,
            do_constant_folding=True,
        )
-       print(f"[===] Diffusion UNet exported to {export_name_unet}")
+       print(f"[=======] Diffusion UNet exported to {export_name_unet}")
 
 4. Instantiate the Converter and Export the Model
--------------------------------------------------
+-------------------------------------------------------------------------------------------------
 
 .. code-block:: python
 
@@ -267,15 +267,15 @@ Two components need to be wrapped for ONNX export: the observation encoder and t
    convert_model.export_onnx(output_dir, ckpt_name)
 
 5. Install OpenVINO
--------------------
+-------------------------------------
 
 .. note::
 
-   Ensure that OpenVINO is installed. Follow the official installation guide:  
+   Ensure that OpenVINO is installed. Follow the official installation guide:
    `Install OpenVINO via pip <https://docs.openvino.ai/2025/get-started/install-openvino/install-openvino-pip.html>`_
 
 6. Convert ONNX to OpenVINO IR
-------------------------------
+------------------------------------------------------------
 
 Use OpenVINO’s Model Optimizer (`ovc`) to convert the exported ONNX models to IR format.
 

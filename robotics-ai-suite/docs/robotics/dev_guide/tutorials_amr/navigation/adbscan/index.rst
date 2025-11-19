@@ -1,7 +1,7 @@
 .. adbscan-algorithm:
 
 ADBSCAN Algorithm
-==================
+============================================================
 
 ADBSCAN (Adaptive DBSCAN) is an Intel® patented algorithm. It is a highly adaptive and scalable object detection and localization (clustering) algorithm, tested successfully to detect objects at all ranges for 2D Lidar, 3D Lidar, and Intel® RealSense™ Depth Camera.
 This method automatically computes clustering parameters (radius and minimum number of points that define a cluster) based on the distance from the sensor and the data density in its field of view, thus alleviating the guesswork from parameter selection and enabling efficient hierarchical clustering.
@@ -9,13 +9,13 @@ ADBSCAN increases detection range by 30%-40% and detects 20%-30% more objects, c
 
 
 Source Code
------------
+--------------------
 
 The source code of this component can be found here: `ADBScan <https://github.com/open-edge-platform/edge-ai-suites/tree/main/robotics-ai-suite/components/adbscan>`_
 
 
 ADBSCAN Tutorials
------------------
+--------------------------------
 
 .. toctree::
    :maxdepth: 1
@@ -26,7 +26,7 @@ ADBSCAN Tutorials
 
 
 ADBSCAN Optimization
---------------------
+--------------------------------------
 
 .. toctree::
    :maxdepth: 1
@@ -35,7 +35,7 @@ ADBSCAN Optimization
 
 
 Troubleshooting
-----------------------------
+-------------------------------------------------------
 
 - Failed to install Deb package: Please make sure to run ``sudo apt update`` before installing the necessary Deb packages.
 

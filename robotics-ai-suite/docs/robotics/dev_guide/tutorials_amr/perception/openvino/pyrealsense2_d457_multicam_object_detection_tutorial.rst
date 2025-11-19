@@ -1,7 +1,7 @@
 .. pyrealsense2-d457-multicam-object-detection-tutorial:
 
 OpenVINO™ Tutorial on Multi-camera Object Detection using Intel® RealSense™ Depth Camera D457
-==============================================================================================
+========================================================================================================================================================================================================================================================================================================================
 
 In this tutorial, the multi-camera use case is demonstrated using an `Axiomtek Robox500 ROS 2 AMR Controller <https://www.axiomtek.com/Default.aspx?MenuId=Products&FunctionId=ProductView&ItemId=27392&C=ROBOX500&upcat=408>`__ and four `Intel® RealSense™ Depth Camera D457 <https://www.intelrealsense.com/depth-camera-d457/>`__. Here, the four cameras are connected to the Industrial Gigabit Multimedia Serial Link™ (GMSL) supported Axiomtek Robox500 ROS 2 AMR Controller through GMSL/FAKRA (female-to-female) cables, which provide high-bandwidth video transmission.
 
@@ -37,17 +37,17 @@ The setup looks like as described in the table below.
 The following steps are required in order to set up the Axiomtek Robox500 ROS 2 AMR Controller to support four Intel® RealSense™ Depth Camera D457.
 
 Source Code
------------
+--------------------
 
 The source code of this component can be found here: `Multicamera-Demo <https://github.com/open-edge-platform/edge-ai-suites/tree/main/robotics-ai-suite/components/multicam-demo>`_
 
 Prerequisites
--------------
+-------------------------
 
 Complete the :doc:`../../../../gsg_robot/index` before continuing.
 
 Axiomtek Robox500 ROS 2 AMR Controller Setup
----------------------------------------------
+------------------------------------------------------------------------------------------
 Connect four Intel® RealSense™ Depth Camera D457 to  the Axiomtek Robox500 ROS 2 AMR Controller as shown in the below picture. Now, power-on the target.
 
 .. image:: ../../../../images/Axiomtek_GMSL_Camera.jpg
@@ -104,7 +104,7 @@ The following steps describe how to configure the Intel’s GMSL Serializer-Dese
 .. Note:: The steps, such as BIOS settings and d4xx module user parameters, must be configured to be relevant to the ``Standalone-mode`` of the Add-in-Card for Axiomtek Robox500 ROS 2 AMR Controller.
 
 Install and run multi-camera object detection tutorial using the Intel® RealSense™ Depth Camera D457
------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Install
 ```````
@@ -151,7 +151,7 @@ All the four cameras are started after approximately 15-20 secs, as shown in the
    * ``config_ros2_v4l2_rs-color-0_3.js`` config file to run the tutorial with four cameras
 
 Troubleshooting and workarounds
--------------------------------
+-------------------------------------------------------------
 
 #. GPU driver not found even after the GPU driver is installed.
 

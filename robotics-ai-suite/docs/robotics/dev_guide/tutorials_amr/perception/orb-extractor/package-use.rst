@@ -1,7 +1,7 @@
 .. _orb-extractor-packge:
 
 GPU ORB Extractor Feature Overview
-====================================
+========================================================================================================================
 
 The orb-extractor feature takes an input image and provides keypoints (spatial locations or points in the image that define what is interesting)
 and descriptor data for those keypoints of that input image.
@@ -24,12 +24,12 @@ The OpenCV linked version handles input and output using OpenCV objects like ``c
 On the other hand, the version not dependent on OpenCV utilizes the internally defined input and output formats within the orb-extractor feature library.
 
 System Requirements
------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 1) Ubuntu 22.04 LTS.
 2) OpenCV 4.5.4
 
 Hardware Requirements
------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 Any of the following CPU with integrated Intel® GPU.
 
 .. code-block::
@@ -41,7 +41,7 @@ Any of the following CPU with integrated Intel® GPU.
    5) 6th to 9th Generation Intel® Core™ i3/i5/i7 Processors
 
 Deb packages
------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. code-block::
 
@@ -49,12 +49,12 @@ Deb packages
   2) liborb-lze-dev - Samples code to show how to use the library.
 
 Prerequisites
--------------
+-------------------------
 
 Complete the :doc:`../../../../gsg_robot/index` before continuing.
 
 Install Deb packages
------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. code-block::
 

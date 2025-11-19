@@ -1,5 +1,5 @@
 iRobot Create 3
-================
+==========================================
 
 iRobot Create 3 is a mobile robotics platform, which developers can use
 to gain hands-on experience with the technologies and concepts that are
@@ -11,13 +11,13 @@ Before starting, review the `iRobot Create 3 mobile robotics platform documentat
 perform the configuration changes needed for the tutorial.
 
 Prerequisites
--------------
+-------------------------
 
 Complete the :doc:`../../../gsg_robot/index` before continuing.
 
 
 iRobot Create 3 hardware extensions
-------------------------------------
+------------------------------------------------------------------------
 
 iRobot Create 3 contains a compute unit running ROS 2 that provides
 access to the on-board sensors and actuators. For this tutorial, the
@@ -59,7 +59,7 @@ following modifications have been applied to the robot:
 
 
 iRobot Create 3 software configuration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Update the robot to use the latest ROS 2 Humble firmware and configure it
 to access your WiFi network following the
@@ -145,7 +145,7 @@ Set a ROS 2 namespace (e.g., ``/robot2``) for your robot, as described on page
 launch file as argument ``irobot_ns``.
 
 Autonomous Mobile Robot Tutorials based on the iRobot Create 3
----------------------------------------------------
+------------------------------------------------------------------------------------------------------
 
 .. toctree::
    :maxdepth: 1

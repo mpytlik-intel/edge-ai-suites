@@ -3,7 +3,7 @@ This section explains the procedure to configure the APT package manager to use 
 Make sure that you have the right :ref:`OS Setup <Os_Setup>`.
 
 Set up ECI APT Repository
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Open a terminal prompt which will be used to execute the remaining steps.
 
@@ -37,7 +37,7 @@ Set up ECI APT Repository
 
 
 Set up ROS2 APT Repository
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. First ensure that the `Ubuntu Universe repository <https://help.ubuntu.com/community/Repositories/Ubuntu>`_ is enabled.
 

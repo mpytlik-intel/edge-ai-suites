@@ -4,7 +4,7 @@
 .. _mc_gateway:
 
 Industrial Motion-Control ROS2 Gateway
-#########################################
+################################################################################
 
 The Industrial Motion-Control ROS2 Gateway is the communication bridge between DDS/RSTP wire-protocol ROS2 implementation and Motion Control (MC) IEC-61131-3 standard Intel implementation. It subscribes velocity commands (commonly from Navigation2 stack) and joint trajectories (commonly from MoveIt2 stack), communicates Real-Time (RT) Domain through Shared Ring Buffer, and gathers the robot's status (AMR's odometry or industrial arm's joint state) and publishes to ROS domain.
 
@@ -14,7 +14,7 @@ The Industrial Motion-Control ROS2 Gateway is the communication bridge between D
 .. _ros2-2axis-rrbot:
 
 Launch RRBot 2-axis Robotic Arm ROS2 tutorial
-***********************************************
+********************************************************************************************
 
 This tutorial monitors and controls the RRBot (`Revolute-Revolute Manipulator Robot`), a double inverted pendulum robots-arm, within the ROS2 framework. It demonstrates motion-control concepts through the `ros2_control <https://control.ros.org/humble/index.html>`_ using a simple 3-linkage, 2-joint arm.
 
@@ -59,7 +59,7 @@ This tutorial monitors and controls the RRBot (`Revolute-Revolute Manipulator Ro
 
    .. figure:: assets/images/rrbot-rviz.png
 
-   **Note**: The command is correctly executed if no “Error” messages are printed (some warnings might be printed due to missing data). The following is a sample result: 
+   **Note**: The command is correctly executed if no “Error” messages are printed (some warnings might be printed due to missing data). The following is a sample result:
 
    .. code-block:: console
 
@@ -96,11 +96,11 @@ This tutorial monitors and controls the RRBot (`Revolute-Revolute Manipulator Ro
 .. _ros2-6axis-hiwin:
 
 Launch HIWIN 6-axis Robotic Arm ROS2 tutorial
-**********************************************
+*******************************************************************************************
 
 This demo allows you to monitor and control the `HIWIN industrial robots <https://hiwin.com/products/industrial-robotics/#IndustrialRobots>`_ within the ROS2 framework:
 
-.. note:: 
+.. note::
 
    The HIWIN robot controller's HRSS software must be be updated to at least version 3.2.16
 
@@ -113,7 +113,7 @@ This demo allows you to monitor and control the `HIWIN industrial robots <https:
    .. code-block:: bash
 
       $ sudo apt install pciutils plcopen-motion plcopen-servo plcopen-databus libshmringbuf-dev libshmringbuf
-      $ sudo apt install ros-humble-run-hiwin-plc 
+      $ sudo apt install ros-humble-run-hiwin-plc
       $ sudo apt install ros-humble-run-hiwin-moveit
 
 #. Open a terminal and run the Robot-ARM PLCopen IEC-61131-3 motion-control driver:
@@ -161,11 +161,11 @@ This demo allows you to monitor and control the `HIWIN industrial robots <https:
 
    .. figure:: assets/images/hiwin-rviz.png
 
-   .. tip:: 
-         
+   .. tip::
+
          If no messages are displayed on the third terminal, verify that the environment variable ``ROS_DOMAIN_ID`` has been properly set to the same value in both terminal environments.
 
-   **Note**: The command is correctly executed if no “Error” messages are printed (some warnings might be printed due to missing data). The following is a sample result: 
+   **Note**: The command is correctly executed if no “Error” messages are printed (some warnings might be printed due to missing data). The following is a sample result:
 
    .. code-block:: console
 
@@ -194,15 +194,15 @@ This demo allows you to monitor and control the `HIWIN industrial robots <https:
 .. _ros2-agvm:
 
 Launch AGV ROS2 tutorial
-*****************************
+********************************************************
 
-This tutorial allows monitors and controls an AGV (Automated Guided Vehicle) using the EtherCAT wired-protocol control on four Mecanum wheel-drive chassis within the ROS2 framework. `YDLidar Communication Protocol for ROS2 <https://github.com/YDLIDAR/YDLidar-SDK/blob/master/doc/YDLidar-SDK-Communication-Protocol.md>`_ is used for ``ydlidar`` devices to configure LiDAR in the ROS2 environment. 
+This tutorial allows monitors and controls an AGV (Automated Guided Vehicle) using the EtherCAT wired-protocol control on four Mecanum wheel-drive chassis within the ROS2 framework. `YDLidar Communication Protocol for ROS2 <https://github.com/YDLIDAR/YDLidar-SDK/blob/master/doc/YDLidar-SDK-Communication-Protocol.md>`_ is used for ``ydlidar`` devices to configure LiDAR in the ROS2 environment.
 
 .. note:: This demo uses the Shared Memory Ring Buffer Library ``libshmringbuf``, and requires ``root`` permissions to set up the shared memory. As such, ``sudo -i`` will be used to get elevated permissions.
-   
+
 #. Install `ROS2 Desktop <https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html>`_ components, if not already completed.
 
-#. Install PLCopen Motion Control and the ROS2 AGVM databus messages with IEC-61131-3 motion-control demo: 
+#. Install PLCopen Motion Control and the ROS2 AGVM databus messages with IEC-61131-3 motion-control demo:
 
    .. code-block:: bash
 
@@ -240,7 +240,7 @@ This tutorial allows monitors and controls an AGV (Automated Guided Vehicle) usi
 
    **Note**: Since the joystick is disconnected, it is normal to see the error ``[ERROR] [1657850097.527093048] [agvm_joystick_node]: Cannot open /dev/input/js0 -1!``.
 
-   **Note**: The command is correctly executed if no “Error” messages are printed (some warnings might be printed due to missing data). The following is a sample result: 
+   **Note**: The command is correctly executed if no “Error” messages are printed (some warnings might be printed due to missing data). The following is a sample result:
 
    .. code-block:: console
 
@@ -281,4 +281,3 @@ This tutorial allows monitors and controls an AGV (Automated Guided Vehicle) usi
    **Expected Result:**
 
    Variables ``AGV cmd/pose/vel/mOdom`` in the second terminal console will be refreshed.
-

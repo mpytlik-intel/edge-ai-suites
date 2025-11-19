@@ -1,12 +1,12 @@
 .. _real_time_linux:
 
 Real-Time Linux
-#################
+################################
 
 The Embodied Intelligence SDK provides real-time capabilities to the kernel with PREEMPT_RT patch and boot parameters for real-time optimization, which aims to increase predictability and reduce scheduler latencies.
 
 Installation
-================
+==========================================
 
 1. Install GRUB customizations
 
@@ -92,7 +92,7 @@ The following command line parameters are used for real-time optimization. You c
    :align: center
 
 Real-time Runtime Optimization
-================================
+====================================================================================
 
 To achieve real-time performance on a target system, specific runtime configurations and optimizations are recommended. This section provides a foundation for enabling real-time capable workloads.
 
@@ -237,7 +237,7 @@ Swap can be disabled with following command:
    $ swapoff -a
 
 Verify Benchmark Performance
-===============================
+================================================================================
 
 After installing the real-time Linux kernel, it's a good idea to benchmark the system to establish confidence that the system is properly configured. Perform either of the following commands to install `Cyclictest <https://git.kernel.org/pub/scm/utils/rt-tests/rt-tests.git>`_. Cyclictest is most commonly used for benchmarking real-time systems. It is one of the most frequently used tools for evaluating the relative performance of an RT. Cyclictest accurately and repeatedly measures the difference between a thread’s intended wake-up time and the time at which it actually wakes up to provide statistics about the system’s latency. It can measure latency in real-time systems caused by the hardware, the firmware, and the operating system.
 Please use ``rt-tests v2.6`` to collect performance, which support to pin threads to specific isolate core and avoid main thread in same core with the measurement threads.

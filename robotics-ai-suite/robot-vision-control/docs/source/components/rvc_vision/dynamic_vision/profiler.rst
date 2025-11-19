@@ -2,7 +2,7 @@
 .. _profiler:
 
 RVC Profiler
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The RVC Profiler is an optional component used to profile and benchmark some critical information about RVC
 

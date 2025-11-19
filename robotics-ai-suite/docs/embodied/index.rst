@@ -1,5 +1,5 @@
 Humanoid - Imitation Learning
-#############
+#########################
 
 Humanoid - Imitation Learning is a suite of intuitive, easy-to-use software stack designed to streamline the development process of Embodied Intelligence product and applications on Intel platform. The SDK provides developers with a comprehensive environment for developing, testing, and optimizing Embodied Intelligence software and algorithms efficiently. It also provides necessary software framework, libraries, tools, Best known configuration(BKC), tutorials and example codes to facilitate AI solution development.
 
@@ -11,7 +11,7 @@ Humanoid - Imitation Learning includes below features:
 * Typical workflows and examples including ACT/DP-based manipulation, LLM task planning, Pick & Place, ORB-SLAM3, etc.
 
 Software Architecture
-======================
+===========================================
 Below picture is high level software architecture of Humanoid - Imitation Learning:
 
 .. image:: assets/images/sdk_architecture.png
@@ -31,7 +31,7 @@ Overall, the Humanoid - Imitation Learning provides a highly optimized, AI-drive
 
 
 Humanoid - Imitation Learning Resources
-=======================
+============================================
 
 - :doc:`Installation and Setup <installation_setup>`
 

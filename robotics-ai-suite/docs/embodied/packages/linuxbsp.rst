@@ -4,12 +4,12 @@
 .. _linuxbsp:
 
 Linux BSP
-############
+########################
 
 The Embodied Intelligence SDK includes Intel's LTS Kernel v6.12 with Preempt RT patch to support the Arrow Lake platform, which includes the Linux Kernel v6.12, optimized configuration, and kernel boot parameters.
 
 Quick Start
-************
+************************
 
 You can install this component from Intel's Embodied Intelligence SDK repository.
 
@@ -26,7 +26,7 @@ For generic kernel:
    $ sudo apt install linux-intel-experimental
 
 Configure and Build Linux Kernel
------------------------------------
+-----------------------------------------------------------------------------------------
 
 The Linux BSP Sources are available to download with ``apt-get source`` in addition to support developer to compile by self and deploy on target.
 This section will explain the procedure to configure the Linux kernel and build it.
@@ -69,7 +69,7 @@ For generic kernel:
 
     +-------------------------------------------------+-----------------------------------------+
     |  kernel config fragment overrides (.cfg)        | Comments                                |
-    +=================================================+=========================================+
+    +=================================================================================================+================================================================================+
     |  .. code-block:: console                        |                                         |
     |                                                 |                                         |
     |     CONFIG_HZ_250=y                             | Reduce task scheduling-clock overhead   |
@@ -163,7 +163,7 @@ For generic kernel:
 
 
 Packages
-*********
+******************
 
 * :ref:`Linux-intel-rt-experimental <linuxbsp>`
 * customizations-grub

@@ -1,7 +1,7 @@
 .. followme-with-gesture:
 
 Follow-me with ADBSCAN, Gesture and Audio Control
-=====================================================
+==============================================================================================================================================================================================================
 
 This demo of the Follow-me algorithm shows a Autonomous Mobile Robot application for following a target person where the movement of the robot can be controlled by the person's location, hand gestures as well as audio command. The entire pipeline diagram can be found in :doc:`../index` page.
 It takes point cloud sensor (2D Lidar/depth camera) as well as RGB camera image as inputs. These inputs are passed through Intel®-patented Adaptive DBScan and a deep-learning-based gesture recognition pipeline, respectively to publish motion command messages for a differential drive robot. It also takes recorded audio commands for starting and stopping the robot movement. Moreover, the demo is equipped with a text-to-speech synthesis model to narrate the robot's
@@ -11,15 +11,15 @@ This demo has been tested and validated on 13th Generation Intel® Core™ proce
 This tutorial describes how to launch the demo in the `Gazebo` simulator.
 
 Getting Started
-----------------
+-------------------------------
 
 Prerequisites
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Complete the :doc:`../../../../../gsg_robot/index` before continuing.
 
 Install the Deb packages
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Install ``ros-humble-followme-turtlebot3-gazebo`` and ``ros-humble-text-to-speech-pkg`` Deb packages from Intel® Autonomous Mobile Robot APT repository. ``ros-humble-followme-turtlebot3-gazebo`` is the wrapper package for the demo which will install all of the dependencies in the backend.
 
@@ -31,7 +31,7 @@ Install ``ros-humble-followme-turtlebot3-gazebo`` and ``ros-humble-text-to-speec
 .. _pre-requisite:
 
 Install Pre-requisite Libraries
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Install the pre-requisite modules for running the framework:
 
@@ -45,7 +45,7 @@ If you are under a proxy network, please make sure to use ``--proxy <http-proxy-
 .. _followme-gesture-audio-lidar:
 
 Run Demo with 2D Lidar
-----------------------------
+-------------------------------------------------------
 Please make sure to source the ``/opt/ros/humble/setup.bash`` file at first before executing any command in a new terminal. You can get more details in :doc:`../../../../../gsg_robot/prepare-system` page.
 
 Run the following commands one by one in five separate terminals:
@@ -143,7 +143,7 @@ The demo will narrate the detected gesture, audio and target location during the
 .. _followme-gesture-audio-realsense:
 
 Run Demo with Intel® RealSense™ Camera
----------------------------------------
+------------------------------------------------------------------------------
 
 Please make sure to source the ``/opt/ros/humble/setup.bash`` file at first before executing any command in a new terminal. You can get more details in :doc:`../../../../../gsg_robot/prepare-system` page.
 
@@ -248,7 +248,7 @@ After running all of the above commands, you will observe similar behavior of th
 .. _troubleshooting:
 
 Troubleshooting
-----------------------------
+-------------------------------------------------------
 
 - Failed to install Deb package: Please make sure to run ``sudo apt update`` before installing the necessary Deb packages.
 

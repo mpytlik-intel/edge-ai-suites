@@ -1,7 +1,7 @@
 .. _model_tutorials:
 
 Model Tutorials
-################
+###############################
 
 Intel OpenVINO supports most of the TensorFlow and PyTorch models. The table below lists some deep learning models that commonly used in the Embodied Intelligence solutions. You can find information about how to run them on Intel platforms:
 
@@ -9,7 +9,7 @@ Intel OpenVINO supports most of the TensorFlow and PyTorch models. The table bel
          :widths: 20 40 50
          :header-rows: 1
 
-         * - Algorithm 
+         * - Algorithm
            - Description
            - Link
          * - YOLOv8
@@ -58,7 +58,7 @@ Intel OpenVINO supports most of the TensorFlow and PyTorch models. The table bel
 
 .. attention::
    When following these tutorials for model conversion, please ensure that the OpenVINO version used for model conversion is the same as the runtime version used for inference. Otherwise, unexpected errors may occur, especially if the model is converted using a newer version and the runtime is an older version. See more details in the :ref:`Troubleshooting <ov_inference_troubleshooting>`.
-   
+
 Please also find information for the models of imitation learning, grasp generation, simultaneous localization and mapping (SLAM) and bird's-eye view (BEV):
 
 .. note::
@@ -76,5 +76,3 @@ Please also find information for the models of imitation learning, grasp generat
     model_tutorials/model_fastbev
     model_tutorials/model_depthanythingv2
     model_tutorials/model_rdt
-   
- 

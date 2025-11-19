@@ -2,13 +2,13 @@
 .. _realsense_node:
 
 Realsense node
-==============
+====================================
 
 The vision launcher automatically spawns all the component of the container, and it accept the following parameters
 
 - namespace. By default `ipc`.
 
-.. note:: 
+.. note::
 
     Changing namespace will change the search of a special file d415camera<newnamespace>, which has to exists.
     this file can be created under <rvc_dynamic_controller_use_caseinstallpath>/cameraurdf/

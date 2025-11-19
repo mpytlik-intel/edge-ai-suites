@@ -1,5 +1,5 @@
 Intel® Extension for PyTorch
-#######
+#############
 
 Intel® Extension for PyTorch extends the PyTorch library with the latest performance optimizations for Intel's hardware. Optimizations take advantage of Intel® Advanced Vector Extensions 512 (Intel® AVX-512) Vector Neural Network Instructions (VNNI) and Intel® Advanced Matrix Extensions (Intel® AMX) on Intel CPUs as well as Intel XeMatrix Extensions (XMX) AI engines on Intel discrete GPUs. Moreover, Intel® Extension for PyTorch provides easy GPU acceleration for Intel discrete GPUs through the PyTorch xpu device.
 

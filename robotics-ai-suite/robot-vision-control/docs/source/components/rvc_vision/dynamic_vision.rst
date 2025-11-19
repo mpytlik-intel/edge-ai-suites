@@ -2,14 +2,14 @@
 .. _dynamic_vision:
 
 Dynamic Vision
---------------
+--------------------------
 
 
 High performance 2D to 3D object classification and dynamic real-time
 space localization
 
 Vision sub components:
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The Vision container is a special process containing all the vision node in the same process, running
 on different threads, to allow zero copy memory operation on large data: RGB and Pointcloud streams.

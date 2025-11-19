@@ -2,7 +2,7 @@
 .. _rvc_vision_messages:
 
 RVC Vision Messages
-====================
+==================================================
 
 Two ROS 2 custom messages have been created for the dynamic use case Vision container internal
 communication: ``rvc_vision_messages``
@@ -26,4 +26,3 @@ RotatedBBList
 This message is a container of RotatedBB message
 
 - Array of RotatedBB messages
-

@@ -1,7 +1,7 @@
 .. followme-with-gesture on jackal robot:
 
 Follow-me with ADBSCAN and Gesture-based Control on Clearpath Robotics Jackal Robot
-=========================================================================================
+==============================================================================================================================================================================================================================================================================================================================================================
 
 This tutorial demonstrates the Follow-me algorithm along with a gesture recognition network, where the robot follows a target person in real time and responds to state commands through hand gestures.
 This tutorial uses Clearpath Robotics Jackal robot and one Intel® RealSense™ camera D400 series.
@@ -22,16 +22,16 @@ Once the starting criteria are met, the robot keeps following the target unless 
 -  The detected gesture is ``thumbs down``.
 
 Getting Started
-----------------
+-------------------------------
 
 Prerequisites
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Complete the :doc:`../../../../../gsg_robot/index` before continuing.
 
 
 Install the Deb package
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Install ``ros-humble-follow-me-tutorial-w-gesture`` Deb package from Autonomous Mobile Robot APT repository.
 
@@ -41,7 +41,7 @@ Install ``ros-humble-follow-me-tutorial-w-gesture`` Deb package from Autonomous 
    sudo apt install ros-humble-follow-me-tutorial-w-gesture
 
 Install Python Modules
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This application uses `Mediapipe Hands Framework <https://mediapipe.readthedocs.io/en/latest/solutions/hands.html>`__
 for hand gesture recognition. Install the following modules as a prerequisite for the framework:
@@ -54,7 +54,7 @@ for hand gesture recognition. Install the following modules as a prerequisite fo
 .. _followme-gesture-realsense-on-clearpathjackal:
 
 Identify serial number of Realsense Camera
--------------------------------------------
+-------------------------------------------------------------------------------------
 
 Install the Intel® RealSense™ camera utilities package to easily read the correct serial number:
 
@@ -75,7 +75,7 @@ You will use this serial number (and not the ASIC Serial Number) when launching 
 
 
 Run Demo with Intel® RealSense™ Camera
----------------------------------
+------------------------------------------------------------------
 
 Execute the following script to launch Follow-Me with Gesture on the Clearpath Robotics Jackal robot:
 
@@ -131,7 +131,7 @@ After starting the script, the robot should begin searching for trackable object
         - The robot will keep following the target as long as the current target location = previous location +/- ``tracking_radius``
 
 Troubleshooting
-----------------------------
+-------------------------------------------------------
 
 - Failed to run the tutorial mentioning permission denied on ``/dev/dri/render128``
 

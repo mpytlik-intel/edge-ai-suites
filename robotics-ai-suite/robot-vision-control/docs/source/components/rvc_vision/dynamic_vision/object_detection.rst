@@ -2,14 +2,14 @@
 .. _object_detection:
 
 Object Detection
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This component implements a plugin framework to host different
 AI/computer vision plugins following the plugin_lib implementation.
 Plugins have to follow rvc_ai_interface APIs.
 
 One exemplary plugin implementing yolo v5/v6 and v8 is shown as
-reference. 
+reference.
 
 In the following image, the results published on the topic ``<namespace>/inference_detection_image``
 
@@ -18,22 +18,22 @@ In the following image, the results published on the topic ``<namespace>/inferen
    Yolo inference with annotations
 
 
-The object detection framework will deliver the (oriented) bounding box and the class identifier to 
-the next stage of the vision pipeline, the pose detector via the custom message ``RotateBBList`` as 
+The object detection framework will deliver the (oriented) bounding box and the class identifier to
+the next stage of the vision pipeline, the pose detector via the custom message ``RotateBBList`` as
 described in :ref:`RVC Vision Messages<rvc_vision_messages>`.
 
- 
+
 The rvc_object_detection_engine will load the yaml specified
 plugin from storage and run the plugin API:
 
 The neural network models are loaded from a package specified as ``rvc_use_case_binaries`` as described below.
 
-The engine accept following parameters: 
+The engine accept following parameters:
 
 - publish_inference_images: enable/disable publishing annotated detection RGB stream
 - model_name: specify filename of the DNN model to load
-- class_name_array: String associated to the class ID of all objects, ascending ordered 
-- plugin_name:  
+- class_name_array: String associated to the class ID of all objects, ascending ordered
+- plugin_name:
 - rvc_use_case_binaries: package name providing the needed binaries
 
 Extracted from delivered example yaml config file ``rvc_object_detection_engine/config/parameters.yaml``

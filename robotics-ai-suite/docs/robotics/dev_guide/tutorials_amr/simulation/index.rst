@@ -1,5 +1,5 @@
 Simulation
-==========
+=========================
 
 The following tutorials guide you on how to use the ROS 2 simulations with Autonomous Mobile Robot. Robot sensing and navigation can be tested in these simulated environments.
 
@@ -12,6 +12,6 @@ The following tutorials guide you on how to use the ROS 2 simulations with Auton
 
 
 Source Code
------------
+--------------------
 
 The source code of this component can be found here: `Simulations <https://github.com/open-edge-platform/edge-ai-suites/tree/main/robotics-ai-suite/components/simulations>`_

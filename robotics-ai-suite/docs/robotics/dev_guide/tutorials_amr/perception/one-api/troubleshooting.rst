@@ -1,10 +1,10 @@
 .. _oneapi-troubleshooting:
 
 Optimized PCL Limitation and Troubleshooting
-============================================
+================================================================================================================================================
 
 Limitation
-----------
+-------------------
 
 This optimized PCL release does not support acceleration for CPU device for
 
@@ -12,7 +12,7 @@ This optimized PCL release does not support acceleration for CPU device for
 
 
 Troubleshooting
----------------
+------------------------------
 
 If the executable produces a segmentation fault (core dumped) when running with a GPU device or
 if the GPU device is not listed in ``sycl-ls`` like below

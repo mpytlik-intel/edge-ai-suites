@@ -1,16 +1,16 @@
 ADBSCAN Algorithm with Intel® RealSense™ Camera Input Demo
-==========================================================================
+==================================================================================================================================================================================================================================================
 
 This tutorial describes how to run the ADBSCAN algorithm from Intel® RealSense™ camera input.
 
 Prerequisites
--------------
+-------------------------
 
 Complete the :doc:`../../../../gsg_robot/index` before continuing.
 
 
 Install
---------------------------------
+--------------------------------------------------------------
 
 Install ``ros-humble-adbscan-ros2`` Deb package from Intel® Autonomous Mobile Robot APT repository
 
@@ -27,7 +27,7 @@ Install the following package with ROS 2 bag files in order to publish point clo
 
 
 Run the demo with Intel® RealSense™ camera
--------------------------------------------
+-------------------------------------------------------------------------------------
 
    .. code-block::
 
@@ -40,7 +40,7 @@ Run the demo with Intel® RealSense™ camera
       .. video:: ../../../../videos/adbscan_demo_RS.mp4
 
 ADBSCAN ROS2 Node Output description
----------------------------------------
+------------------------------------------------------------------------------
 The output is published to the ROS2 topic `obstacle_array`,
 and the message format is `nav2_dynamic_msgs::msg::ObstacleArray`.
 

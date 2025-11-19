@@ -1,14 +1,14 @@
 .. _oneapi_registration:
 
 Intel® oneAPI Base Toolkit\'s Iterative Closest Point (ICP)
-=============================================================================
+=============================================================================================================================================================================================================================================================
 
 The standard Iterative Closest Point (ICP) has been optimized using Intel® oneAPI Base Toolkit.
 Joint ICP and Generalized ICP are not currently optimized with Intel® oneAPI Base Toolkit. This tutorial
 covers the standard ICP.
 
 Iterative Closest Point
------------------------
+--------------------------------------------
 
 Iterative closest point (ICP) is an algorithm utilized to minimize the
 difference between two point clouds.
@@ -87,7 +87,7 @@ for details.
 
 
 Code Explanation
---------------------
+--------------------------------------
 
 Define two input point Clouds (src, tgt), declare the output point cloud, and
 load the test data from GitHub*.

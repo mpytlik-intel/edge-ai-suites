@@ -1,5 +1,5 @@
 Intel® oneAPI Toolkit
-########################
+################################################
 
 `oneAPI <https://www.intel.com/content/www/us/en/developer/tools/oneapi/overview.html>`_ is a cross-industry, open, standards-based unified programming model that provides a common developer experience across accelerator architectures, which provides a comprehensive set of libraries, open source repositories, SYCL-based C++ language extensions, and optimized reference implementations.
 
@@ -10,7 +10,7 @@ Intel® oneAPI Toolkit
 Robotics software developers can use the Intel® oneAPI Toolkit and oneAPI-powered applications to enhance AI deep learning and heterogeneous computing capabilities, thereby leveraging the full value of all hardware.
 
 Intel® oneAPI™ Base Toolkit
-===========================
+======================================================
 The Intel® oneAPI™ Base Toolkit (Base Kit) is a core set of tools and libraries for developing high-performance, data-centric applications across diverse architectures. It features an industry-leading C++ compiler that implements SYCL*, an evolution of C++ for heterogeneous computing.
 
 It includes:
@@ -70,7 +70,7 @@ Install Intel® oneAPI™ Base Toolkit **2024.2.1**:
 3. Follow the instructions in the installer.
 
 Intel® oneAPI HPC Toolkit
-===========================
+======================================================
 
 High-performance computing (HPC) is at the core of AI, machine learning, and deep learning applications. Intel® oneAPI HPC Toolkit delivers what developers need to build, analyze, optimize, and scale HPC applications with the latest techniques in vectorization, multi-threading, multi-node parallelization, and memory optimization.
 

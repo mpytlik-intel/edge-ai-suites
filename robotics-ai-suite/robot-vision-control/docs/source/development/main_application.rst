@@ -2,27 +2,27 @@
 .. _main_application:
 
 Main Application
-###################
+#####################################
 
 The specific use case application, also known as the decisional program, must adhere to certain rules to integrate with the RVC Framework.
 
 .. _main_application_development:
 
 Main Application Development
-=============================
+========================================================
 
-This RVC Component is centered around the motion controller aspect of the RVC Framework. The workflow, in a high-level detail, is as follows: 
+This RVC Component is centered around the motion controller aspect of the RVC Framework. The workflow, in a high-level detail, is as follows:
 
-- An API message, output rvc_messages, is received. 
-- The active grasp plugin computes the pre-grasp and grasp pose for the gripper, also known as the Tool Center Point (TCP). 
+- An API message, output rvc_messages, is received.
+- The active grasp plugin computes the pre-grasp and grasp pose for the gripper, also known as the Tool Center Point (TCP).
 - A State machine or an equivalent programmatic approach is used to decide actions and, if applicable, move the robot to the pre-grasp and then grasp positions, activating the gripper via the selected RVCMotionController::RVCMotionControllerInterface based plugin.
 
 State Machine Snippet
-----------------------
+-------------------------------------------
 The ROS2 node that implements the decisional process needs to load two plugins according to ROS2 parameters. These parameters can be loaded via a launcher, command line, or yaml file.
 
 Example in C++
---------------
+--------------------------
 
 .. code-block:: c++
 
@@ -78,8 +78,8 @@ Example in C++
    }
 
 
-This application will create an instance of a "StateMachine" class, inheriting from rclcpp::Node from 
-ROS2 framework [TODO: link], and passing the smart pointers of the grasp and motion controller Interface  instances. 
+This application will create an instance of a "StateMachine" class, inheriting from rclcpp::Node from
+ROS2 framework [TODO: link], and passing the smart pointers of the grasp and motion controller Interface  instances.
 
 For Example
 

@@ -1,5 +1,5 @@
 Robot Kits
-======================
+========================================================
 
 To run our tutorials on a real robot, you can use your own robot with ROS 2 support. The chapter :doc:`create-your-robot-kit` will provide you information on how start using it with the Autonomous Mobile Robot.
 

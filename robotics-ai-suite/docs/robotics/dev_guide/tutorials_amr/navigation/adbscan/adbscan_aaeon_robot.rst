@@ -1,5 +1,5 @@
 ADBSCAN on AAEON Robot Kit
-=====================================
+=========================================================================================================================
 
 This tutorial describes how to run the ADBSCAN algorithm on the real robot `UP Xtreme i11 AAEON Robot Kit <https://up-shop.org/up-xtreme-i11-robotic-kit.html>`__ using the Intel® RealSense™ camera input.
 During the execution of the program the ADBSCAN algorithm detects objects, and draws them in rviz. Then, the FastMapping algorithm uses data from the ADBSCAN to generate a 2D Map of the environment around.
@@ -7,7 +7,7 @@ User can use the default setup to move robot via gamepad or keyboard, so the 3D-
 
 
 Prerequisites
--------------
+-------------------------
 
 - Assemble your robotic kit following the instructions provided by AAEON.
 
@@ -17,7 +17,7 @@ Prerequisites
 
 
 Run the ADBSCAN Algorithm Using the AAEON Robot Kit
----------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
 
 
 #. To download and install the tutorial run the command below:
@@ -41,7 +41,7 @@ Run the ADBSCAN Algorithm Using the AAEON Robot Kit
       :width: 600
 
 Gamepad Robot Control Method
----------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
 
 
 #. Launch the ADBSCAN AAEON Robot gamepad control program:
@@ -71,7 +71,7 @@ Gamepad Robot Control Method
       :width: 600
 
 Keyboard Robot Control Method
----------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
 
 
 #. Launch the ADBSCAN AAEON Robot keyboard control program:
@@ -128,7 +128,7 @@ Keyboard Robot Control Method
 
 
 Expected Results
----------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
 
 
 #. On the server rviz, you will see how ADBSCAN interprets
@@ -157,6 +157,6 @@ Expected Results
 
 
 Troubleshooting
-----------------------------
+-------------------------------------------------------
 
 For general robot issues, go to: :doc:`../../../../dev_guide/tutorials_amr/robot-tutorials-troubleshooting`.

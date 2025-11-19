@@ -1,7 +1,7 @@
 .. followme-with-gesture on aaeon robot:
 
 Follow-me with ADBSCAN and Gesture-based Control on Aaeon Robot
-=================================================================
+==============================================================================================================================================================================================================================================================
 
 This tutorial demonstrates the Follow-me algorithm with gesture, where the robot follows a target person in real time.
 The movement of the robot can be controlled by the person's position (relative to the robot) as well as the hand gestures.
@@ -28,17 +28,17 @@ Once the starting criteria are met, the robot keeps following the target unless 
 -  The detected gesture is ``thumbs down``.
 
 Getting Started
-----------------
+-------------------------------
 
 Prerequisites
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Assemble your robotic kit following the instructions provided by AAEON.
 
 - Complete the :doc:`../../../../../gsg_robot/index` before continuing.
 
 Install the Deb package
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Install ``ros-humble-follow-me-tutorial-w-gesture`` Deb package from Intel® Autonomous Mobile Robot APT repository.
 
@@ -48,7 +48,7 @@ Install ``ros-humble-follow-me-tutorial-w-gesture`` Deb package from Intel® Aut
       sudo apt install ros-humble-follow-me-tutorial-w-gesture
 
 Install Python Modules
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This application uses `Mediapipe Hands Framework <https://mediapipe.readthedocs.io/en/latest/solutions/hands.html>`__
 for hand gesture recognition. Install the following modules as a prerequisite for the framework:
@@ -61,7 +61,7 @@ for hand gesture recognition. Install the following modules as a prerequisite fo
 .. _followme-gesture-realsense-on-aaeon-robot:
 
 Identify serial number of Realsense Camera
--------------------------------------------
+-------------------------------------------------------------------------------------
 
 Install package
 
@@ -81,7 +81,7 @@ Check the Serial number
 Serial Number is the one which has to be used while launching the demo in below step
 
 Calibrate the robot
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Please perform IMU calibration of the robot, launch script below:
 
    .. code-block:: bash
@@ -91,7 +91,7 @@ Please perform IMU calibration of the robot, launch script below:
 
 
 Run Demo with Intel® RealSense™ Camera
----------------------------------
+------------------------------------------------------------------
 
 To launch the Follow-me application tutorial with gesture on the Aaeon robot, use the following ROS 2 launch file.
 
@@ -154,7 +154,7 @@ The robot will stop as soon as ``thumbs down`` is showed or the target person mo
         - The robot will keep following the target as long as the current target location = previous location +/- ``tracking_radius``
 
 Troubleshooting
-----------------------------
+-------------------------------------------------------
 
 - Failed to run the tutorial mentioning permission denied on ``/dev/dri/render128``
 

@@ -1,5 +1,5 @@
 Install the Autonomous Mobile Robot on the Jackal Onboard Computer
-====================================================================
+===============================================================================================================================================================================================================================
 
 This chapter describes how to install the Autonomous Mobile Robot together with the
 ROS 2 middleware and the Clearpath Robotics ecosystem on
@@ -20,7 +20,7 @@ or replace the pre-installed SATA M.2 SSD with an empty storage device,
 before you continue with the next steps.
 
 Install ROS 2 Humble and the Autonomous Mobile Robot
------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
 
 To install ROS 2 Humble and the Autonomous Mobile Robot on the
 Clearpath Robotics Jackal robot, follow the instructions in the
@@ -40,7 +40,7 @@ account and set its group membership by means of:
 .. _install-clearpath-software-packages:
 
 Install the Clearpath Robotics Software Packages
---------------------------------------------------
+--------------------------------------------------------------------------------------------------
 
 After you have installed ROS 2 Humble and the Autonomous Mobile Robot, you also need the
 ROS 2 development tools (compilers and other tools to build ROS 2 packages).
@@ -70,7 +70,7 @@ Use one of these procedures to install the software on the Jackal onboard comput
 .. _create-your-robot-config:
 
 Create Your Robot Configuration
--------------------------------
+-------------------------------------------------------------
 
 This section describes how you can create the ``robot.yaml`` configuration
 file for your Jackal robot with an Intel® RealSense™ camera D435i. Make sure
@@ -257,7 +257,7 @@ Reboot the robot, so that the new configuration will be propagated.
 
 
 Verify the Robot Configuration
-------------------------------
+------------------------------------------------------------
 
 Verify the Frames of the TF2 Tree
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -404,20 +404,20 @@ To identify the installed package version on your board, run the command:
 The following table shows how the names of the camera-related topics
 depend on the package version.
 
-+-----------------------------------+----------------------------------+
++--------------------------------------------------------------------+-------------------------------------------------------------------+
 | Version of                        | Camera-related topics start with |
 | ``ros-humble-realsense2-camera``  |                                  |
-+===================================+==================================+
++==================================================================================================================+==============================================================================================================+
 | 4.55                              | ``/sensors/camera_0/camera/``    |
-+-----------------------------------+----------------------------------+
++--------------------------------------------------------------------+-------------------------------------------------------------------+
 | 4.54                              | ``/sensors/camera_0/``           |
-+-----------------------------------+----------------------------------+
++--------------------------------------------------------------------+-------------------------------------------------------------------+
 
 
 .. _jackal-troubleshooting:
 
 Jackal Troubleshooting
-------------------------
+------------------------------------------------
 
 If the output of the ``ros2 topic list`` command does not show any topics,
 verify that you are logged in as the ``administrator`` user. Furthermore,
@@ -445,7 +445,7 @@ the systemd journal shows any error messages:
 
 
 References
-----------
+-------------------
 
 -  `Clearpath Robotics - Jackal Unmanned Ground Vehicle Overview <https://clearpathrobotics.com/jackal-small-unmanned-ground-vehicle/>`__
 -  `Clearpath Robotics - Jackal Unmanned Ground Vehicle User Manual <https://docs.clearpathrobotics.com/docs_robots/outdoor_robots/jackal/user_manual_jackal/>`__

@@ -2,7 +2,7 @@
 .. _grasp_interface_plugin:
 
 Grasp Interface Plugin
-----------------------
+-------------------------------------------
 
 The messages from the vision component are subscribed by the
 rvc_grasp_interface automatically when api
@@ -31,7 +31,7 @@ APIs for the Grap plugin can be found at
 :cpp:class:`RVCGraspInterface<RVCControl::RVCGraspInterface>`
 
 Grasp plugin config
--------------------
+-------------------------------------
 
 The interface init function will subscribe to the rvc_message topic,
 that by default is `object_poses` but can be override by:

@@ -1,5 +1,5 @@
 Install Intel® GPU firmware (Optional)
-======================================
+==================================================================================================
 
 The Embodied Intelligence SDK offers two options for installing Intel® GPU firmware:
 

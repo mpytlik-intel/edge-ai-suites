@@ -1,7 +1,7 @@
 .. _oneapi_sample_mls:
 
 Surface Reconstruction with oneAPI Moving Least Squares (MLS)
-=============================================================================
+=============================================================================================================================================================================================================================================================
 
 MLS creates a 3D surface from a point cloud through either down-sampling or up-sampling techniques. Intel® oneAPI Base Toolkit\'s MLS is based on the original MLS API. Differences between the two:
 
@@ -77,7 +77,7 @@ for details.
 
 
 Code Explanation
---------------------
+--------------------------------------
 
 oneAPI MLS requires this header.
 

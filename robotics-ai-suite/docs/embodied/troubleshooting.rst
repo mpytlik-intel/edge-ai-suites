@@ -1,5 +1,5 @@
 Troubleshooting
-###############################################
+############################################################################################
 
 #. **OpenVINO can't detect GPU device**
 
@@ -14,7 +14,7 @@ Troubleshooting
 
         $ export OCL_ICD_VENDORS=/etc/OpenCL/vendors
 
-#. **MESA: warning: Driver does not support the 0x7d51 PCI ID** 
+#. **MESA: warning: Driver does not support the 0x7d51 PCI ID**
 
     .. code-block:: console
 
@@ -74,12 +74,12 @@ Troubleshooting
         ...
 
 #. **IOMMU deivce assigned failed when ACRN hypervisor boot up**
-  
+
     .. code-block:: console
 
         failed to unassign iommu device!
 
-    1. Please check VT-d Enabled in BIOS, refer to the BIOS configuration listed in :doc:`OS Setup <installation_setup/prerequisites/os_setup>`. 
+    1. Please check VT-d Enabled in BIOS, refer to the BIOS configuration listed in :doc:`OS Setup <installation_setup/prerequisites/os_setup>`.
     2. Please check all PCIe devices plugged in have been enabled correctly.
 
 #. **Docker pull time out**

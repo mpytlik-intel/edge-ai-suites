@@ -1,5 +1,5 @@
 OpenVINO™
-###########
+####################
 
 OpenVINO™ is an open-source toolkit for optimizing and deploying deep learning models from cloud to edge.
 

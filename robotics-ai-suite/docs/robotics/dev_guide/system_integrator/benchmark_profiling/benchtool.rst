@@ -1,12 +1,12 @@
 .. benchtool:
 
 Benchtool
-=====================================
+=================================================================================================
 
 This tutorial will show you how to use Benchtool to measure the frequency of messages published in selected ROS 2 topics.
 
 When to use it over ``ros2 topic hz``?
---------------------------------------------
+--------------------------------------------------------------------------------------
 
 Use Benchtool when:
 
@@ -21,13 +21,13 @@ Use ``ros2 topic hz`` when:
 - You want to measure arbitrary topics quickly. (Due to technical limitations this tool is not capable of recording arbitrary topics, and support for them needs to be included in the source code. On the bright size this is easily extendable and requires 3 lines of code to add a new topic type.)
 
 Prerequisites
--------------
+-------------------------
 
 Complete the :doc:`../../../gsg_robot/index` before continuing.
 
 
 Installation
---------------
+--------------------------
 
    .. code-block:: bash
 
@@ -36,7 +36,7 @@ Installation
       sudo apt install ros-humble-bagfile-2d-lidar
 
 Configuration
---------------
+--------------------------
 
 First, you need to set up ``benchtool.toml`` file, below is an example of a configuration file.
 You can configure it to suit your needs.
@@ -90,7 +90,7 @@ This tool also supports subscriptions to arbitrary topic types, to do this you n
 
 
 Usage
-------------
+------------------------
 
 To start the Benchtool, run the following command:
 
@@ -102,7 +102,7 @@ This will start the Benchtool with the configuration file `benchtool.toml` and s
 
 
 Advanced usage - Prometheus Server + Grafana Dashboard
-----------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
 
 This tool by default will also create a Prometheus Server.
 In this section you will learn how to use the Benchtool with Prometheus Server and Grafana Dashboard to visualize the data.

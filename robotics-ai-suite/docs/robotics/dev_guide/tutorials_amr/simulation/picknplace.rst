@@ -1,5 +1,5 @@
 Gazebo Pick & Place Demo
-========================
+==============================================================
 
 This Pick-n-Place demo is a simulation implemented using ROS 2 Humble and Gazebo Classic simulation. The project showcases the interaction of a conveyor belt, a TurtleBot3 Autonomous Mobile Robot (AMR), and two UR5 robotic arms (ARM) in a simulated environment.  The aim is to harness the capabilities of both the Nav2 and MoveIt2 stacks, presenting a comprehensive demonstration of multi-robot coordination in a simulation environment.
 
@@ -8,16 +8,16 @@ This Pick-n-Place demo is a simulation implemented using ROS 2 Humble and Gazebo
 
 
 Getting Started
-----------------
+-------------------------------
 
 Prerequisites
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Complete the :doc:`../../../gsg_robot/index` before continuing.
 
 
 Install Debian Package
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Install ``ros-humble-picknplace-simulation`` Debian package from Intel® Autonomous Mobile Robot APT repository.
 
@@ -27,7 +27,7 @@ Install ``ros-humble-picknplace-simulation`` Debian package from Intel® Autonom
       sudo apt install ros-humble-picknplace-simulation
 
 Run Demo
---------
+--------------
 
 
    .. code-block:: bash
@@ -43,7 +43,7 @@ FastDDS as backend some times causing stability issues.  Recommended to run with
 
 
 Overview
---------
+--------------
 The setup consists of:
 
 * **Two robotic arms**: Based on the UR5 model.
@@ -62,7 +62,7 @@ The demonstration workflow is as follows:
 **Note**: This demo prioritizes the representation of combined stack usage over intricate details. Some assumptions have been made for simplicity. For instance, the item's location on the conveyor belt is sourced directly from Gazebo without integrating perception systems.
 
 Other Details
--------------
+-------------------------
 
 **State Machine Implementation**: The demo employs Smach library to design the state machine that acts as the controller for both ARMs in Python. Smach is a valuable tool for creating, managing, and analyzing hierarchical state machines for robotic operations.
 
@@ -83,7 +83,7 @@ To utilize Cyclone DDS, enable it through the following commands. The apt instal
 
 
 Launch Sequence
----------------
+------------------------------
 Robots are spawned in Gazebo, as illustrated in the diagram.
 
 
@@ -92,7 +92,7 @@ Robots are spawned in Gazebo, as illustrated in the diagram.
 
 
 Sending Nav2 Pose to AMR
-------------------------
+------------------------------------------------
 Use the following command to set a new goal for the AMR:
 
    .. code-block:: bash
@@ -102,7 +102,7 @@ Use the following command to set a new goal for the AMR:
 
 
 Reusing ARM and AMR modules
----------------------------
+------------------------------------------------------
 The robot_config package offers a straightforward way to instantiate both AMR (Autonomous Mobile Robot) and  UR5 ARM robotic configurations. You can effortlessly integrate these configurations into any ROS 2 launch file to visualize and simulate them in Gazebo.
 
 **Spawning AMR in Gazebo**
@@ -152,6 +152,6 @@ The robot_config package offers a straightforward way to instantiate both AMR (A
 This simulation has been tested on Gazebo Classic with ROS 2 Humble. This project provides an example of a simple multi-robot system. It can serve as a resource for anyone interested in robotic simulations.
 
 Troubleshooting
----------------
+------------------------------
 
 For general robot issues, go to: :doc:`../../../dev_guide/tutorials_amr/robot-tutorials-troubleshooting`.

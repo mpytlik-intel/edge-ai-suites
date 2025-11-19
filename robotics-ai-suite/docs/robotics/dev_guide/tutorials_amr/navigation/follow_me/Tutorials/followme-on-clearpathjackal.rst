@@ -1,5 +1,5 @@
 Follow-me with ADBSCAN on Clearpath Robotics Jackal Robot
-================================================================
+=============================================================================================================================================================================================================================================================
 
 This tutorial provides instructions for running the ADBSCAN-based Follow-me algorithm from Autonomous Mobile Robot using Intel® RealSense™ camera input when using a Clearpath Robotics Jackal robot.
 The Intel® RealSense™ camera publishes to ``/camera/depth/color/points`` topic. The ``adbscan_sub_node`` subscribes to the corresponding topic,
@@ -7,15 +7,15 @@ detects the obstacle array, computes the robot's velocity and publishes to the `
 This ``twist`` message consists of the updated angular and linear velocity of the robot to follow the target, which can be subsequently subscribed by a robot-driver.
 
 Getting Started
-----------------
+-------------------------------
 
 Prerequisites
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Complete the :doc:`../../../../../gsg_robot/index` before continuing.
 
 Install the Deb package
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Install the ``ros-humble-follow-me-tutorial`` Deb package from the Autonomous Mobile Robot APT repository.
 
@@ -25,7 +25,7 @@ Install the ``ros-humble-follow-me-tutorial`` Deb package from the Autonomous Mo
    sudo apt install ros-humble-follow-me-tutorial
 
 Run Demo
-----------------
+-------------------------------
 
 To launch the Follow-me application tutorial on the Jackal robot, use the following ROS 2 launch file.
 
@@ -79,7 +79,7 @@ After starting the script, the robot should begin searching for trackable object
         - The robot will keep following the target as long as the current target location = previous location +/- ``tracking_radius``
 
 Troubleshooting
-----------------------------
+-------------------------------------------------------
 
 - Failed to install Deb package: Please make sure to run ``sudo apt update`` before installing the necessary Deb packages.
 

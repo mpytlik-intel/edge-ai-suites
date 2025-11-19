@@ -5,7 +5,7 @@
 .. tutorials-amr:
 
 Tutorials |tutorials_robot|
-===========================
+========================================================================
 
 Prerequisite: Follow the instructions in :doc:`../../gsg_robot/index`.
 

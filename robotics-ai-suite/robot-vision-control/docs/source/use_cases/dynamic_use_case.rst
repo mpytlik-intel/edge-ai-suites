@@ -1,7 +1,7 @@
 .. _dynamic_use_case:
 
 Exemplary Dynamic Use case
-##############################
+############################################################
 
 .. toctree::
    :maxdepth: 1

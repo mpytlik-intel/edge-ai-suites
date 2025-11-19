@@ -1,9 +1,9 @@
 Tools
-------
+------------
 
 
 ROS 2 Tools
-++++++++++++
+++++++++++++++++++++++++
 
 
 The Autonomous Mobile Robot is validated using ROS 2 tools as it is not compatible with ROS 1
@@ -34,7 +34,7 @@ Autonomous Mobile Robot includes:
 
 
 Simulation Tools
-+++++++++++++++++
+++++++++++++++++++++++++++++++++
 
 
 -  The `Gazebo\* robot simulator
@@ -54,7 +54,7 @@ Simulation Tools
 -  Wandering application in Gazebo simulation to showcase autonomous mapping of a gazebo world using TurtleBot3 Waffle robot.
 
 Other Tools
-+++++++++++++
++++++++++++++++++++++++++
 
 
 -  **Intel® oneAPI Base Toolkit** encompasses essential components such as the DPC++ compiler, compatibility tool and a suite of

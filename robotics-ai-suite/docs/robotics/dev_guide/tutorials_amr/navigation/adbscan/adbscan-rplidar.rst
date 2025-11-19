@@ -1,16 +1,16 @@
 ADBSCAN Algorithm with 2D RPLIDAR Input Demo
-==========================================================================
+==================================================================================================================================================================================================================================================
 
 This tutorial describes how to run the ADBSCAN algorithm from Autonomous Mobile Robot
 using 2D RPLIDAR input.
 
 Prerequisites
--------------
+-------------------------
 
 Complete the :doc:`../../../../gsg_robot/index` before continuing.
 
 Install
---------------------------------
+--------------------------------------------------------------
 
 Install ``ros-humble-adbscan-ros2`` Deb package from Intel® Autonomous Mobile Robot APT repository
 
@@ -26,7 +26,7 @@ Install the following package with ROS 2 bag files in order to publish point clo
       sudo apt install ros-humble-bagfile-laser-pointcloud
 
 Run the demo with 2D LIDAR input
---------------------------------
+--------------------------------------------------------------
 
    .. code-block::
 
@@ -41,7 +41,7 @@ One can view the list of running ROS 2 nodes by typing ``ros2 node list`` in a t
    .. image:: ../../../../images/adbscan_node_list.jpg
 
 ADBSCAN ROS2 Node Output description
----------------------------------------
+------------------------------------------------------------------------------
 The output is published to the ROS2 topic `obstacle_array`,
 and the message format is `nav2_dynamic_msgs::msg::ObstacleArray`.
 

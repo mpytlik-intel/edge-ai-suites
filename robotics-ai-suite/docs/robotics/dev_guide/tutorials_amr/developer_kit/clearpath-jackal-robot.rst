@@ -1,5 +1,5 @@
 Clearpath Robotics Jackal Robot
-===================================
+===========================================================================================
 
 The Clearpath Robotics Jackal robot is a rugged unmanned ground robot, which is
 developed and distributed by Clearpath Robotics, a Rockwell Automation company.

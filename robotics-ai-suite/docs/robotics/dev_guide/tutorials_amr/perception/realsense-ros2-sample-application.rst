@@ -1,7 +1,7 @@
 .. realsense-ros2-sample-application:
 
 Intel® RealSense™ Camera with ROS 2 Sample Application
-==============================================================
+===================================================================================================================================================================
 
 This tutorial tells you how to:
 
@@ -78,7 +78,7 @@ Connect an Intel® RealSense™ Depth Camera D457 to  the Axiomtek Robox500 ROS 
       :height: 250
 
 BIOS settings
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Go to the BIOS menu by pressing "``Del``" or "``Esc``" button when the board is powered on. The following BIOS settings should be set to enable Intel® RealSense™ Depth Camera D457 support on an Axiomtek Robox500 ROS 2 AMR Controller.
 
 * Intel Advanced Menu -> Power & Performance -> CPU-Power Management Control -> C States -> < Disable > (Note: If enabled, fps drops)
@@ -131,13 +131,13 @@ Go to the BIOS menu by pressing "``Del``" or "``Esc``" button when the board is 
       - 6c
 
 Install ``librealsense2`` and ``realsense2`` tools
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. code-block:: bash
 
     sudo apt install -y ros-humble-librealsense2-tools
 
 Install ``intel-ipu6`` (``intel-ipu6-dkms``) driver
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Create a ``/etc/modprobe.d/blacklist-ipu6.conf`` file and add the lines of the listing below. This will prevent the loading of the existing default ``intel_ipu6_isys`` kernel module.
 
    .. code-block:: console
@@ -187,7 +187,7 @@ Install ``intel-ipu6`` (``intel-ipu6-dkms``) driver
        license:        GPL
 
 Add the user to the *video* and *render* group
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. code-block:: bash
 
     # Add the $USER to the video group

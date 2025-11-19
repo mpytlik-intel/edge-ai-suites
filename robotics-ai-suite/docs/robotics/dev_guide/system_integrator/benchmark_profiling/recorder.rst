@@ -3,17 +3,17 @@
 .. recorder-tool:
 
 Recorder tool
-=====================================
+=================================================================================================
 
 This tutorial will show you how to use the recorder tool to efficiently store video topics using encode and decode.
 
 Prerequisites
--------------
+-------------------------
 
 Complete the :doc:`../../../gsg_robot/index` before continuing.
 
 Installation
---------------
+--------------------------
 
    .. code-block:: bash
 
@@ -22,7 +22,7 @@ Installation
       sudo apt install ros-humble-bagfile-2d-lidar
 
 Configuration
---------------
+--------------------------
 
 First, you need to set up ``config.toml`` file, below is an example of a configuration file.
 You can configure it to suit your needs.
@@ -65,7 +65,7 @@ You can configure it to suit your needs.
 
 
 Usage - recording
--------------------
+-------------------------------------
 
 To start recording, first, start the ``ros2 bag`` tool. Feel free to use it to record all the topics you want to record. Importantly, you will need to record the topics produced by the recorder tool, that is ``/camera/color/image_raw_dummy`` and ``/camera/aligned_depth_to_color/image_raw_dummy``. These names are created by adding ``_dummy`` to the original topic names and they are used to synchronize with bag and store metadata.
 
@@ -79,18 +79,18 @@ Then start the recorder tool.
 
    .. code-block:: bash
 
-      ros2 run recorder recorder_node --ros-args -p toml:="./config.toml" -p mode:=record   
+      ros2 run recorder recorder_node --ros-args -p toml:="./config.toml" -p mode:=record
 
 Finally, run the load you want to record. This time we are going to use the pre-recorded bag file. However, you can use your own video streams like cameras and so on.
 
    .. code-block:: bash
 
-      ros2 bag play /opt/ros/humble/share/bagfiles/2d-lidar   
+      ros2 bag play /opt/ros/humble/share/bagfiles/2d-lidar
 
 After the bag finishes playing, stop the recorder tool and bag tool, by pressing ``Ctrl+C``.
 
 Usage - playback
---------------------
+--------------------------------------
 
 Run the following commands in separate terminals.
 
@@ -110,14 +110,13 @@ Also, feel free to start the rviz2 tool to visualize the video.
 
    .. code-block:: bash
 
-      rviz2 
+      rviz2
 
 Additional notes
------------------
+--------------------------------
 
 By tweaking the configuration of ``FFMpegVideoEncoder`` section you can change codec and it's parameters. Supported codecs : https://www.intel.com/content/www/us/en/docs/onevpl/developer-reference-media-intel-hardware/1-1/overview.html
 
 Expected frame rate should roughly match the actual frame rate of the topic. Else, during playback, there might be a mismatch between framerate produced by ffmpeg and the requested framerate.
 
 This tool is most useful when ffmpeg is used to encode all topics as this can provide 100x smaller file sizes than using standard bag files.
-

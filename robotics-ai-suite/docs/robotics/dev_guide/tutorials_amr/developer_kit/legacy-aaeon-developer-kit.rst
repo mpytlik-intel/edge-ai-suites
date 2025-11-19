@@ -1,5 +1,5 @@
 AAEON Robotic Kits
-##################
+####################################
 
 The AAEON UP Xtreme* i11 & UP Squared* 6000 Robotic Development Kits are delivered with the Intel® Edge Insights for Autonomous Mobile Robots software preinstalled.
 This is a legacy version of the Autonomous Mobile Robot. The devices may give you a good start to get familiar with an autonomous robotic system.
@@ -9,7 +9,7 @@ check out the up-board.org page:
 
 
 Using the AAEON kit with the latest Autonomous Mobile Robot
----------------------------------------------
+------------------------------------------------------------------------------------------
 
 After you have created a back-up of the legacy software on the robotic kit
 and verified that the robot is functioning properly,
@@ -19,7 +19,7 @@ Just follow our :doc:`../../../gsg_robot/index` from installation of Ubuntu, ROS
 Since release 2.0 the new Deb package based SDK contains all the software required to run on an AAEON robotic kit. It also includes a number of additional tutorials.
 
 Autonomous Mobile Robot Tutorials based on the AAEON Robotic kits
----------------------------------------------------
+------------------------------------------------------------------------------------------------------
 
 .. toctree::
    :maxdepth: 1
@@ -30,7 +30,7 @@ Autonomous Mobile Robot Tutorials based on the AAEON Robotic kits
    ../navigation/follow_me/Tutorials/followme-with-gesture-on-aaeon
 
 Legacy documentation
----------------------------------------------------
+------------------------------------------------------------------------------------------------------
 
 * `EI4AMR at Intel Developer Zone <https://www.intel.com/content/www/us/en/developer/topic-technology/edge-5g/edge-solutions/autonomous-mobile-robots/overview.html>`_
 * `EI4AMR Legacy - Documents Overview <https://www.intel.com/content/www/us/en/developer/topic-technology/edge-5g/edge-solutions/autonomous-mobile-robots.html#tab-blade-1-1>`__

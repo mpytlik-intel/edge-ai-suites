@@ -1,22 +1,22 @@
 .. followme-with-gesture:
 
 Follow-me with ADBSCAN and Gesture Control
-====================================================
+=============================================================================================================================================================================================================
 
 This demo of the Follow-me algorithm shows a Autonomous Mobile Robot application for following a target person where the movement of the robot can be controlled by the person's location and hand gestures. The entire pipeline diagram can be found in :doc:`../index` page.
 This demo contains only the ADBSCAN and Gesture recognition modules in the input-processing application stack. No text-to-speech synthesis module is present in the output-processing application stack. This demo has been tested and validated on 12th Generation Intel® Core™ processors with Intel® Iris® Xe Integrated Graphics (known as Alder Lake-P).
 This tutorial describes how to launch the demo in `Gazebo` simulator.
 
 Getting Started
-----------------
+-------------------------------
 
 Prerequisites
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Complete the :doc:`../../../../../gsg_robot/index` before continuing.
 
 Install the Deb package
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Install ``ros-humble-followme-turtlebot3-gazebo`` Deb package from Intel® Autonomous Mobile Robot APT repository. This is the wrapper package which will launch all of the dependencies in the backend.
 
@@ -26,7 +26,7 @@ Install ``ros-humble-followme-turtlebot3-gazebo`` Deb package from Intel® Auton
       sudo apt install ros-humble-followme-turtlebot3-gazebo
 
 Install Python Modules
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This application uses `Mediapipe Hands Framework <https://mediapipe.readthedocs.io/en/latest/solutions/hands.html>`__
 for hand gesture recognition. Install the following modules as a prerequisite for the framework:
@@ -39,7 +39,7 @@ for hand gesture recognition. Install the following modules as a prerequisite fo
 .. _followme-gesture-lidar:
 
 Run Demo with 2D Lidar
-----------------------------
+-------------------------------------------------------
 
 Run the following script to launch `Gazebo` simulator and ROS 2 rviz2.
 
@@ -71,7 +71,7 @@ The stop condition for the TurtleBot3 robot is fulfilled when **either one** of 
 .. _followme-gesture-realsense:
 
 Run Demo with Intel® RealSense™ Camera
----------------------------------------
+------------------------------------------------------------------------------
 
 Execute the following commands one by one in three separate terminals.
 
@@ -139,7 +139,7 @@ you will observe similar behavior of the TurtleBot3 robot and guide robot in the
         - The robot will keep following the target as long as the current target location = previous location +/- ``tracking_radius``
 
 Troubleshooting
-----------------------------
+-------------------------------------------------------
 
 - Failed to install Deb package: Please make sure to run ``sudo apt update`` before installing the necessary Deb packages.
 

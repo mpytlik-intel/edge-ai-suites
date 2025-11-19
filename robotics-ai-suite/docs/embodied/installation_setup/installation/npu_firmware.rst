@@ -1,5 +1,5 @@
 Install Intel® NPU firmware
-================================
+====================================================================================
 
 Introduction
 :::::::::::::::::::::::::::
@@ -99,6 +99,6 @@ To avoid manual setup of the group for ``accel`` device, the udev rules can be u
     .. code-block:: console
 
         $ ls -lah /dev/accel/accel0
-        crw-rw---- 1 root render 261, 0 Mar 22 13:22 /dev/accel/accel0
+        crw-rw------- 1 root render 261, 0 Mar 22 13:22 /dev/accel/accel0
 
-    If render is missing, or ``crw-rw----`` is not set, please repeat the steps to set the access to the device.
+    If render is missing, or ``crw-rw-------`` is not set, please repeat the steps to set the access to the device.

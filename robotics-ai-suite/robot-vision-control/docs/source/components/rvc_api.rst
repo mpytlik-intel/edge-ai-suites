@@ -2,18 +2,18 @@
 .. _rvc_api_messages:
 
 API messages
-================
+===============================
 
 The RVC API messages are a set of ROS2 messages designed to permit
 communication between the vision components and the motion control components
 
 Messages
----------
+------------------
 
 PoseStamped
 ~~~~~~~~~~~
 
--  *obj_id*: unique uint64 identifier for the associated class of the object. 
+-  *obj_id*: unique uint64 identifier for the associated class of the object.
 -  *string obj_type*: string associated to obj_id
 -  *geometry_msgs/PoseStamped pose_stamped*: the actual pose
    (position/orientation) of the object, time stamped

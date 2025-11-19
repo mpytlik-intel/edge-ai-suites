@@ -1,5 +1,5 @@
 Wandering App
-==================
+============================================================
 
 The Wandering mobile robot application is a Robot Operating System 2 (ROS 2) sample application.
 It can be used with different SLAM algorithms in combination with the ROS2 navigation stack,
@@ -23,6 +23,6 @@ The Autonomous Mobile Robot provides several tutorials showing the Wandering App
 
 
 Source Code
------------
+--------------------
 
 The source code of this component can be found here: `Wandering <https://github.com/open-edge-platform/edge-ai-suites/tree/main/robotics-ai-suite/components/wandering>`_

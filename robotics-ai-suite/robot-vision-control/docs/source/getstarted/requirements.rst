@@ -1,18 +1,18 @@
 RVC Requirements
-================
+===============================
 
 .. figure:: ../images/html/checklist_robot.png
 
 
 Knowledge / Experience
-----------------------
+-------------------------------------------
 
 -  You are familiar with executing Linux commands.
 
 -  ROS 2 background strongly recommended.
 
 Target System
-------------------------------------------
+------------------------------------------------------------------------------------
 
 An industrial PC with an Intel® CPU supporting. Internet connectivity is recommended during the initial setup for installing open-source content.
 
@@ -36,7 +36,7 @@ The following table lists the system requirements:
 
 
 Validated Hardware Platforms
-----------------------------
+-------------------------------------------------------
 
 The following platforms have been validated with RVC:
 

@@ -1,7 +1,7 @@
 .. _oneapi_normal_estimation:
 
 Estimating Surface Normals in a PointCloud
-==================================================
+===================================================================================================================================================================
 
 In this tutorial, we will learn how to obtain the surface normals of each point in the cloud.
 
@@ -63,7 +63,7 @@ In this tutorial, we will learn how to obtain the surface normals of each point 
 
 
 Code Explanation
-------------------
+------------------------------------
 
 The example PCD is initially loaded into a PointCloud<PointXYZ>.
 

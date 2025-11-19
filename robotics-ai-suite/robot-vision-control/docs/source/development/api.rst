@@ -2,7 +2,7 @@
 .. _api_development:
 
 API Development
-###################
+#####################################
 
 To utilize the RVC API, follow the steps outlined below:
 
@@ -42,5 +42,3 @@ Typically, the publisher, usually part of the RVC Vision component, will publish
     [...]
     outMsg.poses.push_back(poseStamped);
     m_pub_poses->publish(outMsg);
-
-

@@ -1,7 +1,7 @@
 .. _greedy_triangulation_openmp:
 
 Fast Triangulation of Unordered Point Clouds (OpenMP Version)
-=================================================================
+====================================================================================================================================================================================================================
 
 This tutorial explains how to run a greedy surface triangulation algorithm (OpenMP version) on a
 PointCloud with normals, to obtain a triangle mesh based on projections of the
@@ -18,7 +18,7 @@ triangulation and combine with other processed segments.
 
 
 Background: Algorithm and Parameters
----------------------------------------
+------------------------------------------------------------------------------
 
 Refer to original `greedy_triangulation <https://pointclouds.org/documentation/tutorials/greedy_projection.html>`__
 for more detail original greedy triangulation parameters.  All greedy triangulation parameters are supported except ``getPointStates()``,
@@ -95,7 +95,7 @@ Additional parameters are defined to provide control segments and overlap.
 
 
 Code Explanation
------------------
+--------------------------------
 
 As the example PCD has only XYZ coordinates, load it into a PointCloud<PointXYZ>.
 

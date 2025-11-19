@@ -1,20 +1,20 @@
 .. launch-wandering-application-gazebo-sim-waffle:
 
 Wandering Application in TurtleBot3 Waffle robot through Gazebo Simulation
-========================================================================
+================================================================================================================================================================================================
 
 
 This tutorial shows a TurtleBot3 Waffle robot performing autonomous mapping of the TurtleBot3 robot world in the Gazebo simulation.
 For more information about TurtleBot3 Waffle robot, see `this <https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/#gazebo-simulation>`__.
 
 Prerequisites
--------------
+-------------------------
 
 Complete the :doc:`../../../gsg_robot/index` before continuing.
 
 
 Run the Sample Application
---------------------------
+--------------------------------------------------
 
 
 #. If your system has an Intel® GPU, follow the steps in the
@@ -65,6 +65,6 @@ Run the Sample Application
 
 
 Troubleshooting
----------------
+------------------------------
 
 For general robot issues, go to: :doc:`../../../dev_guide/tutorials_amr/robot-tutorials-troubleshooting`.

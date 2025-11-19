@@ -1,7 +1,7 @@
 .. object-detection-tutorial:
 
 OpenVINO™ Object Detection Tutorial
-=======================================
+================================================================================================================================
 
 This tutorial is an example for understanding the utilization of the ROS 2 node with OpenVINO™ toolkit.
 It outlines the steps for installing the node and executing the object detection model.
@@ -10,16 +10,16 @@ device parameters (NPU, GPU, or CPU) to specify which inference engine should be
 
 
 Source Code
-^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 The source code of this component can be found here: `Object-Detection <https://github.com/open-edge-platform/edge-ai-suites/tree/main/robotics-ai-suite/components/object-detection>`_
 
 Prerequisites
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Complete the :doc:`../../../../gsg_robot/index` before continuing.
 
 Install OpenVINO™ toolkit tutorial packages
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
@@ -27,7 +27,7 @@ Install OpenVINO™ toolkit tutorial packages
 
 
 Run Demo with Image Input
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Run one of the following commands to launch the object detection node with a specific inference engine:
 
@@ -57,7 +57,7 @@ Once the tutorial is started, the ``mobilenetssd`` model is downloaded, converte
 
 
 Expected Output
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: ../../../../images/Object_detection.png
 
@@ -65,7 +65,7 @@ Expected Output
 To close this application, type ``Ctrl-c`` in the terminal where you ran the launch script.
 
 Troubleshooting
----------------
+------------------------------
 
 
 For general robot issues, go to: :doc:`../../../../dev_guide/tutorials_amr/robot-tutorials-troubleshooting`.

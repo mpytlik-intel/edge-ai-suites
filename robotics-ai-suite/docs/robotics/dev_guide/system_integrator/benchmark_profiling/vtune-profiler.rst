@@ -1,14 +1,14 @@
-=================================
+======================================================================================
 VTune™ Profiler for CPU and GPU profiling
-=================================
+======================================================================================
 
 Overview
-========
+===================
 
 VTune™ Profiler is a performance analysis tool for applications and systems, which helps in analyzing and optimizing the application performance, system performance and system configuration. The profiling can be executed on a CPU, GPU or FPGA. It can profile both single-threaded as well as multi-threaded applications. Refer the `Get Started with VTune™ Profiler <https://www.intel.com/content/www/us/en/docs/vtune-profiler/get-started-guide/2024-0/overview.html>`__ for more details on VTune™ Profiler.
 
 Installation of VTune™ Profiler
-=======================
+============================================================
 
 Follow the `VTune™ Profiler installation guide <https://www.intel.com/content/www/us/en/docs/vtune-profiler/installation-guide/2023-1/overview.html>`__ to install VTune™ Profiler by choosing one of the following two options:
 
@@ -17,7 +17,7 @@ Follow the `VTune™ Profiler installation guide <https://www.intel.com/content/
 
 
 Additional System Setup for CPU and GPU Profiling
-=================================================
+================================================================================================================================
 
 #. Build and Install the Sampling Drivers for Linux Targets.
 
@@ -61,13 +61,13 @@ Additional System Setup for CPU and GPU Profiling
 
 
 Profiling an Application from Autonomous Mobile Robot
-======================================
+==================================================================================================
 
 The example application from Autonomous Mobile Robot considered for the CPU and GPU profiling is the "Collaborative visual slam with fastmapping enabled" application from the  :doc:`../../tutorials_amr/navigation/collaborative-slam` tutorial. The two CPU analyses types considered in this example are ``CPU Hotspots`` analysis and ``CPU Microarchitecture Exploration`` analysis. Furthermore, the GPU analysis type considered is ``GPU Offload`` analysis. The CPU and GPU profiling are carried out using the ``vtune`` command line tool. However, the ``vtune-gui`` tool is later used to visualize and understand the findings.
 
 
 CPU Profiling
--------------
+-------------------------
 
 CPU Hotspots Analysis
 `````````````````````

@@ -5,7 +5,7 @@
 .. _how_it_works:
 
 How it Works |how_it_works|
-===========================
+========================================================================
 
 
 The Autonomous Mobile Robot (\ Autonomous Mobile Robot\ ) modules are deployed as Deb packages,
@@ -15,7 +15,7 @@ execution environments, including robots, development PCs, servers, and the clou
 
 
 Modules and Services
---------------------
+--------------------------------------
 
 
 In the Intel® oneAPI Base Toolkit (oneAPI) and Intel® Distribution of OpenVINO™ toolkit (OpenVINO™), a middleware layered
@@ -54,7 +54,7 @@ operating system. For requirement details, see :doc:`../../dev_guide/requirement
 
 
 Autonomous Mobile Robot Drivers
----------------------------------
+------------------------------------------------------------------
 
 
 Autonomous Mobile Robot relies on standard Intel®

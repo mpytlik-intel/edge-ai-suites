@@ -1,7 +1,7 @@
 .. _model_lightglue:
 
 Feature Tracking Model: LightGlue
-#################################
+##################################################################
 
 LightGlue is a model designed for efficient and accurate feature matching in computer vision tasks. It builds upon the
 principles of feature matching, which is crucial for applications like image stitching, 3D reconstruction, and visual
@@ -42,7 +42,7 @@ robustness and accuracy of feature matching, while also being optimized for real
 - Github link: https://github.com/cvg/LightGlue
 
 Model Conversion
-================
+==========================================
 The LightGlue model is trained using PyTorch but can achieve optimized inference performance on Intel devices using OpenVINO™.
 To enable this, the PyTorch model must first be converted to the OpenVINO™ IR format. This process is done in two stages: first converting to ONNX, and then converting to IR format.
 
@@ -50,12 +50,12 @@ To enable this, the PyTorch model must first be converted to the OpenVINO™ IR 
    :local:
 
 Export LightGlue to ONNX
--------------------------
+-------------------------------------------------
 Before converting the model to OpenVINO IR, it is best practice to first export the PyTorch model to ONNX format. The ONNX model format allows for interoperability across different platforms with support for multiple execution providers and removes Python-specific dependencies such as PyTorch.
 The repository `LightGlue-ONNX <https://github.com/fabio-sim/LightGlue-ONNX>`_ provides a simple command-line tool, ``dynamo.py``, to easily export LightGlue to ONNX and perform inference using ONNX Runtime, based on `Typer <https://typer.tiangolo.com/>`_ to facilitate this conversion.
 
 Exporting the model to ONNX
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Prepare a python environment with the required dependencies by running the following command (python 3.11 or higher is required):
 
 .. code-block:: bash
@@ -74,9 +74,9 @@ Use the following command to export the LightGlue model to ONNX format:
 - ``-h 1280 -w 720`` : Specifies the height and width of the input images.
 
 Convert ONNX to OpenVINO IR
----------------------------
+------------------------------------------------------
 Ensure OpenVINO is Installed
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
    Make sure OpenVINO is installed by following the guide:
    :ref:`Install OpenVINO via pip <openvino_install>`
@@ -84,7 +84,7 @@ Ensure OpenVINO is Installed
 Once the model is in ONNX format, it can be converted to OpenVINO's Intermediate Representation (IR) format using OpenVINO’s command-line model conversion tool, ``ovc``.
 
 Convert ONNX to OpenVINO IR using ovc
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The ``ovc`` tool simplifies the process of converting an ONNX model to OpenVINO IR format.
 
 Run the following command to perform the conversion:

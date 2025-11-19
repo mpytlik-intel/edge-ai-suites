@@ -1,7 +1,7 @@
 .. pointcloud-groundfloor-segmentation:
 
 3D Pointcloud Groundfloor Segmentation for Intel® RealSense™ Camera and 3D LiDAR
-=================================================================================
+========================================================================================================================================================================================================================
 
 This demo showcases an Intel® algorithm designed for the segmentation of depth sensor data,
 compatible with 3D LiDAR or a Intel® RealSense™ camera inputs. The application processes either a 3D pointcloud
@@ -21,13 +21,13 @@ The second topic provides a reduced pointcloud containing only points labeled as
 
 
 Source Code
------------
+--------------------
 
 The source code of this component can be found here: `Groundfloor <https://github.com/open-edge-platform/edge-ai-suites/tree/main/robotics-ai-suite/components/groundfloor>`_
 
 
 Getting Started
-----------------
+-------------------------------
 
 Autonomous Mobile Robot provides a ROS 2 Deb package for the application, supported by the following platform:
 
@@ -37,13 +37,13 @@ Autonomous Mobile Robot provides a ROS 2 Deb package for the application, suppor
 
 
 Prerequisites
--------------
+-------------------------
 
 Complete the :doc:`../../../gsg_robot/index` before continuing.
 
 
 Install Deb package
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Install ``ros-humble-pointcloud-groundfloor-segmentation`` Deb package from Intel® Autonomous Mobile Robot APT repository
 
@@ -54,7 +54,7 @@ Install ``ros-humble-pointcloud-groundfloor-segmentation`` Deb package from Inte
 
 
 Run the Segmentation with Intel® RealSense™ Camera Input
----------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
 
 Execute the following command to run the demo using a Intel® RealSense™ camera input, after starting the Intel® RealSense™ ROS 2 node.
 
@@ -107,7 +107,7 @@ In case of the standalone execution, the rviz view for the filtered pointcloud s
 
 
 Run the Segmentation with a 3D LiDAR sensor
---------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------
 Execute the following script to run the demo if a given pointcloud, for example from a 3D LiDAR sensor should be segmented.
 
    .. code-block:: bash
@@ -137,7 +137,7 @@ The LiDAR node, that needs to be started in parallel, has to provide the topic `
 
 
 Run the Segmentation Algorithm with the Teleop Application
---------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 This use case is intended for the teleop application running on the Aaeon robot,
 as described on page :doc:`../developer_kit/robot-keyboard-teleop`.
@@ -166,7 +166,7 @@ Terminal 3: Run the segmentation application with Intel® RealSense™ camera in
 
 
 Adjusting Application Parameters
-----------------------------------
+-------------------------------------------------------------------
 
 The ROS 2 node supports a set of parameters, that can be found under:
 
@@ -211,7 +211,7 @@ An example illustrating these parameters is provided in the image below:
 
 
 Requirements
-----------------------------------
+-------------------------------------------------------------------
 
 To achieve optimal output quality, it is essential to fulfill following requirements:
 
@@ -223,7 +223,7 @@ To achieve optimal output quality, it is essential to fulfill following requirem
 
 
 Troubleshooting
-----------------------------
+-------------------------------------------------------
 
 - Failed to install Deb package: Please make sure to run ``sudo apt update`` before installing the necessary Deb packages.
 

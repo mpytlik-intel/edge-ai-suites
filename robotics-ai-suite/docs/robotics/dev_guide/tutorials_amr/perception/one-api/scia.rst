@@ -1,7 +1,7 @@
 .. _oneapi_scia:
 
 Using SampleConsensusInitialAligment (SCIA) to Initial Align Two Point Clouds
-===============================================================================
+====================================================================================================================================================================================================================================================================
 
 In this tutorial, we will learn how to initial align two point clouds, using SCIA, provided with the transformation 4x4 matrix.
 
@@ -57,7 +57,7 @@ In this tutorial, we will learn how to initial align two point clouds, using SCI
               0         0         0         1
 
 Code Explanation
-------------------
+------------------------------------
 
 Load ``source/target/fpfh_source/fpfh_target`` PCD file
 

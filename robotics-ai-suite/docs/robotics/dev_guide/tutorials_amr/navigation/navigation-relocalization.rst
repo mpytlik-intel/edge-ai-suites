@@ -1,22 +1,22 @@
 Robot Re-localization Package for ROS 2 Navigation
-===================================================
+======================================================================================================================================
 
 The Robot Re-localization package empowers ROS 2 navigation with the capability to re-localize a robot. In situations where sensor measurements encounter glitches or environment disturbances or scene similarities lead to localization loss, the robot may lose its position. This necessitates a fast and reliable re-localization algorithm to re-establish the robot's location accurately. To tackle this issue, we developed an innovative re-localization algorithm that excels in both computational efficiency and memory usage, specifically designed for mobile robots.
 
 Getting Started
-----------------
+-------------------------------
 
 Autonomous Mobile Robot provides a ROS 2 Deb package for the application, supported by the following platform:
 
 - ROS version: humble
 
 Prerequisites
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Complete the :doc:`../../../gsg_robot/index` before continuing.
 
 Install Deb package
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Install the ``ros-humble-its-relocalization-bringup`` Deb package from the Intel® Autonomous Mobile Robot APT repository
 
@@ -25,7 +25,7 @@ Install the ``ros-humble-its-relocalization-bringup`` Deb package from the Intel
        sudo apt install ros-humble-its-relocalization-bringup
 
 Run the Re-localization
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Run the following script to set environment variables and bring up ROS 2 navigation, and TurtleBot3 robot in Gazebo simulation:
 
@@ -66,7 +66,7 @@ To simulate the re-localization package, we have developed a demo application th
       Before launching the relocalization package, ensure that the robot initial pose has been set as described above.
 
 Troubleshooting
----------------
+------------------------------
 
 
 For general robot issues, go to :doc:`../../../dev_guide/tutorials_amr/robot-tutorials-troubleshooting`.

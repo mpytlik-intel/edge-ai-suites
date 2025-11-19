@@ -1,5 +1,5 @@
 OpenVINO™ Benchmarking Tool
-============================
+=========================================================================
 
 The benchmark application allows users to estimate deep learning inference performance on supported Intel® devices.
 It uses the asynchronous mode to estimate deep learning inference engine performance and latency. Refer to the tutorial

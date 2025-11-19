@@ -1,26 +1,26 @@
 .. segmentation-realsense-tutorial:
 
 OpenVINO™ Tutorial with Segmentation
-=======================================
+================================================================================================================================
 
 This tutorial serves as an example for understanding the utilization of the ROS 2 OpenVINO™ node.
 It outlines the steps for installing and executing the semantic segmentation model using the ROS 2 OpenVINO™ toolkit.
 This tutorial uses the Intel® RealSense™ camera image as input and performs inference on CPU, GPU devices.
 
 Prerequisites
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Complete the :doc:`../../../../gsg_robot/index` before continuing.
 
 Install OpenVINO™ tutorial packages
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
    sudo apt install ros-humble-segmentation-realsense-tutorial
 
 Run Demo with Intel® RealSense™ Camera Topic Input
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Run one of the following commands to launch the segmentation tutorial with a specific inference engine:
 
@@ -47,7 +47,7 @@ and the inference process begins, utilizing the input from the Intel® RealSense
 To exit the application, press ``Ctrl-c`` in the terminal where the launch script was executed.
 
 Troubleshooting
----------------
+------------------------------
 
 
 For general robot issues, go to: :doc:`../../../../dev_guide/tutorials_amr/robot-tutorials-troubleshooting`.

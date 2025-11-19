@@ -1,7 +1,7 @@
 .. _oneapi_voxel_grid:
 
 Downsampling 3D Point Clouds with a Voxelized Grid
-===========================================================
+=================================================================================================================================================================================================
 
 This tutorial covers the process of downsampling / reducing the number of points in a 3D point cloud through a voxelized grid approach.
 
@@ -63,7 +63,7 @@ This tutorial covers the process of downsampling / reducing the number of points
 
 
 Code Explanation
---------------------
+--------------------------------------
 
 Now, let's explain the code in detail.
 

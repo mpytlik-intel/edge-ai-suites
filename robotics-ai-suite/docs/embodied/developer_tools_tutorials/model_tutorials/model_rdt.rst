@@ -1,7 +1,7 @@
 .. _model_rdt:
 
 Robotics Diffusion Transformer (RDT-1B)
-########################################
+###############################################################################
 
 Robotics Diffusion Transformer with 1.2B parameters (RDT-1B), is a diffusion-based foundation model for robotic manipulation. It is pre-trained on a multi-robot collection of 46 datasets with 1M+ episodes. To boost bimanual capability, RDT-1B have collected 6K+ episodes (one of the largest to date) on the ALOHA dual-arm robot for fine-tuning. It has set a new benchmark in terms of dexterity, zero-shot generalizability, and few-shot learning. It supports control of almost all modern manipulators (e.g., dual-arm, joints, EEFs, and even wheeled locomotion) and is ready for the community to fine-tune with their robots.
 
@@ -26,14 +26,14 @@ Robotics Diffusion Transformer with 1.2B parameters (RDT-1B), is a diffusion-bas
 - Github link: https://huggingface.co/robotics-diffusion-transformer/rdt-1b
 
 Model Conversion
-================
+==========================================
 
 | RDT-1B model is consists of several components, the conversion process involves exporting these components to OpenVINO™ IR format.
 | The conversion python script and jupyter notebook are available, please refer to :ref:`Sample Pipeline - RDT Installation <rdt_installation>` to get installation and environment ready.
 | You can download a `pre-trained RDT-1B weights <https://hf-mirror.com/robotics-diffusion-transformer/rdt-1b>`_ from the Hugging Face Hub.
 
 Convert by Script
--------------------
+-------------------------------------
 
 | Converting by script is recommended when you want to get the OpenVINO™ IR format quickly.
 | Simply run the following command at project directory to convert the pre-trained RDT-1B model to OpenVINO™ IR format:
@@ -48,7 +48,7 @@ Convert by Script
 
 
 Convert by Jupyter Notebook
------------------------------
+--------------------------------------------------------
 
 | Converting by Jupyter Notebook is recommended when you want to understand the conversion process step by step, or if you want to modify the conversion parameters.
 | The notebook provides a step-by-step guide to load the pre-trained model and convert several components into OpenVINO™ IR format.

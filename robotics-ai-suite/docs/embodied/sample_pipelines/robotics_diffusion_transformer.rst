@@ -1,7 +1,7 @@
 .. _robotics_diffusion_transformer:
 
 Robotics Diffusion Transformer (RDT)
-####################################
+########################################################################
 
 Robotics Diffusion Transformer (RDT) is the largest bimanual manipulation foundation model with strong generalizability. RDT employs the diffusion transformer as its scalable backbone, with special designs for language-conditioned bimanual manipulation. RDT proposes the Physically Interpretable Unified Action Space, a unified action format for various robots with gripper arms, which enables the model to learn generalizable physical knowledge across diverse robotic datasets.
 
@@ -10,7 +10,7 @@ A RDT pipeline is provided for evaluating the VLA model on the simulation task. 
 In this tutorial, we will introduce how to setup RDT simulation pipeline.
 
 Simulation Task
-===============
+==============================
 
 We have enabled two tasks in the RDT pipeline using the MUJOCO simulation environment, which is also used in the :doc:`./imitation_learning_act` pipeline. A set of datasets has been collected in this environment for fine-tuning the RDT model. You can further modify the simulation tasks to collect additional data for fine-tuning the pre-trained RDT model.
 
@@ -55,14 +55,14 @@ Each task consists of 400 steps. The following GIFs demonstrate the two tasks.
          Peg Insertion
 
 Prerequisites
-=============
+=========================
 
 Please make sure you have finished setup steps in :doc:`../installation_setup`.
 
 .. _rdt_installation:
 
 Installation
-=============
+=========================
 
 Install RDT package
 ::::::::::::::::::::
@@ -98,7 +98,7 @@ Prepare Environment
 You can choose to use a Python virtual environment or a Docker container for the RDT pipeline. The following sections will guide you through both methods.
 
 Use Python Virtual Environment
--------------------------------
+-------------------------------------------------------------
 
 Download and install the ``Miniforge`` as follows if you don't have conda installed on your machine:
 
@@ -138,7 +138,7 @@ Install the OpenVINO™ with the following command:
     $ pip install openvino==2025.2
 
 Use Docker Container
-----------------------
+-------------------------------------------
 
 If you prefer to use a Docker container, you can build the container from the provided `Dockerfile` in the project. The Dockerfile is already set up with all the necessary dependencies.
 
@@ -184,7 +184,7 @@ Run the docker container:
     - ``-e RENDER_GID=$(getent group render | cut -d: -f3)`` is to get host `render` group id to gain access to GPU device.
 
 Run pipeline
-=============
+=========================
 
 Inference
 :::::::::

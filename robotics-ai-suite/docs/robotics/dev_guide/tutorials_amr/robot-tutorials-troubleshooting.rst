@@ -5,12 +5,12 @@
 .. robot-tutorials-troubleshooting:
 
 Troubleshooting for Autonomous Mobile Robot Tutorials |troubleshooting|
-========================================================================
+================================================================================================================================================================================================
 
 .. _shared_robot-tutorials-troubleshooting_start:
 
 Use ``ROS_DOMAIN_ID`` to Avoid Interference in ROS Messages
-------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 A typical method to demonstrate a use case requires you to start several
 ROS 2 nodes and exchange ROS 2 messages between the ROS 2 nodes.
@@ -36,7 +36,7 @@ as described in the :ref:`prepare-ros-environment` section.
 .. _shared_robot-tutorials-troubleshooting_aaeon-motor-control-board:
 
 Troubleshooting AAEON Motor Control Board Issues
-------------------------------------------------
+------------------------------------------------------------------------------------------------
 
 Several tutorials apply an AAEON UP Xtreme i11 Robotic Development Kit to demonstrate how the Autonomous Mobile Robot
 can interact with a physical robot. The AAEON UP Xtreme i11 Robotic Development Kit includes a motor control
@@ -52,7 +52,7 @@ the USB interface of the AAEON UP Xtreme i11 Robotic Development Kit.
 
 
 Add the current user to the ``dialout`` group
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To control the AAEON UP Xtreme i11 Robotic Development Kit via the USB interface, the current user must be a
 member of the ``dialout`` group. Use the ``groups`` command to verify that the
@@ -65,7 +65,7 @@ to this group, add the group membership by means of:
 
 
 Solve conflicts with the BRLTTY daemon
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 BRLTTY is a background process that operates Braille displays, a tool for individuals
 who are blind. There is a possibility that BRLTTY may block the USB interface
@@ -103,11 +103,11 @@ To fix this conflict, remove the ``brltty`` package:
    sudo apt-get remove brltty
 
 Troubleshooting RViz2 Issues
-----------------------------------
+-------------------------------------------------------------------
 
 
 Set Scale Display Mode to 100%
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you encounter a segmentation fault or see errors such as ``libGL error: failed to create drawable`` when starting RViz2 with the ``-d`` flag,
 the issue may be caused by the display scale mode being set to a value other than 100%.
@@ -120,7 +120,7 @@ To resolve this issue, set the display scale mode to 100%:
 
 
 Enable 3D options in RViz2
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note::
 
@@ -146,10 +146,10 @@ Enable 3D options in RViz2
   .. image:: ../../images/aaeon_rviz2_3Doption_selected.png
 
 Troubleshooting OpenVINO™ Issues
-----------------------------------
+-------------------------------------------------------------------
 
 File Permission Errors
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 If you encounter an error stating ``permission denied /tmp/pipeline_object.yaml``, you must adjust the file's ownership and permissions accordingly.
 The file ownership can be reassigned using the ``chown`` command and file permissions can be adjusted using the ``chmod`` command.
 Execute the following commands in your terminal to make the necessary changes:
@@ -163,7 +163,7 @@ The first command assigns the current user as the owner of ``/tmp/pipeline_objec
 for this file.
 
 Missing Model files
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Some of the OpenVINO™ based tutorials in this SDK rely on the models that are provided during the installation of the ``ros-humble-openvino-node``. In case you missed out on installing these models you may run into problem when executing these tutorials.
 
 Follow the instructions on :doc:`../../gsg_robot/install-openvino`, to troubleshoot potential issues with the OpenVINO™ installation.
@@ -172,7 +172,7 @@ Follow the instructions on :doc:`../../gsg_robot/install-openvino`, to troublesh
 .. _troubleshooting-gpu-not-detected:
 
 GPU device is not detected with Linux Kernel 6.7.5 or later
---------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
 
 According to the `Release Notes of the Intel® Graphics Compute Runtime <https://github.com/intel/compute-runtime/releases/tag/24.09.28717.12>`__,
 there is a known incompatibility between the Intel® Graphics Compute Runtime

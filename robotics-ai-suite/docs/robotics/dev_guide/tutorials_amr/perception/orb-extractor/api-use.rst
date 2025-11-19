@@ -1,7 +1,7 @@
  .. _orb-extractor-api:
 
 Tutorial to Use GPU ORB Extractor Feature
-=============================================
+======================================================================================================================================================
 
 This tutorial shows how to use GPU orb-extractor feature library API.
 
@@ -13,12 +13,12 @@ It explains employing multiple CPU threads with multiple ORB extractor objects, 
 The multithread feature provides more flexibility for visual SLAM to call multiple objects of the orb-extractor feature library.
 
 Prerequisites
--------------
+-------------------------
 
 Complete the :doc:`../../../../gsg_robot/index` before continuing.
 
 Tutorial
---------
+--------------
 
 .. note::
 

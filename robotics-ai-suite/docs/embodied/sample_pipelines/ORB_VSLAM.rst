@@ -1,7 +1,7 @@
 .. _orb_slam3:
 
 VSLAM: ORB-SLAM3
-################
+###############################
 
 SLAM(Simultaneous localization and mapping) is a major research problem in the robotics community, where a great deal
 of effort has been devoted to developing new methods to maximize their robustness and reliability.
@@ -23,18 +23,18 @@ ORB-SLAM3 is as robust as the best systems available in the literature, and sign
 
 
 Source Code
-===========
+====================
 
 The source code of this component can be found here: `ORB-SLAM3-Sample <https://github.com/open-edge-platform/edge-ai-suites/tree/main/robotics-ai-suite/pipelines/orb-slam3-sample>`_
 
 Prerequisites
-=============
+=========================
 
 | Please make sure you have all the prerequisites and installation in :doc:`../installation_setup` before proceeding.
 | And follow the guide :doc:`../installation_setup/installation/realsense` to install realsense SDK.
 
 Installation
-=============
+=========================
 
 #. Make sure realsense SDK installed. If not, follow :doc:`Install realsense SDK <../installation_setup/installation/realsense>` to install realsense packages.
    Here is a minimal installation:
@@ -54,7 +54,7 @@ After installation, the VSLAM example programs are installed under folder ``/opt
 **Note:** The ``orb-slam3`` Debian Package is compiled without ``-march=native`` flag by default to ensure compatibility and prevent potential segmentation faults. For enhanced performance, consider building locally with ``-march=native``, which optimizes the code based on specific CPU architecture. The ``-march=native`` option is a compiler flag used with GCC and other compilers to optimize code for the specific architecture of the machine where the compilation occurs. However, it can potentially lead to unexpected behavior, especially when code is intended to run on different architectures.
 
 VSLAM Demos
-===========
+====================
 
 Demo-1: Monocular Camera with Mono-Dataset
 :::::::::::::::::::::::::::::::::::::::::::
@@ -104,4 +104,3 @@ This Demo uses Intel Realsense Camera as stereo inputs.
    .. code-block:: bash
 
       $ /opt/intel/orb-slam3/Examples/Stereo/stereo_realsense_D435i /opt/intel/orb-slam3/Vocabulary/ORBvoc.txt /opt/intel/orb-slam3/Examples/Stereo/RealSense_D435i.yaml
-

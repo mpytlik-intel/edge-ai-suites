@@ -1,7 +1,7 @@
 .. _OS_Setup:
 
 OS Setup
-##########
+###################
 
 To leverage all Embodied Intelligence SDK features, the target system should meet the :ref:`recommended system requirements <Target_System>`. Also, The target system must have a compatible OS (`Ubuntu 22.04 Desktop`) so that you can install Deb packages from SDK. This section explains the procedure to install a compatible OS on the target system.
 
@@ -24,13 +24,13 @@ Do the following to prepare the target system:
    .. include:: bios-generic.rst
 
 Set locale
------------
+--------------------
 
 .. include:: Ubuntu-Set-Locale.rst
 
 
 Set Date and Time
-------------------
+------------------------------------
 
 Use the ``date`` command to display the current date and time. If the Linux OS time and date is incorrect, set it to current date and time:
 
@@ -40,6 +40,6 @@ Use the ``date`` command to display the current date and time. If the Linux OS t
    $ sudo date -s "2025-03-30 12:00"
 
 Setup Sources
---------------
+--------------------------
 
 .. include:: Apt-Repositories.rst

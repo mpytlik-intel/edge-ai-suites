@@ -3,7 +3,7 @@
    :align: bottom
 
 Developer Guide |dev_guide|
-==========================================
+====================================================================================
 
 
 The Autonomous Mobile Robot provides software packages and pre-validated hardware modules for

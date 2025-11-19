@@ -1,7 +1,7 @@
 .. _model_idp3:
 
 Improved 3D Diffusion Policy (iDP3)
-###################################
+####################################################################
 
 Improved 3D Diffusion Policy (iDP3) builds upon the original Diffusion Policy framework by enhancing its capabilities for 3D robotic manipulation tasks. The original Diffusion Policy, while effective for 2D tasks, faced challenges in scaling to 3D environments due to increased complexity and the need for more accurate spatial reasoning. Instead, to address the limitations of the original framework, iDP3 uses a more sophisticated 3D visual encoder to point clouds, enabling the policy to better understand the 3D structure of the environment.
 
@@ -19,14 +19,14 @@ Improved 3D Diffusion Policy (iDP3) builds upon the original Diffusion Policy fr
 - Github link: https://github.com/YanjieZe/Improved-3D-Diffusion-Policy
 
 Model Conversion
-================
+==========================================
 
-iDP3 Model Key Conversion Steps  
---------------------------------
+iDP3 Model Key Conversion Steps
+--------------------------------------------------------------
 This guide outlines the steps to convert the **iDP3** improved 3D Point Cloud Diffusion Policy model—including the observation encoder and diffusion model—into OpenVINO Intermediate Representation (IR) format.
 
-1. Load the Trained Checkpoint  
-------------------------------
+1. Load the Trained Checkpoint
+------------------------------------------------------------
 
 .. code-block:: python
 
@@ -51,8 +51,8 @@ This guide outlines the steps to convert the **iDP3** improved 3D Point Cloud Di
    # Access model
    policy = workspace.model  # Diffusion policy object
 
-2. Prepare Model Wrappers for Export  
-------------------------------------
+2. Prepare Model Wrappers for Export
+------------------------------------------------------------------------
 
 Two components need to be wrapped for ONNX export: the observation encoder and the diffusion model.
 
@@ -90,8 +90,8 @@ Two components need to be wrapped for ONNX export: the observation encoder and t
            self.convert_obs_encoder = ConvertObsEncoder(self.policy)
            self.convert_diffusion_unet = ConvertUnetModel(self.policy)
 
-3. Define ONNX Export Function  
-------------------------------
+3. Define ONNX Export Function
+------------------------------------------------------------
 
 .. code-block:: python
 
@@ -111,7 +111,7 @@ Two components need to be wrapped for ONNX export: the observation encoder and t
            opset_version=13,
            do_constant_folding=True,
        )
-       print(f"[===] Obs Encoder exported to {export_name_obs_encoder}")
+       print(f"[=======] Obs Encoder exported to {export_name_obs_encoder}")
 
        trajectory = torch.randn(1, 16, 25)
        t = torch.randint(100, size=(1,)).float()
@@ -127,26 +127,26 @@ Two components need to be wrapped for ONNX export: the observation encoder and t
            opset_version=13,
            do_constant_folding=True,
        )
-       print(f"[===] Diffusion UNet exported to {export_name_unet}")
+       print(f"[=======] Diffusion UNet exported to {export_name_unet}")
 
-4. Instantiate the Converter and Export the Model  
--------------------------------------------------
+4. Instantiate the Converter and Export the Model
+-------------------------------------------------------------------------------------------------
 
 .. code-block:: python
 
    convert_model = ConvertModel(policy)
    convert_model.export_onnx(output_dir, ckpt_name)
 
-5. Install OpenVINO  
--------------------
+5. Install OpenVINO
+-------------------------------------
 
 .. note::
 
-   Ensure that OpenVINO is installed. Follow the official installation guide:  
+   Ensure that OpenVINO is installed. Follow the official installation guide:
    `Install OpenVINO 2025.2 via pip <https://docs.openvino.ai/2025/get-started/install-openvino.html?PACKAGE=OPENVINO_BASE&VERSION=v_2025_2_0&OP_SYSTEM=LINUX&DISTRIBUTION=PIP>`_
 
-6. Convert ONNX to OpenVINO IR  
-------------------------------
+6. Convert ONNX to OpenVINO IR
+------------------------------------------------------------
 
 Use OpenVINO’s Model Optimizer (`ovc`) to convert the exported ONNX models to IR format.
 
@@ -156,5 +156,5 @@ Use OpenVINO’s Model Optimizer (`ovc`) to convert the exported ONNX models to 
    ovc latest_unet.onnx
 
 Install and Locate Source Code
-==============================
+===============================================================================
 After running ``sudo apt install idp3-ov``, you will be able to see the source code under the ``/opt/idp3-ov/`` directory, follow the ``README.md`` file in ``/opt/idp3-ov/`` to set up the complete source code environment.

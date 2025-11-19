@@ -1,8 +1,8 @@
 Prepare the Target System
-##########################
+##################################################
 
 Install Canonical Ubuntu 22.04 LTS (Jammy Jellyfish)
-========================================================
+==============================================================================================================
 
 It is recommended but not required that your target system has a fresh installation of Canonical Ubuntu 22.04 LTS (Jammy Jellyfish).
 
@@ -11,7 +11,7 @@ Visit the Ubuntu website for installation instructions `Install Ubuntu desktop <
 
 
 Canonical Ubuntu Installation Overview
---------------------------------------------
+--------------------------------------------------------------------------------------
 
 #. Download the ISO file for `Ubuntu OS version 22.04 LTS (Jammy Jellyfish) <https://releases.ubuntu.com/22.04>`__.
 
@@ -32,13 +32,13 @@ Canonical Ubuntu Installation Overview
 
 
 Install ROS 2 Humble
-============================
+=======================================================
 
 To install ROS 2 on your system, follow the `ROS 2 setup guide <https://docs.ros.org/en/humble/Installation.html>`__.
 
 
 ROS 2 Installation Overview
--------------------------------
+-------------------------------------------------------------
 
 When following the `ROS 2 setup with Ubuntu Deb Packages <https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html#ubuntu-debian-packages>`__ the installation
 include the following steps:
@@ -50,7 +50,7 @@ include the following steps:
 .. _prepare-ros-environment-rvc:
 
 Prepare your ROS 2 Environment
--------------------------------
+-------------------------------------------------------------
 In order to execute any ROS 2 command in a new shell, you first have to source the ROS 2 ``setup.bash`` and set the individual ``ROS_DOMAIN_ID`` for your ROS 2 communication graph.
 Get more information about this topic in the `The ROS_DOMAIN_ID <https://docs.ros.org/en/humble/Concepts/Intermediate/About-Domain-ID.html>`__ documentation.
 
@@ -65,7 +65,7 @@ Get more information about this topic in the `The ROS_DOMAIN_ID <https://docs.ro
 
 
 Setup a permanent ROS 2 environment
-+++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 To simplify the handling of your system, you may add these lines to ``~/.bashrc`` file. In this way, the required settings are executed automatically if a new shell is launched.
 
@@ -75,7 +75,7 @@ To simplify the handling of your system, you may add these lines to ``~/.bashrc`
    echo "export ROS_DOMAIN_ID=42" >> ~/.bashrc
 
 Important Notes
-++++++++++++++++
++++++++++++++++++++++++++++++++
 
 .. note::
 

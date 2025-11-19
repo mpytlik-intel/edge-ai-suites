@@ -1,7 +1,7 @@
 
 
 Grasp Plugin
-=============
+================================
 
 The :cpp:class:`RVCGraspInterface<RVCControl::RVCGraspInterface>` defines the interfaces grasp plugins
 are based off.

@@ -1,24 +1,24 @@
 .. collaborative-slam:
 
 Collaborative Visual SLAM
-=========================
+==================================================================
 
 Collaborative Visual SLAM is compiled natively for both Intel® Core™ and Intel Atom® processor-based systems.
 In addition, GPU acceleration may be enabled on selected Intel® Core™ processor-based system.
 The default installation of Collaborative Visual SLAM is designed to run on the widest range of processors.
 
 Source Code
------------
+--------------------
 
 The source code of this component can be found here: `Collaborative-Slam <https://github.com/open-edge-platform/edge-ai-suites/tree/main/robotics-ai-suite/components/collaborative-slam>`_
 
 Prerequisites
--------------
+-------------------------
 
 Complete the :doc:`../../../gsg_robot/index` before continuing.
 
 Collaborative Visual SLAM Versions Available
---------------------------------------------
+--------------------------------------------------------------------------------------
 
 * Intel SSE-only CPU instruction accelerated package for Collaborative SLAM (installed by default):
 
@@ -54,7 +54,7 @@ Use the instructions above to switch between version to experiment with differen
          .. code-block:: console
 
             Configuring liborb-lze
-            ----------------------
+            -------------------------------------------
 
             Select the Intel integrated GPU present on this system. Hint: In another terminal install 'intel-gpu-tools' (sudo apt install intel-gpu-tools), then
             execute 'intel_gpu_top' to view CPU/GPU details (sudo intel_gpu_top -L)
@@ -64,7 +64,7 @@ Use the instructions above to switch between version to experiment with differen
 
 
 Select a Collaborative Visual SLAM Tutorial to Run
---------------------------------------------------
+--------------------------------------------------------------------------------------------------
 
 -  :ref:`c-slam_two robots`: uses as input two ROS 2 bags that simulate two
    robots exploring the same area
@@ -111,7 +111,7 @@ Select a Collaborative Visual SLAM Tutorial to Run
 .. _c-slam_two robots:
 
 Collaborative Visual SLAM with Two Robots
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. To download and install the tutorial run the command below:
 
@@ -148,7 +148,7 @@ Collaborative Visual SLAM with Two Robots
 .. _c-slam_FM:
 
 Collaborative Visual SLAM with FastMapping Enabled
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. To download and install the tutorial run the command below:
 
@@ -205,7 +205,7 @@ Collaborative Visual SLAM with FastMapping Enabled
 .. _c-slam_multi-camera:
 
 Collaborative Visual SLAM with Multi-Camera Feature
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Note: The following part illustrates part of the multi-camera feature in Collaborative SLAM that
 uses Kalman Filter to fuse SLAM poses from different trackers in a loosely-coupled manner,
@@ -261,7 +261,7 @@ they are not yet ready and will be integrated later.
 .. _c-slam_lidar:
 
 Collaborative Visual SLAM with 2D Lidar Enabled
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. To download and install the tutorial run the command below:
 
@@ -313,7 +313,7 @@ Collaborative Visual SLAM with 2D Lidar Enabled
 .. _c-slam_remapping:
 
 Collaborative Visual SLAM with Region-wise Remapping Feature
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. To download and install the tutorial run the command below:
 
@@ -376,7 +376,7 @@ Collaborative Visual SLAM with Region-wise Remapping Feature
 .. _c-slam_GPU:
 
 Collaborative Visual SLAM with GPU Offloading
----------------------------------------------
+------------------------------------------------------------------------------------------
 
 With Intel GPU Level-Zero accelerated package for Collaborative SLAM installed, it is possible to check GPU usage while a tutorial is actively executing.
 
@@ -395,7 +395,7 @@ With Intel GPU Level-Zero accelerated package for Collaborative SLAM installed, 
 
 
 Troubleshooting
----------------
+------------------------------
 
 *  IMU functionality does not currently work properly for the AVX2 and GPU Level-Zero accelerated packages. Please use the SSE-only version of Collaborative SLAM for IMU.
 

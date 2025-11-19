@@ -1,7 +1,7 @@
 .. _model_cns:
 
 Visual Servoing - CNS
-#####################
+##########################################
 
 Visual servoing, also known as vision-based robot control and abbreviated VS, is a technique which uses feedback information extracted from a vision sensor to control the motion of a robot. Visual Servoing control techniques are broadly classified into three types:
 
@@ -9,18 +9,18 @@ Visual servoing, also known as vision-based robot control and abbreviated VS, is
 - Position/pose-based (PBVS)
 - Hybrid approach
 
-**IBVS** is based on the error between current and desired features on the image plane, and does not involve any estimate of the pose of the target. The features may be the coordinates of visual features, lines or moments of regions. 
+**IBVS** is based on the error between current and desired features on the image plane, and does not involve any estimate of the pose of the target. The features may be the coordinates of visual features, lines or moments of regions.
 
-**PBVS** is a model-based technique (with a single camera). This is because the pose of the object of interest is estimated with respect to the camera and then a command is issued to the robot controller, which in turn controls the robot. In this case the image features are extracted as well, but are additionally used to estimate 3D information (pose of the object in Cartesian space), hence it is servoing in 3D. 
+**PBVS** is a model-based technique (with a single camera). This is because the pose of the object of interest is estimated with respect to the camera and then a command is issued to the robot controller, which in turn controls the robot. In this case the image features are extracted as well, but are additionally used to estimate 3D information (pose of the object in Cartesian space), hence it is servoing in 3D.
 
-**Hybrid** approaches use some combination of the 2D and 3D servoing. 
+**Hybrid** approaches use some combination of the 2D and 3D servoing.
 
 Here we take the **IBVS-based** Correspondence Encoded Neural Image Servo Policy as an example.
 
 CNS Overview
-=================
+===========================================
 
-Correspondence encoded Neural image Servo policy (CNS) presents a graph neural network based solution for image servo utilizing explicit keypoints correspondence obtained from any detector-based feature matching methods, such as SIFT, AKAZE, ORB, SuperGlue and etc. 
+Correspondence encoded Neural image Servo policy (CNS) presents a graph neural network based solution for image servo utilizing explicit keypoints correspondence obtained from any detector-based feature matching methods, such as SIFT, AKAZE, ORB, SuperGlue and etc.
 
 It achieves <0.3° and sub-millimeter precision in real-world experiments (mean distance to target ≈ 0.275m) and runs in real-time (~40 fps with ORB as front-end).
 
@@ -31,7 +31,7 @@ It achieves <0.3° and sub-millimeter precision in real-world experiments (mean 
 **Model Architecture:**
 
 - Input Representation: The model takes as input a pair of images: the current image captured by the robot's camera and a target image representing the desired view.
-  
+
 - Feature Extraction: The input images are processed through a convolutional neural network (CNN) to extract high-level visual features. This step is crucial for capturing the important visual information needed for the subsequent stages.
 
 - Correspondence Encoding: The extracted features from both the current and target images are then used to compute visual correspondences. This involves identifying and encoding the relationships between features in the current image and their counterparts in the target image.
@@ -47,18 +47,18 @@ It achieves <0.3° and sub-millimeter precision in real-world experiments (mean 
 - Github link: https://github.com/hhcaz/CNS
 
 Model Conversion
-=================
+===========================================
 
 CNS model can get an optimized inference performance on either Intel CPU or iGPU using OpenVINO toolkit. It is CPU-friendly and you can follow the `official installation tutorial <https://github.com/hhcaz/CNS>`_. It should be noted that ``PyTorch`` (>1.12) and ``PyTorch Geometric`` need to be installed compatibly, and ``pybullet-object-models`` is required when running demo_sim_Erender.py.
 
 Installation guide of dependencies is as follows:
 
 .. code-block:: bash
-    
-    # python library dependencies 
+
+    # python library dependencies
     pip install torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 --index-url https://download.pytorch.org/whl/xpu
     pip install tqdm numpy scipy pybullet matplotlib tensorboard scikit-image open3d>=0.12.0 opencv-python>=4.8.0 pyrealsense2==2.53.1.4623
-    
+
     # install pybullet-object-models
     cd [path to your CNS project]/cns/thirdparty
     pip3 install -e pybullet-object-models/
@@ -85,14 +85,14 @@ To run this model on Intel iGPU, you will need ``OpenVINO 2025.3.0`` and run the
   OpenVINO 2025.3.0 will be released in early September 2025.
 
 .. code-block:: python
-    
+
       import openvino
       import torch
       from cns.benchmark.controller import GraphVSController
       from cns.models.graph_vs import GraphVS
       from cns.midend.graph_gen import GraphData
       import numpy as np
-      
+
       # create OVGraphVS class based on original GraphVS
       class OVGraphVS(GraphVS):
           def __init__(self, *args, **kwargs):
@@ -104,21 +104,21 @@ To run this model on Intel iGPU, you will need ``OpenVINO 2025.3.0`` and run the
 
               if batch is None:
                   batch = torch.zeros(x_cur.size(0)).long().to(x_cur.device)
-              
+
               x_clu = self.encoder(
-                  x_cur, x_tar, pos_cur, pos_tar, cluster_mask, 
+                  x_cur, x_tar, pos_cur, pos_tar, cluster_mask,
                   l0_to_l1_edge_index_cur, cluster_centers_index)
               pos_clu = pos_tar[cluster_centers_index]
               batch_clu = batch[cluster_centers_index]
               xx = self.init_hidden(num_clusters.sum()).to(x_cur)
 
               hidden = torch.where(new_scene, xx,hidden)
-              
+
               hidden, x_clu = self.backbone(
                   hidden, x_clu, pos_clu, l1_dense_edge_index_cur, l1_dense_edge_index_tar, batch_clu)
-              
+
               vel_si_vec, vel_si_norm = self.decoder(x_clu, cluster_mask, batch_clu)
-              
+
               return vel_si_vec, vel_si_norm, hidden
 
       # generate example inputs
@@ -187,7 +187,7 @@ To run this model on Intel iGPU, you will need ``OpenVINO 2025.3.0`` and run the
           # batch = None
           "num_clusters": torch.tensor(14),
       }
-      
+
       # Load checkpoint weights.
       ckpt=torch.load("checkpoints/cns_state_dict.pth", "cpu")
       if hasattr(ckpt, "net") and isinstance(ckpt["net"], torch.nn.Module):
@@ -202,7 +202,7 @@ To run this model on Intel iGPU, you will need ``OpenVINO 2025.3.0`` and run the
       # Convert and Save IR model
       ov_model = openvino.convert_model(model, example_input=example_input)
       openvino.save_model(ov_model, "cns_ov/openvino_model.xml")
-          
+
 One simple inference run of CNS model on iGPU is as follows:
 
 .. code-block:: python

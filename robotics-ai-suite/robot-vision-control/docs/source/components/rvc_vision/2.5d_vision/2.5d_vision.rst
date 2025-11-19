@@ -3,11 +3,11 @@
 .. _2.5d_vision:
 
 2.5D Vision
-=============
+================================
 
 
 2.5D Object Detector
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This approach uses a standard camera RGB steam together with the camera calibration.
 With Computer Vision methods, the camera stream is scanned for given objects (by sample image).
 A detection is in the form of a 2D bounding box with an additional angle defining the rotation of the object.
@@ -15,7 +15,7 @@ A detection is in the form of a 2D bounding box with an additional angle definin
 .. image:: ../../../images/html/rotatedBB.png
 
 
-.. note:: 
+.. note::
 
     As this detection is purely vision based, the objects need to provide a certain level of contrast and unique optical features
     to be able to detect them and determine their position and orientation.
@@ -26,7 +26,7 @@ The primary output of this ``rotated_object_detection`` node is a :ref:`RVC Visi
 
 
 Pose Projection
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Additionally, this component is capable of projecting the finding in the flat RGB input image into a 3D object pose.
 Therefor the algorithm projects the object found in the 2D image onto a plane at the given distance and assumes that the object from the image is located on this plane.
@@ -39,7 +39,7 @@ The output of this projection is a :ref:`API messages<rvc_api_messages>` `PoseSt
 This will be the input for the :ref:`Control<rvc_control>` components to define the actions and drive the robots.
 
 Annotated image
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. image:: ../../../images/html/2.5DAnnotatedImage.png
 
 The ``rotated_object_detection`` node can produce an annotated image as output. This is useful to visually inspect the detections.
@@ -48,7 +48,7 @@ Region of interest
 """"""""""""""""""
 The red rectangle marks the region of interest. The object detection only fousses on this region.
 
-.. note:: 
+.. note::
 
     It is good practice to reduce the region of interest to the minimum area. Bigger areas are causing a higher amount of computation.
     Additionally, irrelevant high-contrast areas are injecting `noise` to the object detection, which might cause inaccurate or no detections.
@@ -56,11 +56,11 @@ The red rectangle marks the region of interest. The object detection only fousse
 Detections
 """"""""""
 The raw detection of an object is shown as a blue quadrilateral.
-The processed and rectified oriented bounding box is overlayed in green. 
+The processed and rectified oriented bounding box is overlayed in green.
 
 
 Configuration
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 The ``rotated_object_detection`` node is configurable both at launch time and - for some parameters - also at runtime.
 
 Inputs
@@ -115,11 +115,11 @@ The objects to detect are confugured with the following structure.
 
     objects: ['object_1']             # list of object names for detection
     # the second level must match the entries from the objects list, here 'object_1'
-    object.object_1.image_path: /path/to/reference/image.png 
+    object.object_1.image_path: /path/to/reference/image.png
     object.robot.nfeatures: 100       # maximum number of features to extract
     object.robot.thickness: 0.1       # object thickness / size parallel to optical axis
 
-.. note:: 
+.. note::
 
     The reference image is ideally taken in the same setup as later used for detection.
     Identical lighting conditions are very crucial for the detection quality.
@@ -147,8 +147,8 @@ Enable / disable creation of annotated image
     annotate: True
 
 
-Launching 
-^^^^^^^^^
+Launching
+^^^^^^^^^^^^^^^^^^
 The ``rvc_rotated_object_detection`` component provides two exemplary launch files, the first only starting the ``rotated_object_detection`` node.
 
 .. code-block:: bash

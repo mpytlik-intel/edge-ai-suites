@@ -1,7 +1,7 @@
 .. _model_depthanythingv2:
 
 Monocular Depth Estimation: Depth Anything V2
-#############################################
+##########################################################################################
 
 Monocular depth estimation is the process of predicting depth information from a single image, which is a challenging
 task due to the inherent ambiguity and lack of explicit 3D cues in 2D images. Despite these challenges, advancements
@@ -62,7 +62,7 @@ Depth Anything V2, is an active powerful foundation model for monocular depth es
 - Github link: https://github.com/DepthAnything/Depth-Anything-V2
 
 Model Conversion
-================
+==========================================
 The Depth-Anything-V2 model is trained using PyTorch but can achieve optimized inference performance on Intel devices using OpenVINO™.
 To enable this, the PyTorch model must first be converted to the OpenVINO™ IR format.
 
@@ -70,12 +70,12 @@ To enable this, the PyTorch model must first be converted to the OpenVINO™ IR 
    :local:
 
 Export Depth-Anything-V2 to ONNX
---------------------------------
+--------------------------------------------------------------
 Before converting the model to OpenVINO IR, it is best practice to first export the PyTorch model to ONNX format.
 The repository `Depth-Anything-ONNX <https://github.com/fabio-sim/Depth-Anything-ONNX>`_ provides a simple command-line tool, ``dynamo.py``, based on `Typer <https://typer.tiangolo.com/>`_ to facilitate this conversion.
 
 Installation
-^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
 Ensure that all required dependencies are installed before proceeding with the conversion (python 3.11 or higher is required).
 
 .. code-block:: bash
@@ -83,7 +83,7 @@ Ensure that all required dependencies are installed before proceeding with the c
    pip install -r requirements.txt
 
 Exporting the model to ONNX
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Use the following command to export the Depth-Anything-V2 model to ONNX format:
 
 .. code-block:: bash
@@ -100,10 +100,10 @@ Use the following command to export the Depth-Anything-V2 model to ONNX format:
    If you encountered a downloading error, please refer to :ref:`Troubleshooting <depthanythingv2_troubleshooting>`
 
 Convert ONNX to OpenVINO IR
----------------------------
+------------------------------------------------------
 
 Ensure OpenVINO is Installed
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. note::
    Make sure OpenVINO is installed by following the guide:
    :ref:`Install OpenVINO via pip <openvino_install>`
@@ -111,7 +111,7 @@ Ensure OpenVINO is Installed
 Once the model is in ONNX format, it can be converted to OpenVINO's Intermediate Representation (IR) format using OpenVINO's command-line model conversion tool, ``ovc``.
 
 Convert ONNX to OpenVINO IR using ovc
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The ``ovc`` tool simplifies the process of converting an ONNX model to OpenVINO IR format.
 
 Run the following command to perform the conversion:

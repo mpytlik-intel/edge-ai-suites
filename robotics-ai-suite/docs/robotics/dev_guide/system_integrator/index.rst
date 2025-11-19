@@ -3,7 +3,7 @@
    :align: bottom
 
 System Integrators |sys_integrator|
-====================================
+================================================================================================
 
 This chapter details information specifically for system integrators.
 
@@ -14,4 +14,3 @@ This chapter details information specifically for system integrators.
    benchmark_profiling/index
    performance
    security
-

@@ -2,7 +2,7 @@
 .. _motion_controller_plugin:
 
 Motion Controller Plugin
-==========================
+===================================================================
 
 The :cpp:class:`RVCMotionControllerInterface<RVCMotionController::RVCMotionControllerInterface>`
 defines the interfaces Motion controller plugins are based off.
@@ -13,7 +13,7 @@ the above interface.
 The development interface is defined in :ref:`Motion Controller Interface Development <motioncontroller_plugins>`
 
 Moveit2 Servo Motion Controller
--------------------------------
+-------------------------------------------------------------
 
 
 RVC is providing a `relatively` simple motion controller based off Moveit2 servo:
@@ -36,7 +36,7 @@ The reason is that the plugin isn't running its own |ros2| node, but it runs in 
 configuration of the motion controller and the grasp plugin is provided to the main node.
 
 Dobby Motion Controller
--------------------------------
+-------------------------------------------------------------
 
 RVC is providing a real-time motion planning framework for robot manipulators called Dobby.
 
@@ -52,7 +52,7 @@ Dobby is a real-time motion planning framework with a high success rate in compl
 
 
 Direct Universal Robot Pendant Controller
------------------------------------------
+--------------------------------------------------------------------------------
 
 The Universal Robot drivers are present in ROS2 and fully supported, but in case another robot
 is employed, and the ROS2 drivers are missing, we provided a strategy to implement a RVC Plugin
@@ -67,7 +67,7 @@ This limitation can of course be worked around, using fine tuned Universal speci
 opposed to movep), but we didn't want to particularize the solution too much towards a very specific model
 
 Direct Universal Robot Pendant Controller configuration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Default parameter value are mostly fine, but one mandatory has to be changed according to the network
 topology: ``server_ip``. This parameter specify the ip of the interface able to talk to the robot.
