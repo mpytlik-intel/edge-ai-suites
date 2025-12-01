@@ -129,7 +129,7 @@ Execute the following commands one by one in three separate terminals.
 
    <!--hide_directive::::{tab-set}
    :::{tab-item}hide_directive--> **Jazzy**
-   <!--hide_directive:sync: tab1hide_directive-->
+   <!--hide_directive:sync: jazzyhide_directive-->
 
    ```bash
    sudo chmod +x /opt/ros/jazzy/share/followme_turtlebot3_gazebo/scripts/demo_RS.sh
@@ -138,7 +138,7 @@ Execute the following commands one by one in three separate terminals.
 
    <!--hide_directive:::
    :::{tab-item}hide_directive-->  **Humble**
-   <!--hide_directive:sync: tab2hide_directive-->
+   <!--hide_directive:sync: humblehide_directive-->
 
    ```bash
    sudo chmod +x /opt/ros/humble/share/followme_turtlebot3_gazebo/scripts/demo_RS.sh
@@ -153,7 +153,7 @@ Execute the following commands one by one in three separate terminals.
 
    <!--hide_directive::::{tab-set}
    :::{tab-item}hide_directive--> **Jazzy**
-   <!--hide_directive:sync: tab1hide_directive-->
+   <!--hide_directive:sync: jazzyhide_directive-->
 
    ```bash
    ros2 run adbscan_ros2_follow_me adbscan_sub_w_gesture --ros-args --params-file /opt/ros/jazzy/share/adbscan_ros2_follow_me/config/adbscan_sub_RS.yaml -r cmd_vel:=tb3/cmd_vel
@@ -161,7 +161,7 @@ Execute the following commands one by one in three separate terminals.
 
    <!--hide_directive:::
    :::{tab-item}hide_directive-->  **Humble**
-   <!--hide_directive:sync: tab2hide_directive-->
+   <!--hide_directive:sync: humblehide_directive-->
 
    ```bash
    ros2 run adbscan_ros2_follow_me adbscan_sub_w_gesture --ros-args --params-file /opt/ros/humble/share/adbscan_ros2_follow_me/config/adbscan_sub_RS.yaml -r cmd_vel:=tb3/cmd_vel
@@ -174,7 +174,7 @@ Execute the following commands one by one in three separate terminals.
 
    <!--hide_directive::::{tab-set}
    :::{tab-item}hide_directive--> **Jazzy**
-   <!--hide_directive:sync: tab1hide_directive-->
+   <!--hide_directive:sync: jazzyhide_directive-->
 
    ```bash
    ros2 run gesture_recognition_pkg traj_and_img_publisher_node.py --ros-args --params-file /opt/ros/jazzy/share/gesture_recognition_pkg/config/gesture_recognition.yaml
@@ -182,7 +182,7 @@ Execute the following commands one by one in three separate terminals.
 
    <!--hide_directive:::
    :::{tab-item}hide_directive-->  **Humble**
-   <!--hide_directive:sync: tab2hide_directive-->
+   <!--hide_directive:sync: humblehide_directive-->
 
    ```bash
    ros2 run gesture_recognition_pkg traj_and_img_publisher_node.py --ros-args --params-file /opt/ros/humble/share/gesture_recognition_pkg/config/gesture_recognition.yaml

@@ -116,7 +116,7 @@ The CPU Hotspots Analysis is carried out with the following parameters:
 
    <!--hide_directive::::{tab-set}
    :::{tab-item}hide_directive--> **Jazzy**
-   <!--hide_directive:sync: tab1hide_directive-->
+   <!--hide_directive:sync: jazzyhide_directive-->
 
    ```bash
    source /opt/ros/jazzy/setup.bash
@@ -124,7 +124,7 @@ The CPU Hotspots Analysis is carried out with the following parameters:
 
    <!--hide_directive:::
    :::{tab-item}hide_directive-->  **Humble**
-   <!--hide_directive:sync: tab2hide_directive-->
+   <!--hide_directive:sync: humblehide_directive-->
 
    ```bash
    source /opt/ros/humble/setup.bash
@@ -153,7 +153,7 @@ The CPU Hotspots Analysis is carried out with the following parameters:
 
    <!--hide_directive::::{tab-set}
    :::{tab-item}hide_directive--> **Jazzy**
-   <!--hide_directive:sync: tab1hide_directive-->
+   <!--hide_directive:sync: jazzyhide_directive-->
 
    ```bash
    vtune -collect hotspots -knob sampling-mode=hw -knob sampling-interval=5 -knob enable-stack-collection=true -knob stack-size=2048 -duration=30 -result-dir ./vtune_results_hotspots /opt/ros/jazzy/share/collab-slam/tutorial-fastmapping/cslam-fastmapping.sh
@@ -161,7 +161,7 @@ The CPU Hotspots Analysis is carried out with the following parameters:
 
    <!--hide_directive:::
    :::{tab-item}hide_directive-->  **Humble**
-   <!--hide_directive:sync: tab2hide_directive-->
+   <!--hide_directive:sync: humblehide_directive-->
 
    ```bash
    vtune -collect hotspots -knob sampling-mode=hw -knob sampling-interval=5 -knob enable-stack-collection=true -knob stack-size=2048 -duration=30 -result-dir ./vtune_results_hotspots /opt/ros/humble/share/collab-slam/tutorial-fastmapping/cslam-fastmapping.sh
@@ -264,7 +264,7 @@ parameters:
 
    <!--hide_directive::::{tab-set}
    :::{tab-item}hide_directive--> **Jazzy**
-   <!--hide_directive:sync: tab1hide_directive-->
+   <!--hide_directive:sync: jazzyhide_directive-->
 
    ```bash
    source /opt/ros/jazzy/setup.bash
@@ -272,7 +272,7 @@ parameters:
 
    <!--hide_directive:::
    :::{tab-item}hide_directive-->  **Humble**
-   <!--hide_directive:sync: tab2hide_directive-->
+   <!--hide_directive:sync: humblehide_directive-->
 
    ```bash
    source /opt/ros/humble/setup.bash
@@ -301,7 +301,7 @@ parameters:
 
    <!--hide_directive::::{tab-set}
    :::{tab-item}hide_directive--> **Jazzy**
-   <!--hide_directive:sync: tab1hide_directive-->
+   <!--hide_directive:sync: jazzyhide_directive-->
 
    ```bash
    vtune -collect uarch-exploration -knob sampling-interval=5 -duration=30 -result-dir=./vtune_results_uarch /opt/ros/jazzy/share/collab-slam/tutorial-fastmapping/cslam-fastmapping.sh
@@ -309,7 +309,7 @@ parameters:
 
    <!--hide_directive:::
    :::{tab-item}hide_directive-->  **Humble**
-   <!--hide_directive:sync: tab2hide_directive-->
+   <!--hide_directive:sync: humblehide_directive-->
 
    ```bash
    vtune -collect uarch-exploration -knob sampling-interval=5 -duration=30 -result-dir=./vtune_results_uarch /opt/ros/humble/share/collab-slam/tutorial-fastmapping/cslam-fastmapping.sh

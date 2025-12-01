@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-Complete the [GSG Robot Get Started guide](../../../gsg_robot/index.rst) before continuing.
+Complete the [getting started guide](../../../gsg_robot/index.rst) before continuing.
 
 ## Hardware Prerequisites
 
@@ -19,7 +19,7 @@ You have a robot and a keyboard or an SSH/VNC connection to the robot.
 
    <!--hide_directive::::{tab-set}hide_directive-->
    <!--hide_directive:::{tab-item}hide_directive--> **Jazzy**
-   <!--hide_directive:sync: tab1hide_directive-->
+   <!--hide_directive:sync: jazzyhide_directive-->
 
    ```bash
    sudo apt update
@@ -28,7 +28,7 @@ You have a robot and a keyboard or an SSH/VNC connection to the robot.
 
    <!--hide_directive:::hide_directive-->
    <!--hide_directive:::{tab-item}hide_directive--> **Humble**
-   <!--hide_directive:sync: tab2hide_directive-->
+   <!--hide_directive:sync: humblehide_directive-->
 
    ```bash
    sudo apt update

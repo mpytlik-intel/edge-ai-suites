@@ -18,7 +18,7 @@ in MIPI mode, which is connected to an
 
 ## Prerequisites
 
-Complete the [GSG Robot Guide](../../../gsg_robot/index) before continuing.
+Complete the [getting started guide]](../../../gsg_robot/index) before continuing.
 
 ## Using Intel® RealSense™ camera connected through USB
 
@@ -29,7 +29,7 @@ Complete the [GSG Robot Guide](../../../gsg_robot/index) before continuing.
 
    <!--hide_directive::::{tab-set}hide_directive-->
    <!--hide_directive:::{tab-item}hide_directive--> **Jazzy**
-   <!--hide_directive:sync: tab1hide_directive-->
+   <!--hide_directive:sync: jazzyhide_directive-->
 
    ```bash
    sudo apt-get install -y ros-jazzy-librealsense2-tools
@@ -37,7 +37,7 @@ Complete the [GSG Robot Guide](../../../gsg_robot/index) before continuing.
 
    <!--hide_directive:::hide_directive-->
    <!--hide_directive:::{tab-item}hide_directive--> **Humble**
-   <!--hide_directive:sync: tab2hide_directive-->
+   <!--hide_directive:sync: humblehide_directive-->
 
    ```bash
    sudo apt-get install -y ros-humble-librealsense2-tools
@@ -50,7 +50,7 @@ Complete the [GSG Robot Guide](../../../gsg_robot/index) before continuing.
 
    <!--hide_directive::::{tab-set}hide_directive-->
    <!--hide_directive:::{tab-item}hide_directive--> **Jazzy**
-   <!--hide_directive:sync: tab1hide_directive-->
+   <!--hide_directive:sync: jazzyhide_directive-->
 
    ```bash
    sudo apt-get install -y ros-jazzy-realsense2-tutorial-demo
@@ -58,7 +58,7 @@ Complete the [GSG Robot Guide](../../../gsg_robot/index) before continuing.
 
    <!--hide_directive:::hide_directive-->
    <!--hide_directive:::{tab-item}hide_directive--> **Humble**
-   <!--hide_directive:sync: tab2hide_directive-->
+   <!--hide_directive:sync: humblehide_directive-->
 
    ```bash
    sudo apt-get install -y ros-humble-realsense2-tutorial-demo
@@ -71,7 +71,7 @@ Complete the [GSG Robot Guide](../../../gsg_robot/index) before continuing.
 
    <!--hide_directive::::{tab-set}hide_directive-->
    <!--hide_directive:::{tab-item}hide_directive--> **Jazzy**
-   <!--hide_directive:sync: tab1hide_directive-->
+   <!--hide_directive:sync: jazzyhide_directive-->
 
    ```bash
    source /opt/ros/jazzy/setup.bash
@@ -79,7 +79,7 @@ Complete the [GSG Robot Guide](../../../gsg_robot/index) before continuing.
 
    <!--hide_directive:::hide_directive-->
    <!--hide_directive:::{tab-item}hide_directive--> **Humble**
-   <!--hide_directive:sync: tab2hide_directive-->
+   <!--hide_directive:sync: humblehide_directive-->
 
    ```bash
    source /opt/ros/humble/setup.bash
@@ -233,7 +233,7 @@ sudo usermod -a -G render $USER
 
    <!--hide_directive::::{tab-set}hide_directive-->
    <!--hide_directive:::{tab-item}hide_directive--> **Jazzy**
-   <!--hide_directive:sync: tab1hide_directive-->
+   <!--hide_directive:sync: jazzyhide_directive-->
 
    ```bash
    sudo apt-get install -y ros-jazzy-realsense2-tutorial-demo
@@ -241,7 +241,7 @@ sudo usermod -a -G render $USER
 
    <!--hide_directive:::hide_directive-->
    <!--hide_directive:::{tab-item}hide_directive--> **Humble**
-   <!--hide_directive:sync: tab2hide_directive-->
+   <!--hide_directive:sync: humblehide_directive-->
 
    ```bash
    sudo apt-get install -y ros-humble-realsense2-tutorial-demo
@@ -254,7 +254,7 @@ sudo usermod -a -G render $USER
 
    <!--hide_directive::::{tab-set}hide_directive-->
    <!--hide_directive:::{tab-item}hide_directive--> **Jazzy**
-   <!--hide_directive:sync: tab1hide_directive-->
+   <!--hide_directive:sync: jazzyhide_directive-->
 
    ```bash
    source /opt/ros/jazzy/setup.bash
@@ -262,7 +262,7 @@ sudo usermod -a -G render $USER
 
    <!--hide_directive:::hide_directive-->
    <!--hide_directive:::{tab-item}hide_directive--> **Humble**
-   <!--hide_directive:sync: tab2hide_directive-->
+   <!--hide_directive:sync: humblehide_directive-->
 
    ```bash
    source /opt/ros/humble/setup.bash

@@ -8,7 +8,7 @@ a map of the environment.
 
 ## Prerequisites
 
-Complete the [GSG Robot](../../../../gsg_robot/index.rst) guide before continuing.
+Complete the [getting started guide](../../../../gsg_robot/index.rst) guide before continuing.
 
 ## Installation and Execution
 

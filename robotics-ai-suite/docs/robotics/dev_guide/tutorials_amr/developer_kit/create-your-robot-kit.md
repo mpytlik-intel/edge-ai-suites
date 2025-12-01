@@ -424,7 +424,7 @@ The [wandering-aaeon-tutorial](../../../dev_guide/tutorials_amr/navigation/wande
 
    <!--hide_directive::::{tab-set}hide_directive-->
    <!--hide_directive:::{tab-item}hide_directive--> **Jazzy**
-   <!--hide_directive:sync: tab1hide_directive-->
+   <!--hide_directive:sync: jazzyhide_directive-->
 
    from: ``params_file:=/opt/ros/jazzy/share/ros2_amr_interface/params/<your_robot>_node_params.yaml``
 
@@ -432,7 +432,7 @@ The [wandering-aaeon-tutorial](../../../dev_guide/tutorials_amr/navigation/wande
 
    <!--hide_directive:::hide_directive-->
    <!--hide_directive:::{tab-item}hide_directive--> **Humble**
-   <!--hide_directive:sync: tab2hide_directive-->
+   <!--hide_directive:sync: humblehide_directive-->
 
    from: ``params_file:=/opt/ros/humble/share/ros2_amr_interface/params/<your_robot>_node_params.yaml``
 
@@ -456,7 +456,7 @@ The [wandering-aaeon-tutorial](../../../dev_guide/tutorials_amr/navigation/wande
 
    <!--hide_directive::::{tab-set}hide_directive-->
    <!--hide_directive:::{tab-item}hide_directive--> **Jazzy**
-   <!--hide_directive:sync: tab1hide_directive-->
+   <!--hide_directive:sync: jazzyhide_directive-->
 
    ```bash
    source /opt/ros/jazzy/setup.bash
@@ -466,7 +466,7 @@ The [wandering-aaeon-tutorial](../../../dev_guide/tutorials_amr/navigation/wande
 
    <!--hide_directive:::hide_directive-->
    <!--hide_directive:::{tab-item}hide_directive--> **Humble**
-   <!--hide_directive:sync: tab2hide_directive-->
+   <!--hide_directive:sync: humblehide_directive-->
 
    ```bash
    source /opt/ros/humble/setup.bash
